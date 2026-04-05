@@ -90,14 +90,33 @@ if [[ -x "$SCRIPT_DIR/bin/sdlc-patch-names" ]]; then
     ok "Skill names patched"
 fi
 
+# ── Clean old symlinks from previous installs ───────────────────────
+info "Cleaning old workflow symlinks ..."
+CLEANED=0
+for link in "$SKILLS_DIR"/*/; do
+    [[ -L "${link%/}" ]] || continue
+    link_target="$(readlink -f "${link%/}" 2>/dev/null || true)"
+    if [[ "$link_target" == *"$SCRIPT_DIR/workflows"* ]]; then
+        rm "${link%/}"
+        ((CLEANED++))
+    fi
+done
+[[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old symlink(s)"
+
 # ── Symlink workflow skills ──────────────────────────────────────────
 info "Linking workflow skills ..."
 WORKFLOW_COUNT=0
+PREFIX=""
+if [[ "$NAMING_MODE" == "namespaced" ]]; then
+    PREFIX="sdlc-"
+fi
+
 if [[ -d "$SCRIPT_DIR/workflows" ]]; then
     for wf_dir in "$SCRIPT_DIR/workflows"/*/; do
         [[ -d "$wf_dir" ]] || continue
         wf_name="$(basename "$wf_dir")"
-        target="$SKILLS_DIR/$wf_name"
+        link_name="${PREFIX}${wf_name}"
+        target="$SKILLS_DIR/$link_name"
         if [[ -L "$target" ]]; then
             rm "$target"
         fi
@@ -105,11 +124,11 @@ if [[ -d "$SCRIPT_DIR/workflows" ]]; then
             ln -s "$wf_dir" "$target"
             ((WORKFLOW_COUNT++))
         else
-            warn "Skipping $wf_name — directory already exists (not a symlink)"
+            warn "Skipping $link_name — directory already exists (not a symlink)"
         fi
     done
 fi
-ok "Linked $WORKFLOW_COUNT workflow skill(s)"
+ok "Linked $WORKFLOW_COUNT workflow skill(s) (prefix: '${PREFIX:-none}')"
 
 # ── Install agents ───────────────────────────────────────────────────
 info "Installing agents ..."
