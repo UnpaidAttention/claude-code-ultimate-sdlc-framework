@@ -3,16 +3,16 @@ set -euo pipefail
 
 # sdlc-patch-names — Patch SKILL.md name: fields based on naming mode
 # Reads naming_mode from ~/.ultimate-sdlc/config.yaml
-# If "namespaced", prefixes all skill names with "ag-"
-# If "short", removes "ag-" prefix
+# If "namespaced", prefixes all skill names with "sdlc-"
+# If "short", removes "sdlc-" prefix
 
-AG_CONFIG="$HOME/.ultimate-sdlc/config.yaml"
+SDLC_CONFIG="$HOME/.ultimate-sdlc/config.yaml"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Read naming mode
 NAMING_MODE="short"
-if [[ -f "$AG_CONFIG" ]]; then
-    NAMING_MODE=$(grep -E '^naming_mode:' "$AG_CONFIG" | sed 's/^[^:]*:[[:space:]]*//' || echo "short")
+if [[ -f "$SDLC_CONFIG" ]]; then
+    NAMING_MODE=$(grep -E '^naming_mode:' "$SDLC_CONFIG" | sed 's/^[^:]*:[[:space:]]*//' || echo "short")
 fi
 
 PATCHED=0
@@ -29,14 +29,14 @@ patch_skill_file() {
     local new_name="$current_name"
 
     if [[ "$NAMING_MODE" == "namespaced" ]]; then
-        # Add ag- prefix if not present (skip the root "ultimate-sdlc" skill)
-        if [[ "$current_name" != ag-* && "$current_name" != "ultimate-sdlc" ]]; then
-            new_name="ag-${current_name}"
+        # Add sdlc- prefix if not present (skip the root "ultimate-sdlc" skill)
+        if [[ "$current_name" != sdlc-* && "$current_name" != "ultimate-sdlc" ]]; then
+            new_name="sdlc-${current_name}"
         fi
     else
-        # Remove ag- prefix if present
-        if [[ "$current_name" == ag-* ]]; then
-            new_name="${current_name#ag-}"
+        # Remove sdlc- prefix if present
+        if [[ "$current_name" == sdlc-* ]]; then
+            new_name="${current_name#sdlc-}"
         fi
     fi
 

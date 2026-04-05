@@ -21,7 +21,7 @@ In any Claude Code session:
 /planning-start    # Begin the Planning Council
 /status            # Check current progress
 /continue          # Auto-advance to next step
-/ag-help           # Full command reference
+/help           # Full command reference
 ```
 
 ## What It Does
@@ -131,7 +131,7 @@ Global config: `~/.ultimate-sdlc/config.yaml`
 During setup you can choose:
 
 - **Short** (default): `/init`, `/planning-start`, `/dev-wave-1`
-- **Namespaced**: `/ag-init`, `/ag-planning-start`, `/ag-dev-wave-1`
+- **Namespaced**: `/sdlc-init`, `/sdlc-planning-start`, `/sdlc-dev-wave-1`
 
 Namespaced mode avoids conflicts if you have other skills with similar names.
 

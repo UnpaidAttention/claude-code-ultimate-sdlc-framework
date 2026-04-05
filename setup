@@ -52,7 +52,7 @@ echo "  1) ${BOLD}Short names${NC} (default)"
 echo "     /init, /planning-start, /dev-wave-1, /continue, etc."
 echo ""
 echo "  2) ${BOLD}Namespaced names${NC}"
-echo "     /ag-init, /ag-planning-start, /ag-dev-wave-1, /ag-continue, etc."
+echo "     /sdlc-init, /sdlc-planning-start, /sdlc-dev-wave-1, /sdlc-continue, etc."
 echo ""
 read -rp "Choice [1/2]: " naming_choice
 
@@ -119,8 +119,8 @@ if [[ -d "$SCRIPT_DIR/agents" ]]; then
     for agent_file in "$SCRIPT_DIR/agents/"*.md; do
         [[ -f "$agent_file" ]] || continue
         agent_name="$(basename "$agent_file")"
-        # Prefix with ag- if not already
-        if [[ "$agent_name" != ag-* ]]; then
+        # Prefix with sdlc- if not already
+        if [[ "$agent_name" != sdlc-* ]]; then
             agent_name="sdlc-${agent_name}"
         fi
         cp "$agent_file" "$AGENTS_DIR/$agent_name"
