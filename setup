@@ -103,8 +103,10 @@ for link in "$SKILLS_DIR"/*/; do
 done
 [[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old symlink(s)"
 
-# ── Symlink workflow skills ──────────────────────────────────────────
-info "Linking workflow skills ..."
+# ── Install workflow skills ──────────────────────────────────────────
+# Claude Code doesn't follow symlinks into nested skill directories,
+# so we create real directories with hard-linked SKILL.md files.
+info "Installing workflow skills ..."
 WORKFLOW_COUNT=0
 PREFIX=""
 if [[ "$NAMING_MODE" == "namespaced" ]]; then
@@ -114,21 +116,16 @@ fi
 if [[ -d "$SCRIPT_DIR/workflows" ]]; then
     for wf_dir in "$SCRIPT_DIR/workflows"/*/; do
         [[ -d "$wf_dir" ]] || continue
+        [[ -f "$wf_dir/SKILL.md" ]] || continue
         wf_name="$(basename "$wf_dir")"
-        link_name="${PREFIX}${wf_name}"
-        target="$SKILLS_DIR/$link_name"
-        if [[ -L "$target" ]]; then
-            rm "$target"
-        fi
-        if [[ ! -e "$target" ]]; then
-            ln -s "$wf_dir" "$target"
-            ((WORKFLOW_COUNT++))
-        else
-            warn "Skipping $link_name — directory already exists (not a symlink)"
-        fi
+        skill_name="${PREFIX}${wf_name}"
+        target_dir="$SKILLS_DIR/$skill_name"
+        mkdir -p "$target_dir"
+        ln -f "$wf_dir/SKILL.md" "$target_dir/SKILL.md"
+        ((WORKFLOW_COUNT++))
     done
 fi
-ok "Linked $WORKFLOW_COUNT workflow skill(s) (prefix: '${PREFIX:-none}')"
+ok "Installed $WORKFLOW_COUNT workflow skill(s) (prefix: '${PREFIX:-none}')"
 
 # ── Install agents ───────────────────────────────────────────────────
 info "Installing agents ..."
