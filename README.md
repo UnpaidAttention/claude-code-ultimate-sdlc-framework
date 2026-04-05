@@ -7,7 +7,7 @@ A structured, gate-driven, multi-council orchestration system for AI-assisted so
 ## Install
 
 ```bash
-git clone https://github.com/UnpaidAttention/antigravity-claude-code.git ~/.claude/skills/antigravity && cd ~/.claude/skills/antigravity && ./setup
+git clone https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework.git ~/.claude/skills/antigravity && cd ~/.claude/skills/antigravity && ./setup
 ```
 
 That's it. All `/commands` are now available in Claude Code.
