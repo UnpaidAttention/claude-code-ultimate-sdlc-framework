@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ag-patch-names — Patch SKILL.md name: fields based on naming mode
+# Reads naming_mode from ~/.antigravity/config.yaml
+# If "namespaced", prefixes all skill names with "ag-"
+# If "short", removes "ag-" prefix
+
+AG_CONFIG="$HOME/.antigravity/config.yaml"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+# Read naming mode
+NAMING_MODE="short"
+if [[ -f "$AG_CONFIG" ]]; then
+    NAMING_MODE=$(grep -E '^naming_mode:' "$AG_CONFIG" | sed 's/^[^:]*:[[:space:]]*//' || echo "short")
+fi
+
+PATCHED=0
+
+patch_skill_file() {
+    local skill_file="$1"
+    [[ -f "$skill_file" ]] || return
+
+    # Extract current name from YAML frontmatter
+    local current_name
+    current_name=$(sed -n '/^---$/,/^---$/{ s/^name:[[:space:]]*//p }' "$skill_file" | head -1)
+    [[ -z "$current_name" ]] && return
+
+    local new_name="$current_name"
+
+    if [[ "$NAMING_MODE" == "namespaced" ]]; then
+        # Add ag- prefix if not present (skip the root "antigravity" skill)
+        if [[ "$current_name" != ag-* && "$current_name" != "antigravity" ]]; then
+            new_name="ag-${current_name}"
+        fi
+    else
+        # Remove ag- prefix if present
+        if [[ "$current_name" == ag-* ]]; then
+            new_name="${current_name#ag-}"
+        fi
+    fi
+
+    if [[ "$new_name" != "$current_name" ]]; then
+        sed -i "s/^name:[[:space:]]*${current_name}$/name: ${new_name}/" "$skill_file"
+        ((PATCHED++))
+        echo "  ${current_name} -> ${new_name}"
+    fi
+}
+
+echo "Patching skill names (mode: ${NAMING_MODE}) ..."
+
+# Patch workflow skills
+for skill_file in "$SCRIPT_DIR/workflows"/*/SKILL.md; do
+    patch_skill_file "$skill_file"
+done
+
+# Patch knowledge skills
+for skill_file in "$SCRIPT_DIR/knowledge"/*/SKILL.md; do
+    patch_skill_file "$skill_file"
+done
+
+echo "Patched ${PATCHED} skill name(s)"

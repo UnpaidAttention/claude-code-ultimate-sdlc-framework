@@ -1,0 +1,97 @@
+No,Product Type,Keywords,Primary (Hex),Secondary (Hex),CTA (Hex),Background (Hex),Text (Hex),Border (Hex),Notes
+1,SaaS (General),"saas, general",#2563EB,#93C5FD,#E85D04,#F0F5FF,#1E293B,#DBEAFE,Trust blue primary + warm orange CTA contrast
+2,Micro SaaS,"micro, saas",#0EA5E9,#7DD3FC,#F97316,#F0F9FF,#0C4A6E,#BAE6FD,Sky blue for approachable micro-product feel
+3,E-commerce,commerce,#0369A1,#38BDF8,#E11D48,#F8FAFC,#0F172A,#E0F2FE,Commerce blue + urgent rose CTA for conversions
+4,E-commerce Luxury,"commerce, luxury",#1C1917,#44403C,#CA8A04,#FAFAF9,#0C0A09,#D6D3D1,Premium colors + minimal accent
+5,Service Landing Page,"service, landing, page",#1D4ED8,#60A5FA,#DC2626,#F8FAFC,#1E293B,#DBEAFE,Professional blue + red urgency CTA
+6,B2B Service,"b2b, service",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Professional blue + neutral grey
+7,Financial Dashboard,"financial, dashboard",#0F4C5C,#34D399,#DC2626,#0F172A,#F1F5F9,#1E293B,Dark bg + green/red financial alerts + trust teal
+8,Analytics Dashboard,"analytics, dashboard",#1E3A5F,#38BDF8,#F59E0B,#0F172A,#E2E8F0,#1E293B,Cool navy bg + sky-blue data viz + amber alerts
+9,Healthcare App,"healthcare, app",#0891B2,#22D3EE,#059669,#ECFEFF,#164E63,#A5F3FC,Calm blue + health green + trust
+10,Educational App,"educational, app",#4F46E5,#818CF8,#F97316,#EEF2FF,#1E1B4B,#C7D2FE,Playful colors + clear hierarchy
+11,Creative Agency,"creative, agency",#EC4899,#F472B6,#06B6D4,#FDF2F8,#831843,#FBCFE8,Bold primaries + artistic freedom
+12,Portfolio/Personal,"portfolio, personal",#18181B,#3F3F46,#2563EB,#FAFAFA,#09090B,#E4E4E7,Brand primary + artistic interpretation
+13,Gaming,gaming,#BE123C,#FB7185,#06B6D4,#0F0F23,#E2E8F0,#881337,Deep crimson + electric cyan neon + immersive dark
+14,Government/Public Service,"government, public, service",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Professional blue + high contrast
+15,Fintech/Crypto,"fintech, crypto",#F59E0B,#FBBF24,#8B5CF6,#0F172A,#F8FAFC,#334155,Dark tech colors + trust + vibrant accents
+16,Social Media App,"social, media, app",#2563EB,#60A5FA,#F43F5E,#F8FAFC,#1E293B,#DBEAFE,Vibrant + engagement colors
+17,Productivity Tool,"productivity, tool",#0284C7,#7DD3FC,#059669,#F0F9FF,#0C4A6E,#BAE6FD,Clear sky blue hierarchy + green completion CTA
+18,Design System/Component Library,"design, system, component, library",#18181B,#52525B,#2563EB,#FAFAFA,#09090B,#E4E4E7,Monochrome structure + blue interactive accent
+19,AI/Chatbot Platform,"chatbot, platform",#0D9488,#5EEAD4,#0284C7,#F0FDFA,#134E4A,#99F6E4,Teal intelligence + deep blue trust accent
+20,NFT/Web3 Platform,"nft, web3, platform",#F59E0B,#FBBF24,#E11D48,#0F172A,#F8FAFC,#334155,Dark + Gold (#FFD700) neon + crypto warmth
+21,Creator Economy Platform,"creator, economy, platform",#DB2777,#F472B6,#F59E0B,#FDF2F8,#831843,#FBCFE8,Vibrant pink creator energy + amber CTA
+22,Sustainability/ESG Platform,"sustainability, esg, platform",#166534,#4ADE80,#CA8A04,#F0FDF4,#052E16,#BBF7D0,Forest green + earth gold accent + natural feel
+23,Remote Work/Collaboration Tool,"remote, work, collaboration, tool",#4338CA,#818CF8,#0891B2,#EEF2FF,#312E81,#C7D2FE,Calm indigo + teal collaboration accent
+24,Mental Health App,"mental, health, app",#5B8A72,#A7D9BD,#D97706,#F5FBF8,#1E3A2F,#C6E6D5,Calm sage green pastels + warm trust accent
+25,Pet Tech App,"pet, tech, app",#EA580C,#FB923C,#0D9488,#FFF7ED,#7C2D12,#FFEDD5,Playful warm orange + teal accent for pet-friendly feel
+26,Smart Home/IoT Dashboard,"smart, home, iot, dashboard",#1E3A8A,#38BDF8,#10B981,#0F172A,#E2E8F0,#1E293B,Dark dashboard + blue/green status indicators
+27,EV/Charging Ecosystem,"charging, ecosystem",#009CD1,#67D8F0,#16A34A,#F0FAFF,#0A3D5C,#BAE6FD,Electric blue (#009CD1) + charging green
+28,Subscription Box Service,"subscription, box, service",#C2410C,#FB923C,#0D9488,#FFF7ED,#7C2D12,#FFEDD5,Burnt orange excitement + teal unboxing surprise
+29,Podcast Platform,"podcast, platform",#1C1917,#57534E,#EA580C,#0F172A,#F5F5F4,#292524,Dark audio atmosphere + warm waveform orange accent
+30,Dating App,"dating, app",#E11D48,#FDA4AF,#D97706,#FFF1F2,#881337,#FECDD3,Romantic rose + warm amber connection accent
+31,Micro-Credentials/Badges Platform,"micro, credentials, badges, platform",#1E40AF,#93C5FD,#CA8A04,#EFF6FF,#1E3A8A,#BFDBFE,Trust blue + gold (#FFD700) badge accent
+32,Knowledge Base/Documentation,"knowledge, base, documentation",#334155,#94A3B8,#0369A1,#F8FAFC,#0F172A,#E2E8F0,Clean slate hierarchy + minimal blue accent
+33,Hyperlocal Services,"hyperlocal, services",#B91C1C,#FCA5A5,#0D9488,#FEF2F2,#7F1D1D,#FECACA,Location-pin red + teal trust marker
+34,Beauty/Spa/Wellness Service,"beauty, spa, wellness, service",#10B981,#34D399,#8B5CF6,#ECFDF5,#064E3B,#A7F3D0,Soft pastels (Pink #FFB6C1 Sage #90EE90) + Cream + Gold accents
+35,Luxury/Premium Brand,"luxury, premium, brand",#1C1917,#44403C,#CA8A04,#FAFAF9,#0C0A09,#D6D3D1,Black + Gold (#FFD700) + White + Minimal accent
+36,Restaurant/Food Service,"restaurant, food, service",#DC2626,#F87171,#CA8A04,#FEF2F2,#450A0A,#FECACA,Warm colors (Orange Red Brown) + appetizing imagery
+37,Fitness/Gym App,"fitness, gym, app",#DC2626,#F87171,#16A34A,#FEF2F2,#1F2937,#FECACA,Energetic (Orange #FF6B35 Electric Blue) + Dark bg
+38,Real Estate/Property,"real, estate, property",#0F766E,#14B8A6,#0369A1,#F0FDFA,#134E4A,#99F6E4,Trust Blue (#0077B6) + Gold accents + White
+39,Travel/Tourism Agency,"travel, tourism, agency",#EC4899,#F472B6,#06B6D4,#FDF2F8,#831843,#FBCFE8,Vibrant destination colors + Sky Blue + Warm accents
+40,Hotel/Hospitality,"hotel, hospitality",#1E3A8A,#3B82F6,#CA8A04,#F8FAFC,#1E40AF,#BFDBFE,Warm neutrals + Gold (#D4AF37) + Brand accent
+41,Wedding/Event Planning,"wedding, event, planning",#B76E79,#E8B4BC,#C9A96E,#FFF8F6,#6B3A42,#F5D5DB,Rose gold + champagne gold + cream + sage
+42,Legal Services,"legal, services",#1E3A8A,#1E40AF,#B45309,#F8FAFC,#0F172A,#CBD5E1,Navy Blue (#1E3A5F) + Gold + White
+43,Insurance Platform,"insurance, platform",#0066CC,#60A5FA,#059669,#F0F7FF,#0A2A52,#BFDBFE,Trust blue (#0066CC) + green security + professional
+44,Banking/Traditional Finance,"banking, traditional, finance",#0F766E,#14B8A6,#0369A1,#F0FDFA,#134E4A,#99F6E4,Navy (#0A1628) + Trust Blue + Gold accents
+45,Online Course/E-learning,"online, course, learning",#0D9488,#2DD4BF,#EA580C,#F0FDFA,#134E4A,#5EEAD4,Vibrant learning colors + Progress green
+46,Non-profit/Charity,"non, profit, charity",#0891B2,#22D3EE,#F97316,#ECFEFF,#164E63,#A5F3FC,Cause-related colors + Trust + Warm
+47,Music Streaming,"music, streaming",#1DB954,#57D983,#E11D48,#121212,#F8FAFC,#282828,Dark Spotify-like + vibrant green play + hot-pink accent
+48,Video Streaming/OTT,"video, streaming, ott",#E50914,#FF6B6B,#F59E0B,#141414,#F8FAFC,#2D2D2D,Dark cinematic bg + streaming red + amber CTA
+49,Job Board/Recruitment,"job, board, recruitment",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Professional Blue + Success Green + Neutral
+50,Marketplace (P2P),"marketplace, p2p",#0D9488,#5EEAD4,#EA580C,#F0FDFA,#134E4A,#99F6E4,Teal trust + warm orange deal-closing CTA
+51,Logistics/Delivery,"logistics, delivery",#2563EB,#93C5FD,#EA580C,#EFF6FF,#1E3A8A,#BFDBFE,Tracking blue + orange in-transit + route accent
+52,Agriculture/Farm Tech,"agriculture, farm, tech",#4A7C23,#86D44A,#92400E,#F7FEF0,#1A3409,#C6E8A0,Earth green (#4A7C23) + brown soil + growth feel
+53,Construction/Architecture,"construction, architecture",#4A4A4A,#9CA3AF,#EA580C,#F8F8F8,#1C1C1C,#D4D4D4,Steel grey + safety orange + blueprint structure
+54,Automotive/Car Dealership,"automotive, car, dealership",#1E293B,#64748B,#DC2626,#F8FAFC,#0F172A,#CBD5E1,Metallic slate + sport red CTA + showroom clean
+55,Photography Studio,"photography, studio",#171717,#525252,#F5F5F5,#FAFAFA,#0A0A0A,#E5E5E5,Black + white minimal + high-contrast gallery
+56,Coworking Space,"coworking, space",#B45309,#FCD34D,#0891B2,#FFFBEB,#78350F,#FDE68A,Warm wood amber + energetic teal community accent
+57,Cleaning Service,"cleaning, service",#0891B2,#67E8F9,#059669,#ECFEFF,#155E75,#A5F3FC,Fresh blue (#00B4D8) + clean green + sparkling feel
+58,Home Services (Plumber/Electrician),"home, services, plumber, electrician",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Trust Blue + Safety Orange + Professional grey
+59,Childcare/Daycare,"childcare, daycare",#F472B6,#FBCFE8,#0D9488,#FDF2F8,#9D174D,#FCE7F3,Playful pink pastels + safe teal + warm nurturing
+60,Senior Care/Elderly,"senior, care, elderly",#1E40AF,#93C5FD,#B45309,#EFF6FF,#1E3A8A,#BFDBFE,Calm trustworthy blue + warm amber accent + readable
+61,Medical Clinic,"medical, clinic",#0077B6,#90E0EF,#059669,#F0F9FF,#023E58,#BAE6FD,Medical blue (#0077B6) + calm green trust + clinical white
+62,Pharmacy/Drug Store,"pharmacy, drug, store",#16A34A,#86EFAC,#0284C7,#F0FDF4,#14532D,#BBF7D0,Pharmacy green + trust blue + clean clinical white
+63,Dental Practice,"dental, practice",#0284C7,#7DD3FC,#FACC15,#F0F9FF,#0C4A6E,#BAE6FD,Fresh blue smile + bright yellow accent + clean white
+64,Veterinary Clinic,"veterinary, clinic",#0D9488,#5EEAD4,#EA580C,#F0FDFA,#134E4A,#99F6E4,Caring teal + warm pet-friendly orange accent
+65,Florist/Plant Shop,"florist, plant, shop",#16A34A,#86EFAC,#DB2777,#F0FDF4,#14532D,#BBF7D0,Natural green + floral pink accent + earth base
+66,Bakery/Cafe,"bakery, cafe",#92400E,#D97706,#DC2626,#FFFBEB,#78350F,#FDE68A,Warm brown + cream gold + appetizing red accent
+67,Coffee Shop,"coffee, shop",#6F4E37,#A8876A,#CA8A04,#FAF5EF,#3E2723,#E0D0C0,Coffee brown (#6F4E37) + cream + warm gold accent
+68,Brewery/Winery,"brewery, winery",#7F1D1D,#DC2626,#CA8A04,#FEF2F2,#450A0A,#FECACA,Deep burgundy + craft gold + amber aesthetic
+69,Airline,airline,#0284C7,#7DD3FC,#E11D48,#F0F9FF,#0C4A6E,#BAE6FD,Sky blue (#0284C7) + cloud white + red CTA accent
+70,News/Media Platform,"news, media, platform",#DC2626,#F87171,#1E293B,#FFFFFF,#0F172A,#E5E7EB,Breaking-news red + high contrast + editorial clean
+71,Magazine/Blog,"magazine, blog",#BE185D,#F9A8D4,#0F172A,#FFFBFB,#831843,#FCE7F3,Editorial rose + clean white + sophisticated dark accent
+72,Freelancer Platform,"freelancer, platform",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Professional Blue + Success Green + Neutral
+73,Consulting Firm,"consulting, firm",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Navy + Gold + Professional grey
+74,Marketing Agency,"marketing, agency",#EC4899,#F472B6,#06B6D4,#FDF2F8,#831843,#FBCFE8,Bold brand colors + Creative freedom
+75,Event Management,"event, management",#E11D48,#FB7185,#B45309,#FFF1F2,#881337,#FECDD3,Coral energy + deep amber excitement accent
+76,Conference/Webinar Platform,"conference, webinar, platform",#0F172A,#334155,#0369A1,#F8FAFC,#020617,#E2E8F0,Professional Blue + Video accent + Brand
+77,Membership/Community,"membership, community",#0D9488,#5EEAD4,#D97706,#F0FDFA,#134E4A,#99F6E4,Warm teal community + amber engagement accent
+78,Newsletter Platform,"newsletter, platform",#1E40AF,#93C5FD,#DC2626,#EFF6FF,#1E3A8A,#BFDBFE,Editorial blue + red subscribe CTA accent
+79,Digital Products/Downloads,"digital, products, downloads",#0891B2,#67E8F9,#EA580C,#ECFEFF,#155E75,#A5F3FC,Digital cyan + warm download CTA accent
+80,Church/Religious Organization,"church, religious, organization",#92400E,#D97706,#1E3A8A,#FFFBEB,#78350F,#FDE68A,Warm gold + deep blue stained-glass accent
+81,Sports Team/Club,"sports, team, club",#DC2626,#F87171,#15803D,#FEF2F2,#7F1D1D,#FECACA,Energetic red team spirit + victory green accent
+82,Museum/Gallery,"museum, gallery",#292524,#78716C,#CA8A04,#FAF9F6,#1C1917,#E7E5E4,Neutral stone gallery + gold exhibition accent
+83,Theater/Cinema,"theater, cinema",#1C1917,#44403C,#CA8A04,#0F0F0F,#FAFAF9,#292524,Dark curtain + spotlight gold accent + dramatic feel
+84,Language Learning App,"language, learning, app",#0D9488,#2DD4BF,#EA580C,#F0FDFA,#134E4A,#5EEAD4,Playful colors + Progress indicators + Country flags
+85,Coding Bootcamp,"coding, bootcamp",#16A34A,#4ADE80,#0EA5E9,#0F172A,#E2E8F0,#1E293B,Terminal green code + sky-blue brand accent
+86,Cybersecurity Platform,"cybersecurity, security, cyber, hacker",#00FF41,#0D0D0D,#00FF41,#000000,#E0E0E0,#1F1F1F,Matrix Green + Deep Black + Terminal feel
+87,Developer Tool / IDE,"developer, tool, ide, code, dev",#3B82F6,#1E293B,#2563EB,#0F172A,#F1F5F9,#334155,Dark syntax theme colors + Blue focus
+88,Biotech / Life Sciences,"biotech, science, biology, medical",#0EA5E9,#0284C7,#10B981,#F8FAFC,#0F172A,#E2E8F0,Sterile White + DNA Blue + Life Green
+89,Space Tech / Aerospace,"space, aerospace, tech, futuristic",#FFFFFF,#94A3B8,#3B82F6,#0B0B10,#F8FAFC,#1E293B,Deep Space Black + Star White + Metallic
+90,Architecture / Interior,"architecture, interior, design, luxury",#171717,#404040,#D4AF37,#FFFFFF,#171717,#E5E5E5,Monochrome + Gold Accent + High Imagery
+91,Quantum Computing,"quantum, qubit, tech",#00FFFF,#7B61FF,#FF00FF,#050510,#E0E0FF,#333344,Interference patterns + Neon + Deep Dark
+92,Biohacking / Longevity,"bio, health, science",#FF4D4D,#0D9488,#00E676,#F5F5F7,#1C1C1E,#E5E5EA,Biological red + true teal + clinical white
+93,Autonomous Systems,"drone, robot, fleet",#00FF41,#008F11,#FF3333,#0D1117,#E6EDF3,#30363D,Terminal Green + Tactical Dark
+94,Generative AI Art,"art, gen-ai, creative",#111111,#333333,#FFFFFF,#FAFAFA,#000000,#E5E5E5,Canvas Neutral + High Contrast
+95,Spatial / Vision OS,"spatial, glass, vision",#FFFFFF,#E5E5E5,#007AFF,#888888,#000000,#FFFFFF,Glass opacity 20% + System Blue
+96,Climate Tech,"climate, green, energy",#2E8B57,#87CEEB,#FFD700,#F0FFF4,#1A3320,#C6E6C6,Nature Green + Solar Yellow + Air Blue

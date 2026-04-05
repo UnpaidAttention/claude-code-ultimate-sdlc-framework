@@ -1,0 +1,400 @@
+---
+name: thoroughness-remediate
+description: |
+  Remediate thoroughness gaps from audit report. Creates DIVE files, updates scope-lock/connectivity-matrix/FEAT specs, generates code remediation AIOUs, and groups into runs. Requires audit report.
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - Agent
+  - AskUserQuestion
+---
+
+## Preamble (run first)
+
+```bash
+# Detect project state
+AG_HOME="${HOME}/.antigravity"
+AG_PROJECT=".antigravity"
+AG_SKILLS="${HOME}/.claude/skills/antigravity"
+
+# Check if project is initialized
+if [ -d "$AG_PROJECT" ]; then
+  echo "PROJECT: initialized"
+  # Read current state
+  if [ -f "$AG_PROJECT/project-context.md" ]; then
+    COUNCIL=$(grep -A1 "## Active Council" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    PHASE=$(grep -A1 "## Current Phase" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    STATUS=$(grep -A1 "## Status" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    echo "COUNCIL: $COUNCIL"
+    echo "PHASE: $PHASE"  
+    echo "STATUS: $STATUS"
+  fi
+else
+  echo "PROJECT: not initialized (run /init first)"
+fi
+
+# Read global config
+if [ -f "$AG_HOME/config.yaml" ]; then
+  GOV_MODE=$(grep "governance_mode:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  PROJ_TYPE=$(grep "project_type:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  echo "GOVERNANCE: ${GOV_MODE:-standard}"
+  echo "PROJECT_TYPE: ${PROJ_TYPE:-web-app}"
+fi
+```
+
+After the preamble runs, use the detected state to verify prerequisites for this workflow.
+
+## Knowledge Skills
+
+Load these knowledge skills for reference during this workflow:
+- Read `~/.claude/skills/antigravity/knowledge/correction-planning/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/feature-deep-dive/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/aiou-decomposition/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/gap-analysis/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+
+
+# /thoroughness-remediate - Thoroughness Remediation
+
+## Arguments
+
+| Argument | Format | Default | Description |
+|----------|--------|---------|-------------|
+| `--severity` | Critical / Major | Critical+Major | Only remediate gaps at or above this severity |
+| `--spec-only` | flag | off | Remediate spec gaps only — skip code AIOU generation |
+| `--code-only` | flag | off | Generate code AIOUs only — skip spec remediation |
+
+## Lens / Skills / Model
+**Lens**: `[Quality]` + `[Architecture]` | **Model**: Claude Opus 4
+> Apply RARV cycle per workflow-conventions.md
+
+## Prerequisites
+
+- `.antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md` must exist
+- The audit report must contain at least one gap matching the severity filter
+
+If prerequisites not met:
+```
+No audit report found. Run /thoroughness-audit first.
+```
+
+---
+
+## Workflow
+
+### Step 1: Load Audit Report
+
+Read `.antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md`. Extract:
+- All gaps from the Consolidated Gap Inventory
+- Retroactive deep-dive analyses (for DIVE file creation)
+- Connectivity analysis (for matrix creation)
+- Feature implementation status table
+- Run sizing analysis
+
+Also read:
+- `specs/scope-lock.md` — canonical feature list
+- `.antigravity/config.yaml` — `thoroughness.severity_threshold`
+- `.antigravity/project-context.md` — current project state
+
+### Step 2: Triage and Prioritize
+
+1. **Apply severity filter** — `--severity` argument (default: Critical + Major). Exclude gaps below threshold.
+2. **Apply mode filter** — if `--spec-only`: keep only Spec-type gaps. If `--code-only`: keep only Code-type gaps.
+3. **Order remediation**:
+   - Critical before Major before Minor
+   - Spec gaps before Code gaps (specs must exist before code can reference them)
+   - Cross-cutting gaps before per-feature gaps (connectivity matrix before individual DIVE files)
+4. **Resolve dependencies**:
+   - DIVE files must be created before FEAT Sections 9-10 can be updated (FEAT references DIVE)
+   - Connectivity matrix must exist before PRH-009 code remediation
+
+Display:
+```
+Thoroughness Remediation Plan
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Gaps to remediate: [N]
+  Critical: [N]
+  Major:    [N]
+
+Spec items: [N]
+Code items: [N]
+
+Remediation order:
+1. [gap description] (TG-XXX)
+2. [gap description] (TG-XXX)
+...
+```
+
+### Step 3: Remediate Spec Gaps
+
+> Skip this step if `--code-only` is set.
+
+Execute spec remediations in dependency order:
+
+#### Step 3a: Create DIVE Files
+
+For each feature with a TG gap for Criterion 2 (missing DIVE):
+
+1. Read the retroactive deep-dive analysis from the audit report
+2. Create `specs/deep-dives/DIVE-{Feature-ID}.md`
+3. Populate all 7 sections from the retroactive analysis
+4. Preserve `[UNCERTAIN]` flags — user should review these
+5. Add a header note: `> Generated by /thoroughness-remediate from audit report retroactive analysis. Review [UNCERTAIN] items.`
+
+#### Step 3b: Add Complexity Column to scope-lock.md
+
+If TG gaps exist for Criterion 1 (missing complexity classification):
+
+1. Read `specs/scope-lock.md`
+2. Add a Complexity column if missing
+3. For each feature without a value, classify using the complexity scoring from the feature-deep-dive skill:
+   - UI Surfaces + Data Entities + Integration Points + Business Logic + User Interactions
+   - 5-7 = Simple, 8-11 = Moderate, 12-15 = Complex
+4. Base classification on DIVE files (newly created or pre-existing) and FEAT specs
+
+#### Step 3c: Create/Update Connectivity Matrix
+
+If TG gap exists for Criterion 4 (missing or incomplete connectivity matrix):
+
+1. If `specs/connectivity-matrix.md` does not exist: create it
+2. Read connectivity analysis from audit report
+3. Read DIVE Section 5 (Cross-Feature Integration) from all DIVE files
+4. Build the full matrix with all features on both axes
+5. For each pair: document interaction type (data/UI/event/none), direction, and mechanism
+6. Mark interactions sourced from retroactive analysis as `[VERIFY]`
+
+Format:
+```markdown
+# Connectivity Matrix
+
+## Feature Interaction Matrix
+
+| | FEAT-001 | FEAT-002 | FEAT-003 | ... |
+|---|---------|---------|---------|-----|
+| FEAT-001 | — | data A→B | none | ... |
+| FEAT-002 | data B→A | — | UI shared | ... |
+| FEAT-003 | none | UI shared | — | ... |
+
+## Interaction Details
+
+### FEAT-001 ↔ FEAT-002: Data Sharing
+- Direction: Bidirectional
+- Mechanism: [description]
+- Shared Data: [what is shared]
+- Implementation Wave: [wave]
+```
+
+#### Step 3d: Update FEAT Specs with Sections 9-10
+
+For each feature with TG gaps for Criterion 3 (missing FEAT Sections 9-10):
+
+1. Read the feature's DIVE file (created in 3a or pre-existing)
+2. Read the existing FEAT spec
+3. Append Section 9 (Component Inventory):
+   - Pull component table from DIVE Section 2
+   - Include total component count
+4. Append Section 10 (Navigation & Access):
+   - Pull from DIVE Section 3 (UI Placement & Navigation)
+   - Include route, navigation path, entry points
+   - For non-UI features: "N/A — no UI surface"
+
+#### Spec Remediation Summary
+
+After completing spec remediations, display:
+
+```
+Spec Remediation Complete
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+DIVE files created:       [N]
+scope-lock.md updated:    [Yes/No]
+Connectivity matrix:      [Created/Updated/Already existed]
+FEAT specs updated:       [N] (Sections 9-10 added)
+
+Items marked [UNCERTAIN]: [N] — review these manually
+Items marked [VERIFY]:    [N] — verify these interactions
+
+Spec gaps resolved: [N] / [total spec gaps]
+```
+
+If `--spec-only`: **STOP** here. Display final summary and exit.
+
+### Step 4: Generate Code Remediation AIOUs
+
+> Skip this step if `--spec-only` is set.
+
+For each Code-type gap (Criteria 5, 7, 8):
+
+1. **Determine gap type and wave**:
+   - Missing feature verification (Criterion 5) → verification AIOU in the feature's final wave
+   - Missing component (Criterion 7 / PRH-008) → AIOU in the component's assigned wave:
+     - Data entities → Wave 2
+     - Services → Wave 3
+     - API endpoints → Wave 4
+     - UI components → Wave 5
+     - Integration → Wave 6
+   - Missing connectivity (Criterion 8 / PRH-009) → Wave 6 integration AIOU
+
+2. **Create AIOU spec** at `specs/aious/AIOU-REM-{NNN}.md`:
+   - Use `AIOU-REM-` prefix to distinguish remediation AIOUs from original planning AIOUs
+   - Include: title, feature reference, gap reference (TG-XXX), wave assignment, effort estimate
+   - Include implementation instructions derived from the DIVE file and gap details
+   - Reference the specific components or interactions that need implementation
+
+3. **Estimate effort** per AIOU using the framework's effort scale
+
+### Step 5: Group into Remediation Runs
+
+If total remediation AIOUs exceed run limits (config: `development.max_aious_per_run` / `development.max_effort_per_run`):
+
+1. Group AIOUs into runs respecting:
+   - Max 15 AIOUs per run (or `.antigravity/config.yaml` value)
+   - Max 45 effort per run (or `.antigravity/config.yaml` value)
+   - Wave ordering within each run (Wave 2 → 3 → 4 → 5 → 6)
+   - Feature cohesion where possible (keep a feature's AIOUs together)
+
+2. Create `.antigravity/council-state/development/remediation-tracker.md`:
+
+```markdown
+# Remediation Tracker
+
+**Source**: /thoroughness-remediate from audit report [DATE]
+**Total Remediation AIOUs**: [N]
+**Total Effort**: [N]
+**Runs**: [N]
+
+## Run REM-1
+
+| AIOU | Feature | Wave | Effort | Status |
+|------|---------|------|--------|--------|
+| AIOU-REM-001 | FEAT-XXX | W2 | [N] | Pending |
+| AIOU-REM-002 | FEAT-XXX | W3 | [N] | Pending |
+
+**Run Total**: [N] AIOUs, [N] effort
+
+## Run REM-2
+...
+```
+
+3. If AIOUs fit in a single run: still create the tracker for consistency, with one run entry.
+
+### Step 6: Verification Plan
+
+Document the verification approach:
+
+```
+Verification Plan
+━━━━━━━━━━━━━━━━
+
+After completing remediation runs:
+1. Run /thoroughness-audit to re-evaluate all features
+2. Target: 0 Critical gaps, 0 Major gaps
+3. Any remaining gaps will appear in the new audit report
+
+Expected result after full remediation:
+- All features have DIVE files with 7 sections
+- scope-lock.md has Complexity column
+- Connectivity matrix covers all features
+- All FEAT specs have Sections 9-10
+- All Tier A features pass PRH-008 and PRH-009
+```
+
+### Step 7: Integration Guidance
+
+Based on gap count and severity, recommend one of three approaches:
+
+**Option A: Inject into Current Cycle**
+- Best when: ≤10 remediation AIOUs, current development cycle is active
+- How: Add remediation runs to the existing run-tracker, execute before next gate
+
+**Option B: Patch Cycle**
+- Best when: 11-30 remediation AIOUs, or significant spec changes needed
+- How: Run `/new-cycle --type patch` to create a focused patch cycle for thoroughness remediation
+
+**Option C: Improvement Cycle**
+- Best when: >30 remediation AIOUs, or project needs broader quality improvements
+- How: Run `/new-cycle --type improvement` to create an improvement cycle
+
+Display the recommendation with reasoning:
+```
+Integration Recommendation: [A/B/C]
+Reasoning: [why this option fits]
+
+To proceed:
+  Option A: Add REM runs to your current run-tracker and execute
+  Option B: Run /new-cycle --type patch
+  Option C: Run /new-cycle --type improvement
+```
+
+### Step 8: Update State
+
+1. Append to `.antigravity/progress.md`:
+```
+### [DATE] - Thoroughness Remediation
+
+**Workflow**: /thoroughness-remediate
+**Gaps Remediated (Spec)**: [N]
+**Code AIOUs Generated**: [N]
+**Remediation Runs**: [N]
+**Integration Recommendation**: [A/B/C]
+```
+
+2. Create `.antigravity/council-state/audit/thoroughness/remediation-status.md`:
+```markdown
+# Remediation Status
+
+**Date**: [DATE]
+**Source Audit**: .antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md
+
+## Summary
+
+| Category | Addressed | Remaining |
+|----------|-----------|-----------|
+| Spec gaps | [N] | [N] |
+| Code gaps (AIOUs created) | [N] | [N] |
+
+## Spec Artifacts Created/Modified
+
+- [list of files created or modified]
+
+## Code Remediation AIOUs
+
+- [list of AIOU-REM-XXX specs created]
+
+## Next Steps
+
+- [based on integration recommendation]
+```
+
+3. Display final completion:
+
+```
+Thoroughness Remediation Complete
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Spec Remediation:
+  DIVE files created:     [N]
+  FEAT specs updated:     [N]
+  Connectivity matrix:    [Created/Updated]
+  scope-lock.md updated:  [Yes/No]
+
+Code Remediation:
+  AIOUs generated:        [N] (AIOU-REM-001 through AIOU-REM-NNN)
+  Remediation runs:       [N]
+  Total effort:           [N]
+
+Integration: [Recommendation A/B/C]
+
+Files:
+  Remediation tracker:  .antigravity/council-state/development/remediation-tracker.md
+  Remediation status:   .antigravity/council-state/audit/thoroughness/remediation-status.md
+  AIOU specs:           specs/aious/AIOU-REM-*.md
+
+Next: Execute remediation runs, then re-run /thoroughness-audit to verify 0 Critical/Major gaps.
+```

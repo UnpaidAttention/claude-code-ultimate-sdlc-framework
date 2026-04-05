@@ -1,0 +1,124 @@
+---
+name: validate-e1
+description: |
+  Execute Enhancement Track E1 - Feature Richness. Evaluate feature richness and identify enhancement opportunities.
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - Agent
+  - AskUserQuestion
+---
+
+## Preamble (run first)
+
+```bash
+# Detect project state
+AG_HOME="${HOME}/.antigravity"
+AG_PROJECT=".antigravity"
+AG_SKILLS="${HOME}/.claude/skills/antigravity"
+
+# Check if project is initialized
+if [ -d "$AG_PROJECT" ]; then
+  echo "PROJECT: initialized"
+  # Read current state
+  if [ -f "$AG_PROJECT/project-context.md" ]; then
+    COUNCIL=$(grep -A1 "## Active Council" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    PHASE=$(grep -A1 "## Current Phase" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    STATUS=$(grep -A1 "## Status" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    echo "COUNCIL: $COUNCIL"
+    echo "PHASE: $PHASE"  
+    echo "STATUS: $STATUS"
+  fi
+else
+  echo "PROJECT: not initialized (run /init first)"
+fi
+
+# Read global config
+if [ -f "$AG_HOME/config.yaml" ]; then
+  GOV_MODE=$(grep "governance_mode:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  PROJ_TYPE=$(grep "project_type:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  echo "GOVERNANCE: ${GOV_MODE:-standard}"
+  echo "PROJECT_TYPE: ${PROJ_TYPE:-web-app}"
+fi
+```
+
+After the preamble runs, use the detected state to verify prerequisites for this workflow.
+
+## Knowledge Skills
+
+Load these knowledge skills for reference during this workflow:
+- Read `~/.claude/skills/antigravity/knowledge/feature-assessment/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/competitive-analysis/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/enhancement-planning/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/creative-ideation/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+
+
+# /validate-e1 - Feature Richness
+
+## Lens / Skills / Model
+**Lens**: `[Requirements]` | **Model**: Claude Opus 4.5
+> Apply RARV cycle, session protocol per council-validation.md
+
+## Prerequisites
+
+- Gate P4 must be passed
+
+If prerequisites not met:
+```
+Gate P4 not passed. Run /validate-gate-p4 first.
+```
+
+---
+
+## Workflow
+
+### Step 1: Update Project State
+
+Update `.antigravity/project-context.md`:
+- Set `Current Track`: Enhancement
+- Set `Current Phase`: E1 - Feature Richness
+- Set `Status`: in_progress
+
+### Step 2: Feature Richness Assessment
+
+Evaluate current feature set:
+
+Use **Display Template** from `council-validation.md` to show: Feature Richness Assessment
+
+### Step 3: Competitive Analysis
+
+Brief competitive analysis:
+
+Use **Display Template** from `council-validation.md` to show: Competitive Position
+
+### Step 4: Enhancement Candidates
+
+Identify enhancement candidates:
+
+Use **Display Template** from `council-validation.md` to show: Enhancement Candidates
+
+### Step 5: Phase Completion Criteria
+
+- [ ] Feature richness assessed
+- [ ] Competitive analysis complete
+- [ ] Enhancement candidates identified
+- [ ] Priorities assigned
+
+### Step 6: Complete Phase
+
+```
+## E1: Feature Richness - Complete
+
+**Feature Richness Score**: [X]/10
+**Enhancement Candidates**: [Y]
+**Quick Wins Identified**: [Z]
+
+**Next Step**: Run `/validate-e2` to continue to Innovation Opportunities
+```
+
+---

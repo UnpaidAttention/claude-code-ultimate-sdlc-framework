@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ag-config — Read/write Antigravity config values
+# Usage:
+#   ag-config get <key>           Read a config value
+#   ag-config set <key> <value>   Write a config value
+#   ag-config list                List all config values
+
+CONFIG_FILE="$HOME/.antigravity/config.yaml"
+
+usage() {
+    echo "Usage:"
+    echo "  ag-config get <key>           Read a config value"
+    echo "  ag-config set <key> <value>   Write a config value"
+    echo "  ag-config list                List all config values"
+    exit 1
+}
+
+ensure_config() {
+    if [[ ! -f "$CONFIG_FILE" ]]; then
+        echo "Error: Config file not found at $CONFIG_FILE" >&2
+        echo "Run the setup script first: ~/.claude/skills/antigravity/setup" >&2
+        exit 1
+    fi
+}
+
+cmd_get() {
+    local key="$1"
+    ensure_config
+    local value
+    value=$(grep -E "^${key}:" "$CONFIG_FILE" | head -1 | sed 's/^[^:]*:[[:space:]]*//')
+    if [[ -z "$value" ]]; then
+        echo "Key not found: $key" >&2
+        exit 1
+    fi
+    echo "$value"
+}
+
+cmd_set() {
+    local key="$1"
+    local value="$2"
+    ensure_config
+    if grep -qE "^${key}:" "$CONFIG_FILE"; then
+        # Update existing key
+        sed -i "s|^${key}:.*|${key}: ${value}|" "$CONFIG_FILE"
+    else
+        # Append new key
+        echo "${key}: ${value}" >> "$CONFIG_FILE"
+    fi
+    echo "Set ${key} = ${value}"
+}
+
+cmd_list() {
+    ensure_config
+    echo "# Antigravity Config ($CONFIG_FILE)"
+    echo ""
+    grep -v '^#' "$CONFIG_FILE" | grep -v '^[[:space:]]*$' || true
+}
+
+# ── Main ─────────────────────────────────────────────────────────────
+if [[ $# -lt 1 ]]; then
+    usage
+fi
+
+case "$1" in
+    get)
+        [[ $# -lt 2 ]] && usage
+        cmd_get "$2"
+        ;;
+    set)
+        [[ $# -lt 3 ]] && usage
+        cmd_set "$2" "$3"
+        ;;
+    list)
+        cmd_list
+        ;;
+    *)
+        usage
+        ;;
+esac

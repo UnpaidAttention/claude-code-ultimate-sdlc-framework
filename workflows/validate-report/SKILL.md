@@ -1,0 +1,91 @@
+---
+name: validate-report
+description: |
+  Generate comprehensive validation and perfection report
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - Agent
+  - AskUserQuestion
+---
+
+## Preamble (run first)
+
+```bash
+# Detect project state
+AG_HOME="${HOME}/.antigravity"
+AG_PROJECT=".antigravity"
+AG_SKILLS="${HOME}/.claude/skills/antigravity"
+
+# Check if project is initialized
+if [ -d "$AG_PROJECT" ]; then
+  echo "PROJECT: initialized"
+  # Read current state
+  if [ -f "$AG_PROJECT/project-context.md" ]; then
+    COUNCIL=$(grep -A1 "## Active Council" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    PHASE=$(grep -A1 "## Current Phase" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    STATUS=$(grep -A1 "## Status" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    echo "COUNCIL: $COUNCIL"
+    echo "PHASE: $PHASE"  
+    echo "STATUS: $STATUS"
+  fi
+else
+  echo "PROJECT: not initialized (run /init first)"
+fi
+
+# Read global config
+if [ -f "$AG_HOME/config.yaml" ]; then
+  GOV_MODE=$(grep "governance_mode:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  PROJ_TYPE=$(grep "project_type:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  echo "GOVERNANCE: ${GOV_MODE:-standard}"
+  echo "PROJECT_TYPE: ${PROJ_TYPE:-web-app}"
+fi
+```
+
+After the preamble runs, use the detected state to verify prerequisites for this workflow.
+
+## Knowledge Skills
+
+Load these knowledge skills for reference during this workflow:
+- Read `~/.claude/skills/antigravity/knowledge/report-generation/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/metrics-analysis/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+
+
+# Workflow: validate-report
+
+---
+
+## Lens / Skills / Model
+**Lens**: `[Quality]` + `[Documentation]` | **Model**: Claude Sonnet 4
+> Apply session protocol per `council-validation.md`
+---
+
+Generate comprehensive validation & perfection report.
+
+## Trigger
+`/validate-report` or "Generate validation report"
+
+## Behavior
+
+1. Read all state files
+2. Compile statistics
+3. Summarize findings across all tracks
+4. Generate comprehensive report
+5. Include recommendations
+
+## Output
+
+Use **Display Template** from `council-validation.md` to show: Software Validation & Perfection Report
+
+## Notes
+- Be thorough and complete
+- Include all statistics
+- Provide clear recommendation
+- Reference all supporting documents

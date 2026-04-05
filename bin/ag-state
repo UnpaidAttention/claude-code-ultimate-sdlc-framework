@@ -1,0 +1,405 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ag-state — Per-project state management for Antigravity SDLC
+# Usage:
+#   ag-state init [project-name]              Create .antigravity/ with templates
+#   ag-state current                          Show current council/phase/gate
+#   ag-state advance <council> <phase>        Update project-context.md
+#   ag-state gate-check <gate-id>             Show gate status
+#   ag-state archive-cycle                    Move state to .cycles/
+#   ag-state new-cycle <type>                 Create fresh cycle
+
+AG_DIR=".antigravity"
+CONTEXT_FILE="$AG_DIR/project-context.md"
+MANIFEST_FILE="$AG_DIR/project-manifest.md"
+TODAY=$(date +%Y-%m-%d)
+
+usage() {
+    echo "Usage:"
+    echo "  ag-state init [project-name]              Create .antigravity/ with templates"
+    echo "  ag-state current                          Show current council/phase/gate"
+    echo "  ag-state advance <council> <phase>        Update project-context.md"
+    echo "  ag-state gate-check <gate-id>             Show gate status"
+    echo "  ag-state archive-cycle                    Move state to .cycles/"
+    echo "  ag-state new-cycle <type>                 Create fresh cycle (full|feature|patch|maintenance|improvement)"
+    exit 1
+}
+
+ensure_project() {
+    if [[ ! -d "$AG_DIR" ]]; then
+        echo "Error: No .antigravity/ directory found in current project." >&2
+        echo "Run: ag-state init [project-name]" >&2
+        exit 1
+    fi
+}
+
+get_context_field() {
+    local field="$1"
+    grep -E "^## ${field}" "$CONTEXT_FILE" -A 1 | tail -1 | xargs
+}
+
+get_cycle_number() {
+    if [[ -f "$CONTEXT_FILE" ]]; then
+        grep -oP 'Cycle: cycle-\K[0-9]+' "$CONTEXT_FILE" 2>/dev/null | head -1 || echo "001"
+    else
+        echo "001"
+    fi
+}
+
+# ── init ─────────────────────────────────────────────────────────────
+cmd_init() {
+    local project_name="${1:-$(basename "$(pwd)")}"
+
+    if [[ -d "$AG_DIR" ]]; then
+        echo "Warning: .antigravity/ already exists."
+        read -rp "Re-initialize? This will overwrite state files. [y/N] " answer
+        if [[ "${answer,,}" != "y" ]]; then
+            echo "Aborted."
+            exit 0
+        fi
+    fi
+
+    # Read governance mode from global config if available
+    local governance_mode="standard"
+    local project_type="web-app"
+    if [[ -f "$HOME/.antigravity/config.yaml" ]]; then
+        governance_mode=$(grep -E '^governance_mode:' "$HOME/.antigravity/config.yaml" | sed 's/^[^:]*:[[:space:]]*//' || echo "standard")
+        project_type=$(grep -E '^project_type:' "$HOME/.antigravity/config.yaml" | sed 's/^[^:]*:[[:space:]]*//' || echo "web-app")
+    fi
+
+    mkdir -p "$AG_DIR"/{council-state/{planning,development,audit,validation},specs/{features,aious,adrs},handoffs,.cycles}
+
+    # project-context.md
+    cat > "$CONTEXT_FILE" <<EOF
+# Project Context
+
+## Active Council
+planning
+
+## Current Phase
+1
+
+## Status
+not_started
+
+## Cycle Information
+- Cycle: cycle-001
+- Type: full
+- Started: ${TODAY}
+- Governance Mode: ${governance_mode}
+EOF
+
+    # project-manifest.md
+    cat > "$MANIFEST_FILE" <<EOF
+# Project Manifest
+
+## Project
+- Name: ${project_name}
+- Type: ${project_type}
+- Created: ${TODAY}
+- Framework: antigravity-sdlc-claude-code
+
+## Cycle History
+| Cycle | Type | Started | Completed | Features |
+|-------|------|---------|-----------|----------|
+| cycle-001 | full | ${TODAY} | — | — |
+EOF
+
+    # config.yaml (project-level)
+    cat > "$AG_DIR/config.yaml" <<EOF
+# Project-level Antigravity config
+project_name: ${project_name}
+governance_mode: ${governance_mode}
+project_type: ${project_type}
+EOF
+
+    # progress.md
+    cat > "$AG_DIR/progress.md" <<EOF
+# Progress Tracker
+
+## Current Cycle: cycle-001
+
+### Planning Council
+- [ ] Phase 1: Product Concept
+- [ ] Gate 1.5: Scope Lock
+- [ ] Phase 2: Feature Discovery
+- [ ] Phase 3: Feature Specs
+- [ ] Gate 3.5: Spec Completeness
+- [ ] Phase 3 (Supporting): Supporting Specs
+- [ ] Phase 8: Handoff Prep
+- [ ] Gate 8: Planning Exit
+
+### Development Council
+- [ ] Wave 0: Environment Setup
+- [ ] Wave 1: Data Layer
+- [ ] Wave 2: Business Logic
+- [ ] Wave 3: API Layer
+- [ ] Gate I4: Integration Check
+- [ ] Wave 4: Integration
+- [ ] Wave 5: UI Layer
+- [ ] Wave 6: Polish
+- [ ] Gate I8: Development Exit
+
+### Audit Council
+- [ ] Track T: Testing
+- [ ] Track A: Analysis
+- [ ] Track E: Evidence
+- [ ] Gate A2: Audit Exit
+
+### Validation Council
+- [ ] Track V: Verification
+- [ ] Track C: Compliance
+- [ ] Track P: Performance
+- [ ] Track E: Environment
+- [ ] Track S: Sign-off
+- [ ] Gate V5: Release Gate
+EOF
+
+    # Council state files
+    for council in planning development audit validation; do
+        cat > "$AG_DIR/council-state/${council}/current-state.md" <<EOF
+# ${council^} Council State
+
+## Status
+not_started
+
+## Last Updated
+${TODAY}
+
+## Notes
+
+EOF
+    done
+
+    echo "Initialized .antigravity/ for project: ${project_name}"
+    echo "  Governance mode: ${governance_mode}"
+    echo "  Project type: ${project_type}"
+    echo ""
+    echo "Next: run /planning-start or /init in Claude Code"
+}
+
+# ── current ──────────────────────────────────────────────────────────
+cmd_current() {
+    ensure_project
+    echo "=== Antigravity Project State ==="
+    echo ""
+    echo "Council: $(get_context_field 'Active Council')"
+    echo "Phase:   $(get_context_field 'Current Phase')"
+    echo "Status:  $(get_context_field 'Status')"
+    echo ""
+    grep -E '^- (Cycle|Type|Started|Governance)' "$CONTEXT_FILE" 2>/dev/null || true
+}
+
+# ── advance ──────────────────────────────────────────────────────────
+cmd_advance() {
+    local council="$1"
+    local phase="$2"
+    ensure_project
+
+    # Validate council
+    case "$council" in
+        planning|development|audit|validation) ;;
+        *) echo "Error: Invalid council '$council'. Must be: planning, development, audit, validation" >&2; exit 1 ;;
+    esac
+
+    # Update project-context.md
+    sed -i "s/^## Active Council$/## Active Council/" "$CONTEXT_FILE"
+    sed -i "/^## Active Council$/{ n; s/.*/${council}/ }" "$CONTEXT_FILE"
+    sed -i "/^## Current Phase$/{ n; s/.*/${phase}/ }" "$CONTEXT_FILE"
+    sed -i "/^## Status$/{ n; s/.*/in_progress/ }" "$CONTEXT_FILE"
+
+    # Update council state
+    local state_file="$AG_DIR/council-state/${council}/current-state.md"
+    if [[ -f "$state_file" ]]; then
+        sed -i "s/^## Status$/## Status/" "$state_file"
+        sed -i "/^## Status$/{ n; s/.*/in_progress — Phase ${phase}/ }" "$state_file"
+        sed -i "s/^## Last Updated$/## Last Updated/" "$state_file"
+        sed -i "/^## Last Updated$/{ n; s/.*/${TODAY}/ }" "$state_file"
+    fi
+
+    echo "Advanced to: ${council} / Phase ${phase}"
+}
+
+# ── gate-check ───────────────────────────────────────────────────────
+cmd_gate_check() {
+    local gate_id="$1"
+    ensure_project
+
+    echo "=== Gate Check: ${gate_id} ==="
+    echo ""
+
+    case "$gate_id" in
+        1.5)
+            echo "Gate 1.5 — Scope Lock"
+            echo "Required: User scope confirmation + scope-lock.md generated"
+            [[ -f "$AG_DIR/specs/scope-lock.md" ]] && echo "  [x] scope-lock.md exists" || echo "  [ ] scope-lock.md missing"
+            ;;
+        3.5)
+            echo "Gate 3.5 — Spec Completeness"
+            echo "Required: Every feature in scope-lock has >= 1 AIOU"
+            local feat_count=$(ls "$AG_DIR/specs/features/" 2>/dev/null | wc -l)
+            local aiou_count=$(ls "$AG_DIR/specs/aious/" 2>/dev/null | wc -l)
+            echo "  Features: ${feat_count}"
+            echo "  AIOUs:    ${aiou_count}"
+            ;;
+        8)
+            echo "Gate 8 — Planning Exit"
+            echo "Required: Full end-to-end traceability"
+            [[ -f "$AG_DIR/handoffs/planning-to-dev.md" ]] && echo "  [x] Handoff doc exists" || echo "  [ ] Handoff doc missing"
+            ;;
+        I4)
+            echo "Gate I4 — Integration Check"
+            echo "Required: Waves 0-3 complete, integration tests pass"
+            ;;
+        I8)
+            echo "Gate I8 — Development Exit"
+            echo "Required: All waves complete, visual QA evidence"
+            ;;
+        A2)
+            echo "Gate A2 — Audit Exit"
+            echo "Required: All audit tracks complete"
+            ;;
+        V5)
+            echo "Gate V5 — Release Gate"
+            echo "Required: All validation tracks complete"
+            ;;
+        *)
+            echo "Unknown gate: ${gate_id}"
+            echo "Valid gates: 1.5, 3.5, 8, I4, I8, A2, V5"
+            exit 1
+            ;;
+    esac
+}
+
+# ── archive-cycle ────────────────────────────────────────────────────
+cmd_archive_cycle() {
+    ensure_project
+
+    local cycle_num
+    cycle_num=$(get_cycle_number)
+    local archive_dir="$AG_DIR/.cycles/cycle-${cycle_num}"
+
+    if [[ -d "$archive_dir" ]]; then
+        echo "Error: Archive directory already exists: $archive_dir" >&2
+        exit 1
+    fi
+
+    mkdir -p "$archive_dir"
+
+    # Archive state files
+    cp "$CONTEXT_FILE" "$archive_dir/" 2>/dev/null || true
+    cp "$AG_DIR/progress.md" "$archive_dir/" 2>/dev/null || true
+    cp -r "$AG_DIR/council-state" "$archive_dir/" 2>/dev/null || true
+    cp -r "$AG_DIR/specs" "$archive_dir/" 2>/dev/null || true
+    cp -r "$AG_DIR/handoffs" "$archive_dir/" 2>/dev/null || true
+
+    echo "Archived cycle-${cycle_num} to $archive_dir"
+    echo "Run 'ag-state new-cycle <type>' to start a new cycle."
+}
+
+# ── new-cycle ────────────────────────────────────────────────────────
+cmd_new_cycle() {
+    local cycle_type="${1:-full}"
+    ensure_project
+
+    # Validate type
+    case "$cycle_type" in
+        full|feature|patch|maintenance|improvement) ;;
+        *) echo "Error: Invalid cycle type '$cycle_type'. Must be: full, feature, patch, maintenance, improvement" >&2; exit 1 ;;
+    esac
+
+    # Determine next cycle number
+    local current_num
+    current_num=$(get_cycle_number)
+    local next_num
+    next_num=$(printf "%03d" $((10#$current_num + 1)))
+
+    # Determine starting council based on cycle type
+    local start_council="planning"
+    local start_phase="1"
+    case "$cycle_type" in
+        patch)       start_council="development"; start_phase="1" ;;
+        maintenance) start_council="audit"; start_phase="1" ;;
+    esac
+
+    # Reset state files
+    cat > "$CONTEXT_FILE" <<EOF
+# Project Context
+
+## Active Council
+${start_council}
+
+## Current Phase
+${start_phase}
+
+## Status
+not_started
+
+## Cycle Information
+- Cycle: cycle-${next_num}
+- Type: ${cycle_type}
+- Started: ${TODAY}
+- Governance Mode: $(grep -oP 'Governance Mode: \K.*' "$CONTEXT_FILE" 2>/dev/null || echo "standard")
+EOF
+
+    # Reset council states
+    for council in planning development audit validation; do
+        cat > "$AG_DIR/council-state/${council}/current-state.md" <<EOF
+# ${council^} Council State
+
+## Status
+not_started
+
+## Last Updated
+${TODAY}
+
+## Notes
+
+EOF
+    done
+
+    # Clear specs and handoffs
+    rm -rf "$AG_DIR/specs/features/"* "$AG_DIR/specs/aious/"* "$AG_DIR/specs/adrs/"* "$AG_DIR/handoffs/"* 2>/dev/null || true
+
+    # Update manifest
+    if [[ -f "$MANIFEST_FILE" ]]; then
+        echo "| cycle-${next_num} | ${cycle_type} | ${TODAY} | — | — |" >> "$MANIFEST_FILE"
+    fi
+
+    echo "Started new cycle: cycle-${next_num} (${cycle_type})"
+    echo "  Starting council: ${start_council}"
+    echo "  Starting phase: ${start_phase}"
+}
+
+# ── Main ─────────────────────────────────────────────────────────────
+if [[ $# -lt 1 ]]; then
+    usage
+fi
+
+case "$1" in
+    init)
+        cmd_init "${2:-}"
+        ;;
+    current)
+        cmd_current
+        ;;
+    advance)
+        [[ $# -lt 3 ]] && usage
+        cmd_advance "$2" "$3"
+        ;;
+    gate-check)
+        [[ $# -lt 2 ]] && usage
+        cmd_gate_check "$2"
+        ;;
+    archive-cycle)
+        cmd_archive_cycle
+        ;;
+    new-cycle)
+        [[ $# -lt 2 ]] && usage
+        cmd_new_cycle "$2"
+        ;;
+    *)
+        usage
+        ;;
+esac

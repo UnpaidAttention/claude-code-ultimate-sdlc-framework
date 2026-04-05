@@ -1,0 +1,93 @@
+---
+name: validate-feature
+description: |
+  Deep validation of feature through intent alignment and completeness
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
+  - Glob
+  - Grep
+  - Agent
+  - AskUserQuestion
+---
+
+## Preamble (run first)
+
+```bash
+# Detect project state
+AG_HOME="${HOME}/.antigravity"
+AG_PROJECT=".antigravity"
+AG_SKILLS="${HOME}/.claude/skills/antigravity"
+
+# Check if project is initialized
+if [ -d "$AG_PROJECT" ]; then
+  echo "PROJECT: initialized"
+  # Read current state
+  if [ -f "$AG_PROJECT/project-context.md" ]; then
+    COUNCIL=$(grep -A1 "## Active Council" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    PHASE=$(grep -A1 "## Current Phase" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    STATUS=$(grep -A1 "## Status" "$AG_PROJECT/project-context.md" | tail -1 | tr -d ' ')
+    echo "COUNCIL: $COUNCIL"
+    echo "PHASE: $PHASE"  
+    echo "STATUS: $STATUS"
+  fi
+else
+  echo "PROJECT: not initialized (run /init first)"
+fi
+
+# Read global config
+if [ -f "$AG_HOME/config.yaml" ]; then
+  GOV_MODE=$(grep "governance_mode:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  PROJ_TYPE=$(grep "project_type:" "$AG_HOME/config.yaml" | awk '{print $2}')
+  echo "GOVERNANCE: ${GOV_MODE:-standard}"
+  echo "PROJECT_TYPE: ${PROJ_TYPE:-web-app}"
+fi
+```
+
+After the preamble runs, use the detected state to verify prerequisites for this workflow.
+
+## Knowledge Skills
+
+Load these knowledge skills for reference during this workflow:
+- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/gap-analysis/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/purpose-alignment/SKILL.md`
+- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+
+
+# Workflow: validate-feature
+
+---
+
+## Lens / Skills / Model
+**Lens**: `[Quality]` | **Model**: Claude Sonnet 4
+> Apply session protocol per `council-validation.md`
+---
+
+Deep validation of a specific feature through intent alignment and completeness.
+
+## Trigger
+`/validate-feature [feature-name]` or "Validate [feature] feature"
+
+## Behavior
+
+1. Identify the feature to validate
+2. Extract/review feature intent
+3. Compare against implementation
+4. Apply completeness matrix
+5. Apply multi-lens analysis
+6. Identify gaps and issues
+7. Update intent-map.md and completeness-matrix.md
+
+## Output
+
+Use **Display Template** from `council-validation.md` to show: Feature Validation: [Feature Name]
+
+## Notes
+- Be thorough in intent extraction
+- Score honestly against completeness dimensions
+- Specific gap identification with file:line references
+- Clear correction recommendations
