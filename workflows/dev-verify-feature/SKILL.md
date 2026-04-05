@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/integration-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/evidence-capture/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/integration-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/evidence-capture/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-verify-feature - Feature Integration Checkpoint
@@ -66,7 +66,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` + `[Architecture]` | **Model**: Claude Opus 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/council-development.md`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/council-development.md`
 
 ## Purpose
 
@@ -140,7 +140,7 @@ Using the User Journey Map from `DIVE-XXX.md` Section 4:
 
 ### Step 4: Verify Navigation & Placement
 
-Using Navigation & Placement from `DIVE-XXX.md` Section 3 AND `.antigravity/council-state/development/ui-design-plan.md` (if exists):
+Using Navigation & Placement from `DIVE-XXX.md` Section 3 AND `.ultimate-sdlc/council-state/development/ui-design-plan.md` (if exists):
 
 - [ ] Feature is accessible at documented route/URL
 - [ ] Navigation path works (e.g., Sidebar → Settings → Notifications)
@@ -210,7 +210,7 @@ Verified by: [AI model] | Timestamp: [ISO 8601]
 ### Step 8: Update State
 
 **If ALL checks PASS:**
-- Save verification report to `.antigravity/council-state/development/feature-verifications/FEAT-XXX-verified.md`
+- Save verification report to `.ultimate-sdlc/council-state/development/feature-verifications/FEAT-XXX-verified.md`
 - Update WORKING-MEMORY.md: record feature verification PASS
 - Announce: "FEAT-XXX VERIFIED COMPLETE ✅"
 

@@ -41,7 +41,7 @@ Always active regardless of council or context.
 **PROHIBITED**: "We'll figure this out during development", "TBD", "Approximately X features", symptom-fixing without root cause.
 
 **DEFERRED Pattern** (approved TBD alternative): `DEFERRED:[reason]:[owner]:[target-phase]`
-- All three fields required; track in `.antigravity/specs/deferred-decisions.md`
+- All three fields required; track in `.ultimate-sdlc/specs/deferred-decisions.md`
 - Gate fails if DEFERRED items targeting current phase remain OPEN
 
 ### 0.6 Request Classification
@@ -61,7 +61,7 @@ For COMPLEX requests, ask 2-3 questions BEFORE implementing:
 
 ### 0.8 Skill Loading Protocol
 
-**Maximum 7 skills per workflow.** Knowledge skills are loaded via the Read tool from `~/.claude/skills/antigravity/knowledge/`. If absent, use defaults:
+**Maximum 7 skills per workflow.** Knowledge skills are loaded via the Read tool from `~/.claude/skills/ultimate-sdlc/knowledge/`. If absent, use defaults:
 
 | Prefix | Default Skills |
 |--------|----------------|
@@ -75,13 +75,13 @@ For COMPLEX requests, ask 2-3 questions BEFORE implementing:
 
 ### 0.9 State Persistence
 
-**Persistent (all cycles)**: `.antigravity/project-manifest.md` — Project identity, cycle history, feature inventory
-**Authoritative (per-cycle)**: `.antigravity/project-context.md`, `.antigravity/council-state/*/current-state.md`, `.antigravity/specs/scope-lock.md`
-**Planning Batch State**: `.antigravity/council-state/planning/planning-tracker.md`
-**Session**: `.antigravity/council-state/*/WORKING-MEMORY.md`
-**Historical**: `.antigravity/progress.md` (append-only, per-cycle)
+**Persistent (all cycles)**: `.ultimate-sdlc/project-manifest.md` — Project identity, cycle history, feature inventory
+**Authoritative (per-cycle)**: `.ultimate-sdlc/project-context.md`, `.ultimate-sdlc/council-state/*/current-state.md`, `.ultimate-sdlc/specs/scope-lock.md`
+**Planning Batch State**: `.ultimate-sdlc/council-state/planning/planning-tracker.md`
+**Session**: `.ultimate-sdlc/council-state/*/WORKING-MEMORY.md`
+**Historical**: `.ultimate-sdlc/progress.md` (append-only, per-cycle)
 
-**Cycle State Resolution**: If `.antigravity/project-context.md` exists → active cycle. If only `.antigravity/project-manifest.md` → between cycles, run `/new-cycle`. If neither → run `/init` or `/adopt`.
+**Cycle State Resolution**: If `.ultimate-sdlc/project-context.md` exists → active cycle. If only `.ultimate-sdlc/project-manifest.md` → between cycles, run `/new-cycle`. If neither → run `/init` or `/adopt`.
 
 **File Loading — On-Demand Model**:
 
@@ -128,7 +128,7 @@ Apply analytical lenses for the current task. Lenses provide awareness, not hard
 - **Socratic Gate override**: Workflow frontmatter `socratic_gate: skip` → skip. Explicit "Prerequisites" section → questions already answered. Otherwise → apply gate.
 - **Sequential vs Parallel**: One feature at a time within a single session. Parallel subagents (Task tool) can work on different features simultaneously.
 - **Evidence Fallback Chain**: Playwright MCP → Request user → After 2 unanswered prompts, proceed without. NEVER mark as "verified" without actual evidence.
-- **Zero-Compromise vs Deferral**: "TBD" prohibited → use `DEFERRED:[reason]:[owner]:[target-phase]` tracked in `.antigravity/specs/deferred-decisions.md`.
+- **Zero-Compromise vs Deferral**: "TBD" prohibited → use `DEFERRED:[reason]:[owner]:[target-phase]` tracked in `.ultimate-sdlc/specs/deferred-decisions.md`.
 - **Workflow overrides**: Frontmatter `overrides:` section can set `socratic_gate: skip`, `evidence_required: user-provided`, `parallel_allowed: true` for that workflow only.
 
 Document conflicts in `.memory/semantic/conflict-resolutions.md`. Never proceed with unresolved conflict.
@@ -144,7 +144,7 @@ Document conflicts in `.memory/semantic/conflict-resolutions.md`. Never proceed 
 
 **Reference**: `INTEGRITY-RULES.md` for prohibitions (PRH-001 to PRH-009).
 
-**Locations**: `.antigravity/council-state/{planning,development}/run-tracker.md`
+**Locations**: `.ultimate-sdlc/council-state/{planning,development}/run-tracker.md`
 
 **Session Start**: project-context.md → run-tracker.md → WORKING-MEMORY.md → work ONLY on assigned items.
 
@@ -180,7 +180,7 @@ Document conflicts in `.memory/semantic/conflict-resolutions.md`. Never proceed 
 1. Content file count exceeds session type limit
 2. Conversation exceeds ~30 substantive turns
 3. You notice repeating yourself or losing track of earlier decisions
-4. Gate verification fails 3+ times on same criterion (see Gate Failure Protocol in `~/.claude/skills/antigravity/context/gate-criteria.md`)
+4. Gate verification fails 3+ times on same criterion (see Gate Failure Protocol in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md`)
 
 **Fast context rebuild**: Read `project-intelligence.md` first when resuming — key decisions in ~20 lines, 80% of context at 10% the cost.
 

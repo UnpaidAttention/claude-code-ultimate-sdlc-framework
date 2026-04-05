@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/purpose-alignment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/critical-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/multi-lens-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/purpose-alignment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/critical-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-lens-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-a1 - Purpose Alignment
@@ -64,7 +64,7 @@ Load these knowledge skills for reference during this workflow:
 
 **CRITICAL**: This phase cannot begin until the Testing (T1-T5) phase group is complete.
 
-1.  **Verify T5 Completion**: Check `.antigravity/council-state/audit/current-state.md`.
+1.  **Verify T5 Completion**: Check `.ultimate-sdlc/council-state/audit/current-state.md`.
 2.  **Look for**: `Phase T5: Performance & Security` marked as `[x] Complete`.
 3.  **If not complete, STOP and display the following message:**
     ```
@@ -84,7 +84,7 @@ Load these knowledge skills for reference during this workflow:
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: A1 - Purpose Alignment
 - Set `Status`: in_progress
 
@@ -104,7 +104,7 @@ For each major feature:
 
 ### Step 4: Document Findings
 
-Create `.antigravity/council-state/audit/alignment-report.md`:
+Create `.ultimate-sdlc/council-state/audit/alignment-report.md`:
 
 Use **Display Template** from `council-audit.md` to show: Purpose Alignment Report
 

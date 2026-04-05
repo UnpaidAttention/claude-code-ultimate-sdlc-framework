@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-gate-8 - Gate 8 Verification
@@ -131,12 +131,12 @@ Use **Display Template** from `council-planning.md` to show: Gate 8 Verification
 
 **If ALL criteria pass:**
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set `Planning Council`: Complete
    - Set `Gate 8`: Passed
    - Set `Active Council`: development (ready)
 
-2. Update `.antigravity/council-state/planning/current-state.md`:
+2. Update `.ultimate-sdlc/council-state/planning/current-state.md`:
    - Mark Gate 8 passed with timestamp
 
 3. Display:
@@ -148,7 +148,7 @@ Use **Display Template** from `council-planning.md` to show: Gate 8: PASSED
 Use **Display Template** from `council-planning.md` to show: Gate 8: FAILED
 
 If FAIL:
-1. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+1. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Document issues found
    - Track what needs fixing
 

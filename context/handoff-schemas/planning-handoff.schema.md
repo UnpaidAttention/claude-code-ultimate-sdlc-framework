@@ -19,12 +19,12 @@ A valid `planning-handoff.md` MUST contain ALL of these sections:
 - [ ] Technology stack
 - [ ] Key architectural decisions (reference ADRs)
 - [ ] Integration points
-- [ ] Database Design reference (`.antigravity/specs/architecture/database-design.md`) — or N/A if Lightweight
-- [ ] API Specification reference (`.antigravity/specs/architecture/api-specification.md`) — or N/A if Lightweight
+- [ ] Database Design reference (`.ultimate-sdlc/specs/architecture/database-design.md`) — or N/A if Lightweight
+- [ ] API Specification reference (`.ultimate-sdlc/specs/architecture/api-specification.md`) — or N/A if Lightweight
 
 ### 2b. Business Requirements (Standard/Enterprise only)
 **Required fields**:
-- [ ] BRD reference (`.antigravity/specs/business/brd.md`)
+- [ ] BRD reference (`.ultimate-sdlc/specs/business/brd.md`)
 - [ ] Key business objectives summary (top 5 from BRD)
 - [ ] BR-XXX → FEAT-XXX traceability confirmation
 
@@ -68,9 +68,9 @@ A valid `planning-handoff.md` MUST contain ALL of these sections:
 - [ ] Resource requirements
 - [ ] Scaling considerations
 - [ ] Monitoring requirements
-- [ ] NFR targets summary (from `.antigravity/specs/prd-crosscutting.md` §1 — performance, scalability, availability)
-- [ ] CI/CD pipeline spec reference (`.antigravity/specs/infrastructure/ci-cd-spec.md`) — or N/A if Lightweight
-- [ ] Monitoring plan reference (`.antigravity/specs/infrastructure/monitoring-plan.md`) — or N/A if Lightweight
+- [ ] NFR targets summary (from `.ultimate-sdlc/specs/prd-crosscutting.md` §1 — performance, scalability, availability)
+- [ ] CI/CD pipeline spec reference (`.ultimate-sdlc/specs/infrastructure/ci-cd-spec.md`) — or N/A if Lightweight
+- [ ] Monitoring plan reference (`.ultimate-sdlc/specs/infrastructure/monitoring-plan.md`) — or N/A if Lightweight
 - [ ] SLI/SLO definitions
 
 ### 8. Verification & Sign-off

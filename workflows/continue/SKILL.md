@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,7 +51,7 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /continue - Auto-Advance Framework
@@ -60,7 +60,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: Dynamic (per target workflow) | **Model**: Claude Sonnet 4
-> Conductor workflow. Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/the active council rules file`
+> Conductor workflow. Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/the active council rules file`
 
 ## Arguments
 | Argument | Required | Description |
@@ -84,15 +84,15 @@ Automatically advance through the framework without requiring manual workflow in
 
 Read these files to determine current position:
 
-1. `.antigravity/project-context.md` — Active council, current phase, status
-2. `.antigravity/council-state/{active-council}/current-state.md` — Detailed phase progress
-3. `.antigravity/council-state/{active-council}/WORKING-MEMORY.md` — Session context
-4. `.antigravity/progress.md` — Recent activity (last 3 entries)
-5. **Development only**: `.antigravity/council-state/development/run-tracker.md` — Multi-run progress
+1. `.ultimate-sdlc/project-context.md` — Active council, current phase, status
+2. `.ultimate-sdlc/council-state/{active-council}/current-state.md` — Detailed phase progress
+3. `.ultimate-sdlc/council-state/{active-council}/WORKING-MEMORY.md` — Session context
+4. `.ultimate-sdlc/progress.md` — Recent activity (last 3 entries)
+5. **Development only**: `.ultimate-sdlc/council-state/development/run-tracker.md` — Multi-run progress
 
-If `.antigravity/project-context.md` does not exist:
-→ Check if `.antigravity/project-manifest.md` exists:
-  - **If manifest exists but no .antigravity/project-context.md**: "No active cycle. Run `/new-cycle` to start a new development cycle."
+If `.ultimate-sdlc/project-context.md` does not exist:
+→ Check if `.ultimate-sdlc/project-manifest.md` exists:
+  - **If manifest exists but no .ultimate-sdlc/project-context.md**: "No active cycle. Run `/new-cycle` to start a new development cycle."
   - **If neither exists**: "Project not initialized. Run `/init` to start a new project, or `/adopt` to onboard an existing codebase."
 → STOP.
 
@@ -104,12 +104,12 @@ From the state files, extract:
 - **Active Council**: Planning / Development / Audit / Validation
 - **Current Phase/Wave/Track**: The identifier (e.g., "Phase 3", "Wave 2", "T3")
 - **Status**: in_progress / complete / blocked
-- **Cycle Type**: Full / Feature / Patch / Maintenance / Improvement (from .antigravity/project-context.md `Cycle Information` section)
+- **Cycle Type**: Full / Feature / Patch / Maintenance / Improvement (from .ultimate-sdlc/project-context.md `Cycle Information` section)
 - **Active Councils**: Which councils are active for this cycle type
 - **Last completed step**: What was the most recent phase/wave/track marked complete?
 
 If status is **blocked**:
-→ Display the blocker from .antigravity/project-context.md
+→ Display the blocker from .ultimate-sdlc/project-context.md
 → STOP. Instruct user to resolve the blocker first.
 
 ---
@@ -205,7 +205,7 @@ Use the navigation table below to map current position → next workflow.
 
 If the next workflow is a **gate** (contains "gate" in the name):
 
-1. **Read** the gate workflow file from `~/.claude/skills/antigravity/workflows/`
+1. **Read** the gate workflow file from `~/.claude/skills/ultimate-sdlc/workflows/`
 2. **Execute** gate verification steps inline
 3. **If PASS**: Update state files, continue to the next phase (loop back to Step 3)
 4. **If FAIL**: STOP immediately. Display:
@@ -259,7 +259,7 @@ At council boundaries, check the **Cycle Type** to determine the correct next co
 
 When advancing through Phase 2.5, Phase 3, or Phase 3.5 in batch mode:
 
-1. **Read** `.antigravity/council-state/planning/planning-tracker.md`
+1. **Read** `.ultimate-sdlc/council-state/planning/planning-tracker.md`
 2. **Check** if there are more batches remaining for the current phase
 3. **If more batches**: Mark current batch complete in planning-tracker. Advance to next batch. Re-execute the same phase workflow (Phase 2.5, 3, or 3.5) for the next batch's features.
 4. **If final batch of Phase 2.5**: Mark Phase 2.5 complete. Advance to Phase 3, reset to Batch 1.
@@ -275,7 +275,7 @@ When advancing through Phase 2.5, Phase 3, or Phase 3.5 in batch mode:
 
 After Development Gate I8 passes for a run:
 
-1. **Read** `.antigravity/council-state/development/run-tracker.md`
+1. **Read** `.ultimate-sdlc/council-state/development/run-tracker.md`
 2. **Check** if there are more runs remaining
 3. **If more runs**: Mark current run complete in run-tracker, advance to next run. Reset wave progress to Wave 0. Continue with `/dev-wave-1`.
 4. **If final run**: Mark all runs complete. Run `/dev-complete` to generate handoff. Then → Council Transition to Audit.
@@ -286,12 +286,12 @@ After Development Gate I8 passes for a run:
 
 Once the next workflow is determined:
 
-1. **Read** the workflow file from `~/.claude/skills/antigravity/workflows/{workflow-name}.md`
+1. **Read** the workflow file from `~/.claude/skills/ultimate-sdlc/workflows/{workflow-name}.md`
 2. **Follow** its instructions:
    - Load the specified agent
    - Load the specified skills (from `skills_required` frontmatter)
    - Execute all steps in order
-3. **When complete**: Update state files (.antigravity/project-context.md, current-state.md, .antigravity/progress.md)
+3. **When complete**: Update state files (.ultimate-sdlc/project-context.md, current-state.md, .ultimate-sdlc/progress.md)
 4. **Loop** back to Step 3 to determine the next workflow
 
 ---
@@ -301,9 +301,9 @@ Once the next workflow is determined:
 If approaching the context budget limit (estimated >80% consumed):
 
 1. **Save** current state to:
-   - `.antigravity/council-state/{active-council}/WORKING-MEMORY.md` — What was being worked on
-   - `.antigravity/project-context.md` — Updated position
-   - `.antigravity/progress.md` — Session log entry
+   - `.ultimate-sdlc/council-state/{active-council}/WORKING-MEMORY.md` — What was being worked on
+   - `.ultimate-sdlc/project-context.md` — Updated position
+   - `.ultimate-sdlc/progress.md` — Session log entry
 2. **Display**:
    ```
    ⚠️ Context budget approaching limit. State saved.
@@ -348,7 +348,7 @@ If `--dry-run` is passed:
 - Gates are always verified, never auto-passed.
 - Council transitions always require user confirmation.
 - The navigation table matches `status.md` — keep them in sync.
-- **Cycle awareness**: `/continue` respects the cycle type from `.antigravity/project-context.md`. For abbreviated cycle types (Patch, Maintenance), it skips inactive councils at transitions.
+- **Cycle awareness**: `/continue` respects the cycle type from `.ultimate-sdlc/project-context.md`. For abbreviated cycle types (Patch, Maintenance), it skips inactive councils at transitions.
 - After the final gate passes (Gate S2 or equivalent), `/continue` directs users to `/close-cycle` and `/new-cycle` instead of a terminal "RELEASE READY" state.
 
 ---

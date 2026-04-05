@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/orchestration-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/aiou-decomposition/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/parallel-execution/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/task-delegation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/orchestration-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/aiou-decomposition/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/parallel-execution/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/task-delegation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Multi-Agent Orchestration

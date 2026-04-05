@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,17 +51,17 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/planning-orchestration/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/planning-orchestration/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-scope-analysis - Development Run Division Planning
 
 ## Purpose
 
-Analyze the AIOUs from planning-handoff.md to determine if development should be divided into multiple runs. Creates `.antigravity/council-state/development/run-tracker.md` to track run progress.
+Analyze the AIOUs from planning-handoff.md to determine if development should be divided into multiple runs. Creates `.ultimate-sdlc/council-state/development/run-tracker.md` to track run progress.
 
 **Core Principle**: "Do it right, or do it twice." - Large development efforts divided into manageable runs prevent AIOU truncation and ensure complete implementation.
 
@@ -194,7 +194,7 @@ AIOU Verification:
 
 ### Step 6: Create Run Tracker
 
-Create `.antigravity/council-state/development/run-tracker.md` using template from `.reference/run-tracker-template-development.md`.
+Create `.ultimate-sdlc/council-state/development/run-tracker.md` using template from `.reference/run-tracker-template-development.md`.
 
 Populate:
 1. Summary section with totals and size distribution
@@ -224,15 +224,15 @@ Still create run-tracker.md with a single run for consistency and verification.
 
 ### Step 9: Update Project State
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Note scope analysis complete
    - Record run count and total effort
 
-2. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Record scope analysis results
    - Note run assignments
 
-3. Create `.antigravity/council-state/development/` directory if doesn't exist
+3. Create `.ultimate-sdlc/council-state/development/` directory if doesn't exist
 
 4. Display completion:
 
@@ -282,7 +282,7 @@ Output run assignments with:
 
 | File | Purpose |
 |------|---------|
-| `.antigravity/council-state/development/run-tracker.md` | Tracks run progress, AIOU assignments, wave completion |
+| `.ultimate-sdlc/council-state/development/run-tracker.md` | Tracks run progress, AIOU assignments, wave completion |
 
 ---
 

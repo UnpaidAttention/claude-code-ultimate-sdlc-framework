@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/quality-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/defect-logging/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/quality-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/defect-logging/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-gate-a3 - Gate A3 Verification
@@ -79,13 +79,13 @@ A3 not complete. Run /audit-a3 first.
 
 ### Step 1: Load Gate A3 Criteria
 
-Load criteria from `~/.claude/skills/antigravity/context/gate-criteria.md` § Audit Council Gates → Gate A3.
+Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates → Gate A3.
 
 Verify each criterion against the authoritative checklist. Run automated checks where applicable.
 
 ### Step 1.5: Security Checklist
 
-Complete the Security Checklist from `~/.claude/skills/antigravity/context/gate-criteria.md` § Standard Terms.
+Complete the Security Checklist from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Standard Terms.
 
 ### Step 2: Gate Decision
 

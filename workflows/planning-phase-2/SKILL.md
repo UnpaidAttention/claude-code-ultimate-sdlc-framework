@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/decision-making/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/system-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/decision-making/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/system-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-phase-2 - Architecture
@@ -80,7 +80,7 @@ Phase 1.5 not complete. Run /planning-phase-1-5 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: planning
 - Set `Current Phase`: 2 - Architecture
 - Set `Status`: in_progress
@@ -125,7 +125,7 @@ Use **Display Template** from `council-planning.md` to show: ADR-XXX: [Decision 
 
 ### Step 4B: Generate Database Design Document
 
-> **Governance check**: Read `.antigravity/config.yaml → governance_mode`. If `lightweight`, SKIP this step. If `standard` or `enterprise`, this step is MANDATORY.
+> **Governance check**: Read `.ultimate-sdlc/config.yaml → governance_mode`. If `lightweight`, SKIP this step. If `standard` or `enterprise`, this step is MANDATORY.
 
 1. Read `templates/database-design-template.md` for required structure
 2. Read the database technology ADR (created in Step 4) for technology selection
@@ -173,10 +173,10 @@ Before completing this phase, verify:
 
 When all criteria met:
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Phase 2 status: Complete
 
-2. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Mark completed tasks
    - Record session learnings
 

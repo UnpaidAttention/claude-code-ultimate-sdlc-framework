@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/fmea-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/risk-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/resilience-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/failure-mitigation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/fmea-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/risk-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/resilience-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/failure-mitigation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-p2 - Failure Mode Analysis
@@ -79,7 +79,7 @@ P1 not complete. Run /validate-p1 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: P2 - Failure Mode Analysis
 - Set `Status`: in_progress
 

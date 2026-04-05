@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Type-specific configuration that adapts framework behavior to the kind of software being built. Set during `/init` via `.antigravity/config.yaml → project_type`.
+Type-specific configuration that adapts framework behavior to the kind of software being built. Set during `/init` via `.ultimate-sdlc/config.yaml → project_type`.
 
 ---
 
@@ -131,7 +131,7 @@ Used during Audit and Validation Councils for defect evidence and correction pro
 
 ## How Workflows Use Presets
 
-1. Read `.antigravity/config.yaml → project_type`
+1. Read `.ultimate-sdlc/config.yaml → project_type`
 2. Look up the relevant section in this file
 3. Apply type-specific configuration:
    - **Planning**: Use Feature Categories for thoroughness checking

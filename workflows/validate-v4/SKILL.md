@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/prerequisite-verification/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/dependency-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/blocker-resolution/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-validation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/prerequisite-verification/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/dependency-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/blocker-resolution/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-validation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-v4 - Prerequisite Verification
@@ -79,7 +79,7 @@ V3 not complete. Run /validate-v3 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: V4 - Prerequisite Verification
 - Set `Status`: in_progress
 

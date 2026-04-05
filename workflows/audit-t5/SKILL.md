@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/security-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/performance-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/vulnerability-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/security-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/performance-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/vulnerability-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-t5 - Performance & Security
@@ -94,7 +94,7 @@ See `.reference/mcp-tool-guide.md` for setup and verification.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: T5 - Performance & Security
 - Set `Status`: in_progress
 

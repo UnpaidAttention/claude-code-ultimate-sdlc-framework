@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish-plan - Phase 4: Remediation Plan
@@ -68,8 +68,8 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- `.antigravity/council-state/development/ui-slop-report.md` must exist (Phase 2 complete)
-- `.antigravity/council-state/development/ui-polish-alternatives.md` must exist (Phase 3 complete)
+- `.ultimate-sdlc/council-state/development/ui-slop-report.md` must exist (Phase 2 complete)
+- `.ultimate-sdlc/council-state/development/ui-polish-alternatives.md` must exist (Phase 3 complete)
 
 If prerequisite not met:
 ```
@@ -84,8 +84,8 @@ Phase 4 requires the researched alternatives from Phase 3.
 ### Step 1: Load Inputs
 
 Read:
-- `.antigravity/council-state/development/ui-slop-report.md` — the findings to remediate
-- `.antigravity/council-state/development/ui-polish-alternatives.md` — the researched alternatives
+- `.ultimate-sdlc/council-state/development/ui-slop-report.md` — the findings to remediate
+- `.ultimate-sdlc/council-state/development/ui-polish-alternatives.md` — the researched alternatives
 - `design-system.md` — current design system
 
 ### Step 2: Select Best Alternatives
@@ -164,7 +164,7 @@ Present the complete remediation plan to the user. Display:
 
 ## Output
 
-Save remediation plan to `.antigravity/council-state/development/ui-polish-plan.md`:
+Save remediation plan to `.ultimate-sdlc/council-state/development/ui-polish-plan.md`:
 
 ```markdown
 # Design Remediation Plan

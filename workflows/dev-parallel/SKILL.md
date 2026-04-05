@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/parallel-execution/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/file-ownership/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/git-operations/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/parallel-execution/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/file-ownership/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/git-operations/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Development Parallel Execution Workflow
@@ -66,7 +66,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: claude-opus-4-6
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/council-development.md`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/council-development.md`
 
 ## Description
 Spawns parallel agents in Manager View to execute multiple independent AIOUs simultaneously. **Includes safety guardrails to prevent merge conflicts and coordination failures.**
@@ -108,7 +108,7 @@ Use **Display Template** from `council-development.md` to show: Parallel Safety 
 - Refactor to eliminate shared file modifications
 
 ### Step 2: Identify Parallel AIOUs
-- Read current wave AIOUs from `.antigravity/project-context.md`
+- Read current wave AIOUs from `.ultimate-sdlc/project-context.md`
 - Filter to AIOUs with no inter-dependencies
 - Verify each AIOU's external dependencies are met
 - **Verify File Ownership Artifact shows no conflicts**
@@ -129,7 +129,7 @@ Use **Display Template** from `council-development.md` to show: Parallel Safety 
 - Generate Plan Artifact showing parallel structure
 
 ### Step 5: Spawn Manager View Agents
-- Open Antigravity Manager View
+- Open Ultimate SDLC Manager View
 - For each parallel AIOU:
   - Spawn new agent instance
   - Assign AIOU specification

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/status-reporting/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/progress-tracking/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/metrics-collection/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/status-reporting/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/progress-tracking/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/metrics-collection/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: dev-wave5-status
@@ -88,7 +88,7 @@ Read `wave5-context.md` to get:
 
 ### Step 1.5: Read UI Design Phase Status
 
-Read `.antigravity/council-state/development/run-tracker.md` and check:
+Read `.ultimate-sdlc/council-state/development/run-tracker.md` and check:
 - UI Research (UI-R): PENDING / COMPLETE
 - UI Design Plan (UI-P): PENDING / COMPLETE
 - UI Wiring Verification (UI-V) for current run: PENDING / COMPLETE / NOT YET RUN

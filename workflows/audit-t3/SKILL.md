@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/accessibility-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/usability-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/visual-design-review/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/accessibility-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/usability-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/visual-design-review/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-t3 - GUI Analysis
@@ -79,7 +79,7 @@ T2 not complete. Run /audit-t2 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: audit
 - Set `Current Phase`: T3 - GUI Analysis
 - Set `Status`: in_progress
@@ -96,7 +96,7 @@ Document all screens/pages:
 
 For each screen, use agent-native capture methods:
 
-**Using Antigravity browser extension (primary):**
+**Using Ultimate SDLC browser extension (primary):**
 1. Start dev server via terminal (if not already running)
 2. Navigate to each screen via `browser_navigate`
 3. Capture screenshot via `browser.capture_screenshot_and_save`
@@ -111,7 +111,7 @@ For each screen, use agent-native capture methods:
 
 **Fallback:** Request user provide screenshots — see `.reference/screenshot-capture-guide.md`
 
-Save to `.antigravity/council-state/audit/screenshots/`
+Save to `.ultimate-sdlc/council-state/audit/screenshots/`
 Name format: `T3-[screen-name]-[state].png`
 
 ### Step 4: Navigation Flow Analysis

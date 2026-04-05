@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/performance-optimization/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/performance-optimization/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /improvement-planning - Improvement Cycle Planning
@@ -87,9 +87,9 @@ Abbreviated planning workflow for **Improvement cycles** — focused on code qua
 
 ## Pre-Conditions
 
-- `.antigravity/project-context.md` must exist with `Cycle Type: Improvement`
+- `.ultimate-sdlc/project-context.md` must exist with `Cycle Type: Improvement`
 - `cycle-baseline.md` must exist (created by `/new-cycle`)
-- `.antigravity/project-manifest.md` must exist
+- `.ultimate-sdlc/project-manifest.md` must exist
 
 ---
 
@@ -157,9 +157,9 @@ Use **Display Template** from `council-development.md` to show: Planning Handoff
 
 ### Step 6: Update State
 
-1. Update `.antigravity/project-context.md`: Mark Planning complete (abbreviated)
-2. Update `.antigravity/council-state/planning/current-state.md`: All phases complete
-3. Update `.antigravity/progress.md` with planning session summary
+1. Update `.ultimate-sdlc/project-context.md`: Mark Planning complete (abbreviated)
+2. Update `.ultimate-sdlc/council-state/planning/current-state.md`: All phases complete
+3. Update `.ultimate-sdlc/progress.md` with planning session summary
 
 ### Step 7: Route to Development
 

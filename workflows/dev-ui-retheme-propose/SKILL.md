@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-retheme-propose - Phase 3: Propose New Design System
@@ -66,8 +66,8 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 1 complete: `.antigravity/council-state/development/current-theme-snapshot.md` exists
-- Phase 2 complete: `.antigravity/council-state/development/retheme-direction.md` exists
+- Phase 1 complete: `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` exists
+- Phase 2 complete: `.ultimate-sdlc/council-state/development/retheme-direction.md` exists
 
 If prerequisites not met:
 ```
@@ -82,8 +82,8 @@ Run /dev-ui-retheme-snapshot and /dev-ui-retheme-direction first.
 ### Step 3.1: Review Inputs
 
 Read and synthesize:
-- `.antigravity/council-state/development/current-theme-snapshot.md` — what exists now
-- `.antigravity/council-state/development/retheme-direction.md` — where we're going
+- `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` — what exists now
+- `.ultimate-sdlc/council-state/development/retheme-direction.md` — where we're going
 - `design-system.md` if it exists — formal design system structure
 
 ### Step 3.2: Create Complete New Design System
@@ -146,7 +146,7 @@ Present the complete proposal to the user with the before/after comparison.
 [Key highlights — the 3-5 most impactful changes]
 
 Please review the complete proposal in:
-.antigravity/council-state/development/retheme-proposal.md
+.ultimate-sdlc/council-state/development/retheme-proposal.md
 
 **Do you approve this design system for implementation?**
 - Approve as-is → I'll proceed with /dev-ui-retheme-apply
@@ -160,7 +160,7 @@ Please review the complete proposal in:
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/retheme-proposal.md`:
+Save to `.ultimate-sdlc/council-state/development/retheme-proposal.md`:
 
 ```markdown
 # Proposed New Theme — [Theme Name]
@@ -284,7 +284,7 @@ Save to `.antigravity/council-state/development/retheme-proposal.md`:
 - WCAG AA contrast has been verified for all text/background combinations
 - User has been presented the proposal
 - User has explicitly approved (status updated to APPROVED)
-- `.antigravity/council-state/development/retheme-proposal.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/retheme-proposal.md` exists and is complete
 
 ---
 
@@ -297,7 +297,7 @@ Save to `.antigravity/council-state/development/retheme-proposal.md`:
 **Key changes**: [top 3-4 changes]
 **User approval**: [APPROVED / APPROVED WITH CHANGES]
 
-Proposal saved to: .antigravity/council-state/development/retheme-proposal.md
+Proposal saved to: .ultimate-sdlc/council-state/development/retheme-proposal.md
 
 Next step: Run /dev-ui-retheme-apply to implement the new theme.
 ```

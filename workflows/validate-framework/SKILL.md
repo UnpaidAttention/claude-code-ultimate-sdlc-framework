@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,8 +51,8 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
 
 
 # /validate-framework - Framework Self-Validation
@@ -66,7 +66,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Purpose
 
-Check the integrity of the Antigravity SDLC Framework to catch structural problems, missing files, broken references, and configuration errors.
+Check the integrity of the Ultimate SDLC Framework to catch structural problems, missing files, broken references, and configuration errors.
 
 **Run this workflow when:**
 - After making changes to framework files
@@ -83,11 +83,11 @@ Check the integrity of the Antigravity SDLC Framework to catch structural proble
 Check that all required directories exist:
 
 ```
-□ ~/.claude/skills/antigravity/rules/
-□ ~/.claude/skills/antigravity/agents/
-□ ~/.claude/skills/antigravity/knowledge/
-□ ~/.claude/skills/antigravity/workflows/
-□ ~/.claude/skills/antigravity/context/
+□ ~/.claude/skills/ultimate-sdlc/rules/
+□ ~/.claude/skills/ultimate-sdlc/agents/
+□ ~/.claude/skills/ultimate-sdlc/knowledge/
+□ ~/.claude/skills/ultimate-sdlc/workflows/
+□ ~/.claude/skills/ultimate-sdlc/context/
 □ handoffs/
 ```
 
@@ -101,13 +101,13 @@ Check these files exist and are non-empty:
 
 | File | Required |
 |------|----------|
-| `~/.claude/skills/antigravity/rules/UNIVERSAL-RULES.md` | ✓ |
-| `~/.claude/skills/antigravity/rules/CONSTITUTION.md` | ✓ |
-| `~/.claude/skills/antigravity/rules/conflict-resolution.md` | ✓ |
-| `~/.claude/skills/antigravity/rules/council-planning.md` | ✓ |
-| `~/.claude/skills/antigravity/rules/council-development.md` | ✓ |
-| `~/.claude/skills/antigravity/rules/council-audit.md` | ✓ |
-| `~/.claude/skills/antigravity/rules/council-validation.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/UNIVERSAL-RULES.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/CONSTITUTION.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/conflict-resolution.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/council-planning.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/council-development.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/council-audit.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/rules/council-validation.md` | ✓ |
 
 **If any missing**: Report which files are missing.
 
@@ -119,13 +119,13 @@ Check these files exist:
 
 | File | Required |
 |------|----------|
-| `~/.claude/skills/antigravity/context/framework-overview.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` | ✓ |
 | `.reference/phase-guide.md` | ✓ |
 | `.reference/skills-index.md` | ✓ |
-| `~/.claude/skills/antigravity/context/state-management.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/context/state-management.md` | ✓ |
 | `.reference/model-selection-guide.md` | ✓ |
 | `.reference/skill-loading-guide.md` | ✓ |
-| `~/.claude/skills/antigravity/context/error-catalog.md` | ✓ |
+| `~/.claude/skills/ultimate-sdlc/context/error-catalog.md` | ✓ |
 | `.reference/skill-dependencies.md` | ✓ |
 
 ---
@@ -163,9 +163,9 @@ Check these critical workflows exist:
 
 Check for broken references:
 
-1. **Agent references in workflows**: For each workflow with `agents:` section, verify the agent file exists in `~/.claude/skills/antigravity/agents/`
+1. **Agent references in workflows**: For each workflow with `agents:` section, verify the agent file exists in `~/.claude/skills/ultimate-sdlc/agents/`
 
-2. **Skill references**: For common skills referenced, verify they exist in `~/.claude/skills/antigravity/knowledge/`
+2. **Skill references**: For common skills referenced, verify they exist in `~/.claude/skills/ultimate-sdlc/knowledge/`
 
 3. **File path references**: Scan for `.md` file references and verify they resolve
 

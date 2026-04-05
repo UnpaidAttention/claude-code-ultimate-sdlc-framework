@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/e2e-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/runtime-verification/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/integration-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/evidence-capture/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/e2e-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/runtime-verification/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/integration-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/evidence-capture/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: validate-e2e-test
@@ -103,7 +103,7 @@ A feature is NOT verified until:
 - [ ] Backend/database is accessible for verification
 - [ ] Console/logs are visible for inspection
 - [ ] Feature ID exists in `intent-map.md`
-- [ ] Antigravity browser extension installed and connected (verify green status indicator in IDE) OR Playwright MCP configured — see `.reference/mcp-tool-guide.md`
+- [ ] Ultimate SDLC browser extension installed and connected (verify green status indicator in IDE) OR Playwright MCP configured — see `.reference/mcp-tool-guide.md`
 
 ## Steps
 

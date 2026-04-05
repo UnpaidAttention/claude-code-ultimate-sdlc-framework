@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/test-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/refactoring-techniques/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/refactoring-techniques/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /enhance - Update Application
@@ -64,7 +64,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/the active council rules file`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/the active council rules file`
 
 ## Task
 

@@ -3,7 +3,7 @@ description: External model integration for capabilities Claude lacks. Use when 
 
 # BlockRun
 
-**BlockRun works with Claude Code and Google Antigravity.**
+**BlockRun works with Claude Code and Google Ultimate SDLC.**
 
 You can't generate images. You have no real-time X/Twitter access. BlockRun gives you these capabilities.
 

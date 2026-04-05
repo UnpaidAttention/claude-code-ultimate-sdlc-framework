@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/test-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/tdd-workflow/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/tdd-workflow/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-wave-1 - Utilities & Helpers
@@ -79,7 +79,7 @@ Wave 0 not complete. Run /dev-start first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: development
 - Set `Current Wave`: 1 - Utilities & Helpers
 - Set `Status`: in_progress
@@ -145,10 +145,10 @@ Before completing this wave, verify:
 
 When all criteria met:
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Wave 1 status: Complete
 
-2. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Mark completed AIOUs
    - Record session learnings
 

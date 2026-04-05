@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/feature-deep-dive/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/multi-perspective-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-deep-dive/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-perspective-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-feature-deep-dive - Feature Deep-Dive Analysis
@@ -89,7 +89,7 @@ This phase forces structured deep analysis of EVERY feature before FEAT specs ar
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: planning
 - Set `Current Phase`: 2.5 - Feature Deep-Dive Analysis
 - Set `Status`: in_progress
@@ -98,9 +98,9 @@ Update `.antigravity/project-context.md`:
 
 Read and understand:
 - `specs/scope-lock.md` — canonical feature list with complexity classifications
-- `.antigravity/council-state/planning/planning-tracker.md` — batch assignments (if batched)
+- `.ultimate-sdlc/council-state/planning/planning-tracker.md` — batch assignments (if batched)
 - Architecture from Phase 2 (ADRs, system design)
-- `.antigravity/project-context.md` — project type and constraints
+- `.ultimate-sdlc/project-context.md` — project type and constraints
 
 **Scope Verification**: Count features in scope-lock.md. This is the number of DIVE analyses that must be produced. No exceptions.
 
@@ -290,10 +290,10 @@ When all criteria met (all batches complete, or single pass complete):
 
 1. **Final scope verification**: Count DIVE-XXX.md files in `specs/deep-dives/`. This count MUST equal the feature count in `specs/scope-lock.md`. If mismatch → STOP and identify missing features.
 
-2. Update `.antigravity/project-context.md`:
+2. Update `.ultimate-sdlc/project-context.md`:
    - Set Phase 2.5 status: Complete
 
-3. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+3. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Mark completed tasks
    - Record session learnings
    - **Record total component count across all features**

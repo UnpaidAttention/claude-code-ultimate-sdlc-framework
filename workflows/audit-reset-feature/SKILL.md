@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/functional-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/defect-logging/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/test-case-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/functional-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/defect-logging/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-case-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Reset Feature Test
@@ -87,13 +87,13 @@ Reset and re-test a specific feature from scratch.
    - Verify feature exists in T1 inventory
 
 2. **Review Previous Test State**
-   - Check `.antigravity/progress.md` for previous test results
+   - Check `.ultimate-sdlc/progress.md` for previous test results
    - Check `defect-log.md` for related defects
    - Note: DEF-XXX IDs associated with this feature
 
 3. **Archive Previous Results**
    Use **Display Template** from `council-audit.md` to show: Previous Test Results (Archived)
-   - Append to `.antigravity/progress.md` under "Archived Tests" section
+   - Append to `.ultimate-sdlc/progress.md` under "Archived Tests" section
 
 4. **Update Defect Status**
    For each related defect in `defect-log.md`:
@@ -118,7 +118,7 @@ Reset and re-test a specific feature from scratch.
 7. **Execute Fresh Test**
    - Follow standard T2 functional testing protocol
    - Test all acceptance criteria from planning-handoff.md (if available)
-   - Document results in `.antigravity/progress.md`
+   - Document results in `.ultimate-sdlc/progress.md`
    - Log any new defects with fresh DEF-XXX IDs
 
 8. **Compare Results**
@@ -129,7 +129,7 @@ Reset and re-test a specific feature from scratch.
    - Update `audit-context.md` with new test results
    - Update `defect-log.md` with any new defects
    - Close resolved defects if re-test passes
-   - Update `.antigravity/progress.md` with completion
+   - Update `.ultimate-sdlc/progress.md` with completion
 
 ## Output Format
 

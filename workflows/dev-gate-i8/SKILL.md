@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/quality-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/quality-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-gate-i8 - Gate I8 Verification
@@ -92,12 +92,12 @@ This is a **BLOCKING** gate.
 
 **SCOPE**: In multi-run mode, verify criteria for current run's AIOUs only.
 
-Load criteria from `~/.claude/skills/antigravity/context/gate-criteria.md` § Development Council Gates → Gate I8.
+Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Development Council Gates → Gate I8.
 
 For `project_type` with frontend: also verify design quality criteria from `gate-criteria.md` (criteria 9-16), including:
 - Anti-slop compliance, design consistency, accessibility, visual QA evidence (criteria 9-12)
 - UI design phases complete, UI wiring verification passed, navigation architecture complete, interactive elements wired (criteria 13-16)
-- Check for `.antigravity/council-state/development/ui-verify-run-*.md` reports with PASS verdict
+- Check for `.ultimate-sdlc/council-state/development/ui-verify-run-*.md` reports with PASS verdict
 
 Run automated verification:
 // turbo
@@ -123,15 +123,15 @@ Include: wave completion, test summary, build status, and gate decision.
 
 **If ALL criteria pass:**
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set `Development Council`: Complete (for current run)
    - Set `Gate I8`: Passed (for current run)
    - Set `Active Council`: audit (ready)
 
-2. Update `.antigravity/council-state/development/current-state.md`:
+2. Update `.ultimate-sdlc/council-state/development/current-state.md`:
    - Mark Gate I8 passed with timestamp
 
-3. **If multi-run mode**, update `.antigravity/council-state/development/run-tracker.md`:
+3. **If multi-run mode**, update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Set Gate I8 status to ✅ for current run
    - Update all wave columns to Complete for current run
    - **Mark current run as COMPLETED**
@@ -158,11 +158,11 @@ When the final run passes Gate I8:
 List failures with remediation steps. Next step: fix issues, re-run `/dev-gate-i8`.
 
 **If FAIL in multi-run mode:**
-1. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+1. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Document issues found for current run
    - Track what needs fixing
 
-2. Update `.antigravity/council-state/development/run-tracker.md`:
+2. Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Note gate failure for current run
    - Do NOT mark run as complete
    - Keep run status as "In Progress"

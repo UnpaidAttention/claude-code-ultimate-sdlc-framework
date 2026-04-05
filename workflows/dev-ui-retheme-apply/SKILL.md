@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-retheme-apply - Phase 4: Implement Theme
@@ -65,9 +65,9 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 1 complete: `.antigravity/council-state/development/current-theme-snapshot.md` exists
-- Phase 2 complete: `.antigravity/council-state/development/retheme-direction.md` exists
-- Phase 3 complete: `.antigravity/council-state/development/retheme-proposal.md` exists with status APPROVED
+- Phase 1 complete: `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` exists
+- Phase 2 complete: `.ultimate-sdlc/council-state/development/retheme-direction.md` exists
+- Phase 3 complete: `.ultimate-sdlc/council-state/development/retheme-proposal.md` exists with status APPROVED
 - User has explicitly approved the design system proposal
 
 If prerequisites not met:
@@ -93,7 +93,7 @@ Execute the theme change in strict dependency order to minimize intermediate bre
 
 ### Step 4.1: Update Design Tokens (foundation)
 
-1. Read the approved proposal from `.antigravity/council-state/development/retheme-proposal.md`
+1. Read the approved proposal from `.ultimate-sdlc/council-state/development/retheme-proposal.md`
 2. Update `design-system.md` with the new theme (or create if it does not exist)
 3. Update CSS variables / Tailwind config / theme configuration files:
    - Color tokens (all palette values)

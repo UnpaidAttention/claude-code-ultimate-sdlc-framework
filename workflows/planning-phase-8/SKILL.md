@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-phase-8 - Launch Ready
@@ -79,7 +79,7 @@ Phases 4-7 not complete. Run /planning-supporting-specs first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: planning
 - Set `Current Phase`: 8 - Launch Ready
 - Set `Status`: in_progress
@@ -150,10 +150,10 @@ Before completing this phase, verify:
 
 When all criteria met:
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Phase 8 status: Complete
 
-2. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Mark completed tasks
    - Record session learnings
 

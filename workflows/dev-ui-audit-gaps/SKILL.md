@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit-gaps - Phase 3: Gap Analysis
@@ -66,8 +66,8 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 1 complete: `.antigravity/council-state/development/ui-audit-existing-inventory.md` exists
-- Phase 2 complete: `.antigravity/council-state/development/ui-audit-target-state.md` exists
+- Phase 1 complete: `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md` exists
+- Phase 2 complete: `.ultimate-sdlc/council-state/development/ui-audit-target-state.md` exists
 
 If prerequisites not met:
 ```
@@ -104,7 +104,7 @@ For every cell in the Target CRUD Matrix, check if the operation is implemented:
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/ui-audit-report.md`:
+Save to `.ultimate-sdlc/council-state/development/ui-audit-report.md`:
 
 ```markdown
 # UI Completeness Gap Analysis
@@ -138,7 +138,7 @@ Save to `.antigravity/council-state/development/ui-audit-report.md`:
 - Every target interaction has been verified for wiring status
 - Every CRUD operation has been checked for completeness
 - Gap counts are accurate and documented
-- `.antigravity/council-state/development/ui-audit-report.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/ui-audit-report.md` exists and is complete
 
 ---
 
@@ -151,7 +151,7 @@ Save to `.antigravity/council-state/development/ui-audit-report.md`:
 **Interaction gaps**: [Z] unwired, [W] missing out of [X] target
 **CRUD gaps**: [Z] missing out of [X] target
 
-Gap analysis saved to: .antigravity/council-state/development/ui-audit-report.md
+Gap analysis saved to: .ultimate-sdlc/council-state/development/ui-audit-report.md
 
 Next step: Run /dev-ui-audit-plan to create the implementation plan.
 ```

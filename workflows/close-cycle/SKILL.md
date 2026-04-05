@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,9 +51,9 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/planning-orchestration/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/planning-orchestration/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /close-cycle - Close and Archive Current Cycle
@@ -88,9 +88,9 @@ Close the current development cycle by:
 ### Step 1: Read Current State
 
 Read these files:
-- `.antigravity/project-context.md` — Current position, cycle info
-- `.antigravity/project-manifest.md` — Project identity, cycle history
-- `.antigravity/council-state/{active-council}/current-state.md` — Council progress
+- `.ultimate-sdlc/project-context.md` — Current position, cycle info
+- `.ultimate-sdlc/project-manifest.md` — Project identity, cycle history
+- `.ultimate-sdlc/council-state/{active-council}/current-state.md` — Council progress
 
 Extract:
 - Cycle ID and type
@@ -137,18 +137,18 @@ cp -r specs/ .cycles/{cycle-id}/specs/
 
 | Source (Root) | Destination (Archive) |
 |---|---|
-| `.antigravity/project-context.md` | `.cycles/{cycle-id}/cycle-context.md` |
-| `.antigravity/progress.md` | `.cycles/{cycle-id}/.antigravity/progress.md` |
+| `.ultimate-sdlc/project-context.md` | `.cycles/{cycle-id}/cycle-context.md` |
+| `.ultimate-sdlc/progress.md` | `.cycles/{cycle-id}/.ultimate-sdlc/progress.md` |
 | `cycle-baseline.md` | `.cycles/{cycle-id}/cycle-baseline.md` |
-| `.antigravity/council-state/planning/` | `.cycles/{cycle-id}/.antigravity/council-state/planning/` |
-| `.antigravity/council-state/development/` | `.cycles/{cycle-id}/.antigravity/council-state/development/` |
-| `.antigravity/council-state/audit/` | `.cycles/{cycle-id}/.antigravity/council-state/audit/` |
-| `.antigravity/council-state/validation/` | `.cycles/{cycle-id}/.antigravity/council-state/validation/` |
+| `.ultimate-sdlc/council-state/planning/` | `.cycles/{cycle-id}/.ultimate-sdlc/council-state/planning/` |
+| `.ultimate-sdlc/council-state/development/` | `.cycles/{cycle-id}/.ultimate-sdlc/council-state/development/` |
+| `.ultimate-sdlc/council-state/audit/` | `.cycles/{cycle-id}/.ultimate-sdlc/council-state/audit/` |
+| `.ultimate-sdlc/council-state/validation/` | `.cycles/{cycle-id}/.ultimate-sdlc/council-state/validation/` |
 | `handoffs/*` | `.cycles/{cycle-id}/handoffs/` |
 | `.memory/` | `.cycles/{cycle-id}/.memory/` |
 | `.metrics/` | `.cycles/{cycle-id}/.metrics/` |
 
-**Do NOT move**: `.antigravity/project-manifest.md`, `product-concept.md`, `specs/`, `~/.claude/skills/antigravity/`, `~/.claude/skills/antigravity/context/`, `.reference/`, `.antigravity/config.yaml`, source code.
+**Do NOT move**: `.ultimate-sdlc/project-manifest.md`, `product-concept.md`, `specs/`, `~/.claude/skills/ultimate-sdlc/`, `~/.claude/skills/ultimate-sdlc/context/`, `.reference/`, `.ultimate-sdlc/config.yaml`, source code.
 
 #### 4d: Save Cycle Summary
 
@@ -181,7 +181,7 @@ Use **Display Template** from `council-development.md` to show: Project Learning
 
 ### Step 7: Update Project Manifest
 
-Update `.antigravity/project-manifest.md`:
+Update `.ultimate-sdlc/project-manifest.md`:
 
 1. Move cycle from "Active" to "Completed" in Cycle History
 2. Add completion date
@@ -195,19 +195,19 @@ Update `.antigravity/project-manifest.md`:
 After archiving, the root should be clean of cycle-specific state:
 
 **Should exist at root**:
-- `.antigravity/project-manifest.md` — Project identity
+- `.ultimate-sdlc/project-manifest.md` — Project identity
 - `product-concept.md` — Original vision
 - `specs/` — Accumulated specifications
 - `.cycles/` — Archived cycles
-- `~/.claude/skills/antigravity/`, `~/.claude/skills/antigravity/context/`, `.reference/` — Framework
-- `.antigravity/config.yaml`, `CLAUDE.md`, `README.md`, `ARCHITECTURE.md` — Framework docs
+- `~/.claude/skills/ultimate-sdlc/`, `~/.claude/skills/ultimate-sdlc/context/`, `.reference/` — Framework
+- `.ultimate-sdlc/config.yaml`, `CLAUDE.md`, `README.md`, `ARCHITECTURE.md` — Framework docs
 - Source code directories
 
 **Should NOT exist at root** (archived to .cycles/):
-- `.antigravity/project-context.md`
-- `.antigravity/progress.md`
+- `.ultimate-sdlc/project-context.md`
+- `.ultimate-sdlc/progress.md`
 - `cycle-baseline.md`
-- `.antigravity/council-state/` (with contents)
+- `.ultimate-sdlc/council-state/` (with contents)
 - `handoffs/` (with contents)
 - `.memory/`
 - `.metrics/`

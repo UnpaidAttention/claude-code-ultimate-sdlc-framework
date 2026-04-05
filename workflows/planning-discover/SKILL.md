@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/brainstorming/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/interview-techniques/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/brainstorming/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/interview-techniques/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: planning-discover
@@ -85,7 +85,7 @@ Execute these steps in order:
 
 Read these files to understand your role:
 - `CLAUDE.md` - Framework documentation
-- `~/.claude/skills/antigravity/context/framework-overview.md` - Your role and purpose
+- `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` - Your role and purpose
 
 ### Step 2: Initial Idea Capture
 
@@ -248,7 +248,7 @@ This approach:
 When `/planning-start` detects `idea-intake.md`:
 - Skips basic project info questions (already captured)
 - Uses idea-intake.md as input for Phase 1: Discovery
-- Pre-populates .antigravity/project-context.md with captured information
+- Pre-populates .ultimate-sdlc/project-context.md with captured information
 
 ## Notes
 

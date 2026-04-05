@@ -30,8 +30,8 @@ Within each track, phases are sequential with mandatory prerequisites.
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/antigravity/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate T3**: GUI Analysis → see `gate-criteria.md § Gate T3` — **skip if `project_type` has no frontend**
 - **Gate A2**: Completeness → see `gate-criteria.md § Gate A2`
@@ -41,10 +41,10 @@ Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-m
 
 Standard session start/resume sequence for all Audit Council workflows:
 
-1. Read `.antigravity/config.yaml` → extract `governance_mode`, `project_type`
-2. Read `.antigravity/project-context.md` → confirm Active Council = Audit, get current track/phase
-3. Read `.antigravity/handoffs/development-handoff.md` → load implementation summary
-4. Read `.antigravity/council-state/audit/WORKING-MEMORY.md` → check for incomplete tasks
+1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
+2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Audit, get current track/phase
+3. Read `.ultimate-sdlc/handoffs/development-handoff.md` → load implementation summary
+4. Read `.ultimate-sdlc/council-state/audit/WORKING-MEMORY.md` → check for incomplete tasks
 5. **If resuming**: Display resume summary, continue from last position
 6. **If new session**: Display welcome with track overview
 7. Check governance_mode → apply mode-specific behavior (combine phases in Lightweight, skip T3 if no frontend)
@@ -77,7 +77,7 @@ Standard session start/resume sequence for all Audit Council workflows:
 
 **NO DEFECT WITHOUT REPRODUCTION + EVIDENCE**
 
-> Evidence format is determined by `project_type`: screenshots for web-app/mobile-app, terminal output for cli-tool, request/response diffs for api-service. See `~/.claude/skills/antigravity/context/project-presets.md`.
+> Evidence format is determined by `project_type`: screenshots for web-app/mobile-app, terminal output for cli-tool, request/response diffs for api-service. See `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
 
 ## Defect Severity
 
@@ -123,7 +123,7 @@ Functional testing MUST go beyond happy-path verification. For EVERY feature tes
 
 ### Security-Specific Test Requirements
 
-For every threat in `.antigravity/specs/security/threat-model.md`:
+For every threat in `.ultimate-sdlc/specs/security/threat-model.md`:
 - Identify the specific attack vector (SQL injection, XSS, IDOR, etc.)
 - Attempt the attack against the implemented mitigation
 - Verify the attack is blocked (request rejected, input sanitized, access denied)
@@ -163,7 +163,7 @@ Switch with `/audit-think [mode]`:
 - audit-handoff.md - Quality assessment
 - defect-log.md - All defects with evidence
 
-Validate against `~/.claude/skills/antigravity/context/handoff-schemas/audit-handoff.schema.md`.
+Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/audit-handoff.schema.md`.
 
 ## Recovery
 

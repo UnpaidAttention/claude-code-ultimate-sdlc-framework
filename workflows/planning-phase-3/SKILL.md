@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/feature-spec/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/acceptance-criteria/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-spec/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/acceptance-criteria/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-phase-3 - Features
@@ -85,7 +85,7 @@ Phase 2 not complete. Run /planning-phase-2 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: planning
 - Set `Current Phase`: 3 - Features
 - Set `Status`: in_progress
@@ -95,7 +95,7 @@ Update `.antigravity/project-context.md`:
 Read and understand:
 - `specs/scope-lock.md` — the canonical list of ALL features to be planned
 - `specs/deep-dives/DIVE-*.md` — Deep-dive analysis for all features (from Phase 2.5)
-- `.antigravity/council-state/planning/planning-tracker.md` — batch assignments (if batched)
+- `.ultimate-sdlc/council-state/planning/planning-tracker.md` — batch assignments (if batched)
 - Architecture from Phase 2
 - ADRs for technical constraints
 
@@ -108,7 +108,7 @@ Read and understand:
 **Lens**: `[Requirements]`
 
 **Action Required**:
-1. Apply `[Requirements]` lens from `~/.claude/skills/antigravity/agents/`
+1. Apply `[Requirements]` lens from `~/.claude/skills/ultimate-sdlc/agents/`
 2. APPLY the agent's domain expertise: Use "Core Principles" for decisions, "When to Use" for scope. Ignore personality descriptions. Framework rules (P0-P3) override agent guidelines..
 3. LOAD the skills specified in the `skills_required` section of this workflow's frontmatter.
 4. PROCEED to Step 1 after loading..
@@ -132,7 +132,7 @@ Use **Display Template** from `council-planning.md` to show: FEAT-XXX: [Feature 
 **Lens**: `[Architecture]`
 
 **Action Required**:
-1. Apply `[Architecture]` lens from `~/.claude/skills/antigravity/agents/`
+1. Apply `[Architecture]` lens from `~/.claude/skills/ultimate-sdlc/agents/`
 2. APPLY the agent's domain expertise: Use "Core Principles" for decisions, "When to Use" for scope. Ignore personality descriptions. Framework rules (P0-P3) override agent guidelines..
 3. LOAD the skills specified in the `skills_required` section of this workflow's frontmatter.
 4. PROCEED to Step 1 after loading..
@@ -202,10 +202,10 @@ When all criteria met (all batches complete, or single pass complete):
 
 1. **Final scope verification**: Count FEAT-XXX.md files in `specs/features/`. This count MUST equal the feature count in `specs/scope-lock.md`. If mismatch → STOP and identify missing features.
 
-2. Update `.antigravity/project-context.md`:
+2. Update `.ultimate-sdlc/project-context.md`:
    - Set Phase 3 status: Complete
 
-3. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+3. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Mark completed tasks
    - Record session learnings
 

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,12 +51,12 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit-fix - Phase 5: Implement Gaps
@@ -67,7 +67,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 4 complete: `.antigravity/council-state/development/ui-audit-plan.md` exists
+- Phase 4 complete: `.ultimate-sdlc/council-state/development/ui-audit-plan.md` exists
 - User has reviewed and approved the implementation plan
 
 If prerequisites not met:
@@ -82,10 +82,10 @@ Run /dev-ui-audit-plan first, then get user approval before proceeding.
 
 ### Step 5.1: Load Implementation Context
 
-1. Read `.antigravity/council-state/development/ui-audit-plan.md` — the approved plan
-2. Read `.antigravity/council-state/development/ui-audit-existing-inventory.md` — existing design system tokens
-3. Read `.antigravity/council-state/development/ui-audit-report.md` — gap details
-4. Read `.antigravity/council-state/development/ui-audit-target-state.md` — target interaction maps
+1. Read `.ultimate-sdlc/council-state/development/ui-audit-plan.md` — the approved plan
+2. Read `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md` — existing design system tokens
+3. Read `.ultimate-sdlc/council-state/development/ui-audit-report.md` — gap details
+4. Read `.ultimate-sdlc/council-state/development/ui-audit-target-state.md` — target interaction maps
 
 ### Step 5.2: Implement Priority 1 — Missing Routes
 
@@ -127,7 +127,7 @@ For each incomplete page in the plan:
 
 ### Step 5.5: Progress Tracking
 
-After completing each item, update `.antigravity/council-state/development/ui-audit-plan.md`:
+After completing each item, update `.ultimate-sdlc/council-state/development/ui-audit-plan.md`:
 - Change item status from `PENDING` to `DONE`
 - If an item cannot be completed, mark as `BLOCKED` with reason
 
@@ -145,7 +145,7 @@ After completing each item, update `.antigravity/council-state/development/ui-au
 
 ## Completion Condition
 
-- All items in `.antigravity/council-state/development/ui-audit-plan.md` are marked `DONE` (or `BLOCKED` with documented reason)
+- All items in `.ultimate-sdlc/council-state/development/ui-audit-plan.md` are marked `DONE` (or `BLOCKED` with documented reason)
 - All new code follows existing design system
 - Tests pass for all implemented gaps
 - No existing code was deleted

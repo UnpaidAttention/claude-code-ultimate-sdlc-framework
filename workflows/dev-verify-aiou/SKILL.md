@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/acceptance-criteria/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/test-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/evidence-capture/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/acceptance-criteria/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/evidence-capture/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Development Verify AIOU Workflow
@@ -66,7 +66,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4.5
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/council-development.md`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/council-development.md`
 
 ## Description
 
@@ -167,13 +167,13 @@ Use **Display Template** from `council-development.md` to show: AIOU Completion 
 ### Step 8: Update State (Only if Verified)
 
 **If ALL checks PASS:**
-- Update `.antigravity/project-context.md` to mark AIOU complete
+- Update `.ultimate-sdlc/project-context.md` to mark AIOU complete
 - Commit with message: `Complete AIOU-XXX: [description]`
 - Save to Knowledge Base: `{PROJECT}-DEV-AIOU-XXX-COMPLETE`
 - Announce: "AIOU-XXX VERIFIED COMPLETE ✅"
 
 **If ANY check FAILS:**
-- Do NOT update .antigravity/project-context.md
+- Do NOT update .ultimate-sdlc/project-context.md
 - Do NOT commit
 - List specific failures
 - Announce: "AIOU-XXX VERIFICATION FAILED ❌ - [reasons]"

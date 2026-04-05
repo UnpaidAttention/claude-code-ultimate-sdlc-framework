@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/evidence-capture/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/traceability/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/evidence-capture/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/traceability/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Planning Verify Workflow
@@ -81,14 +81,14 @@ AI agents have a tendency to claim completion without proper verification. This 
 ## Pre-Conditions
 
 - At least one deliverable should be complete
-- `.antigravity/project-context.md` must exist with current phase
+- `.ultimate-sdlc/project-context.md` must exist with current phase
 - Deliverable files must be accessible
 
 ## Steps
 
 ### Step 1: Identify What to Verify
 
-Read `.antigravity/project-context.md` and `.antigravity/progress.md` to determine:
+Read `.ultimate-sdlc/project-context.md` and `.ultimate-sdlc/progress.md` to determine:
 - Current phase
 - Deliverables claimed as complete
 - Files that should exist
@@ -154,7 +154,7 @@ Use **Display Template** from `council-planning.md` to show: Planning Verificati
 ### Step 6: Update State
 
 **If VERIFIED:**
-- Update `.antigravity/progress.md` with verification timestamp
+- Update `.ultimate-sdlc/progress.md` with verification timestamp
 - Save to Knowledge Base: `{PROJECT}-PLANNING-VERIFY-{PHASE}-{DATE}`
 - Announce: "Phase [X] deliverables VERIFIED ✅"
 

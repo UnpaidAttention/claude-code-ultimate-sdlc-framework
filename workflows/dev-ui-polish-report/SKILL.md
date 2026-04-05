@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish-report - Phase 2: Generate Slop Report
@@ -68,7 +68,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- `.antigravity/council-state/development/ui-slop-scan.md` must exist (Phase 1 complete)
+- `.ultimate-sdlc/council-state/development/ui-slop-scan.md` must exist (Phase 1 complete)
 
 If prerequisite not met:
 ```
@@ -82,7 +82,7 @@ Phase 2 requires the raw scan output from Phase 1.
 
 ### Step 1: Load Raw Scan Results
 
-Read `.antigravity/council-state/development/ui-slop-scan.md` from Phase 1. Extract all findings across the 5 categories.
+Read `.ultimate-sdlc/council-state/development/ui-slop-scan.md` from Phase 1. Extract all findings across the 5 categories.
 
 ### Step 2: Deduplicate and Consolidate
 
@@ -133,13 +133,13 @@ Summarize at the top of the report:
 
 ## Output
 
-Save structured report to `.antigravity/council-state/development/ui-slop-report.md`:
+Save structured report to `.ultimate-sdlc/council-state/development/ui-slop-report.md`:
 
 ```markdown
 # Anti-Slop Audit Report
 
 ## Report Date: [date]
-## Source: .antigravity/council-state/development/ui-slop-scan.md
+## Source: .ultimate-sdlc/council-state/development/ui-slop-scan.md
 
 ## Findings Summary
 [Summary counts per Step 5]
@@ -160,7 +160,7 @@ Save structured report to `.antigravity/council-state/development/ui-slop-report
 - All raw findings consolidated and deduplicated
 - Every finding has severity assigned with justification
 - Summary counts match detailed findings
-- Report saved to `.antigravity/council-state/development/ui-slop-report.md`
+- Report saved to `.ultimate-sdlc/council-state/development/ui-slop-report.md`
 
 ---
 
@@ -170,7 +170,7 @@ Save structured report to `.antigravity/council-state/development/ui-slop-report
 ## Phase 2 Complete: Slop Report Generated
 
 **Total slop findings**: [N] (HIGH: [n], MEDIUM: [n], LOW: [n])
-**Report saved to**: .antigravity/council-state/development/ui-slop-report.md
+**Report saved to**: .ultimate-sdlc/council-state/development/ui-slop-report.md
 
 **Next step**: Run `/dev-ui-polish-research` to research design alternatives for each finding category.
 ```

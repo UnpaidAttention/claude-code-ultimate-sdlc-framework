@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,13 +51,13 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/thoroughness-audit/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/gap-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/feature-deep-dive/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/thoroughness-audit/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/gap-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-deep-dive/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /thoroughness-audit - Thoroughness Audit
@@ -88,7 +88,7 @@ This is a **read-only audit**. All artifact creation is deferred to `/thoroughne
 
 - Project must have `specs/scope-lock.md` (feature list)
 - At least one FEAT spec must exist in `specs/features/`
-- `.antigravity/project-context.md` must exist
+- `.ultimate-sdlc/project-context.md` must exist
 
 If prerequisites not met:
 ```
@@ -103,11 +103,11 @@ Run /planning-start if this is a new project.
 ### Step 1: Load Project Context
 
 Read and internalize:
-- `.antigravity/project-context.md` — project type, active council, current phase
+- `.ultimate-sdlc/project-context.md` — project type, active council, current phase
 - `specs/scope-lock.md` — canonical feature list with IDs
-- `.antigravity/council-state/development/run-tracker.md` — run divisions and AIOU assignments (if exists)
-- `.antigravity/council-state/planning/planning-handoff.md` — planning→development handoff (if exists)
-- `.antigravity/config.yaml` — thoroughness settings (`thoroughness.audit_batch_size`)
+- `.ultimate-sdlc/council-state/development/run-tracker.md` — run divisions and AIOU assignments (if exists)
+- `.ultimate-sdlc/council-state/planning/planning-handoff.md` — planning→development handoff (if exists)
+- `.ultimate-sdlc/config.yaml` — thoroughness settings (`thoroughness.audit_batch_size`)
 
 **Extract from scope-lock.md:**
 - Total feature count
@@ -118,7 +118,7 @@ Read and internalize:
 
 ### Step 2: Determine Batch Plan
 
-Read `.antigravity/config.yaml` → `thoroughness.audit_batch_size` (default: 5).
+Read `.ultimate-sdlc/config.yaml` → `thoroughness.audit_batch_size` (default: 5).
 
 - If audit set ≤ batch size: **single pass** — audit all features without stopping
 - If audit set > batch size: **batched** — divide into batches of 3-5 features, grouped by related functionality where possible
@@ -195,13 +195,13 @@ Check `specs/connectivity-matrix.md`:
 
 #### 4e: Criterion 5 — Feature Verification (Tier A only)
 
-Check `.antigravity/council-state/development/feature-verifications/FEAT-{ID}-verified.md`:
+Check `.ultimate-sdlc/council-state/development/feature-verifications/FEAT-{ID}-verified.md`:
 - File exists? If not → Critical gap
 - If exists: verify it references the component inventory and confirms implementation
 
 #### 4f: Criterion 6 — Run Sizing (Tier A and B only)
 
-Check `.antigravity/council-state/development/run-tracker.md`:
+Check `.ultimate-sdlc/council-state/development/run-tracker.md`:
 - If exists: find the run(s) containing this feature's AIOUs. Check limits (≤15 AIOUs, ≤45 effort).
 - If no run-tracker but total AIOUs > 15: → Major gap (run-tracker should exist)
 
@@ -250,8 +250,8 @@ Wait for user to say "proceed" before starting the next batch.
 
 After all features audited (all batches complete or single pass done):
 
-1. Create directory: `.antigravity/council-state/audit/thoroughness/`
-2. Write report to `.antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md` using the template from `templates/thoroughness-audit-report.md`
+1. Create directory: `.ultimate-sdlc/council-state/audit/thoroughness/`
+2. Write report to `.ultimate-sdlc/council-state/audit/thoroughness/thoroughness-audit-report.md` using the template from `templates/thoroughness-audit-report.md`
 3. Fill all template sections:
    - Executive Summary with gap counts and pass rate
    - Feature Implementation Status table
@@ -264,7 +264,7 @@ After all features audited (all batches complete or single pass done):
 
 ### Step 8: Update State
 
-1. Append to `.antigravity/progress.md`:
+1. Append to `.ultimate-sdlc/progress.md`:
 ```
 ### [DATE] - Thoroughness Audit
 
@@ -272,7 +272,7 @@ After all features audited (all batches complete or single pass done):
 **Features Audited**: [N]
 **Gaps Found**: [critical] Critical, [major] Major, [minor] Minor
 **Pass Rate**: [N]%
-**Report**: .antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md
+**Report**: .ultimate-sdlc/council-state/audit/thoroughness/thoroughness-audit-report.md
 ```
 
 2. Do NOT change Active Council or modify existing specs.
@@ -295,7 +295,7 @@ Breakdown:
   Spec gaps:   [N] (artifact creation/update needed)
   Code gaps:   [N] (implementation work needed)
 
-Report: .antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md
+Report: .ultimate-sdlc/council-state/audit/thoroughness/thoroughness-audit-report.md
 
 Next Step: Run /thoroughness-remediate to address gaps.
   --severity Critical    → Fix only critical gaps

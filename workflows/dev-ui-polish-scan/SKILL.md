@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish-scan - Phase 1: Anti-Slop Scan
@@ -170,7 +170,7 @@ For each finding, record:
 
 ## Output
 
-Save raw scan results to `.antigravity/council-state/development/ui-slop-scan.md`:
+Save raw scan results to `.ultimate-sdlc/council-state/development/ui-slop-scan.md`:
 
 ```markdown
 # Anti-Slop Scan — Raw Results
@@ -208,7 +208,7 @@ Save raw scan results to `.antigravity/council-state/development/ui-slop-scan.md
 
 - All 5 scan categories executed against the full frontend codebase
 - Every finding recorded with file paths and evidence
-- Raw results saved to `.antigravity/council-state/development/ui-slop-scan.md`
+- Raw results saved to `.ultimate-sdlc/council-state/development/ui-slop-scan.md`
 
 ---
 
@@ -218,7 +218,7 @@ Save raw scan results to `.antigravity/council-state/development/ui-slop-scan.md
 ## Phase 1 Complete: Anti-Slop Scan Finished
 
 **Findings recorded**: [N] total across 5 categories
-**Raw results saved to**: .antigravity/council-state/development/ui-slop-scan.md
+**Raw results saved to**: .ultimate-sdlc/council-state/development/ui-slop-scan.md
 
 **Next step**: Run `/dev-ui-polish-report` to generate the structured slop report from raw scan results.
 ```

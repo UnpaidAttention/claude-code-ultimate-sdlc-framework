@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit-verify - Phase 6: Verify Completeness
@@ -66,9 +66,9 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 5 complete: All items in `.antigravity/council-state/development/ui-audit-plan.md` are `DONE` or `BLOCKED`
-- `.antigravity/council-state/development/ui-audit-report.md` exists (the gap analysis to verify against)
-- `.antigravity/council-state/development/ui-audit-target-state.md` exists (the target state to verify against)
+- Phase 5 complete: All items in `.ultimate-sdlc/council-state/development/ui-audit-plan.md` are `DONE` or `BLOCKED`
+- `.ultimate-sdlc/council-state/development/ui-audit-report.md` exists (the gap analysis to verify against)
+- `.ultimate-sdlc/council-state/development/ui-audit-target-state.md` exists (the target state to verify against)
 
 If prerequisites not met:
 ```
@@ -127,7 +127,7 @@ If CRITICAL or HIGH issues found:
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/ui-audit-verification.md`:
+Save to `.ultimate-sdlc/council-state/development/ui-audit-verification.md`:
 
 ```markdown
 # UI Audit Verification Report
@@ -181,7 +181,7 @@ Save to `.antigravity/council-state/development/ui-audit-verification.md`:
 - Full verification has been run against all target state items
 - All CRITICAL and HIGH issues have been remediated
 - Verification report is saved
-- `.antigravity/council-state/development/ui-audit-verification.md` exists with PASS verdict
+- `.ultimate-sdlc/council-state/development/ui-audit-verification.md` exists with PASS verdict
 
 ---
 

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit-scan - Phase 1: Inventory Existing UI
@@ -101,7 +101,7 @@ Ensure the project has pages/components and specs/features/ is populated.
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/ui-audit-existing-inventory.md`:
+Save to `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md`:
 
 ```markdown
 # UI Audit — Existing Inventory
@@ -136,7 +136,7 @@ Save to `.antigravity/council-state/development/ui-audit-existing-inventory.md`:
 - Every page component has been inventoried for interactive elements
 - Each interactive element has a wired/unwired/missing status
 - Design system tokens are documented
-- `.antigravity/council-state/development/ui-audit-existing-inventory.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md` exists and is complete
 
 ---
 
@@ -149,7 +149,7 @@ Save to `.antigravity/council-state/development/ui-audit-existing-inventory.md`:
 **Interactive elements**: [N] ([X] wired, [Y] unwired)
 **Design system**: [status]
 
-Inventory saved to: .antigravity/council-state/development/ui-audit-existing-inventory.md
+Inventory saved to: .ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md
 
 Next step: Run /dev-ui-audit-target to build the target state.
 ```

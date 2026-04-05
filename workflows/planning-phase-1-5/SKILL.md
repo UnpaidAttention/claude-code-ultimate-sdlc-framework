@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/multi-perspective-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/risk-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/decision-making/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-perspective-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/risk-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/decision-making/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 <!-- NOTE: Command uses hyphens for consistency: /planning-phase-1-5 
@@ -69,7 +69,7 @@ Load these knowledge skills for reference during this workflow:
 ## Prerequisites
 
 - Phase 1 (Discovery) must be complete
-- Requirements documented in specs/ or .antigravity/project-context.md
+- Requirements documented in specs/ or .ultimate-sdlc/project-context.md
 
 If prerequisites not met:
 ```
@@ -82,7 +82,7 @@ Phase 1 not complete. Run /planning-start first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: planning
 - Set `Current Phase`: 1.5 - Deliberation
 - Set `Status`: in_progress
@@ -204,7 +204,7 @@ Classify each in-scope feature to inform analysis depth and batch grouping:
 
 ### Step 6: Batch Planning (if applicable)
 
-If total in-scope features ≥8, create `.antigravity/council-state/planning/planning-tracker.md` per the schema in `council-planning.md § Planning Batch Mode`:
+If total in-scope features ≥8, create `.ultimate-sdlc/council-state/planning/planning-tracker.md` per the schema in `council-planning.md § Planning Batch Mode`:
 1. Group features into batches of 3-5 by module/domain
 2. Present batch groupings to user for review
 3. Document batch assignments in planning-tracker.md
@@ -245,10 +245,10 @@ Before completing this phase, verify:
 
 When all criteria met:
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Phase 1.5 status: Complete
 
-2. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Mark completed tasks
    - Record session learnings
    - **Record total feature count and user-confirmed scope**

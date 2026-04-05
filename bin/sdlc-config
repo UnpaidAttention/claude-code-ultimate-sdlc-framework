@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ag-config — Read/write Antigravity config values
+# sdlc-config — Read/write Ultimate SDLC config values
 # Usage:
-#   ag-config get <key>           Read a config value
-#   ag-config set <key> <value>   Write a config value
-#   ag-config list                List all config values
+#   sdlc-config get <key>           Read a config value
+#   sdlc-config set <key> <value>   Write a config value
+#   sdlc-config list                List all config values
 
-CONFIG_FILE="$HOME/.antigravity/config.yaml"
+CONFIG_FILE="$HOME/.ultimate-sdlc/config.yaml"
 
 usage() {
     echo "Usage:"
-    echo "  ag-config get <key>           Read a config value"
-    echo "  ag-config set <key> <value>   Write a config value"
-    echo "  ag-config list                List all config values"
+    echo "  sdlc-config get <key>           Read a config value"
+    echo "  sdlc-config set <key> <value>   Write a config value"
+    echo "  sdlc-config list                List all config values"
     exit 1
 }
 
 ensure_config() {
     if [[ ! -f "$CONFIG_FILE" ]]; then
         echo "Error: Config file not found at $CONFIG_FILE" >&2
-        echo "Run the setup script first: ~/.claude/skills/antigravity/setup" >&2
+        echo "Run the setup script first: ~/.claude/skills/ultimate-sdlc/setup" >&2
         exit 1
     fi
 }
@@ -53,7 +53,7 @@ cmd_set() {
 
 cmd_list() {
     ensure_config
-    echo "# Antigravity Config ($CONFIG_FILE)"
+    echo "# Ultimate SDLC Config ($CONFIG_FILE)"
     echo ""
     grep -v '^#' "$CONFIG_FILE" | grep -v '^[[:space:]]*$' || true
 }

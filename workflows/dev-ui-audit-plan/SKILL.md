@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit-plan - Phase 4: Gap Implementation Plan
@@ -65,7 +65,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 3 complete: `.antigravity/council-state/development/ui-audit-report.md` exists
+- Phase 3 complete: `.ultimate-sdlc/council-state/development/ui-audit-report.md` exists
 
 If prerequisites not met:
 ```
@@ -79,7 +79,7 @@ Run /dev-ui-audit-gaps first to identify gaps.
 
 ### Step 4.1: Categorize Gaps by Priority
 
-Read `.antigravity/council-state/development/ui-audit-report.md` and organize gaps into implementation priorities:
+Read `.ultimate-sdlc/council-state/development/ui-audit-report.md` and organize gaps into implementation priorities:
 
 **Priority 1: Missing Routes** — Create pages that don't exist. These are structural gaps.
 
@@ -99,7 +99,7 @@ Display the plan and **wait for user approval** before proceeding. The user may 
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/ui-audit-plan.md`:
+Save to `.ultimate-sdlc/council-state/development/ui-audit-plan.md`:
 
 ```markdown
 # UI Gap Implementation Plan
@@ -140,7 +140,7 @@ After saving the plan, present it to the user:
 **Incomplete pages**: [N] pages to fill
 **Total items**: [N]
 
-Plan saved to: .antigravity/council-state/development/ui-audit-plan.md
+Plan saved to: .ultimate-sdlc/council-state/development/ui-audit-plan.md
 
 Please review the plan. You can:
 - Approve as-is → proceed with /dev-ui-audit-fix
@@ -161,7 +161,7 @@ Awaiting your approval before implementation begins.
 - Tasks are ordered by priority with dependencies identified
 - Effort estimate is provided
 - Plan has been presented to user
-- `.antigravity/council-state/development/ui-audit-plan.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/ui-audit-plan.md` exists and is complete
 
 ---
 

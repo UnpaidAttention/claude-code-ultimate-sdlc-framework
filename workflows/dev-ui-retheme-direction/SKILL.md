@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-retheme-direction - Phase 2: Research New Direction
@@ -65,7 +65,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 1 complete: `.antigravity/council-state/development/current-theme-snapshot.md` exists
+- Phase 1 complete: `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` exists
 - Git tag `pre-retheme-baseline` exists
 
 If prerequisites not met:
@@ -80,7 +80,7 @@ Run /dev-ui-retheme-snapshot first.
 
 ### Step 2.1: Review Current Theme
 
-Read `.antigravity/council-state/development/current-theme-snapshot.md` and summarize the current visual identity.
+Read `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` and summarize the current visual identity.
 
 ### Step 2.2: User Direction Input
 
@@ -126,7 +126,7 @@ Combine research findings into a clear direction statement:
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/retheme-direction.md`:
+Save to `.ultimate-sdlc/council-state/development/retheme-direction.md`:
 
 ```markdown
 # Retheme Direction
@@ -167,7 +167,7 @@ Save to `.antigravity/council-state/development/retheme-direction.md`:
 - User has provided direction input
 - Research or validation has been performed based on user choice
 - Direction is clearly documented with rationale
-- `.antigravity/council-state/development/retheme-direction.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/retheme-direction.md` exists and is complete
 
 ---
 
@@ -180,7 +180,7 @@ Save to `.antigravity/council-state/development/retheme-direction.md`:
 **Direction**: [brief description of new aesthetic]
 **Key changes**: [top 3-4 changes from current theme]
 
-Direction saved to: .antigravity/council-state/development/retheme-direction.md
+Direction saved to: .ultimate-sdlc/council-state/development/retheme-direction.md
 
 Next step: Run /dev-ui-retheme-propose to create the complete new design system proposal.
 ```

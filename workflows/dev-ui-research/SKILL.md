@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-research - UI Design Research Phase
@@ -77,7 +77,7 @@ Research UI design approaches, gather visual inspiration, and analyze reference 
 - `handoffs/planning-handoff.md` exists with Design Direction (Section 4)
 - Feature specs exist in `specs/features/`
 - Deep-dives exist in `specs/deep-dives/`
-- `.antigravity/council-state/development/run-tracker.md` shows UI Design Phases status = PENDING
+- `.ultimate-sdlc/council-state/development/run-tracker.md` shows UI Design Phases status = PENDING
 
 If prerequisites not met:
 ```
@@ -166,7 +166,7 @@ For each major page type identified in Step 1:
    - Generate 2-3 prototype screens for the application's primary pages
    - Use the planning handoff's design direction as the prompt basis
    - Extract design patterns from generated screens
-   - If Stitch produces a DESIGN.md: save as supplementary reference in `.antigravity/council-state/development/stitch-references/` (not as the canonical design system)
+   - If Stitch produces a DESIGN.md: save as supplementary reference in `.ultimate-sdlc/council-state/development/stitch-references/` (not as the canonical design system)
 
 2. **If Stitch web tool is accessible** (via WebFetch/WebSearch):
    - Research available design patterns and templates
@@ -195,7 +195,7 @@ For each major page type identified in Step 1:
 
 ### Step 6: Generate Design Research Document
 
-Create `.antigravity/council-state/development/ui-design-research.md`:
+Create `.ultimate-sdlc/council-state/development/ui-design-research.md`:
 
 ```markdown
 # UI Design Research — [Project Name]
@@ -251,7 +251,7 @@ If research suggests different fonts or colors than planning proposed, state the
 
 ### Step 7: Update Run Tracker
 
-Update `.antigravity/council-state/development/run-tracker.md`:
+Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
 - Set `UI Design Phases > UI Research` status to ✅ COMPLETE
 
 ### Step 8: Announce Completion
@@ -263,7 +263,7 @@ Update `.antigravity/council-state/development/run-tracker.md`:
 **Design references collected**: [N]
 **Competitive applications analyzed**: [N]
 
-Research document saved to: .antigravity/council-state/development/ui-design-research.md
+Research document saved to: .ultimate-sdlc/council-state/development/ui-design-research.md
 
 Next step: Run /dev-ui-design-plan to create the UI design plan.
 ```
@@ -273,7 +273,7 @@ Next step: Run /dev-ui-design-plan to create the UI design plan.
 ## Completion Condition
 
 The phase is complete when ALL of the following are true:
-- `.antigravity/council-state/development/ui-design-research.md` exists
+- `.ultimate-sdlc/council-state/development/ui-design-research.md` exists
 - Every page from the Page Inventory has a section in the research document
 - Each page section contains at least 2 specific design references (not generic principles)
 - At least 3 competitive/reference applications were analyzed

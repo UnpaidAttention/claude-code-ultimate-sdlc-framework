@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/state-diagnosis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/conflict-resolution/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/recovery-procedures/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/session-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/state-diagnosis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/conflict-resolution/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/recovery-procedures/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/session-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /recover - Session Recovery Workflow
@@ -63,7 +63,7 @@ Load these knowledge skills for reference during this workflow:
 ---
 ## Lens Selection
 
-**Agent Selection by Council** (read from .antigravity/project-context.md `Active Council` field):
+**Agent Selection by Council** (read from .ultimate-sdlc/project-context.md `Active Council` field):
 
 | Active Council | Lead Agent |
 |----------------|------------|
@@ -73,7 +73,7 @@ Load these knowledge skills for reference during this workflow:
 | Validation | `[Requirements]` + `[Quality]` |
 | (unknown/missing) | `[Requirements]` (fallback) |
 
-**If .antigravity/project-context.md is corrupted or unreadable**: Use `[Requirements]` lens as fallback.
+**If .ultimate-sdlc/project-context.md is corrupted or unreadable**: Use `[Requirements]` lens as fallback.
 
 ---
 
@@ -112,9 +112,9 @@ Check for inconsistencies:
 
 | Check | Expected | Actual | Conflict? |
 |-------|----------|--------|-----------|
-| .antigravity/project-context.md phase matches current-state.md | Same phase | [actual] | YES/NO |
+| .ultimate-sdlc/project-context.md phase matches current-state.md | Same phase | [actual] | YES/NO |
 | WORKING-MEMORY.md tasks align with phase | All tasks for current phase | [actual] | YES/NO |
-| .antigravity/progress.md last entry matches .antigravity/project-context.md | Same phase | [actual] | YES/NO |
+| .ultimate-sdlc/progress.md last entry matches .ultimate-sdlc/project-context.md | Same phase | [actual] | YES/NO |
 | In-progress tasks in WORKING-MEMORY.md | None (clean end) or few | [actual] | YES/NO |
 
 ### Step 3: Diagnose Interruption Type
@@ -171,13 +171,13 @@ After recovery action determined:
    - Clear stale in-progress tasks
    - Add recovery note to Session Learnings
 
-2. **Update .antigravity/progress.md**:
+2. **Update .ultimate-sdlc/progress.md**:
    - Add recovery session entry
    - Document what was recovered
 
 3. **Commit state**:
    ```bash
-   git add .antigravity/project-context.md .antigravity/progress.md .antigravity/council-state/
+   git add .ultimate-sdlc/project-context.md .ultimate-sdlc/progress.md .ultimate-sdlc/council-state/
    git commit -m "recovery: restored state after interrupted session"
    ```
 

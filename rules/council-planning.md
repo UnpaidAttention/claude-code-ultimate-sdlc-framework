@@ -36,7 +36,7 @@ These produce a `planning-handoff.md` compatible with standard Development Counc
 
 ### Feed-Forward Reference Protocol
 
-Before generating any deliverable, the agent MUST read all upstream documents listed in `~/.claude/skills/antigravity/context/document-dependencies.md § Per-Phase Required Inputs`. This ensures:
+Before generating any deliverable, the agent MUST read all upstream documents listed in `~/.claude/skills/ultimate-sdlc/context/document-dependencies.md § Per-Phase Required Inputs`. This ensures:
 1. No contradictions with prior decisions
 2. Correct terminology and ID references (BR-XXX, FEAT-XXX, AIOU-XXX)
 3. NFR targets and constraints are respected downstream
@@ -45,8 +45,8 @@ Before generating any deliverable, the agent MUST read all upstream documents li
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/antigravity/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate 1.5**: Feature Completeness → see `gate-criteria.md § Gate 1.5`
 - **Gate 3.5**: AIOU Decomposition → see `gate-criteria.md § Gate 3.5`
@@ -56,13 +56,13 @@ Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-m
 
 Standard session start/resume sequence for all Planning Council workflows:
 
-1. Read `.antigravity/config.yaml` → extract `governance_mode`, `project_type`
-2. Read `.antigravity/project-context.md` → confirm Active Council = Planning, get current phase
-3. Read `.antigravity/council-state/planning/current-state.md` → get phase checklist
-4. Read `.antigravity/council-state/planning/WORKING-MEMORY.md` → check for incomplete tasks
+1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
+2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Planning, get current phase
+3. Read `.ultimate-sdlc/council-state/planning/current-state.md` → get phase checklist
+4. Read `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md` → check for incomplete tasks
 5. **If resuming**: Display resume summary from WORKING-MEMORY, continue from last position
 6. **If new session**: Display welcome, proceed to current phase
-7. Check governance_mode → skip non-applicable phases per `~/.claude/skills/antigravity/context/governance-modes.md`
+7. Check governance_mode → skip non-applicable phases per `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`
 
 ## Scope Integrity Principle
 
@@ -76,13 +76,13 @@ When feature count >=8, Phases 2.5 (Feature Deep-Dive), 3 (Feature Specs), and 3
 
 **Batch Protocol:**
 
-1. **Trigger**: Feature count in `.antigravity/specs/scope-lock.md` >= 8
+1. **Trigger**: Feature count in `.ultimate-sdlc/specs/scope-lock.md` >= 8
 2. **Batch size**: 3-5 features per batch, grouped by module/domain (not arbitrary)
 3. **Batched phases**: Phase 2.5 (Feature Deep-Dive), Phase 3 (Feature Specs), and Phase 3.5 (AIOU Decomposition)
 
 **Rationale**: Smaller batches ensure the AI agent deeply focuses on each feature's complexity, components, and integration points. Context dilution across 15+ features is the primary cause of shallow specifications.
 4. **Non-batched phases**: Phases 1, 1.5, 2 (cross-cutting discovery/architecture), Phases 4-7 (cross-cutting supporting specs), Phase 8 (handoff) — these execute once
-5. **Tracking**: `.antigravity/council-state/planning/planning-tracker.md` — lists every feature, its batch assignment, and spec completion status
+5. **Tracking**: `.ultimate-sdlc/council-state/planning/planning-tracker.md` — lists every feature, its batch assignment, and spec completion status
 6. **Session boundary = batch boundary**: Complete a batch → save progress → STOP → notify user of completion → user runs `/continue` (or the next applicable workflow) → next batch
 7. **Phase 3 and 3.5 interleave per batch**: Each batch completes both FEAT specs AND AIOU decomposition before the next batch begins. This keeps context focused.
 
@@ -104,7 +104,7 @@ When feature count >=8, Phases 2.5 (Feature Deep-Dive), 3 (Feature Specs), and 3
 
 **Batch Completion Verification:**
 - Before marking a batch complete: every feature in the batch has a FEAT-XXX.md AND at least one AIOU-XXX.md
-- Before advancing to Phase 4: ALL batches complete. Verify total FEAT count and AIOU count against `.antigravity/specs/scope-lock.md`
+- Before advancing to Phase 4: ALL batches complete. Verify total FEAT count and AIOU count against `.ultimate-sdlc/specs/scope-lock.md`
 - If a batch is too large mid-session: STOP and request subdivision (same as Development's run recovery protocol)
 
 ## Thoroughness Protocol (T1-T5)
@@ -114,7 +114,7 @@ Used during Discovery (Phase 1) to ensure no features are silently missed. Refer
 **T1**: Read the product concept / feature list completely
 **T2**: Count total features explicitly
 **T3**: Identify implicit features not explicitly stated
-**T4**: Cross-reference against Feature Categories for `project_type` (see `~/.claude/skills/antigravity/context/project-presets.md`)
+**T4**: Cross-reference against Feature Categories for `project_type` (see `~/.claude/skills/ultimate-sdlc/context/project-presets.md`)
 **T5**: Anti-Truncation Declaration — confirm every feature is accounted for
 
 ## Display Template
@@ -169,15 +169,15 @@ AIOU > L size → MUST split
 
 ## Wave Organization
 
-Waves are determined by `project_type` — see `~/.claude/skills/antigravity/context/project-presets.md` for type-specific wave structures. Default (web-app): Wave 0: Types & Interfaces → Wave 1: Utilities & Helpers → Wave 2: Data Layer → Wave 3: Services → Wave 4: API Layer → Wave 5: UI Components → Wave 6: Integration
+Waves are determined by `project_type` — see `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for type-specific wave structures. Default (web-app): Wave 0: Types & Interfaces → Wave 1: Utilities & Helpers → Wave 2: Data Layer → Wave 3: Services → Wave 4: API Layer → Wave 5: UI Components → Wave 6: Integration
 
 ## Handoff Requirements
 
 planning-handoff.md MUST contain: Executive summary, Architecture summary, All feature specifications, Design direction, AIOU wave summary, All AIOU specifications, Security requirements, Infrastructure requirements, Appendices (ADRs, data models, API contracts)
 
-Validate against `~/.claude/skills/antigravity/context/handoff-schemas/planning-handoff.schema.md`.
+Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/planning-handoff.schema.md`.
 
-**Scope Coverage**: Handoff must cover every feature in `.antigravity/specs/scope-lock.md`. Gate 8 verifies this.
+**Scope Coverage**: Handoff must cover every feature in `.ultimate-sdlc/specs/scope-lock.md`. Gate 8 verifies this.
 
 ## Recovery
 

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/audit-orchestration/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/navigation-flow/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/test-case-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/audit-orchestration/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/navigation-flow/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-case-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-start - Begin Audit Council
@@ -95,7 +95,7 @@ Start or resume the Audit Council. This council systematically tests and audits 
 
 ## Pre-Conditions
 
-- `.antigravity/project-context.md` must exist (run `/init` first if not)
+- `.ultimate-sdlc/project-context.md` must exist (run `/init` first if not)
 - Development Council must be complete (Gate I8 passed)
 - `handoffs/development-handoff.md` must exist
 
@@ -106,13 +106,13 @@ Start or resume the Audit Council. This council systematically tests and audits 
 ### Step 1: Load Framework Context
 
 Read these files:
-- `~/.claude/skills/antigravity/context/framework-overview.md` - Understand the overall process
+- `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` - Understand the overall process
 - `.reference/phase-guide.md` - Detailed track and phase information
 - `.reference/skills-index.md` - Skills to load for each phase
 
 ### Step 2: Check Project State
 
-Read `.antigravity/project-context.md`:
+Read `.ultimate-sdlc/project-context.md`:
 - If `Active Council` is not "audit", check if transition is valid
 - Verify Development Council (Gate I8) is marked complete
 - Identify current track and phase
@@ -120,7 +120,7 @@ Read `.antigravity/project-context.md`:
 
 ### Step 2a: Cycle-Scoped Audit
 
-**Read the Cycle Type from `.antigravity/project-context.md`.**
+**Read the Cycle Type from `.ultimate-sdlc/project-context.md`.**
 
 **Note**: Patch and Maintenance cycles skip the Audit Council entirely (routed by `/continue`). If this workflow is reached during a Patch/Maintenance cycle, display: "Patch/Maintenance cycles skip Audit. Run `/validate-start` instead."
 
@@ -132,12 +132,12 @@ For non-initial cycles that DO include Audit:
 | **Feature** | **Primary**: Audit new features thoroughly. **Secondary**: Regression check on existing features that interact with new ones. Do not re-audit unchanged, isolated features. |
 | **Improvement** | **Primary**: Verify no regressions in existing functionality. **Secondary**: Verify refactored code meets same quality bar. Behavioral contracts from planning must be verified. |
 
-**Add to `.antigravity/council-state/audit/WORKING-MEMORY.md`**:
+**Add to `.ultimate-sdlc/council-state/audit/WORKING-MEMORY.md`**:
 ```
 ### Cycle Context
 - Cycle Type: [type]
 - Audit Scope: [FULL / NEW+REGRESSION / REGRESSION-ONLY per table above]
-- Cycle Intent: [from .antigravity/project-context.md]
+- Cycle Intent: [from .ultimate-sdlc/project-context.md]
 ```
 
 **For Feature cycles**: When creating the feature inventory (T1), distinguish between:
@@ -161,7 +161,7 @@ Check if `handoffs/development-handoff.md` exists:
 
 ### Step 5: New Session Setup
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set `Active Council`: audit
    - Set `Current Track`: Testing
    - Set `Current Phase`: T1
@@ -172,7 +172,7 @@ Check if `handoffs/development-handoff.md` exists:
    - Extract component inventory
    - Extract test coverage info
 
-3. Create `.antigravity/council-state/audit/current-state.md`:
+3. Create `.ultimate-sdlc/council-state/audit/current-state.md`:
    - Initialize track statuses
    - Create empty defect log
    - Create empty enhancement register
@@ -184,27 +184,27 @@ Check if `handoffs/development-handoff.md` exists:
    - Document test environment details
 
 5. Load T1 Skills (from `.reference/skills-index.md`):
-   - Read `~/.claude/skills/antigravity/knowledge/audit-orchestration/SKILL.md`
-   - Read `~/.claude/skills/antigravity/knowledge/navigation-flow/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/audit-orchestration/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/navigation-flow/SKILL.md`
 
-6. Update `.antigravity/progress.md` with new session entry
+6. Update `.ultimate-sdlc/progress.md` with new session entry
 
 7. Display welcome:
 Use **Display Template** from `council-audit.md` to show: Audit Council - T1: Inventory
 
-**After completing inventory work, update `.antigravity/project-context.md`:** Set Phase: T2. Then run `/audit-t2` to continue.
+**After completing inventory work, update `.ultimate-sdlc/project-context.md`:** Set Phase: T2. Then run `/audit-t2` to continue.
 
 > **T1 Complete marker**: The T1 phase ends when the feature catalogue is produced and displayed. Do not continue to T2 in the same session — run `/audit-t2` separately.
 
 ### Step 6: Resume Session
 
-1. Read `.antigravity/project-context.md` for current track and phase
-2. Read `.antigravity/progress.md` for last session notes
-3. Read `.antigravity/council-state/audit/current-state.md` for detailed state
-4. Read `.antigravity/council-state/audit/defect-log.md` for defects found
+1. Read `.ultimate-sdlc/project-context.md` for current track and phase
+2. Read `.ultimate-sdlc/progress.md` for last session notes
+3. Read `.ultimate-sdlc/council-state/audit/current-state.md` for detailed state
+4. Read `.ultimate-sdlc/council-state/audit/defect-log.md` for defects found
 5. Load skills for current phase:
    - Look up phase in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/antigravity/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
 
 6. Verify software accessibility:
    - Confirm application is still accessible
@@ -269,7 +269,7 @@ Use `/status`
 
 ## Gate Criteria
 
-See `~/.claude/skills/antigravity/context/gate-criteria.md` § Audit Council Gates for full criteria:
+See `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates for full criteria:
 - **Gate T3** (after GUI Analysis)
 - **Gate A2** (after Completeness)
 - **Gate A3** (after Quality Assessment)
@@ -280,7 +280,7 @@ See `~/.claude/skills/antigravity/context/gate-criteria.md` § Audit Council Gat
 
 When all tracks complete:
 - Generate `handoffs/audit-handoff.md`
-- Update `.antigravity/project-context.md` to mark Audit complete
+- Update `.ultimate-sdlc/project-context.md` to mark Audit complete
 - Instruct user to run `/validate-start`
 
 ---

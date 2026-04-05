@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/wave-execution/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/tdd-methodology/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/implementation-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/wave-execution/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/tdd-methodology/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/implementation-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: ralph-wave
@@ -92,7 +92,7 @@ Execute an entire development wave autonomously using the Ralph Wiggum plugin's 
 Before starting:
 1. `planning-handoff.md` exists with wave specifications
 2. All prior waves completed
-3. `.antigravity/project-context.md` shows current wave status
+3. `.ultimate-sdlc/project-context.md` shows current wave status
 4. Git checkpoint created: `pre-wave-{N}`
 5. Ralph Wiggum plugin installed
 
@@ -111,7 +111,7 @@ The Ralph Wiggum plugin uses a **Stop hook** mechanism:
 
 ### Step 1: Validate Wave
 
-1. Read `.antigravity/project-context.md` to confirm wave number
+1. Read `.ultimate-sdlc/project-context.md` to confirm wave number
 2. Read `planning-handoff.md` for wave AIOUs
 3. Verify all dependency waves complete
 4. Count total AIOUs in wave
@@ -132,7 +132,7 @@ git tag ralph-wave-{N}-start
 
 ## YOUR TASK EACH ITERATION
 
-1. READ STATE: Open .antigravity/project-context.md and find AIOUs for Wave {N}
+1. READ STATE: Open .ultimate-sdlc/project-context.md and find AIOUs for Wave {N}
    - Identify the first AIOU with status PENDING or IN_PROGRESS
    - If ALL Wave {N} AIOUs show status VERIFIED, you are DONE
 
@@ -150,12 +150,12 @@ git tag ralph-wave-{N}-start
 
 4. AFTER VERIFICATION:
    - If VERIFIED: Commit with message 'Complete AIOU-XXX: [description]'
-     Update .antigravity/project-context.md to mark AIOU as VERIFIED
-   - If FAILED: Attempt fix (you have up to 3 attempts tracked in .antigravity/progress.md)
-     If still failing after 3 attempts, mark as BLOCKED in .antigravity/project-context.md
+     Update .ultimate-sdlc/project-context.md to mark AIOU as VERIFIED
+   - If FAILED: Attempt fix (you have up to 3 attempts tracked in .ultimate-sdlc/progress.md)
+     If still failing after 3 attempts, mark as BLOCKED in .ultimate-sdlc/project-context.md
      and move to the next AIOU
 
-5. LOG PROGRESS: Update .antigravity/progress.md with what you accomplished this iteration
+5. LOG PROGRESS: Update .ultimate-sdlc/progress.md with what you accomplished this iteration
 
 ## CRITICAL RULES
 - ONLY output <promise>Wave {N} complete</promise> when ALL AIOUs are truly VERIFIED
@@ -164,7 +164,7 @@ git tag ralph-wave-{N}-start
 - Read git log to see what previous iterations accomplished
 
 ## COMPLETION SIGNAL
-When all Wave {N} AIOUs show VERIFIED in .antigravity/project-context.md:
+When all Wave {N} AIOUs show VERIFIED in .ultimate-sdlc/project-context.md:
 <promise>Wave {N} complete</promise>" --max-iterations {CALCULATED_LIMIT}
 ```
 

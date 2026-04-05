@@ -1,35 +1,35 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ag-state — Per-project state management for Antigravity SDLC
+# sdlc-state — Per-project state management for Ultimate SDLC
 # Usage:
-#   ag-state init [project-name]              Create .antigravity/ with templates
-#   ag-state current                          Show current council/phase/gate
-#   ag-state advance <council> <phase>        Update project-context.md
-#   ag-state gate-check <gate-id>             Show gate status
-#   ag-state archive-cycle                    Move state to .cycles/
-#   ag-state new-cycle <type>                 Create fresh cycle
+#   sdlc-state init [project-name]              Create .ultimate-sdlc/ with templates
+#   sdlc-state current                          Show current council/phase/gate
+#   sdlc-state advance <council> <phase>        Update project-context.md
+#   sdlc-state gate-check <gate-id>             Show gate status
+#   sdlc-state archive-cycle                    Move state to .cycles/
+#   sdlc-state new-cycle <type>                 Create fresh cycle
 
-AG_DIR=".antigravity"
+AG_DIR=".ultimate-sdlc"
 CONTEXT_FILE="$AG_DIR/project-context.md"
 MANIFEST_FILE="$AG_DIR/project-manifest.md"
 TODAY=$(date +%Y-%m-%d)
 
 usage() {
     echo "Usage:"
-    echo "  ag-state init [project-name]              Create .antigravity/ with templates"
-    echo "  ag-state current                          Show current council/phase/gate"
-    echo "  ag-state advance <council> <phase>        Update project-context.md"
-    echo "  ag-state gate-check <gate-id>             Show gate status"
-    echo "  ag-state archive-cycle                    Move state to .cycles/"
-    echo "  ag-state new-cycle <type>                 Create fresh cycle (full|feature|patch|maintenance|improvement)"
+    echo "  sdlc-state init [project-name]              Create .ultimate-sdlc/ with templates"
+    echo "  sdlc-state current                          Show current council/phase/gate"
+    echo "  sdlc-state advance <council> <phase>        Update project-context.md"
+    echo "  sdlc-state gate-check <gate-id>             Show gate status"
+    echo "  sdlc-state archive-cycle                    Move state to .cycles/"
+    echo "  sdlc-state new-cycle <type>                 Create fresh cycle (full|feature|patch|maintenance|improvement)"
     exit 1
 }
 
 ensure_project() {
     if [[ ! -d "$AG_DIR" ]]; then
-        echo "Error: No .antigravity/ directory found in current project." >&2
-        echo "Run: ag-state init [project-name]" >&2
+        echo "Error: No .ultimate-sdlc/ directory found in current project." >&2
+        echo "Run: sdlc-state init [project-name]" >&2
         exit 1
     fi
 }
@@ -52,7 +52,7 @@ cmd_init() {
     local project_name="${1:-$(basename "$(pwd)")}"
 
     if [[ -d "$AG_DIR" ]]; then
-        echo "Warning: .antigravity/ already exists."
+        echo "Warning: .ultimate-sdlc/ already exists."
         read -rp "Re-initialize? This will overwrite state files. [y/N] " answer
         if [[ "${answer,,}" != "y" ]]; then
             echo "Aborted."
@@ -63,9 +63,9 @@ cmd_init() {
     # Read governance mode from global config if available
     local governance_mode="standard"
     local project_type="web-app"
-    if [[ -f "$HOME/.antigravity/config.yaml" ]]; then
-        governance_mode=$(grep -E '^governance_mode:' "$HOME/.antigravity/config.yaml" | sed 's/^[^:]*:[[:space:]]*//' || echo "standard")
-        project_type=$(grep -E '^project_type:' "$HOME/.antigravity/config.yaml" | sed 's/^[^:]*:[[:space:]]*//' || echo "web-app")
+    if [[ -f "$HOME/.ultimate-sdlc/config.yaml" ]]; then
+        governance_mode=$(grep -E '^governance_mode:' "$HOME/.ultimate-sdlc/config.yaml" | sed 's/^[^:]*:[[:space:]]*//' || echo "standard")
+        project_type=$(grep -E '^project_type:' "$HOME/.ultimate-sdlc/config.yaml" | sed 's/^[^:]*:[[:space:]]*//' || echo "web-app")
     fi
 
     mkdir -p "$AG_DIR"/{council-state/{planning,development,audit,validation},specs/{features,aious,adrs},handoffs,.cycles}
@@ -98,7 +98,7 @@ EOF
 - Name: ${project_name}
 - Type: ${project_type}
 - Created: ${TODAY}
-- Framework: antigravity-sdlc-claude-code
+- Framework: ultimate-sdlc-claude-code
 
 ## Cycle History
 | Cycle | Type | Started | Completed | Features |
@@ -108,7 +108,7 @@ EOF
 
     # config.yaml (project-level)
     cat > "$AG_DIR/config.yaml" <<EOF
-# Project-level Antigravity config
+# Project-level Ultimate SDLC config
 project_name: ${project_name}
 governance_mode: ${governance_mode}
 project_type: ${project_type}
@@ -172,7 +172,7 @@ ${TODAY}
 EOF
     done
 
-    echo "Initialized .antigravity/ for project: ${project_name}"
+    echo "Initialized .ultimate-sdlc/ for project: ${project_name}"
     echo "  Governance mode: ${governance_mode}"
     echo "  Project type: ${project_type}"
     echo ""
@@ -182,7 +182,7 @@ EOF
 # ── current ──────────────────────────────────────────────────────────
 cmd_current() {
     ensure_project
-    echo "=== Antigravity Project State ==="
+    echo "=== Ultimate SDLC Project State ==="
     echo ""
     echo "Council: $(get_context_field 'Active Council')"
     echo "Phase:   $(get_context_field 'Current Phase')"
@@ -295,7 +295,7 @@ cmd_archive_cycle() {
     cp -r "$AG_DIR/handoffs" "$archive_dir/" 2>/dev/null || true
 
     echo "Archived cycle-${cycle_num} to $archive_dir"
-    echo "Run 'ag-state new-cycle <type>' to start a new cycle."
+    echo "Run 'sdlc-state new-cycle <type>' to start a new cycle."
 }
 
 # ── new-cycle ────────────────────────────────────────────────────────

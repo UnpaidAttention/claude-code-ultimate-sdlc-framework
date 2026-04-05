@@ -1,4 +1,4 @@
-# Antigravity SDLC Framework for Claude Code
+# Ultimate SDLC Framework for Claude Code
 
 A structured, gate-driven, multi-council orchestration system for AI-assisted software development. Manages the full lifecycle from requirements through deployment: **Planning → Development → Audit → Validation**.
 
@@ -7,7 +7,7 @@ A structured, gate-driven, multi-council orchestration system for AI-assisted so
 ## Install
 
 ```bash
-git clone https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework.git ~/.claude/skills/antigravity && cd ~/.claude/skills/antigravity && ./setup
+git clone https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework.git ~/.claude/skills/ultimate-sdlc && cd ~/.claude/skills/ultimate-sdlc && ./setup
 ```
 
 That's it. All `/commands` are now available in Claude Code.
@@ -58,14 +58,14 @@ Automatically selected based on feature count:
 
 8 analytical perspectives available as subagents:
 
-- `ag-architecture` — System structure, API design, scalability
-- `ag-security` — Threat modeling, OWASP, secrets
-- `ag-quality` — Test coverage, code review, defects
-- `ag-performance` — Profiling, optimization, benchmarks
-- `ag-ux` — Usability, accessibility, design
-- `ag-operations` — Deployment, monitoring, failure modes
-- `ag-requirements` — Feature completeness, scope
-- `ag-documentation` — Technical docs, guides
+- `sdlc-architecture` — System structure, API design, scalability
+- `sdlc-security` — Threat modeling, OWASP, secrets
+- `sdlc-quality` — Test coverage, code review, defects
+- `sdlc-performance` — Profiling, optimization, benchmarks
+- `sdlc-ux` — Usability, accessibility, design
+- `sdlc-operations` — Deployment, monitoring, failure modes
+- `sdlc-requirements` — Feature completeness, scope
+- `sdlc-documentation` — Technical docs, guides
 
 ## Cycle Types
 
@@ -79,10 +79,10 @@ Automatically selected based on feature count:
 
 ## Project Structure
 
-Per-project state lives in `.antigravity/` within your project directory:
+Per-project state lives in `.ultimate-sdlc/` within your project directory:
 
 ```
-.antigravity/
+.ultimate-sdlc/
 ├── project-manifest.md          # Persistent identity
 ├── project-context.md           # Current council/phase/status
 ├── progress.md                  # Session history
@@ -96,14 +96,14 @@ Per-project state lives in `.antigravity/` within your project directory:
 ## Plugin Structure
 
 ```
-~/.claude/skills/antigravity/
+~/.claude/skills/ultimate-sdlc/
 ├── setup                        # One-time installation script
 ├── SKILL.md                     # Root skill (framework overview)
 ├── bin/                         # CLI utilities
-│   ├── ag-config                # Config reader/writer
-│   ├── ag-state                 # State management
-│   ├── ag-uninstall             # Clean removal
-│   └── ag-patch-names           # Prefix patching
+│   ├── sdlc-config                # Config reader/writer
+│   ├── sdlc-state                 # State management
+│   ├── sdlc-uninstall             # Clean removal
+│   └── sdlc-patch-names           # Prefix patching
 ├── workflows/                   # 167 invokable workflow skills
 ├── knowledge/                   # 240 reference knowledge skills
 ├── agents/                      # 8 focus lens agents
@@ -116,14 +116,14 @@ Per-project state lives in `.antigravity/` within your project directory:
 
 ## Configuration
 
-Global config: `~/.antigravity/config.yaml`
+Global config: `~/.ultimate-sdlc/config.yaml`
 
 ```bash
 # View config
-~/.claude/skills/antigravity/bin/ag-config list
+~/.claude/skills/ultimate-sdlc/bin/sdlc-config list
 
 # Change settings
-~/.claude/skills/antigravity/bin/ag-config set governance_mode enterprise
+~/.claude/skills/ultimate-sdlc/bin/sdlc-config set governance_mode enterprise
 ```
 
 ## Naming Modes
@@ -138,13 +138,13 @@ Namespaced mode avoids conflicts if you have other skills with similar names.
 ## Update
 
 ```bash
-cd ~/.claude/skills/antigravity && git pull && ./setup
+cd ~/.claude/skills/ultimate-sdlc && git pull && ./setup
 ```
 
 ## Uninstall
 
 ```bash
-~/.claude/skills/antigravity/bin/ag-uninstall
+~/.claude/skills/ultimate-sdlc/bin/sdlc-uninstall
 ```
 
 ## Requirements

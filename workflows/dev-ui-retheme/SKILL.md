@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-retheme - UI Theme Makeover (Orchestrator)
@@ -82,11 +82,11 @@ Apply a completely new visual theme to an existing, functionally complete UI. Ch
 
 | # | Phase | Command | Artifact | Description |
 |---|-------|---------|----------|-------------|
-| 1 | Document Current Theme | `/dev-ui-retheme-snapshot` | `.antigravity/council-state/development/current-theme-snapshot.md` | Extract design system, screenshot pages, create safety tag |
-| 2 | Research New Direction | `/dev-ui-retheme-direction` | `.antigravity/council-state/development/retheme-direction.md` | Present options, get user input, research direction |
-| 3 | Propose New Design System | `/dev-ui-retheme-propose` | `.antigravity/council-state/development/retheme-proposal.md` | Complete design system proposal with before/after comparison |
+| 1 | Document Current Theme | `/dev-ui-retheme-snapshot` | `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` | Extract design system, screenshot pages, create safety tag |
+| 2 | Research New Direction | `/dev-ui-retheme-direction` | `.ultimate-sdlc/council-state/development/retheme-direction.md` | Present options, get user input, research direction |
+| 3 | Propose New Design System | `/dev-ui-retheme-propose` | `.ultimate-sdlc/council-state/development/retheme-proposal.md` | Complete design system proposal with before/after comparison |
 | 4 | Implement Theme | `/dev-ui-retheme-apply` | Code changes | Update tokens, styles, components, layouts in dependency order |
-| 5 | Visual Verification | `/dev-ui-retheme-verify` | `.antigravity/council-state/development/retheme-verification.md` | Build, test, screenshot comparison, consistency check |
+| 5 | Visual Verification | `/dev-ui-retheme-verify` | `.ultimate-sdlc/council-state/development/retheme-verification.md` | Build, test, screenshot comparison, consistency check |
 
 ---
 
@@ -107,10 +107,10 @@ The user controls when each phase begins by invoking this orchestrator again or 
 
 Check for phase artifacts in order and route to the first incomplete phase:
 
-1. If `.antigravity/council-state/development/current-theme-snapshot.md` does NOT exist → run `/dev-ui-retheme-snapshot`
-2. If `.antigravity/council-state/development/retheme-direction.md` does NOT exist → run `/dev-ui-retheme-direction`
-3. If `.antigravity/council-state/development/retheme-proposal.md` does NOT exist → run `/dev-ui-retheme-propose`
-4. If `.antigravity/council-state/development/retheme-verification.md` does NOT exist:
+1. If `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` does NOT exist → run `/dev-ui-retheme-snapshot`
+2. If `.ultimate-sdlc/council-state/development/retheme-direction.md` does NOT exist → run `/dev-ui-retheme-direction`
+3. If `.ultimate-sdlc/council-state/development/retheme-proposal.md` does NOT exist → run `/dev-ui-retheme-propose`
+4. If `.ultimate-sdlc/council-state/development/retheme-verification.md` does NOT exist:
    - If old theme values still present in frontend code → run `/dev-ui-retheme-apply`
    - If implementation appears complete → run `/dev-ui-retheme-verify`
 5. If all artifacts exist → retheme complete, display summary

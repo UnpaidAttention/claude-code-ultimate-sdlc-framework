@@ -1,7 +1,7 @@
 ---
-name: antigravity
+name: Ultimate SDLC
 description: |
-  Antigravity Ultimate SDLC Framework for Claude Code. A structured, gate-driven,
+  Ultimate SDLC Framework for Claude Code. A structured, gate-driven,
   multi-council orchestration system for AI-assisted software development.
   Manages the full lifecycle: Planning → Development → Audit → Validation.
   Use /ag-help for available commands, /init to start a new project,
@@ -17,7 +17,7 @@ allowed-tools:
   - AskUserQuestion
 ---
 
-# Antigravity Ultimate SDLC Framework
+# Ultimate SDLC Framework
 
 ## Overview
 
@@ -68,23 +68,23 @@ When the user's request matches one of these patterns, invoke the corresponding 
 
 ## Utility Scripts
 
-The following CLI utilities are available at `~/.claude/skills/antigravity/bin/`:
+The following CLI utilities are available at `~/.claude/skills/ultimate-sdlc/bin/`:
 
 | Script | Purpose |
 |---|---|
-| `ag-config` | Read/write global config (`~/.antigravity/config.yaml`) |
-| `ag-state` | Per-project state management (`.antigravity/`) |
-| `ag-uninstall` | Clean removal of all installed components |
-| `ag-patch-names` | Toggle between short and namespaced skill names |
+| `sdlc-config` | Read/write global config (`~/.ultimate-sdlc/config.yaml`) |
+| `ag-state` | Per-project state management (`.ultimate-sdlc/`) |
+| `sdlc-uninstall` | Clean removal of all installed components |
+| `sdlc-patch-names` | Toggle between short and namespaced skill names |
 
 ## State Management
 
-### Global State (`~/.antigravity/`)
+### Global State (`~/.ultimate-sdlc/`)
 - `config.yaml` — Global settings (naming mode, governance, telemetry)
 - `analytics/` — Usage analytics
 - `sessions/` — Session history
 
-### Project State (`.antigravity/`)
+### Project State (`.ultimate-sdlc/`)
 - `project-manifest.md` — Persistent project identity and cycle history
 - `project-context.md` — Current council, phase, and status
 - `progress.md` — Checkbox tracker for all phases and gates

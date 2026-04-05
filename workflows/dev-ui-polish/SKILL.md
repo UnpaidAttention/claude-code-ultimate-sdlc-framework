@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish - Anti-Slop Audit & Design Remediation (Orchestrator)
@@ -93,12 +93,12 @@ Design polish changes visuals — it requires working code to polish.
 
 | Phase | Command | Description | Output |
 |-------|---------|-------------|--------|
-| 1 | `/dev-ui-polish-scan` | Anti-Slop Scan | `.antigravity/council-state/development/ui-slop-scan.md` |
-| 2 | `/dev-ui-polish-report` | Generate Slop Report | `.antigravity/council-state/development/ui-slop-report.md` |
-| 3 | `/dev-ui-polish-research` | Research Design Alternatives | `.antigravity/council-state/development/ui-polish-alternatives.md` |
-| 4 | `/dev-ui-polish-plan` | Remediation Plan (HARD STOP for approval) | `.antigravity/council-state/development/ui-polish-plan.md` |
+| 1 | `/dev-ui-polish-scan` | Anti-Slop Scan | `.ultimate-sdlc/council-state/development/ui-slop-scan.md` |
+| 2 | `/dev-ui-polish-report` | Generate Slop Report | `.ultimate-sdlc/council-state/development/ui-slop-report.md` |
+| 3 | `/dev-ui-polish-research` | Research Design Alternatives | `.ultimate-sdlc/council-state/development/ui-polish-alternatives.md` |
+| 4 | `/dev-ui-polish-plan` | Remediation Plan (HARD STOP for approval) | `.ultimate-sdlc/council-state/development/ui-polish-plan.md` |
 | 5 | `/dev-ui-polish-apply` | Implement Remediation | Modified source files |
-| 6 | `/dev-ui-polish-verify` | Design Consistency Verification | `.antigravity/council-state/development/ui-polish-report.md` (final) |
+| 6 | `/dev-ui-polish-verify` | Design Consistency Verification | `.ultimate-sdlc/council-state/development/ui-polish-report.md` (final) |
 
 ---
 
@@ -121,14 +121,14 @@ The user controls when each phase begins by invoking this orchestrator again or 
 
 Check for phase artifacts to determine progress:
 
-1. If `.antigravity/council-state/development/ui-slop-scan.md` does NOT exist → Route to **Phase 1**: `/dev-ui-polish-scan`
-2. If `.antigravity/council-state/development/ui-slop-report.md` does NOT exist → Route to **Phase 2**: `/dev-ui-polish-report`
-3. If `.antigravity/council-state/development/ui-polish-alternatives.md` does NOT exist → Route to **Phase 3**: `/dev-ui-polish-research`
-4. If `.antigravity/council-state/development/ui-polish-plan.md` does NOT exist → Route to **Phase 4**: `/dev-ui-polish-plan`
-5. If `.antigravity/council-state/development/ui-polish-plan.md` exists but does NOT contain `## Status: APPROVED` → Route to **Phase 4** (awaiting approval)
-6. If `.antigravity/council-state/development/ui-polish-plan.md` does NOT contain `## Implementation Status: COMPLETE` → Route to **Phase 5**: `/dev-ui-polish-apply`
-7. If `.antigravity/council-state/development/ui-polish-report.md` does NOT contain `## Final Verification: PASS` → Route to **Phase 6**: `/dev-ui-polish-verify`
-8. If `.antigravity/council-state/development/ui-polish-report.md` contains `## Final Verification: PASS` → **Complete**
+1. If `.ultimate-sdlc/council-state/development/ui-slop-scan.md` does NOT exist → Route to **Phase 1**: `/dev-ui-polish-scan`
+2. If `.ultimate-sdlc/council-state/development/ui-slop-report.md` does NOT exist → Route to **Phase 2**: `/dev-ui-polish-report`
+3. If `.ultimate-sdlc/council-state/development/ui-polish-alternatives.md` does NOT exist → Route to **Phase 3**: `/dev-ui-polish-research`
+4. If `.ultimate-sdlc/council-state/development/ui-polish-plan.md` does NOT exist → Route to **Phase 4**: `/dev-ui-polish-plan`
+5. If `.ultimate-sdlc/council-state/development/ui-polish-plan.md` exists but does NOT contain `## Status: APPROVED` → Route to **Phase 4** (awaiting approval)
+6. If `.ultimate-sdlc/council-state/development/ui-polish-plan.md` does NOT contain `## Implementation Status: COMPLETE` → Route to **Phase 5**: `/dev-ui-polish-apply`
+7. If `.ultimate-sdlc/council-state/development/ui-polish-report.md` does NOT contain `## Final Verification: PASS` → Route to **Phase 6**: `/dev-ui-polish-verify`
+8. If `.ultimate-sdlc/council-state/development/ui-polish-report.md` contains `## Final Verification: PASS` → **Complete**
 
 ### Step 2: Display Status and Route
 

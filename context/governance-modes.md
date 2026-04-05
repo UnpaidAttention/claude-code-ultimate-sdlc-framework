@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Scale framework governance to project size. Small projects get lightweight process; large projects get full governance. The mode is set during `/init` or `/new-cycle` and stored in `.antigravity/config.yaml → governance_mode`.
+Scale framework governance to project size. Small projects get lightweight process; large projects get full governance. The mode is set during `/init` or `/new-cycle` and stored in `.ultimate-sdlc/config.yaml → governance_mode`.
 
 ---
 
@@ -20,13 +20,13 @@ Scale framework governance to project size. Small projects get lightweight proce
 
 | Document | Location | Lightweight | Standard | Enterprise |
 |----------|----------|------------|----------|------------|
-| BRD | `.antigravity/specs/business/brd.md` | ❌ Skip | ✅ Required | ✅ Required |
-| PRD Cross-Cutting | `.antigravity/specs/prd-crosscutting.md` | ❌ Skip | ✅ Required | ✅ Required |
-| Database Design | `.antigravity/specs/architecture/database-design.md` | ❌ Skip | ✅ Required | ✅ Required |
-| API Specification | `.antigravity/specs/architecture/api-specification.md` | ❌ Skip | ✅ Required | ✅ Required |
-| CI/CD Spec (detailed) | `.antigravity/specs/infrastructure/ci-cd-spec.md` | ❌ Skip | ✅ Required | ✅ Required |
-| Monitoring Plan | `.antigravity/specs/infrastructure/monitoring-plan.md` | ❌ Skip | ✅ Required | ✅ Required |
-| Runbook | `.antigravity/specs/operations/runbook.md` | ❌ Skip | ⚠️ Recommended | ✅ Required |
+| BRD | `.ultimate-sdlc/specs/business/brd.md` | ❌ Skip | ✅ Required | ✅ Required |
+| PRD Cross-Cutting | `.ultimate-sdlc/specs/prd-crosscutting.md` | ❌ Skip | ✅ Required | ✅ Required |
+| Database Design | `.ultimate-sdlc/specs/architecture/database-design.md` | ❌ Skip | ✅ Required | ✅ Required |
+| API Specification | `.ultimate-sdlc/specs/architecture/api-specification.md` | ❌ Skip | ✅ Required | ✅ Required |
+| CI/CD Spec (detailed) | `.ultimate-sdlc/specs/infrastructure/ci-cd-spec.md` | ❌ Skip | ✅ Required | ✅ Required |
+| Monitoring Plan | `.ultimate-sdlc/specs/infrastructure/monitoring-plan.md` | ❌ Skip | ✅ Required | ✅ Required |
+| Runbook | `.ultimate-sdlc/specs/operations/runbook.md` | ❌ Skip | ⚠️ Recommended | ✅ Required |
 | Tech Docs Suite | `docs/` | ⚠️ Recommended | ✅ Required | ✅ Required |
 | Consistency Audits | At gates | ❌ Skip | ✅ Required | ✅ Required |
 
@@ -38,9 +38,9 @@ Scale framework governance to project size. Small projects get lightweight proce
 
 Set automatically during `/init` or `/new-cycle` based on feature count:
 
-1. Count features from `.antigravity/project-manifest.md` (feature inventory) or `product-concept.md`
+1. Count features from `.ultimate-sdlc/project-manifest.md` (feature inventory) or `product-concept.md`
 2. Apply thresholds above
-3. Store in `.antigravity/config.yaml → governance_mode`
+3. Store in `.ultimate-sdlc/config.yaml → governance_mode`
 4. User can override: `/init --mode enterprise` or `/new-cycle --mode lightweight`
 
 ---
@@ -95,14 +95,14 @@ Everything in Standard, plus:
 
 ## How Workflows Use Modes
 
-Workflows check the mode via `.antigravity/config.yaml → governance_mode`:
+Workflows check the mode via `.ultimate-sdlc/config.yaml → governance_mode`:
 
 - **Phase workflows**: Skip non-active phases in Lightweight mode
 - **Gate workflows**: Use abbreviated checklists in Lightweight mode (same pass/fail, fewer criteria)
 - **`/continue`**: Navigation table adapts to active phases per mode
 - **`/status`**: Shows only active phases for current mode
 
-If `governance_mode` is not set in `.antigravity/config.yaml`, default to **Standard**.
+If `governance_mode` is not set in `.ultimate-sdlc/config.yaml`, default to **Standard**.
 
 ---
 
@@ -113,7 +113,7 @@ Modes can be changed mid-cycle if scope changes significantly:
 - **Upgrade** (Lightweight → Standard): Safe at any point. New phases become available.
 - **Downgrade** (Standard → Lightweight): Safe only before entering the phase that would be skipped. Cannot skip a phase already in progress.
 
-Update `.antigravity/config.yaml → governance_mode` and run `/status` to see adjusted plan.
+Update `.ultimate-sdlc/config.yaml → governance_mode` and run `/status` to see adjusted plan.
 
 ---
 
@@ -130,8 +130,8 @@ Governance mode and project type are independent but interact:
 Project type determines **what** is done (wave content, verification layers, feature categories).
 Governance mode determines **how much** is done (phase count, gate count, ceremony level).
 
-See `~/.claude/skills/antigravity/context/project-presets.md` for full project-type-specific configuration.
-See `~/.claude/skills/antigravity/context/config-reader.md` for how workflows consume these values.
+See `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for full project-type-specific configuration.
+See `~/.claude/skills/ultimate-sdlc/context/config-reader.md` for how workflows consume these values.
 
 ---
 

@@ -1,14 +1,14 @@
 ---
-name: ag-help
+name: help
 description: |
-  Show all available Antigravity SDLC Framework commands organized by council and purpose.
+  Show all available Ultimate SDLC Framework commands organized by council and purpose.
   Use when asked for help, command list, or framework overview.
 allowed-tools:
   - Bash
   - Read
 ---
 
-# Antigravity SDLC Framework — Command Reference
+# Ultimate SDLC Framework — Command Reference
 
 ## Quick Start
 
@@ -164,23 +164,23 @@ allowed-tools:
 ## Focus Lens Agents
 
 Available as subagents via the Agent tool:
-- `ag-architecture` — System structure, API design, scalability
-- `ag-security` — Threat modeling, OWASP, secrets
-- `ag-quality` — Test coverage, code review, defects
-- `ag-performance` — Profiling, optimization, benchmarks
-- `ag-ux` — Usability, accessibility, design
-- `ag-operations` — Deployment, monitoring, failure modes
-- `ag-requirements` — Feature completeness, scope
-- `ag-documentation` — Technical docs, guides
+- `sdlc-architecture` — System structure, API design, scalability
+- `sdlc-security` — Threat modeling, OWASP, secrets
+- `sdlc-quality` — Test coverage, code review, defects
+- `sdlc-performance` — Profiling, optimization, benchmarks
+- `sdlc-ux` — Usability, accessibility, design
+- `sdlc-operations` — Deployment, monitoring, failure modes
+- `sdlc-requirements` — Feature completeness, scope
+- `sdlc-documentation` — Technical docs, guides
 
 ## File Locations
 
 | Component | Location |
 |-----------|----------|
-| Plugin source | `~/.claude/skills/antigravity/` |
-| Global config | `~/.antigravity/config.yaml` |
-| Project state | `.antigravity/` (in project root) |
-| Knowledge skills | `~/.claude/skills/antigravity/knowledge/` |
-| Rules | `~/.claude/skills/antigravity/rules/` |
-| Context | `~/.claude/skills/antigravity/context/` |
-| Agents | `~/.claude/skills/antigravity/agents/` |
+| Plugin source | `~/.claude/skills/ultimate-sdlc/` |
+| Global config | `~/.ultimate-sdlc/config.yaml` |
+| Project state | `.ultimate-sdlc/` (in project root) |
+| Knowledge skills | `~/.claude/skills/ultimate-sdlc/knowledge/` |
+| Rules | `~/.claude/skills/ultimate-sdlc/rules/` |
+| Context | `~/.claude/skills/ultimate-sdlc/context/` |
+| Agents | `~/.claude/skills/ultimate-sdlc/agents/` |

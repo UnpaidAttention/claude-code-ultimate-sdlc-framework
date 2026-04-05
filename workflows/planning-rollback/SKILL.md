@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/rollback-procedures/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/checkpoint-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rollback-procedures/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/checkpoint-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Planning Rollback
@@ -73,8 +73,8 @@ Load these knowledge skills for reference during this workflow:
 - Unrecoverable errors in deliverables
 
 ## Prerequisites
-- `.antigravity/project-context.md` must exist with phase history
-- `.antigravity/progress.md` should have checkpoint notes
+- `.ultimate-sdlc/project-context.md` must exist with phase history
+- `.ultimate-sdlc/progress.md` should have checkpoint notes
 
 ## CRITICAL: Confirmation Required
 
@@ -85,8 +85,8 @@ Ask: "This will rollback to Phase [X]. The following will be discarded: [list]. 
 ## Steps
 
 1. **Identify Current State**
-   - Read `.antigravity/project-context.md` for current phase
-   - Read `.antigravity/progress.md` for recent work
+   - Read `.ultimate-sdlc/project-context.md` for current phase
+   - Read `.ultimate-sdlc/progress.md` for recent work
    - List deliverables created since target rollback point
 
 2. **Select Rollback Target**
@@ -109,16 +109,16 @@ Ask: "This will rollback to Phase [X]. The following will be discarded: [list]. 
    ```
    Create: archive/rollback-[timestamp]/
    Copy: All deliverables being discarded
-   Copy: Current .antigravity/project-context.md
-   Copy: Current .antigravity/progress.md
+   Copy: Current .ultimate-sdlc/project-context.md
+   Copy: Current .ultimate-sdlc/progress.md
    ```
 
-   b. **Update .antigravity/project-context.md**:
+   b. **Update .ultimate-sdlc/project-context.md**:
    - Set current phase to target
    - Clear completed phases after target
    - Reset status to "in_progress"
 
-   c. **Update .antigravity/progress.md**:
+   c. **Update .ultimate-sdlc/progress.md**:
    - Add rollback entry with timestamp
    - Note reason for rollback
    - Note what was archived
@@ -127,8 +127,8 @@ Ask: "This will rollback to Phase [X]. The following will be discarded: [list]. 
    - Move to archive folder, don't delete
 
 6. **Verify Rollback**
-   - Confirm .antigravity/project-context.md shows correct phase
-   - Confirm .antigravity/progress.md documents rollback
+   - Confirm .ultimate-sdlc/project-context.md shows correct phase
+   - Confirm .ultimate-sdlc/progress.md documents rollback
    - Confirm archived files are accessible
 
 7. **Resume Work**
@@ -144,4 +144,4 @@ Use **Display Template** from `council-planning.md` to show: Rollback Complete
 If rollback was a mistake:
 - Archived files are preserved in `archive/rollback-[timestamp]/`
 - Can manually restore from archive
-- Update .antigravity/project-context.md and .antigravity/progress.md accordingly
+- Update .ultimate-sdlc/project-context.md and .ultimate-sdlc/progress.md accordingly

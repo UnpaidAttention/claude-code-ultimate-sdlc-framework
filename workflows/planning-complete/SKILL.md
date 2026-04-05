@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-complete - Complete Planning Council
@@ -90,7 +90,7 @@ Verify Planning Council completion, generate handoff document, and prepare for D
 
 Check all Gate 8 criteria:
 
-- [ ] All phases 1-8 marked complete in `.antigravity/project-context.md`
+- [ ] All phases 1-8 marked complete in `.ultimate-sdlc/project-context.md`
 - [ ] All features have FEAT-XXX specifications in `specs/features/`
 - [ ] All features decomposed into AIOUs in `specs/aious/`
 - [ ] Architecture decisions documented in `specs/adrs/`
@@ -109,12 +109,12 @@ Use **Display Template** from `council-planning.md` to show: Planning Council Ha
 
 ### Step 3: Update State
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Mark Planning Council as complete
    - Add Gate 8 to "Gates Passed" table
    - Add planning-handoff.md to "Handoffs Generated" table
 
-2. Update `.antigravity/progress.md`:
+2. Update `.ultimate-sdlc/progress.md`:
    - Add Planning Council completion entry
 
 ### Step 4: Report Completion
@@ -127,7 +127,7 @@ Use **Display Template** from `council-planning.md` to show: Planning Council Co
 ## Rollback
 
 If issues are found after completion:
-- Edit `.antigravity/project-context.md` to reopen Planning Council
+- Edit `.ultimate-sdlc/project-context.md` to reopen Planning Council
 - Fix issues
 - Run `/planning-complete` again
 

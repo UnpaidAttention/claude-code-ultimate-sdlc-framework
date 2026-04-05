@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,8 +51,8 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
 
 
 # /amend - Inter-Council Amendment
@@ -91,8 +91,8 @@ You CANNOT amend a council you haven't completed yet.
 
 ### Step 1: Read Config & Context
 
-1. Read `.antigravity/config.yaml` → extract current council, governance_mode
-2. Read `.antigravity/project-context.md` → confirm current position
+1. Read `.ultimate-sdlc/config.yaml` → extract current council, governance_mode
+2. Read `.ultimate-sdlc/project-context.md` → confirm current position
 3. Validate the target council has already been completed (or is current)
 
 ### Step 2: Document the Amendment
@@ -119,7 +119,7 @@ Document any downstream impacts in the amendment log.
 
 ### Step 5: Return to Current Position
 
-1. Update `.antigravity/project-context.md` with amendment note
+1. Update `.ultimate-sdlc/project-context.md` with amendment note
 2. Update `WORKING-MEMORY.md` with amendment context
 3. Resume work at the current phase in the current council
 

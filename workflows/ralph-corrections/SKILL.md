@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/correction-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/tdd-methodology/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/root-cause-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/correction-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/tdd-methodology/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/root-cause-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: ralph-corrections
@@ -171,13 +171,13 @@ git tag ralph-corrections-start
 4. AFTER VERIFICATION:
    - If Certificate generated: Update correction-log.md status to COMPLETE
      Commit with message 'Fix COR-XXX: [root cause summary]'
-   - If FAILED: Track attempt count in .antigravity/progress.md
+   - If FAILED: Track attempt count in .ultimate-sdlc/progress.md
      If 3 attempts exhausted, mark as BLOCKED with reason
      Move to the next correction
 
 5. CHECK FOR REGRESSIONS: Run related tests after each fix
 
-6. LOG PROGRESS: Update .antigravity/progress.md with what you completed this iteration
+6. LOG PROGRESS: Update .ultimate-sdlc/progress.md with what you completed this iteration
 
 ## TRACK PRIORITY ORDER (if not filtered)
 1. V-track corrections (V1-V5) - Validation issues

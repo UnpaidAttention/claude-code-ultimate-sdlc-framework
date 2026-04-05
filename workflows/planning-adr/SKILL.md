@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/decision-making/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/trade-off-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/decision-making/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/trade-off-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Planning ADR Workflow
@@ -113,8 +113,8 @@ Before finalizing, verify:
 ### Step 5: Save ADR
 
 - Save to `specs/adrs/ADR-XXX-[title].md`
-- Update `.antigravity/progress.md` with new ADR
-- Update architecture section in `.antigravity/project-context.md`
+- Update `.ultimate-sdlc/progress.md` with new ADR
+- Update architecture section in `.ultimate-sdlc/project-context.md`
 
 ### Step 6: Knowledge Base
 

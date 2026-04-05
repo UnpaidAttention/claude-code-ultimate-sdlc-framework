@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/typescript-expert/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/typescript-expert/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-start - Begin Development Council
@@ -63,7 +63,7 @@ Load these knowledge skills for reference during this workflow:
 ## Arguments
 | Argument | Required | Description |
 |----------|----------|-------------|
-| (none) | — | Session auto-detects state from `.antigravity/project-context.md` |
+| (none) | — | Session auto-detects state from `.ultimate-sdlc/project-context.md` |
 
 ---
 
@@ -85,7 +85,7 @@ Start or resume the Development Council. This council transforms planning specif
 
 ## Pre-Conditions
 
-- `.antigravity/project-context.md` must exist (run `/init` first if not)
+- `.ultimate-sdlc/project-context.md` must exist (run `/init` first if not)
 - Planning Council must be complete (Gate 8 passed)
 - `handoffs/planning-handoff.md` must exist
 
@@ -96,12 +96,12 @@ Start or resume the Development Council. This council transforms planning specif
 ### Step 1: Session Setup
 
 Follow **Session Protocol** from `council-development.md`:
-1. Read `.antigravity/config.yaml` → extract `governance_mode`, `project_type`
-2. Read `.antigravity/project-context.md` → confirm Active Council, current wave
+1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
+2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council, current wave
 
 ### Step 2: Check Project State
 
-Read `.antigravity/project-context.md`:
+Read `.ultimate-sdlc/project-context.md`:
 - If `Active Council` is not "development", check if transition is valid
 - Verify Planning Council (Gate 8) is marked complete OR abbreviated planning is complete
 - Identify current wave
@@ -109,9 +109,9 @@ Read `.antigravity/project-context.md`:
 
 ### Step 2a: Cycle Context for Development
 
-**Read the Cycle Type from `.antigravity/project-context.md`.**
+**Read the Cycle Type from `.ultimate-sdlc/project-context.md`.**
 
-For **all non-initial cycles** (cycle number > 1 in `.antigravity/project-manifest.md`):
+For **all non-initial cycles** (cycle number > 1 in `.ultimate-sdlc/project-manifest.md`):
 
 1. **Existing codebase detected**: Source code already exists. Development EXTENDS the existing codebase — do NOT recreate project structure, types, or utilities that already exist.
 2. **Read `cycle-baseline.md`** (if exists): Understand existing architecture, tech stack, and patterns.
@@ -125,11 +125,11 @@ For **all non-initial cycles** (cycle number > 1 in `.antigravity/project-manife
 | **Maintenance** | UPDATE dependencies, config, infrastructure. Do not change business logic unless required by updates. |
 | **Improvement** | REFACTOR existing code per behavioral contracts. No new features. Existing tests must continue passing. |
 
-4. **Add to `.antigravity/council-state/development/WORKING-MEMORY.md`**:
+4. **Add to `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`**:
    ```
    ### Cycle Context
    - Cycle Type: [type]
-   - Cycle Intent: [from .antigravity/project-context.md]
+   - Cycle Intent: [from .ultimate-sdlc/project-context.md]
    - Existing Codebase: YES
    - Development Scope: [EXTEND / FIX / UPDATE / REFACTOR per table above]
    ```
@@ -174,13 +174,13 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
 
 ### Step 5: New Session Setup
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set `Active Council`: development
    - Set `Current Wave`: 0
    - Set `Status`: in_progress
    - **If multi-run**: Note current run number
 
-2. **If multi-run mode**: Update `.antigravity/council-state/development/run-tracker.md`:
+2. **If multi-run mode**: Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Set current run status to 🔄 IN-PROGRESS
    - Record start date for current run
 
@@ -190,7 +190,7 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
    - Extract architecture decisions
    - Extract tech stack requirements
 
-4. Create/Update `.antigravity/council-state/development/current-state.md`:
+4. Create/Update `.ultimate-sdlc/council-state/development/current-state.md`:
    - List AIOUs for current run with status "pending"
    - Record wave assignments
    - **If multi-run**: Note run number and scope
@@ -209,11 +209,11 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
      - Create git checkpoint: `pre-wave-0`
 
 6. Load Wave 0 Skills (from `.reference/skills-index.md`):
-   - Read `~/.claude/skills/antigravity/knowledge/typescript-expert/SKILL.md`
-   - Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-   - Read `~/.claude/skills/antigravity/knowledge/architecture/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/typescript-expert/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture/SKILL.md`
 
-7. Update `.antigravity/progress.md` with new session entry
+7. Update `.ultimate-sdlc/progress.md` with new session entry
 
 8. Display welcome using **Display Template** from `council-development.md` with:
    - Wave: 0 (Types & Interfaces)
@@ -233,17 +233,17 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
 
 ### Step 6: Resume Session
 
-1. Read `.antigravity/project-context.md` for current wave
-2. Read `.antigravity/progress.md` for last session notes
-3. Read `.antigravity/council-state/development/current-state.md` for AIOU statuses
-4. **If multi-run mode**: Read `.antigravity/council-state/development/run-tracker.md`:
+1. Read `.ultimate-sdlc/project-context.md` for current wave
+2. Read `.ultimate-sdlc/progress.md` for last session notes
+3. Read `.ultimate-sdlc/council-state/development/current-state.md` for AIOU statuses
+4. **If multi-run mode**: Read `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Identify current run (status = IN-PROGRESS)
    - Load only AIOUs assigned to this run
    - Identify last completed wave for this run
 5. Read `handoffs/planning-handoff.md` for AIOU specifications
 6. Load skills for current wave:
    - Look up wave in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/antigravity/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
 
 7. Verify repository state:
    - Run `git status`
@@ -251,7 +251,7 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
    - Run tests to verify state
 
 8. Display resume status using **Display Template** from `council-development.md` with:
-   - Current wave and progress table (use wave structure from `~/.claude/skills/antigravity/context/project-presets.md` for `project_type`)
+   - Current wave and progress table (use wave structure from `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for `project_type`)
    - **Lens**: per current wave
    - Next AIOU to implement
    - If multi-run: include run progress
@@ -311,7 +311,7 @@ Use `/status`
 
 ## Gate Criteria
 
-Refer to `~/.claude/skills/antigravity/context/gate-criteria.md` for:
+Refer to `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` for:
 - **Gate I4** criteria (after Wave 4)
 - **Gate I8** criteria (after Wave 6)
 
@@ -321,7 +321,7 @@ Refer to `~/.claude/skills/antigravity/context/gate-criteria.md` for:
 
 When Gate I8 passes:
 - Generate `handoffs/development-handoff.md`
-- Update `.antigravity/project-context.md` to mark Development complete
+- Update `.ultimate-sdlc/project-context.md` to mark Development complete
 - Instruct user to run `/audit-start`
 
 ---

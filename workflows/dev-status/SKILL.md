@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/status-reporting/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/progress-tracking/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/metrics-collection/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/status-reporting/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/progress-tracking/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/metrics-collection/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: dev-status
@@ -78,8 +78,8 @@ Execute these steps:
 ### Step 1: Read Current State
 
 Read these files:
-- `.antigravity/project-context.md` - for current wave and AIOU statuses
-- `.antigravity/progress.md` - for session notes and blockers
+- `.ultimate-sdlc/project-context.md` - for current wave and AIOU statuses
+- `.ultimate-sdlc/progress.md` - for session notes and blockers
 - `planning-handoff.md` - for AIOU specifications reference
 
 If files don't exist, respond: "No development session found. Run `/dev-start` to begin."

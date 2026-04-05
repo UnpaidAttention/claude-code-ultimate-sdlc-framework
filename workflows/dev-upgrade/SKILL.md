@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/git-operations/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/configuration-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/git-operations/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/configuration-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Framework Upgrade
@@ -66,7 +66,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/council-development.md`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/council-development.md`
 
 ## Trigger
 - `/dev-upgrade` - Start upgrade process
@@ -79,7 +79,7 @@ Safely upgrade the framework while:
 - Preserving project-specific configuration
 - Backing up customizations
 - Migrating settings to new version
-- Regenerating Antigravity skills
+- Regenerating Ultimate SDLC skills
 
 ## Upgrade Process
 
@@ -107,7 +107,7 @@ Or with custom backup location:
 
 After upgrade completes:
 
-1. **Regenerate Antigravity skills**:
+1. **Regenerate Ultimate SDLC skills**:
    ```
    /dev-export-skills
    ```
@@ -148,7 +148,7 @@ Options:
    cp -r ./backups/dev-council-TIMESTAMP/.agent .
    cp -r ./backups/dev-council-TIMESTAMP/.standards .
    cp ./backups/dev-council-TIMESTAMP/CLAUDE.md .
-   cp ./backups/dev-council-TIMESTAMP/.antigravity/config.yaml .
+   cp ./backups/dev-council-TIMESTAMP/.ultimate-sdlc/config.yaml .
    ```
 
 2. **Regenerate skills**:
@@ -159,12 +159,12 @@ Options:
 ## Customization Preservation
 
 ### Preserved Automatically
-- Project `.antigravity/config.yaml` (if in project root, not framework)
-- Project state files (`.antigravity/project-context.md`, `.antigravity/progress.md`)
+- Project `.ultimate-sdlc/config.yaml` (if in project root, not framework)
+- Project state files (`.ultimate-sdlc/project-context.md`, `.ultimate-sdlc/progress.md`)
 
 ### Manual Preservation Needed
 - Custom standards added to `.standards/`
-- Custom workflows added to `~/.claude/skills/antigravity/workflows/`
+- Custom workflows added to `~/.claude/skills/ultimate-sdlc/workflows/`
 - Custom directives added to `directives/`
 
 **Recommendation**: Keep customizations in project-specific files, not framework files.

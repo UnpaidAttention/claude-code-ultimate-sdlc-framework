@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/orchestration-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/orchestration-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /council-switch - Change Active Council
@@ -78,7 +78,7 @@ Load these knowledge skills for reference during this workflow:
 1. **Verify gate completion** before switching
 2. **Save current state** before transition
 3. **Load new council state** after switch
-4. **Update .antigravity/config.yaml** with new active council
+4. **Update .ultimate-sdlc/config.yaml** with new active council
 
 ---
 
@@ -107,13 +107,13 @@ IF switching FROM Validation:
 
 ### 2. State Preservation
 
-- Save current progress to `.antigravity/council-state/{current}/current-state.md`
-- Update `.antigravity/progress.md` with session summary
+- Save current progress to `.ultimate-sdlc/council-state/{current}/current-state.md`
+- Update `.ultimate-sdlc/progress.md` with session summary
 
 ### 3. Council Activation
 
-- Update `.antigravity/config.yaml` active_council field
-- Load `.antigravity/council-state/{new}/current-state.md`
+- Update `.ultimate-sdlc/config.yaml` active_council field
+- Load `.ultimate-sdlc/council-state/{new}/current-state.md`
 - Display new council status
 
 ---

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit - UI Completeness Audit (Non-Destructive)
@@ -78,12 +78,12 @@ Audit an existing UI for completeness gaps — missing routes, unwired buttons, 
 
 | # | Phase | Command | Artifact | Description |
 |---|-------|---------|----------|-------------|
-| 1 | Inventory Existing UI | `/dev-ui-audit-scan` | `.antigravity/council-state/development/ui-audit-existing-inventory.md` | Scan routes, components, design system |
-| 2 | Build Target State | `/dev-ui-audit-target` | `.antigravity/council-state/development/ui-audit-target-state.md` | Define what SHOULD exist from specs |
-| 3 | Gap Analysis | `/dev-ui-audit-gaps` | `.antigravity/council-state/development/ui-audit-report.md` | Compare existing vs. target |
-| 4 | Implementation Plan | `/dev-ui-audit-plan` | `.antigravity/council-state/development/ui-audit-plan.md` | Prioritized plan for closing gaps |
+| 1 | Inventory Existing UI | `/dev-ui-audit-scan` | `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md` | Scan routes, components, design system |
+| 2 | Build Target State | `/dev-ui-audit-target` | `.ultimate-sdlc/council-state/development/ui-audit-target-state.md` | Define what SHOULD exist from specs |
+| 3 | Gap Analysis | `/dev-ui-audit-gaps` | `.ultimate-sdlc/council-state/development/ui-audit-report.md` | Compare existing vs. target |
+| 4 | Implementation Plan | `/dev-ui-audit-plan` | `.ultimate-sdlc/council-state/development/ui-audit-plan.md` | Prioritized plan for closing gaps |
 | 5 | Implement Gaps | `/dev-ui-audit-fix` | Code changes, tests | Build missing routes, wire components |
-| 6 | Verify Completeness | `/dev-ui-audit-verify` | `.antigravity/council-state/development/ui-audit-verification.md` | Full UI-V verification pass |
+| 6 | Verify Completeness | `/dev-ui-audit-verify` | `.ultimate-sdlc/council-state/development/ui-audit-verification.md` | Full UI-V verification pass |
 
 ---
 
@@ -104,11 +104,11 @@ The user controls when each phase begins by invoking this orchestrator again or 
 
 Check for phase artifacts in order and route to the first incomplete phase:
 
-1. If `.antigravity/council-state/development/ui-audit-existing-inventory.md` does NOT exist → run `/dev-ui-audit-scan`
-2. If `.antigravity/council-state/development/ui-audit-target-state.md` does NOT exist → run `/dev-ui-audit-target`
-3. If `.antigravity/council-state/development/ui-audit-report.md` does NOT exist → run `/dev-ui-audit-gaps`
-4. If `.antigravity/council-state/development/ui-audit-plan.md` does NOT exist → run `/dev-ui-audit-plan`
-5. If `.antigravity/council-state/development/ui-audit-verification.md` does NOT exist:
+1. If `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md` does NOT exist → run `/dev-ui-audit-scan`
+2. If `.ultimate-sdlc/council-state/development/ui-audit-target-state.md` does NOT exist → run `/dev-ui-audit-target`
+3. If `.ultimate-sdlc/council-state/development/ui-audit-report.md` does NOT exist → run `/dev-ui-audit-gaps`
+4. If `.ultimate-sdlc/council-state/development/ui-audit-plan.md` does NOT exist → run `/dev-ui-audit-plan`
+5. If `.ultimate-sdlc/council-state/development/ui-audit-verification.md` does NOT exist:
    - If implementation items remain in `ui-audit-plan.md` → run `/dev-ui-audit-fix`
    - If all items complete → run `/dev-ui-audit-verify`
 6. If all artifacts exist → audit complete, display summary

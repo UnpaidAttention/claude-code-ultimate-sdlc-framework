@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish-apply - Phase 5: Implement Remediation
@@ -68,7 +68,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- `.antigravity/council-state/development/ui-polish-plan.md` must exist AND contain `## Status: APPROVED`
+- `.ultimate-sdlc/council-state/development/ui-polish-plan.md` must exist AND contain `## Status: APPROVED`
 
 If prerequisite not met:
 ```
@@ -155,7 +155,7 @@ Colors apply through tokens, so update the source of truth first.
 
 If Playwright MCP or browser tools are available:
 1. Capture screenshots at 3 breakpoints (375x812, 768x1024, 1920x1080) for each modified page
-2. Save to `.antigravity/council-state/development/ui-polish-screenshots/`
+2. Save to `.ultimate-sdlc/council-state/development/ui-polish-screenshots/`
 3. Name format: `[page-name]-[breakpoint]-after.png`
 
 If tools not available: note in output that manual visual verification was performed.
@@ -164,7 +164,7 @@ If tools not available: note in output that manual visual verification was perfo
 
 ## Output
 
-Update `.antigravity/council-state/development/ui-polish-plan.md` with implementation status:
+Update `.ultimate-sdlc/council-state/development/ui-polish-plan.md` with implementation status:
 
 ```markdown
 ## Implementation Log
@@ -219,7 +219,7 @@ Update `.antigravity/council-state/development/ui-polish-plan.md` with implement
 **Layouts**: [COMPLETE/FAILED]
 **Copy**: [COMPLETE/FAILED]
 
-Implementation log appended to: .antigravity/council-state/development/ui-polish-plan.md
+Implementation log appended to: .ultimate-sdlc/council-state/development/ui-polish-plan.md
 
 **Next step**: Run `/dev-ui-polish-verify` to run the final design consistency verification.
 ```

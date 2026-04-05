@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/brainstorming/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/brainstorming/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-start - Begin Planning Council
@@ -81,7 +81,7 @@ Start or resume the Planning Council. This council transforms requirements into 
 
 ## Pre-Conditions
 
-- `.antigravity/project-context.md` must exist (run `/init` first if not)
+- `.ultimate-sdlc/project-context.md` must exist (run `/init` first if not)
 - If resuming from another council, previous council must be complete
 
 ---
@@ -91,20 +91,20 @@ Start or resume the Planning Council. This council transforms requirements into 
 ### Step 1: Session Setup
 
 Follow **Session Protocol** from `council-planning.md`:
-1. Read `.antigravity/config.yaml` → extract `governance_mode`, `project_type`
-2. Read `.antigravity/project-context.md` → confirm Active Council, current phase
-3. Read `~/.claude/skills/antigravity/context/framework-overview.md`, `.reference/phase-guide.md`
+1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
+2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council, current phase
+3. Read `~/.claude/skills/ultimate-sdlc/context/framework-overview.md`, `.reference/phase-guide.md`
 
 ### Step 2: Check Project State
 
-Read `.antigravity/project-context.md`:
+Read `.ultimate-sdlc/project-context.md`:
 - If `Active Council` is not "planning", check if transition is valid
 - Identify current phase
 - Read `Cycle Information` section → extract **Cycle Type** and **Cycle Intent**
 
 ### Step 2a: Cycle-Type Routing
 
-**Read the Cycle Type from `.antigravity/project-context.md` → `Cycle Information` → `Cycle Type`.**
+**Read the Cycle Type from `.ultimate-sdlc/project-context.md` → `Cycle Information` → `Cycle Type`.**
 
 | Cycle Type | Action |
 |------------|--------|
@@ -120,7 +120,7 @@ When the cycle type is **Feature**, planning is scoped to NEW features only:
 
 1. **Read `cycle-baseline.md`** — This summarizes existing architecture, features, and tech debt
 2. **Read `specs/feature-inventory.md`** (if exists) — This lists all existing features
-3. **Read `.antigravity/project-manifest.md`** — Cycle history and project identity
+3. **Read `.ultimate-sdlc/project-manifest.md`** — Cycle history and project identity
 4. **Set planning context**:
    - Phase 1 (Discovery): Focus on understanding NEW feature requirements. Existing features are baseline — do not rediscover them. Reference `cycle-baseline.md` for what already exists.
    - Phase 2 (Architecture): Evaluate IF architectural changes are needed for new features. Read existing ADRs from `specs/adrs/`. Only create new ADRs for new decisions.
@@ -129,17 +129,17 @@ When the cycle type is **Feature**, planning is scoped to NEW features only:
    - Phases 4-7: Only plan for NEW feature requirements (security, testing, infra, sprint).
    - Phase 8: Handoff covers only NEW features and their integration with existing codebase.
 
-5. **Add to `.antigravity/council-state/planning/WORKING-MEMORY.md`**:
+5. **Add to `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`**:
    ```
    ### Cycle Context
    - Cycle Type: Feature
-   - Cycle Intent: [from .antigravity/project-context.md]
+   - Cycle Intent: [from .ultimate-sdlc/project-context.md]
    - Existing Features: [count from feature-inventory.md]
    - Existing ADRs: [count from specs/adrs/]
    - Scope: NEW features only — existing codebase is baseline
    ```
 
-**Full Cycle (cycle > 1) Note**: When the cycle type is Full but this is NOT cycle-001 (check `.antigravity/project-manifest.md` cycle history), also read `cycle-baseline.md` for existing context. Full cycles may rebuild or majorly revise, but should still be aware of what exists.
+**Full Cycle (cycle > 1) Note**: When the cycle type is Full but this is NOT cycle-001 (check `.ultimate-sdlc/project-manifest.md` cycle history), also read `cycle-baseline.md` for existing context. Full cycles may rebuild or majorly revise, but should still be aware of what exists.
 
 ### Step 3: Determine Mode
 
@@ -151,17 +151,17 @@ When the cycle type is **Feature**, planning is scoped to NEW features only:
 
 ### Step 4: New Session Setup
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set `Active Council`: planning
    - Set `Current Phase`: 1
    - Set `Status`: in_progress
 
 2. Load Phase 1 skills if context budget allows (see UNIVERSAL-RULES §0.15):
-   - `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-   - `~/.claude/skills/antigravity/knowledge/brainstorming/SKILL.md`
-   - `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
+   - `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+   - `~/.claude/skills/ultimate-sdlc/knowledge/brainstorming/SKILL.md`
+   - `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
 
-3. Update `.antigravity/progress.md` with new session entry
+3. Update `.ultimate-sdlc/progress.md` with new session entry
 
 4. **Check for Product Concept**:
    - Look for `product-concept.md` in project root
@@ -188,7 +188,7 @@ Ask user to confirm the product concept is accurate before proceeding.
 3. **Execute Thoroughness Protocol** (MANDATORY after initial review):
 
    Follow **Thoroughness Protocol (T1-T5)** from `council-planning.md`.
-   Use **Feature Categories** for the current `project_type` from `~/.claude/skills/antigravity/context/project-presets.md`.
+   Use **Feature Categories** for the current `project_type` from `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
 
 ### Step 4B: Start Without Product Concept
 
@@ -205,13 +205,13 @@ Guide user through requirements gathering. Suggest creating `product-concept.md`
 After gathering initial requirements through conversation, **Execute Thoroughness Protocol** (MANDATORY):
 
 Follow **Thoroughness Protocol (T1-T5)** from `council-planning.md`.
-Use **Feature Categories** for the current `project_type` from `~/.claude/skills/antigravity/context/project-presets.md`.
+Use **Feature Categories** for the current `project_type` from `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
 
 ### Step 4C: Generate Business Requirements Document (BRD)
 
-> **Governance check**: Read `.antigravity/config.yaml → governance_mode`. If `lightweight`, SKIP this step (BRD is optional). If `standard` or `enterprise`, this step is MANDATORY.
+> **Governance check**: Read `.ultimate-sdlc/config.yaml → governance_mode`. If `lightweight`, SKIP this step (BRD is optional). If `standard` or `enterprise`, this step is MANDATORY.
 
-1. Read `~/.claude/skills/antigravity/context/document-dependencies.md` — confirm BRD dependencies are satisfied (product-concept.md exists)
+1. Read `~/.claude/skills/ultimate-sdlc/context/document-dependencies.md` — confirm BRD dependencies are satisfied (product-concept.md exists)
 2. Read `templates/brd-template.md` for the required structure
 3. Generate `specs/business/brd.md` using the product concept as input:
    - **Section 2 (Business Objectives)**: Extract from product-concept.md Vision + Problem Statement + Success Metrics
@@ -221,17 +221,17 @@ Use **Feature Categories** for the current `project_type` from `~/.claude/skills
    - **Section 9 (ROI Analysis)**: Use Success Metrics + Constraints to estimate
    - Flag all assumptions with `[ASSUMPTION: ...]`
 4. Present BRD summary to user for review
-5. Update `.antigravity/council-state/planning/WORKING-MEMORY.md` with BRD status
-6. Record in `.antigravity/progress.md`: "BRD generated: specs/business/brd.md"
+5. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md` with BRD status
+6. Record in `.ultimate-sdlc/progress.md`: "BRD generated: specs/business/brd.md"
 
 ### Step 5: Resume Session
 
-1. Read `.antigravity/project-context.md` for current phase
-2. Read `.antigravity/progress.md` for last session notes
-3. Read `.antigravity/council-state/planning/current-state.md` for detailed state
+1. Read `.ultimate-sdlc/project-context.md` for current phase
+2. Read `.ultimate-sdlc/progress.md` for last session notes
+3. Read `.ultimate-sdlc/council-state/planning/current-state.md` for detailed state
 4. Load skills for current phase:
    - Look up phase in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/antigravity/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
 
 5. Display status:
 Use **Display Template** from `council-planning.md` to show: Planning Council - Resumed
@@ -284,7 +284,7 @@ When Phase 8 gate passes:
   - **If Feature cycle**: Handoff must clearly state scope (new features only) and reference existing codebase as baseline
   - **If Full cycle (non-initial)**: Handoff must reference `cycle-baseline.md` for existing context
 - `specs/business/brd.md` (if Standard/Enterprise mode — BR-XXX IDs referenced by FEAT specs)
-- Update `.antigravity/project-context.md` to mark Planning complete
+- Update `.ultimate-sdlc/project-context.md` to mark Planning complete
 - Instruct user to run `/dev-start`
 
 ---

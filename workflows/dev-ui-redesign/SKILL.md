@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-redesign - UI Redesign
@@ -84,7 +84,7 @@ Restart frontend UI development from scratch on a project that already has UI co
 
 ## Prerequisites
 
-- `.antigravity/project-context.md` exists with Active Council = Development
+- `.ultimate-sdlc/project-context.md` exists with Active Council = Development
 - Backend Waves 0-4 are complete (at least one run has passed Gate I4)
 - Project has frontend (`project_type` is web-app or mobile-app)
 - Git working tree is clean (no uncommitted changes)
@@ -103,13 +103,13 @@ UI Redesign requires:
 
 ### Step 1: Assess Current State
 
-1. Read `.antigravity/project-context.md` — confirm development council is active, get current wave/run
-2. Read `.antigravity/council-state/development/run-tracker.md` — identify which runs have completed Wave 5
+1. Read `.ultimate-sdlc/project-context.md` — confirm development council is active, get current wave/run
+2. Read `.ultimate-sdlc/council-state/development/run-tracker.md` — identify which runs have completed Wave 5
 3. Inventory existing UI artifacts:
    - `design-system.md` — exists? Y/N
-   - `.antigravity/council-state/development/ui-design-research.md` — exists? Y/N
-   - `.antigravity/council-state/development/ui-design-plan.md` — exists? Y/N
-   - `.antigravity/council-state/development/ui-verify-run-*.md` — which runs have verification reports?
+   - `.ultimate-sdlc/council-state/development/ui-design-research.md` — exists? Y/N
+   - `.ultimate-sdlc/council-state/development/ui-design-plan.md` — exists? Y/N
+   - `.ultimate-sdlc/council-state/development/ui-verify-run-*.md` — which runs have verification reports?
    - `wave5-context.md` — exists? Y/N
    - `wave5-classification.md` — exists? Y/N
    - `visual-qa/` — exists? Y/N
@@ -223,7 +223,7 @@ Create archive directory: `.ui-redesign-archive/[timestamp]/`
 
 ### Step 6: Reset Run Tracker
 
-Update `.antigravity/council-state/development/run-tracker.md`:
+Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
 
 1. **UI Design Phases section**:
    - Set `UI Research` to ⏳ PENDING (unless `--keep-research`)
@@ -254,14 +254,14 @@ Update `.antigravity/council-state/development/run-tracker.md`:
 
 ### Step 7: Reset Project State
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Current Wave back to the appropriate point:
      - If `--keep-design-system`: Wave 5 (ready for implementation)
      - If `--keep-research`: UI-P (ready for design planning)
      - Otherwise: UI-R (ready for design research)
    - Add note: "UI Redesign initiated [date]"
 
-2. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Add entry documenting the redesign:
      ```
      ### UI Redesign — [date]

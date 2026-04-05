@@ -37,35 +37,35 @@ WARNING issues: Minor naming inconsistencies, style differences, non-critical ga
 ### At Gate 1.5
 Audit these documents together:
 - `product-concept.md`
-- `.antigravity/specs/business/brd.md` (if exists)
-- `.antigravity/specs/features/feature-candidates.md`
+- `.ultimate-sdlc/specs/business/brd.md` (if exists)
+- `.ultimate-sdlc/specs/features/feature-candidates.md`
 
 ### At Gate 3.5
 Audit these documents together:
-- `.antigravity/specs/scope-lock.md`
-- All `.antigravity/specs/features/FEAT-XXX.md`
-- All `.antigravity/specs/aious/AIOU-XXX.md`
-- `.antigravity/specs/prd-crosscutting.md` (if exists)
-- `.antigravity/specs/architecture/api-specification.md` (if exists)
-- `.antigravity/specs/architecture/database-design.md` (if exists)
-- `.antigravity/specs/connectivity-matrix.md`
+- `.ultimate-sdlc/specs/scope-lock.md`
+- All `.ultimate-sdlc/specs/features/FEAT-XXX.md`
+- All `.ultimate-sdlc/specs/aious/AIOU-XXX.md`
+- `.ultimate-sdlc/specs/prd-crosscutting.md` (if exists)
+- `.ultimate-sdlc/specs/architecture/api-specification.md` (if exists)
+- `.ultimate-sdlc/specs/architecture/database-design.md` (if exists)
+- `.ultimate-sdlc/specs/connectivity-matrix.md`
 
 ### At Gate 8
 Audit these documents together:
-- ALL .antigravity/specs/* documents
-- `.antigravity/handoffs/planning-handoff.md`
-- Cross-reference everything against `.antigravity/specs/scope-lock.md`
+- ALL .ultimate-sdlc/specs/* documents
+- `.ultimate-sdlc/handoffs/planning-handoff.md`
+- Cross-reference everything against `.ultimate-sdlc/specs/scope-lock.md`
 
 ### At Gate I4
 Audit these documents together:
-- `.antigravity/specs/architecture/api-specification.md` (planned) vs implemented endpoints
-- `.antigravity/specs/architecture/database-design.md` (planned) vs implemented schema
+- `.ultimate-sdlc/specs/architecture/api-specification.md` (planned) vs implemented endpoints
+- `.ultimate-sdlc/specs/architecture/database-design.md` (planned) vs implemented schema
 
 ### At Gate I8
 Audit these documents together:
-- `.antigravity/handoffs/development-handoff.md` vs `.antigravity/specs/wave-summary.md` (AIOU counts match)
-- `.antigravity/specs/connectivity-matrix.md` vs actual integration test results
-- `.antigravity/specs/operations/runbook.md` vs actual deployment config
+- `.ultimate-sdlc/handoffs/development-handoff.md` vs `.ultimate-sdlc/specs/wave-summary.md` (AIOU counts match)
+- `.ultimate-sdlc/specs/connectivity-matrix.md` vs actual integration test results
+- `.ultimate-sdlc/specs/operations/runbook.md` vs actual deployment config
 
 ---
 

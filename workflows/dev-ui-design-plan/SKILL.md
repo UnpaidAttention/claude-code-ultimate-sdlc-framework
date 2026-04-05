@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-design-plan - UI Design Planning Phase
@@ -74,7 +74,7 @@ Translate design research into a concrete, actionable design plan that the agent
 
 ## Prerequisites
 
-- `.antigravity/council-state/development/ui-design-research.md` exists (UI-R phase complete)
+- `.ultimate-sdlc/council-state/development/ui-design-research.md` exists (UI-R phase complete)
 - `handoffs/planning-handoff.md` with Design Direction
 - All `specs/features/FEAT-XXX.md` and `specs/deep-dives/DIVE-XXX.md` available
 - At least one run has passed Gate I4
@@ -91,7 +91,7 @@ Run /dev-ui-research first.
 
 ### Step 1: Load Inputs
 
-1. Read `.antigravity/council-state/development/ui-design-research.md` (research findings)
+1. Read `.ultimate-sdlc/council-state/development/ui-design-research.md` (research findings)
 2. Read `handoffs/planning-handoff.md` Section 4 (Design Direction)
 3. Read ALL `specs/features/FEAT-XXX.md` — extract user-facing pages/views
 4. Read ALL `specs/deep-dives/DIVE-XXX.md` — extract component inventories, user journeys
@@ -480,7 +480,7 @@ Close methods: X button, ESC key, backdrop click, cancel button
 
 ### Step 6: Compile Design Plan Document
 
-Save as `.antigravity/council-state/development/ui-design-plan.md`:
+Save as `.ultimate-sdlc/council-state/development/ui-design-plan.md`:
 
 ```markdown
 # UI Design Plan — [Project Name]
@@ -532,8 +532,8 @@ See: design-system.md
 
 Verification checklist:
 - [ ] `design-system.md` exists with ALL required sections, no TBD values
-- [ ] `.antigravity/council-state/development/ui-design-plan.md` exists
-- [ ] `.antigravity/council-state/development/ui-design-research.md` exists
+- [ ] `.ultimate-sdlc/council-state/development/ui-design-plan.md` exists
+- [ ] `.ultimate-sdlc/council-state/development/ui-design-research.md` exists
 - [ ] Route Tree is built to leaf level (no container page without its children listed)
 - [ ] Every route in the Route Tree has a page layout specification
 - [ ] Every container page has sub-navigation defined (type, items, default child, active indicator)
@@ -596,7 +596,7 @@ If genuine gaps found: fix them in the design plan before proceeding. If concern
 
 ### Step 8: Update State
 
-1. Update `.antigravity/council-state/development/run-tracker.md`:
+1. Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Set `UI Design Phases > UI Design Plan` status to ✅ COMPLETE
 
 2. Display:
@@ -608,7 +608,7 @@ If genuine gaps found: fix them in the design plan before proceeding. If concern
 **Routes mapped**: [N]
 **Interactive elements inventoried**: [N] buttons, [N] forms, [N] modals, [N] data components
 
-Design plan saved to: .antigravity/council-state/development/ui-design-plan.md
+Design plan saved to: .ultimate-sdlc/council-state/development/ui-design-plan.md
 
 Next step: Continue to Wave 5 with /dev-wave5-start
 The design plan will guide all frontend implementation.

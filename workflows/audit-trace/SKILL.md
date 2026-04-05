@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/traceability-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/gap-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/traceability-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/gap-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Traceability Audit
@@ -85,7 +85,7 @@ Cross-reference implemented code against `planning-handoff.md` to detect drift, 
    - Note expected file/component locations
 
 2. **Load Implementation Inventory**
-   - Read T1 feature inventory from `audit-context.md` or `.antigravity/progress.md`
+   - Read T1 feature inventory from `audit-context.md` or `.ultimate-sdlc/progress.md`
    - List all implemented features discovered
    - Note actual file/component locations
 

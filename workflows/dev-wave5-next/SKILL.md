@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/model-routing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/progress-tracking/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/model-routing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/progress-tracking/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: dev-wave5-next
@@ -220,7 +220,7 @@ Layer Progress:
 
 Before implementing each AIOU:
 1. Read `design-system.md` — apply established typography, colors, and spacing tokens
-2. Read `.antigravity/council-state/development/ui-design-plan.md` — find the page layout, navigation entries, and interactive element inventory entries relevant to this AIOU
+2. Read `.ultimate-sdlc/council-state/development/ui-design-plan.md` — find the page layout, navigation entries, and interactive element inventory entries relevant to this AIOU
 3. **Check the Route Tree**: Identify ALL routes this AIOU covers — both the parent page AND every sub-page, tab, and wizard step beneath it. The AIOU is not complete until ALL routes it owns are implemented.
 4. **Implement against the design plan**: Use the planned layout, wire interactive elements per the inventory, follow the navigation architecture for all links
 5. Reference `frontend-design` skill's Anti-Convergence Rule: every component must be distinctive

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/gate-verification/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/release-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/gate-verification/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/release-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-complete - Complete Validation Council
@@ -159,13 +159,13 @@ Use **Display Template** from `council-validation.md` to show: Validation Counci
 
 ### Step 4: Update State
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Mark Validation Council as complete
    - Add all gates to "Gates Passed" table
    - Add validation-handoff.md to "Handoffs Generated" table
    - Set Status: RELEASE READY
 
-2. Update `.antigravity/progress.md`:
+2. Update `.ultimate-sdlc/progress.md`:
    - Add Validation Council completion entry
    - Add release ready timestamp
 
@@ -211,7 +211,7 @@ Run `/init` in a new project directory.
 
 ---
 
-Congratulations on completing the Antigravity SDLC Framework!
+Congratulations on completing the Ultimate SDLC Framework!
 ```
 
 ---

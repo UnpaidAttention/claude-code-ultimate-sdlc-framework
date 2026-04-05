@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/status-reporting/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/progress-tracking/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/metrics-collection/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/status-reporting/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/progress-tracking/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/metrics-collection/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /status - Show Status
@@ -83,9 +83,9 @@ Display the current state of the project across all four councils.
 
 ### Step 1: Check Initialization
 
-Check if `.antigravity/project-context.md` exists:
+Check if `.ultimate-sdlc/project-context.md` exists:
 - **If not exists**:
-  - Check if `.antigravity/project-manifest.md` exists:
+  - Check if `.ultimate-sdlc/project-manifest.md` exists:
     - **If manifest exists**: Display "No active cycle. Run `/new-cycle` to start a new development cycle."
     - **If neither exists**: Display "Project not initialized. Run `/init` to start a new project, or `/adopt` to onboard an existing codebase."
 - **If exists**: Continue to Step 2
@@ -93,14 +93,14 @@ Check if `.antigravity/project-context.md` exists:
 ### Step 2: Load State
 
 Read these files:
-- `.antigravity/project-context.md` - Main state (includes Cycle Information section)
-- `.antigravity/project-manifest.md` - Project identity and cycle history (if exists)
-- `.antigravity/progress.md` - Session history
+- `.ultimate-sdlc/project-context.md` - Main state (includes Cycle Information section)
+- `.ultimate-sdlc/project-manifest.md` - Project identity and cycle history (if exists)
+- `.ultimate-sdlc/progress.md` - Session history
 - Council-specific state (based on active council):
-  - Planning: `.antigravity/council-state/planning/current-state.md`
-  - Development: `.antigravity/council-state/development/current-state.md`
-  - Audit: `.antigravity/council-state/audit/current-state.md`
-  - Validation: `.antigravity/council-state/validation/current-state.md`
+  - Planning: `.ultimate-sdlc/council-state/planning/current-state.md`
+  - Development: `.ultimate-sdlc/council-state/development/current-state.md`
+  - Audit: `.ultimate-sdlc/council-state/audit/current-state.md`
+  - Validation: `.ultimate-sdlc/council-state/validation/current-state.md`
 
 ### Step 3: Display Status
 
@@ -169,7 +169,7 @@ Use **Display Template** from `the active council rules file` to show: Project S
 
 ## If No Active Cycle
 
-If `.antigravity/project-manifest.md` exists but `.antigravity/project-context.md` does not (between cycles):
+If `.ultimate-sdlc/project-manifest.md` exists but `.ultimate-sdlc/project-context.md` does not (between cycles):
 
 Use **Display Template** from `the active council rules file` to show: Project Status
 

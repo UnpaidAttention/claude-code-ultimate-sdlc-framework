@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-audit-target - Phase 2: Build Target State
@@ -65,7 +65,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- Phase 1 complete: `.antigravity/council-state/development/ui-audit-existing-inventory.md` exists
+- Phase 1 complete: `.ultimate-sdlc/council-state/development/ui-audit-existing-inventory.md` exists
 - Feature specs exist in `specs/features/`
 - Deep-dives exist in `specs/deep-dives/`
 
@@ -95,7 +95,7 @@ Complete inventory of every button, form, modal, menu, dropdown, filter, sort co
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/ui-audit-target-state.md`:
+Save to `.ultimate-sdlc/council-state/development/ui-audit-target-state.md`:
 
 ```markdown
 # UI Audit — Target State
@@ -139,7 +139,7 @@ Save to `.antigravity/council-state/development/ui-audit-target-state.md`:
 - Every feature has a complete interaction map (trigger→completion)
 - CRUD matrix covers all data entities
 - Interactive element inventory includes every expected control
-- `.antigravity/council-state/development/ui-audit-target-state.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/ui-audit-target-state.md` exists and is complete
 
 ---
 
@@ -152,7 +152,7 @@ Save to `.antigravity/council-state/development/ui-audit-target-state.md`:
 **Target interactions**: [N]
 **Data entities with CRUD**: [N]
 
-Target state saved to: .antigravity/council-state/development/ui-audit-target-state.md
+Target state saved to: .ultimate-sdlc/council-state/development/ui-audit-target-state.md
 
 Next step: Run /dev-ui-audit-gaps to compare existing vs. target.
 ```

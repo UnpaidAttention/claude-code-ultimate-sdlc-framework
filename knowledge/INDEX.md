@@ -1,4 +1,4 @@
-# Antigravity Knowledge Skills Index
+# Ultimate SDLC Knowledge Skills Index
 
 ## Skills (240 total, alphabetical)
 

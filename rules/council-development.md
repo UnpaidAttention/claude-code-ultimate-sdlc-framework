@@ -4,7 +4,7 @@ Load when: `/council development` or `/dev-*` commands
 
 ## State File Access Restrictions
 
-> The Development Council reads state files from `.antigravity/council-state/development/` and the planning handoff from `.antigravity/handoffs/planning-handoff.md`. Do NOT read other council's state directories.
+> The Development Council reads state files from `.ultimate-sdlc/council-state/development/` and the planning handoff from `.ultimate-sdlc/handoffs/planning-handoff.md`. Do NOT read other council's state directories.
 
 ## Workflow Sequence
 
@@ -26,14 +26,14 @@ Load when: `/council development` or `/dev-*` commands
 
 > **Note**: Waves 0 and 1 are combined into `/dev-wave-1` because Types and Utilities are tightly coupled and typically implemented together.
 
-**Note**: Waves 0-6 may execute in multiple runs. Check `.antigravity/council-state/development/run-tracker.md` for run assignments.
+**Note**: Waves 0-6 may execute in multiple runs. Check `.ultimate-sdlc/council-state/development/run-tracker.md` for run assignments.
 
 **Note**: UI-R and UI-P execute ONCE globally (after the first run passes Gate I4). UI-V executes per run after Wave 5. See UI Design Phases below.
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/antigravity/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate I4**: Services Complete → see `gate-criteria.md § Gate I4`
 - **UI Design Review Gate**: Design plan complete → see `/dev-ui-design-plan` Step 7
@@ -44,14 +44,14 @@ Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-m
 
 Standard session start/resume sequence for all Development Council workflows:
 
-1. Read `.antigravity/config.yaml` → extract `governance_mode`, `project_type`
-2. Read `.antigravity/project-context.md` → confirm Active Council = Development, get current wave
-3. Read `.antigravity/handoffs/planning-handoff.md` → load AIOU specs for current wave
-4. Read `.antigravity/council-state/development/WORKING-MEMORY.md` → check for incomplete AIOUs
-5. Check for `.antigravity/council-state/development/run-tracker.md` → if exists, load current run assignment
+1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
+2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Development, get current wave
+3. Read `.ultimate-sdlc/handoffs/planning-handoff.md` → load AIOU specs for current wave
+4. Read `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md` → check for incomplete AIOUs
+5. Check for `.ultimate-sdlc/council-state/development/run-tracker.md` → if exists, load current run assignment
 6. **If resuming**: Display resume summary, identify next incomplete AIOU
 7. **If new session**: Display welcome with wave overview, proceed to first AIOU
-8. Check governance_mode → apply mode-specific behavior per `~/.claude/skills/antigravity/context/governance-modes.md`
+8. Check governance_mode → apply mode-specific behavior per `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`
 
 ## Context Health Protocol
 
@@ -137,7 +137,7 @@ Use this template for all Development Council gate artifacts:
 
 ## Run Tracker Awareness
 
-When `.antigravity/council-state/development/run-tracker.md` exists (multi-run mode):
+When `.ultimate-sdlc/council-state/development/run-tracker.md` exists (multi-run mode):
 1. Read run tracker at workflow start to identify current run
 2. Load ONLY the AIOUs assigned to the current run
 3. Process only those AIOUs (not all project AIOUs)
@@ -149,8 +149,8 @@ When `.antigravity/council-state/development/run-tracker.md` exists (multi-run m
 
 Before starting ANY AIOU, the agent MUST load the parent feature's context:
 
-1. **Read** the parent FEAT-XXX spec from `.antigravity/specs/features/FEAT-XXX.md`
-2. **Read** the deep-dive analysis from `.antigravity/specs/deep-dives/DIVE-XXX.md`
+1. **Read** the parent FEAT-XXX spec from `.ultimate-sdlc/specs/features/FEAT-XXX.md`
+2. **Read** the deep-dive analysis from `.ultimate-sdlc/specs/deep-dives/DIVE-XXX.md`
 3. **Identify** the AIOU's role: other feature AIOUs, which are complete, how this AIOU connects to the component inventory
 4. **After completing each AIOU**, verify against feature context: Does implementation align with user journey? Does it implement all components for this AIOU's scope? Does it handle documented integration points?
 
@@ -165,9 +165,9 @@ For EVERY AIOU that produces testable code, follow the Red-Green-Refactor cycle:
 - Read parent FEAT-XXX spec + AIOU-XXX spec + deep-dive DIVE-XXX (if exists)
 - Search codebase for existing patterns matching this AIOU's requirements
 - If existing pattern found: follow it. Do NOT create an alternative pattern.
-- **Wave 2 additional context**: Read `.antigravity/specs/architecture/database-design.md` (if exists) — use as implementation blueprint for data layer AIOUs. Schema design, indexes, migration strategy are authoritative.
-- **Wave 4 additional context**: Read `.antigravity/specs/architecture/api-specification.md` (if exists) — use as implementation blueprint for API layer AIOUs. Endpoint paths, request/response schemas, error codes, and auth requirements are authoritative.
-- **All waves**: Read `.antigravity/specs/prd-crosscutting.md` §1 NFRs (if exists) — performance budgets, security requirements, and accessibility standards apply to all implementation work.
+- **Wave 2 additional context**: Read `.ultimate-sdlc/specs/architecture/database-design.md` (if exists) — use as implementation blueprint for data layer AIOUs. Schema design, indexes, migration strategy are authoritative.
+- **Wave 4 additional context**: Read `.ultimate-sdlc/specs/architecture/api-specification.md` (if exists) — use as implementation blueprint for API layer AIOUs. Endpoint paths, request/response schemas, error codes, and auth requirements are authoritative.
+- **All waves**: Read `.ultimate-sdlc/specs/prd-crosscutting.md` §1 NFRs (if exists) — performance budgets, security requirements, and accessibility standards apply to all implementation work.
 
 ### 1. Red Phase — Write Failing Tests
 - Each acceptance criterion → at least one test case
@@ -245,7 +245,7 @@ After the LAST AIOU for any feature completes, run `/dev-verify-feature FEAT-XXX
 
 ## Wave 5 Classification
 
-> **Note**: Wave 5 (UI Components) only applies when `project_type` has a frontend (web-app, mobile-app). For CLI-tool, library, api-service, ml-pipeline: Wave 5 content is determined by `~/.claude/skills/antigravity/context/project-presets.md`.
+> **Note**: Wave 5 (UI Components) only applies when `project_type` has a frontend (web-app, mobile-app). For CLI-tool, library, api-service, ml-pipeline: Wave 5 content is determined by `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
 
 | Type | Examples | Model |
 |------|----------|-------|
@@ -377,33 +377,33 @@ Gate I4 PASS (first run) → UI-R (research) → UI-P (design plan) → Wave 5 (
 ### UI-R: Design Research (`/dev-ui-research`)
 - **When**: Once, after the FIRST run passes Gate I4
 - **Purpose**: Research design inspiration from Dribbble, Spline, and competitive applications
-- **Output**: `.antigravity/council-state/development/ui-design-research.md`
+- **Output**: `.ultimate-sdlc/council-state/development/ui-design-research.md`
 - **Completion**: Every page has design references; research document covers all identified pages
 
 ### UI-P: Design Planning (`/dev-ui-design-plan`)
 - **When**: Once, after UI-R completes
 - **Purpose**: Define design system, page layouts, navigation architecture, interactive element inventory
-- **Output**: `design-system.md` + `.antigravity/council-state/development/ui-design-plan.md`
+- **Output**: `design-system.md` + `.ultimate-sdlc/council-state/development/ui-design-plan.md`
 - **Review Gate**: Agent verifies all pages, routes, and interactive elements are accounted for before proceeding
 - **HARD STOP**: Wave 5 CANNOT begin until UI-P is complete and passes its review gate
 
 ### UI-V: Wiring Verification (`/dev-ui-verify`)
 - **When**: Per run, after Wave 5 completes (before Wave 6)
 - **Purpose**: Verify navigation works, buttons are wired, forms submit, states are complete
-- **Output**: `.antigravity/council-state/development/ui-verify-run-[N].md`
+- **Output**: `.ultimate-sdlc/council-state/development/ui-verify-run-[N].md`
 - **Blocking**: Wave 6 CANNOT begin until UI-V passes (0 CRITICAL, 0 HIGH issues)
 
 ### UI Audit (`/dev-ui-audit`) — Non-Destructive Completeness Fix
 - **When**: Project has existing UI that's partially built. Pages exist but sub-pages, interactions, or CRUD operations are missing.
 - **Purpose**: Scan existing UI, compare against feature specs, identify gaps (missing routes, unwired buttons, incomplete interactions), plan and build only what's missing
 - **Preserves**: ALL existing code. Only ADDS new code and CONNECTS existing elements.
-- **Output**: `.antigravity/council-state/development/ui-audit-report.md`
+- **Output**: `.ultimate-sdlc/council-state/development/ui-audit-report.md`
 
 ### UI Polish (`/dev-ui-polish`) — Anti-Slop Remediation
 - **When**: AFTER UI is functionally complete. The UI works but looks like generic AI output.
 - **Purpose**: Scan for AI slop patterns (default fonts, purple gradients, bento grids, generic copy), research distinctive alternatives, replace slop with project-appropriate design
 - **Prerequisite**: `/dev-ui-audit` or `/dev-ui-verify` passed — functionality must be complete before polishing
-- **Output**: `.antigravity/council-state/development/ui-slop-report.md`, `.antigravity/council-state/development/ui-polish-report.md`
+- **Output**: `.ultimate-sdlc/council-state/development/ui-slop-report.md`, `.ultimate-sdlc/council-state/development/ui-polish-report.md`
 
 ### UI Retheme (`/dev-ui-retheme`) — Visual Theme Makeover
 - **When**: UI is complete and works but you want a completely different visual identity (new colors, fonts, spacing, aesthetic)
@@ -450,11 +450,11 @@ Standard Hero Split (Left Text / Right Image) | Bento Grids as default | Purple 
 
 development-handoff.md containing: Implementation summary, Test results, Coverage metrics, Known issues, Git commit history
 
-Validate against `~/.claude/skills/antigravity/context/handoff-schemas/development-handoff.schema.md`.
+Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/development-handoff.schema.md`.
 
 ## Session Summary Protocol
 
-At the end of every development session (whether natural completion, context limit, or user-initiated stop), append a structured summary to `.antigravity/progress.md`:
+At the end of every development session (whether natural completion, context limit, or user-initiated stop), append a structured summary to `.ultimate-sdlc/progress.md`:
 
 ```markdown
 ### Session: [ISO 8601 timestamp]
@@ -469,7 +469,7 @@ At the end of every development session (whether natural completion, context lim
 **Next action**: [exact next step for the resuming session]
 ```
 
-Also update `.antigravity/council-state/development/WORKING-MEMORY.md` with:
+Also update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md` with:
 - Last completed AIOU ID
 - Current wave and position within wave
 - Any blocked items or unresolved issues
@@ -483,14 +483,14 @@ If recovering mid-wave, verify last completed AIOU via WORKING-MEMORY.md and res
 
 ### Post-Gate I8: Operational Readiness Documents
 
-> **Governance check**: Read `.antigravity/config.yaml → governance_mode`.
+> **Governance check**: Read `.ultimate-sdlc/config.yaml → governance_mode`.
 
 **Step 1: Generate Operational Runbook** (Enterprise: REQUIRED | Standard: RECOMMENDED | Lightweight: SKIP)
 1. Read `templates/runbook-template.md`
-2. Read `.antigravity/specs/security/threat-model.md` — failure modes inform scenarios
-3. Read `.antigravity/specs/architecture/api-specification.md` — integration endpoints inform failure scenarios
-4. Read `.antigravity/specs/infrastructure/monitoring-plan.md` — alerting rules inform symptoms
-5. Generate `.antigravity/specs/operations/runbook.md` covering all 12 mandatory scenarios from the checklist
+2. Read `.ultimate-sdlc/specs/security/threat-model.md` — failure modes inform scenarios
+3. Read `.ultimate-sdlc/specs/architecture/api-specification.md` — integration endpoints inform failure scenarios
+4. Read `.ultimate-sdlc/specs/infrastructure/monitoring-plan.md` — alerting rules inform symptoms
+5. Generate `.ultimate-sdlc/specs/operations/runbook.md` covering all 12 mandatory scenarios from the checklist
 6. Each scenario documents actual system behavior (not theoretical — this is post-implementation)
 
 **Step 2: Generate Technical Documentation Suite** (Standard/Enterprise: REQUIRED | Lightweight: RECOMMENDED)
@@ -498,6 +498,6 @@ If recovering mid-wave, verify last completed AIOU via WORKING-MEMORY.md and res
 2. Generate docs from actual implemented codebase:
    - `README.md` — setup, env vars, commands from actual package.json/Makefile
    - `ARCHITECTURE.md` — component map from actual directory structure, links to ADRs
-   - `API_GUIDE.md` — from `.antigravity/specs/architecture/api-specification.md` + actual routes
+   - `API_GUIDE.md` — from `.ultimate-sdlc/specs/architecture/api-specification.md` + actual routes
    - `TROUBLESHOOTING.md` — common issues discovered during development
 3. Verify all checklist items checked

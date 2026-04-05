@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ag-patch-names — Patch SKILL.md name: fields based on naming mode
-# Reads naming_mode from ~/.antigravity/config.yaml
+# sdlc-patch-names — Patch SKILL.md name: fields based on naming mode
+# Reads naming_mode from ~/.ultimate-sdlc/config.yaml
 # If "namespaced", prefixes all skill names with "ag-"
 # If "short", removes "ag-" prefix
 
-AG_CONFIG="$HOME/.antigravity/config.yaml"
+AG_CONFIG="$HOME/.ultimate-sdlc/config.yaml"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # Read naming mode
@@ -29,8 +29,8 @@ patch_skill_file() {
     local new_name="$current_name"
 
     if [[ "$NAMING_MODE" == "namespaced" ]]; then
-        # Add ag- prefix if not present (skip the root "antigravity" skill)
-        if [[ "$current_name" != ag-* && "$current_name" != "antigravity" ]]; then
+        # Add ag- prefix if not present (skip the root "ultimate-sdlc" skill)
+        if [[ "$current_name" != ag-* && "$current_name" != "ultimate-sdlc" ]]; then
             new_name="ag-${current_name}"
         fi
     else

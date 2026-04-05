@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-retheme-snapshot - Phase 1: Document Current Theme
@@ -96,7 +96,7 @@ Run /dev-ui-audit first if there are functional gaps.
 
 If Playwright MCP or screenshot tool available:
 - Capture every major page at desktop (1920px) and mobile (375px)
-- Save to `.antigravity/council-state/development/retheme-before/`
+- Save to `.ultimate-sdlc/council-state/development/retheme-before/`
 
 If no screenshot tool available:
 - Note that manual screenshots are recommended before proceeding
@@ -117,7 +117,7 @@ This tag provides a one-command recovery path: `git checkout pre-retheme-baselin
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/current-theme-snapshot.md`:
+Save to `.ultimate-sdlc/council-state/development/current-theme-snapshot.md`:
 
 ```markdown
 # Current Theme Snapshot
@@ -164,7 +164,7 @@ Save to `.antigravity/council-state/development/current-theme-snapshot.md`:
 [Current nav styles]
 
 ## Screenshots
-- Location: .antigravity/council-state/development/retheme-before/
+- Location: .ultimate-sdlc/council-state/development/retheme-before/
 - Pages captured: [list]
 - Captured at: [timestamp]
 
@@ -180,7 +180,7 @@ Save to `.antigravity/council-state/development/current-theme-snapshot.md`:
 - All design tokens and visual properties have been extracted and documented
 - Screenshots captured (or manual screenshot instruction provided)
 - Git tag `pre-retheme-baseline` created
-- `.antigravity/council-state/development/current-theme-snapshot.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` exists and is complete
 
 ---
 
@@ -195,7 +195,7 @@ Save to `.antigravity/council-state/development/current-theme-snapshot.md`:
 **Screenshots**: [N] pages captured
 **Safety tag**: pre-retheme-baseline
 
-Snapshot saved to: .antigravity/council-state/development/current-theme-snapshot.md
+Snapshot saved to: .ultimate-sdlc/council-state/development/current-theme-snapshot.md
 
 Next step: Run /dev-ui-retheme-direction to research the new theme direction.
 ```

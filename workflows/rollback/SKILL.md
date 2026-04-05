@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,8 +51,8 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
 
 
 # /rollback - Development Wave Rollback
@@ -99,17 +99,17 @@ Use **Display Template** from `council-development.md` to show: ⚠️ Rollback 
 
 ### Step 3: State File Rollback
 
-1. Update `.antigravity/council-state/development/current-state.md`:
+1. Update `.ultimate-sdlc/council-state/development/current-state.md`:
    - Reset current wave to [N+1] (next wave to implement)
    - Uncheck waves after [N]
-2. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Clear entries related to discarded waves
    - Add rollback note with reason
 3. If multi-run: Update `run-tracker.md` to reflect rolled-back state
 
 ### Step 4: Log the Rollback
 
-Append to `.antigravity/progress.md`:
+Append to `.ultimate-sdlc/progress.md`:
 
 Use **Display Template** from `council-development.md` to show: ⚠️ ROLLBACK — [Date]
 

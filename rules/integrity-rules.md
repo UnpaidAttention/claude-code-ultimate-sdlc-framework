@@ -43,7 +43,7 @@ Every shortcut creates compounding technical debt. The only sustainable path is 
 
 **Prohibited Patterns**: "Temporarily disabled auth service" | "Commenting out validation layer" | Removing imports/registrations | Setting feature flags to false | Wrapping in `if (false)` | Removing middleware
 
-**Required**: Fix actual errors. If blocked by external dependency: `DEFERRED:[reason]:[owner]:[target-phase]` tracked in `.antigravity/specs/deferred-decisions.md`.
+**Required**: Fix actual errors. If blocked by external dependency: `DEFERRED:[reason]:[owner]:[target-phase]` tracked in `.ultimate-sdlc/specs/deferred-decisions.md`.
 
 **Detection**: Diff for removed imports, commented blocks, disabled flags, removed registrations.
 
@@ -103,7 +103,7 @@ Every shortcut creates compounding technical debt. The only sustainable path is 
 
 **Prohibited Patterns**: "Basic version" | "Simplified implementation" | Reducing component inventory | Implementing fewer components than specified | Skipping secondary/error user journeys | "Minimal viable" when full spec exists | Omitting documented states or transitions
 
-**Required**: Implement the FULL component inventory from the deep-dive analysis (`.antigravity/specs/deep-dives/DIVE-XXX.md`). Every component listed in the deep-dive must have a corresponding implementation. All user journeys (primary, secondary, AND error) must be implemented as documented.
+**Required**: Implement the FULL component inventory from the deep-dive analysis (`.ultimate-sdlc/specs/deep-dives/DIVE-XXX.md`). Every component listed in the deep-dive must have a corresponding implementation. All user journeys (primary, secondary, AND error) must be implemented as documented.
 
 **Detection**: Compare implemented components against deep-dive Component Inventory. Count files/components vs. deep-dive count. Check user journey coverage against documented journeys.
 
@@ -115,9 +115,9 @@ Every shortcut creates compounding technical debt. The only sustainable path is 
 
 **Prohibited Patterns**: "Will integrate later" | Implementing features in isolation when connectivity matrix shows interactions | Skipping shared components | Ignoring documented data sharing between features | Deferring integration points to "a future pass"
 
-**Required**: Every interaction documented in `.antigravity/specs/connectivity-matrix.md` must be implemented and verified in Wave 6. Shared components must be implemented once and consumed by all documented features. Data sharing mechanisms must match the documented direction and method.
+**Required**: Every interaction documented in `.ultimate-sdlc/specs/connectivity-matrix.md` must be implemented and verified in Wave 6. Shared components must be implemented once and consumed by all documented features. Data sharing mechanisms must match the documented direction and method.
 
-**Detection**: Cross-reference `.antigravity/specs/connectivity-matrix.md` against Wave 6 verification report. Every row in the matrix must have a corresponding PASS in the verification.
+**Detection**: Cross-reference `.ultimate-sdlc/specs/connectivity-matrix.md` against Wave 6 verification report. Every row in the matrix must have a corresponding PASS in the verification.
 
 ---
 

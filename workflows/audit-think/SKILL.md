@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/critical-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/creative-ideation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/intuitive-reasoning/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/critical-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/creative-ideation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/intuitive-reasoning/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Thinking Mode Selection
@@ -92,7 +92,7 @@ Examples:
 
 ### Critical Thinking Mode
 ```
-Load: ~/.claude/skills/antigravity/knowledge/critical-analysis/SKILL.md
+Load: ~/.claude/skills/ultimate-sdlc/knowledge/critical-analysis/SKILL.md
 Model: Claude Opus 4.5
 
 Approach:
@@ -110,7 +110,7 @@ Use during:
 
 ### Creative Thinking Mode
 ```
-Load: ~/.claude/skills/antigravity/knowledge/creative-ideation/SKILL.md
+Load: ~/.claude/skills/ultimate-sdlc/knowledge/creative-ideation/SKILL.md
 Model: Claude Opus 4.5
 
 Approach:
@@ -128,7 +128,7 @@ Use during:
 
 ### Intuitive Thinking Mode
 ```
-Load: ~/.claude/skills/antigravity/knowledge/intuitive-reasoning/SKILL.md
+Load: ~/.claude/skills/ultimate-sdlc/knowledge/intuitive-reasoning/SKILL.md
 Model: Claude Opus 4.5
 
 Approach:
@@ -146,7 +146,7 @@ Use during:
 
 ### Systematic Thinking Mode
 ```
-Load: ~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md
+Load: ~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md
 Model: Claude Opus 4.5
 
 Approach:
@@ -167,7 +167,7 @@ Use during:
 1. **Announce Mode Change**
    ```
    Switching to [MODE] thinking mode.
-   Loading: ~/.claude/skills/antigravity/knowledge/[skill]/SKILL.md
+   Loading: ~/.claude/skills/ultimate-sdlc/knowledge/[skill]/SKILL.md
    ```
 
 2. **Apply Mode Lens**

@@ -1,14 +1,14 @@
-# Antigravity Skills
+# Ultimate SDLC Skills
 
-> **Hướng dẫn tạo và sử dụng Skills trong Antigravity Kit**
+> **Hướng dẫn tạo và sử dụng Skills trong Ultimate SDLC Kit**
 
 ---
 
 ## 📋 Giới thiệu
 
-Mặc dù các mô hình cơ bản của Antigravity (như Gemini) là những mô hình đa năng mạnh mẽ, nhưng chúng không biết ngữ cảnh dự án cụ thể hoặc các tiêu chuẩn của nhóm bạn. Việc tải từng quy tắc hoặc công cụ vào cửa sổ ngữ cảnh của tác nhân sẽ dẫn đến tình trạng "phình to công cụ", chi phí cao hơn, độ trễ và sự nhầm lẫn.
+Mặc dù các mô hình cơ bản của Ultimate SDLC (như Gemini) là những mô hình đa năng mạnh mẽ, nhưng chúng không biết ngữ cảnh dự án cụ thể hoặc các tiêu chuẩn của nhóm bạn. Việc tải từng quy tắc hoặc công cụ vào cửa sổ ngữ cảnh của tác nhân sẽ dẫn đến tình trạng "phình to công cụ", chi phí cao hơn, độ trễ và sự nhầm lẫn.
 
-**Antigravity Skills** giải quyết vấn đề này thông qua tính năng **Progressive Disclosure**. Kỹ năng là một gói kiến thức chuyên biệt, ở trạng thái không hoạt động cho đến khi cần. Thông tin này chỉ được tải vào ngữ cảnh của tác nhân khi yêu cầu cụ thể của bạn khớp với nội dung mô tả của kỹ năng.
+**Ultimate SDLC Skills** giải quyết vấn đề này thông qua tính năng **Progressive Disclosure**. Kỹ năng là một gói kiến thức chuyên biệt, ở trạng thái không hoạt động cho đến khi cần. Thông tin này chỉ được tải vào ngữ cảnh của tác nhân khi yêu cầu cụ thể của bạn khớp với nội dung mô tả của kỹ năng.
 
 ---
 
@@ -39,7 +39,7 @@ my-skill/
 ### Bước 1: Tạo thư mục
 
 ```bash
-mkdir -p ~/.gemini/antigravity/skills/code-review
+mkdir -p ~/.gemini/Ultimate SDLC/skills/code-review
 ```
 
 ### Bước 2: Tạo SKILL.md

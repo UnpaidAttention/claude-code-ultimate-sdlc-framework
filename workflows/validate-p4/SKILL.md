@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/security-hardening/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/vulnerability-scanning/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/owasp-compliance/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/security-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/security-hardening/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/vulnerability-scanning/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/owasp-compliance/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/security-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-p4 - Security Hardening
@@ -79,7 +79,7 @@ P3 not complete. Run /validate-p3 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: P4 - Security Hardening
 - Set `Status`: in_progress
 
@@ -105,7 +105,7 @@ Run security scans using available tools (MCP servers preferred, terminal fallba
 
 **DAST Scan (recommended):**
 - Use ZAP MCP if available — run spider + active scan on running application
-- If ZAP MCP unavailable: use Antigravity browser extension to manually test injection points (SQLi, XSS, CSRF) against running application
+- If ZAP MCP unavailable: use Ultimate SDLC browser extension to manually test injection points (SQLi, XSS, CSRF) against running application
 - If neither available: run `nikto -h <url>` via terminal for basic scanning
 
 **Container Scan (if Docker used):**

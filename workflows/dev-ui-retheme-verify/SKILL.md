@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-retheme-verify - Phase 5: Visual Verification
@@ -67,9 +67,9 @@ Load these knowledge skills for reference during this workflow:
 ## Prerequisites
 
 - Phase 1-4 complete:
-  - `.antigravity/council-state/development/current-theme-snapshot.md` exists
-  - `.antigravity/council-state/development/retheme-direction.md` exists
-  - `.antigravity/council-state/development/retheme-proposal.md` exists with status APPROVED
+  - `.ultimate-sdlc/council-state/development/current-theme-snapshot.md` exists
+  - `.ultimate-sdlc/council-state/development/retheme-direction.md` exists
+  - `.ultimate-sdlc/council-state/development/retheme-proposal.md` exists with status APPROVED
   - Theme implementation complete (build and tests pass)
 
 If prerequisites not met:
@@ -98,8 +98,8 @@ If any fail: fix issues before proceeding. All three must pass cleanly.
 
 If Playwright MCP or screenshot tool available:
 1. Capture every major page at desktop (1920px) and mobile (375px)
-2. Save to `.antigravity/council-state/development/retheme-after/`
-3. Compare against `.antigravity/council-state/development/retheme-before/`:
+2. Save to `.ultimate-sdlc/council-state/development/retheme-after/`
+3. Compare against `.ultimate-sdlc/council-state/development/retheme-before/`:
    - Changes should be visual only
    - Layout structure should be preserved (unless layout changes were part of the approved proposal)
    - No pages should be broken or missing content
@@ -160,7 +160,7 @@ Update `design-system.md` with the final new theme as the canonical design syste
 
 ## Output Artifact
 
-Save to `.antigravity/council-state/development/retheme-verification.md`:
+Save to `.ultimate-sdlc/council-state/development/retheme-verification.md`:
 
 ```markdown
 # Retheme Verification Report
@@ -171,8 +171,8 @@ Save to `.antigravity/council-state/development/retheme-verification.md`:
 - **Lint**: PASS / FAIL
 
 ## Screenshot Comparison
-- **Before**: .antigravity/council-state/development/retheme-before/
-- **After**: .antigravity/council-state/development/retheme-after/
+- **Before**: .ultimate-sdlc/council-state/development/retheme-before/
+- **After**: .ultimate-sdlc/council-state/development/retheme-after/
 - **Pages compared**: [N]
 - **Visual-only changes**: YES / NO (if NO, list structural changes)
 
@@ -224,7 +224,7 @@ Save to `.antigravity/council-state/development/retheme-verification.md`:
 - WCAG AA contrast verification passes for all text/background combinations
 - Anti-Slop Scan passes: new theme does not introduce slop patterns
 - `design-system.md` updated with final new theme
-- `.antigravity/council-state/development/retheme-verification.md` exists and is complete
+- `.ultimate-sdlc/council-state/development/retheme-verification.md` exists and is complete
 
 ---
 
@@ -254,8 +254,8 @@ Save to `.antigravity/council-state/development/retheme-verification.md`:
 
 **Recovery**: git checkout pre-retheme-baseline
 
-Before/After screenshots: .antigravity/council-state/development/retheme-before/ and retheme-after/
-Verification report: .antigravity/council-state/development/retheme-verification.md
+Before/After screenshots: .ultimate-sdlc/council-state/development/retheme-before/ and retheme-after/
+Verification report: .ultimate-sdlc/council-state/development/retheme-verification.md
 ```
 
 ---

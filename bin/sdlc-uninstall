@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ag-uninstall — Remove Antigravity SDLC Framework from Claude Code
+# sdlc-uninstall — Remove Ultimate SDLC Framework from Claude Code
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-AG_HOME="$HOME/.antigravity"
+AG_HOME="$HOME/.ultimate-sdlc"
 CLAUDE_DIR="$HOME/.claude"
 SKILLS_DIR="$CLAUDE_DIR/skills"
 AGENTS_DIR="$CLAUDE_DIR/agents"
-RULES_DIR="$CLAUDE_DIR/rules/antigravity"
+RULES_DIR="$CLAUDE_DIR/rules/ultimate-sdlc"
 CLAUDE_MD="$CLAUDE_DIR/CLAUDE.md"
 
 RED='\033[0;31m'
@@ -23,7 +23,7 @@ ok()    { echo -e "${GREEN}[ok]${NC}    $*"; }
 warn()  { echo -e "${YELLOW}[warn]${NC}  $*"; }
 
 echo ""
-echo -e "${BOLD}Antigravity SDLC Framework — Uninstall${NC}"
+echo -e "${BOLD}Ultimate SDLC Framework — Uninstall${NC}"
 echo "======================================="
 echo ""
 
@@ -46,7 +46,7 @@ ok "Removed $REMOVED workflow symlink(s)"
 # ── Remove agent files ───────────────────────────────────────────────
 info "Removing agent files ..."
 REMOVED=0
-for agent_file in "$AGENTS_DIR"/ag-*.md; do
+for agent_file in "$AGENTS_DIR"/sdlc-*.md; do
     [[ -f "$agent_file" ]] || continue
     rm "$agent_file"
     ((REMOVED++))
@@ -64,12 +64,12 @@ fi
 
 # ── Remove routing block from CLAUDE.md ──────────────────────────────
 info "Removing routing block from CLAUDE.md ..."
-if [[ -f "$CLAUDE_MD" ]] && grep -qF "## Antigravity SDLC Framework" "$CLAUDE_MD"; then
-    # Remove from the ## Antigravity SDLC Framework header to the next ## header or EOF
+if [[ -f "$CLAUDE_MD" ]] && grep -qF "## Ultimate SDLC Framework" "$CLAUDE_MD"; then
+    # Remove from the ## Ultimate SDLC Framework header to the next ## header or EOF
     # Use sed to delete the block
-    sed -i '/^## Antigravity SDLC Framework$/,/^## [^A]/{/^## [^A]/!d}' "$CLAUDE_MD"
+    sed -i '/^## Ultimate SDLC Framework$/,/^## [^A]/{/^## [^A]/!d}' "$CLAUDE_MD"
     # Also remove the marker line if it's now at EOF
-    sed -i '/^## Antigravity SDLC Framework$/d' "$CLAUDE_MD"
+    sed -i '/^## Ultimate SDLC Framework$/d' "$CLAUDE_MD"
     # Clean up trailing blank lines
     sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$CLAUDE_MD"
     ok "Routing block removed from CLAUDE.md"
@@ -77,7 +77,7 @@ else
     ok "No routing block found in CLAUDE.md"
 fi
 
-# ── Optionally remove ~/.antigravity/ ────────────────────────────────
+# ── Optionally remove ~/.ultimate-sdlc/ ────────────────────────────────
 echo ""
 if [[ -d "$AG_HOME" ]]; then
     echo -e "${YELLOW}Found global config at $AG_HOME/${NC}"

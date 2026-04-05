@@ -1,7 +1,7 @@
 ---
 name: adopt
 description: |
-  Onboard an existing codebase to the Antigravity Ultimate SDLC Framework. Scans code, generates feature inventory, extracts architecture, creates project manifest.
+  Onboard an existing codebase to the Ultimate SDLC Framework. Scans code, generates feature inventory, extracts architecture, creates project manifest.
 allowed-tools:
   - Bash
   - Read
@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /adopt - Onboard Existing Codebase
@@ -75,7 +75,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Purpose
 
-Onboard an existing, already-developed codebase to the Antigravity SDLC Framework so that subsequent development cycles can be managed through the framework. This is for projects that were NOT built using the framework originally.
+Onboard an existing, already-developed codebase to the Ultimate SDLC Framework so that subsequent development cycles can be managed through the framework. This is for projects that were NOT built using the framework originally.
 
 **What this does**:
 1. Analyzes the existing codebase to understand tech stack, architecture, and features
@@ -98,11 +98,11 @@ Onboard an existing, already-developed codebase to the Antigravity SDLC Framewor
 1. **Verify codebase exists**: Check for source code directories (`src/`, `app/`, `lib/`, `pages/`, `server/`, etc.) or language-specific indicators (`package.json`, `requirements.txt`, `go.mod`, `Cargo.toml`, `pom.xml`, etc.)
    - If no codebase found: "No codebase detected. Run `/init` to start a new project."
 
-2. **Check if already adopted**: Check for `.antigravity/project-manifest.md`
+2. **Check if already adopted**: Check for `.ultimate-sdlc/project-manifest.md`
    - If exists: "Project already onboarded. Run `/new-cycle` to start a new cycle."
 
-3. **Check for existing framework state**: Check for `.antigravity/project-context.md`
-   - If exists with Active Council: "Framework state detected. This project may already be using the framework. Run `/status` to check, or delete `.antigravity/project-context.md` to proceed with adoption."
+3. **Check for existing framework state**: Check for `.ultimate-sdlc/project-context.md`
+   - If exists with Active Council: "Framework state detected. This project may already be using the framework. Run `/status` to check, or delete `.ultimate-sdlc/project-context.md` to proceed with adoption."
 
 ---
 
@@ -216,7 +216,7 @@ Use **Display Template** from `the active council rules file` to show: Quality B
 
 ### Step 5: Create Project Manifest
 
-Create `.antigravity/project-manifest.md`:
+Create `.ultimate-sdlc/project-manifest.md`:
 
 Use **Display Template** from `the active council rules file` to show: Project Manifest
 

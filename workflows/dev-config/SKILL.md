@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/configuration-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/validation-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/configuration-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/validation-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Configuration Management
@@ -66,7 +66,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/council-development.md`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/council-development.md`
 
 ## Trigger
 - `/dev-config` - Display current configuration
@@ -75,7 +75,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Purpose
 
-The `.antigravity/config.yaml` file allows customization of framework behavior:
+The `.ultimate-sdlc/config.yaml` file allows customization of framework behavior:
 - Project profile (micro/standard/enterprise)
 - Parallel execution settings
 - Standards enforcement
@@ -86,16 +86,16 @@ The `.antigravity/config.yaml` file allows customization of framework behavior:
 
 ### At Session Start
 
-1. Check if `.antigravity/config.yaml` exists in project root
+1. Check if `.ultimate-sdlc/config.yaml` exists in project root
 2. If exists: Load and validate
-3. If not exists: Use defaults from framework `.antigravity/config.yaml`
+3. If not exists: Use defaults from framework `.ultimate-sdlc/config.yaml`
 4. Report active configuration
 
 ### Load Sequence
 
 ```
-1. Read framework default .antigravity/config.yaml
-2. Read project .antigravity/config.yaml (if exists)
+1. Read framework default .ultimate-sdlc/config.yaml
+2. Read project .ultimate-sdlc/config.yaml (if exists)
 3. Merge (project overrides framework defaults)
 4. Validate merged configuration
 5. Apply to session
@@ -207,7 +207,7 @@ models:
   complex_issues: "claude-opus-4"
 ```
 
-Recommended models for each wave. Antigravity can use these for model selection.
+Recommended models for each wave. Ultimate SDLC can use these for model selection.
 
 ## Validation Rules
 
@@ -241,7 +241,7 @@ Use **Display Template** from `council-development.md` to show: In /dev-parallel
 
 To customize configuration for a project:
 
-1. Copy `.antigravity/config.yaml` from framework to project root
+1. Copy `.ultimate-sdlc/config.yaml` from framework to project root
 2. Edit values as needed
 3. Run `/dev-config validate` to verify
 4. Configuration applies to all subsequent operations

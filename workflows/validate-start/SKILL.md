@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/intent-extraction/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/multi-lens-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/intent-extraction/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-lens-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-start - Begin Validation Council
@@ -84,7 +84,7 @@ Start or resume the Validation Council. This council validates software against 
 
 ## Pre-Conditions
 
-- `.antigravity/project-context.md` must exist (run `/init` first if not)
+- `.ultimate-sdlc/project-context.md` must exist (run `/init` first if not)
 - **Full / Feature / Improvement cycles**: Audit Council must be complete (Gates A2 and A3 passed), `handoffs/audit-handoff.md` must exist
 - **Patch / Maintenance cycles**: Development Council must be complete (Gate I8 passed), `handoffs/development-handoff.md` must exist (Audit is skipped for these cycle types)
 
@@ -95,13 +95,13 @@ Start or resume the Validation Council. This council validates software against 
 ### Step 1: Load Framework Context
 
 Read these files:
-- `~/.claude/skills/antigravity/context/framework-overview.md` - Understand the overall process
+- `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` - Understand the overall process
 - `.reference/phase-guide.md` - Detailed track and phase information
 - `.reference/skills-index.md` - Skills to load for each phase
 
 ### Step 2: Check Project State
 
-Read `.antigravity/project-context.md`:
+Read `.ultimate-sdlc/project-context.md`:
 - If `Active Council` is not "validation", check if transition is valid
 - Identify current track and phase
 - Read `Cycle Information` section → extract **Cycle Type** and **Cycle Intent**
@@ -112,7 +112,7 @@ Read `.antigravity/project-context.md`:
 
 ### Step 2a: Cycle-Scoped Validation
 
-**Read the Cycle Type from `.antigravity/project-context.md`.**
+**Read the Cycle Type from `.ultimate-sdlc/project-context.md`.**
 
 | Cycle Type | Validation Scope | Handoff Source |
 |------------|-----------------|----------------|
@@ -122,12 +122,12 @@ Read `.antigravity/project-context.md`:
 | **Maintenance** | **Primary**: Verify all existing tests pass after updates. **Secondary**: Verify no behavioral changes. | `development-handoff.md` (no audit handoff) |
 | **Improvement** | **Primary**: Verify behavioral contracts from planning are maintained. **Secondary**: Verify refactored code passes all existing tests. | `audit-handoff.md` |
 
-**Add to `.antigravity/council-state/validation/WORKING-MEMORY.md`**:
+**Add to `.ultimate-sdlc/council-state/validation/WORKING-MEMORY.md`**:
 ```
 ### Cycle Context
 - Cycle Type: [type]
 - Validation Scope: [FULL / NEW+REGRESSION / REGRESSION-ONLY / CONTRACT-VERIFY per table above]
-- Cycle Intent: [from .antigravity/project-context.md]
+- Cycle Intent: [from .ultimate-sdlc/project-context.md]
 - Handoff Source: [audit-handoff.md / development-handoff.md]
 ```
 
@@ -160,7 +160,7 @@ Check if `handoffs/development-handoff.md` exists:
 
 ### Step 5: New Session Setup
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set `Active Council`: validation
    - Set `Current Track`: Validation
    - Set `Current Phase`: V1
@@ -171,31 +171,31 @@ Check if `handoffs/development-handoff.md` exists:
    - Extract quality scorecard
    - Extract enhancement proposals
 
-3. Create `.antigravity/council-state/validation/current-state.md`:
+3. Create `.ultimate-sdlc/council-state/validation/current-state.md`:
    - Initialize track statuses
    - Copy defects to correction queue
    - Initialize verification checklists
 
 4. Create supporting documents:
-   - `.antigravity/council-state/validation/intent-map.md`
-   - `.antigravity/council-state/validation/completeness-matrix.md`
-   - `.antigravity/council-state/validation/correction-log.md`
-   - `.antigravity/council-state/validation/enhancement-proposals.md`
+   - `.ultimate-sdlc/council-state/validation/intent-map.md`
+   - `.ultimate-sdlc/council-state/validation/completeness-matrix.md`
+   - `.ultimate-sdlc/council-state/validation/correction-log.md`
+   - `.ultimate-sdlc/council-state/validation/enhancement-proposals.md`
 
 5. Load V1 Skills (from `.reference/skills-index.md`):
-   - Read `~/.claude/skills/antigravity/knowledge/intent-extraction/SKILL.md`
-   - Read `~/.claude/skills/antigravity/knowledge/multi-lens-analysis/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/intent-extraction/SKILL.md`
+   - Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-lens-analysis/SKILL.md`
 
-6. Update `.antigravity/progress.md` with new session entry
+6. Update `.ultimate-sdlc/progress.md` with new session entry
 
 7. Display welcome:
 Use **Display Template** from `council-validation.md` to show: Validation Council - V1: Intent Extraction
 
 ### Step 6: Resume Session
 
-1. Read `.antigravity/project-context.md` for current track and phase
-2. Read `.antigravity/progress.md` for last session notes
-3. Read `.antigravity/council-state/validation/current-state.md` for detailed state
+1. Read `.ultimate-sdlc/project-context.md` for current track and phase
+2. Read `.ultimate-sdlc/progress.md` for last session notes
+3. Read `.ultimate-sdlc/council-state/validation/current-state.md` for detailed state
 4. Read track-specific documents based on current phase:
    - V-phases: `intent-map.md`
    - C-phases: `correction-log.md`
@@ -204,7 +204,7 @@ Use **Display Template** from `council-validation.md` to show: Validation Counci
    - S-phases: All documents
 5. Load skills for current phase:
    - Look up phase in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/antigravity/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
 
 6. Display status:
 Use **Display Template** from `council-validation.md` to show: Validation Council - Resumed
@@ -364,7 +364,7 @@ For EVERY correction:
 
 When Gate S2 passes:
 - Generate `handoffs/validation-handoff.md`
-- Update `.antigravity/project-context.md` to mark Validation complete
+- Update `.ultimate-sdlc/project-context.md` to mark Validation complete
 - Generate final release checklist
 - **CYCLE COMPLETE** — Instruct user to run `/close-cycle` to archive this cycle, then `/new-cycle` for the next
 

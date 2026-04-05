@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish-verify - Phase 6: Design Consistency Verification
@@ -68,7 +68,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- `.antigravity/council-state/development/ui-polish-plan.md` must contain `## Implementation Status: COMPLETE` (Phase 5 complete)
+- `.ultimate-sdlc/council-state/development/ui-polish-plan.md` must contain `## Implementation Status: COMPLETE` (Phase 5 complete)
 
 If prerequisite not met:
 ```
@@ -151,7 +151,7 @@ Verify no remnants of old styles coexist with new styles:
 
 ## Output
 
-Save final verification report to `.antigravity/council-state/development/ui-polish-report.md`:
+Save final verification report to `.ultimate-sdlc/council-state/development/ui-polish-report.md`:
 
 ```markdown
 # UI Polish — Final Verification Report

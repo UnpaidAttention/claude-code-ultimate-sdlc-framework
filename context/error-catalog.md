@@ -25,14 +25,14 @@ Centralized error codes and recovery procedures.
 
 ## State Errors (ERR-STATE-*)
 
-### ERR-STATE-001: Missing .antigravity/project-context.md
+### ERR-STATE-001: Missing .ultimate-sdlc/project-context.md
 **Recovery**: Run `/init` to create project context.
 
-### ERR-STATE-002: Corrupted .antigravity/project-context.md
-**Recovery**: Run `/recover`. If fails, recreate from .antigravity/progress.md history.
+### ERR-STATE-002: Corrupted .ultimate-sdlc/project-context.md
+**Recovery**: Run `/recover`. If fails, recreate from .ultimate-sdlc/progress.md history.
 
 ### ERR-STATE-003: State Inconsistency
-**Recovery**: Run `/recover`. .antigravity/project-context.md is authoritative; council state derived from it.
+**Recovery**: Run `/recover`. .ultimate-sdlc/project-context.md is authoritative; council state derived from it.
 
 ### ERR-STATE-004: Session Interrupted
 **Recovery**: Read WORKING-MEMORY.md → verify in-progress work → complete or rollback → continue.

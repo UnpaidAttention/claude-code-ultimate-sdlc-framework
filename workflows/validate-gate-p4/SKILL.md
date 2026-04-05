@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/gate-verification/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/production-readiness/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/security-verification/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/performance-verification/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/gate-verification/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/production-readiness/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/security-verification/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/performance-verification/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-gate-p4 - Gate P4 Verification
@@ -79,7 +79,7 @@ P4 not complete. Run /validate-p4 first.
 
 ### Step 1: Load Gate P4 Criteria
 
-Load criteria from `~/.claude/skills/antigravity/context/gate-criteria.md` § Validation Council Gates → Gate P4.
+Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate P4.
 
 Verify each criterion against the authoritative checklist. Run automated checks where applicable.
 

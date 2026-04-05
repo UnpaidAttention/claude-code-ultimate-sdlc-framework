@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/project-setup/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/planning-orchestration/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/project-setup/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/planning-orchestration/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /new-cycle - Start a New Development Cycle
@@ -75,7 +75,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Purpose
 
-This is the **primary re-entry point** for the Antigravity SDLC Framework after initial development. It enables ongoing use of the framework for:
+This is the **primary re-entry point** for the Ultimate SDLC Framework after initial development. It enables ongoing use of the framework for:
 - Adding new features to a completed product
 - Fixing bugs and patching defects
 - Performing maintenance (dependency updates, infrastructure changes)
@@ -90,7 +90,7 @@ This is the **primary re-entry point** for the Antigravity SDLC Framework after 
 
 ### Check 1: Project Manifest Exists
 
-If `.antigravity/project-manifest.md` does NOT exist:
+If `.ultimate-sdlc/project-manifest.md` does NOT exist:
 - Check for codebase indicators (`src/`, `package.json`, `go.mod`, `requirements.txt`, `Cargo.toml`, etc.)
   - **If codebase exists**: "Existing codebase detected but no project manifest. Run `/adopt` first to onboard this project to the framework."
   - **If nothing exists**: "No project found. Run `/init` to start a new project from scratch."
@@ -98,9 +98,9 @@ If `.antigravity/project-manifest.md` does NOT exist:
 
 ### Check 2: Previous Cycle State
 
-If `.antigravity/project-context.md` exists (previous cycle state still at root level):
+If `.ultimate-sdlc/project-context.md` exists (previous cycle state still at root level):
 
-1. Read `.antigravity/project-context.md` and check the `Status` field and `Active Council`
+1. Read `.ultimate-sdlc/project-context.md` and check the `Status` field and `Active Council`
 2. **If Status indicates completion** (all councils complete, Gate S2 passed, or marked Release Ready):
    - Display: "Previous cycle completed. Archiving automatically before starting new cycle."
    - Execute **Auto-Archive Protocol** (see below)
@@ -127,7 +127,7 @@ When archiving a previous cycle's state:
 
 ### Step A1: Determine Cycle Number and Name
 
-1. Read `.antigravity/project-manifest.md` → get `Cycle History` table
+1. Read `.ultimate-sdlc/project-manifest.md` → get `Cycle History` table
 2. Determine next cycle number (count of existing cycles + 1)
 3. Previous cycle = last entry in the Cycle History table
 4. If no Cycle History entries exist (first cycle from /init), use: `cycle-001-initial-build`
@@ -146,24 +146,24 @@ Move these files/directories INTO the archive:
 
 | Source (Root) | Destination (Archive) |
 |---|---|
-| `.antigravity/project-context.md` | `.cycles/cycle-{NNN}/cycle-context.md` |
-| `.antigravity/progress.md` | `.cycles/cycle-{NNN}/.antigravity/progress.md` |
-| `.antigravity/council-state/planning/` | `.cycles/cycle-{NNN}/.antigravity/council-state/planning/` |
-| `.antigravity/council-state/development/` | `.cycles/cycle-{NNN}/.antigravity/council-state/development/` |
-| `.antigravity/council-state/audit/` | `.cycles/cycle-{NNN}/.antigravity/council-state/audit/` |
-| `.antigravity/council-state/validation/` | `.cycles/cycle-{NNN}/.antigravity/council-state/validation/` |
+| `.ultimate-sdlc/project-context.md` | `.cycles/cycle-{NNN}/cycle-context.md` |
+| `.ultimate-sdlc/progress.md` | `.cycles/cycle-{NNN}/.ultimate-sdlc/progress.md` |
+| `.ultimate-sdlc/council-state/planning/` | `.cycles/cycle-{NNN}/.ultimate-sdlc/council-state/planning/` |
+| `.ultimate-sdlc/council-state/development/` | `.cycles/cycle-{NNN}/.ultimate-sdlc/council-state/development/` |
+| `.ultimate-sdlc/council-state/audit/` | `.cycles/cycle-{NNN}/.ultimate-sdlc/council-state/audit/` |
+| `.ultimate-sdlc/council-state/validation/` | `.cycles/cycle-{NNN}/.ultimate-sdlc/council-state/validation/` |
 | `handoffs/*` | `.cycles/cycle-{NNN}/handoffs/` |
 | `.memory/` | `.cycles/cycle-{NNN}/.memory/` |
 | `.metrics/` | `.cycles/cycle-{NNN}/.metrics/` |
 
 **Do NOT move** (these persist across cycles):
-- `.antigravity/project-manifest.md` — Project identity
+- `.ultimate-sdlc/project-manifest.md` — Project identity
 - `product-concept.md` — Original vision
 - `specs/` — Accumulated specifications (project-level)
-- `~/.claude/skills/antigravity/` — Framework files
-- `~/.claude/skills/antigravity/context/` — Framework context
+- `~/.claude/skills/ultimate-sdlc/` — Framework files
+- `~/.claude/skills/ultimate-sdlc/context/` — Framework context
 - `.reference/` — Framework reference
-- `.antigravity/config.yaml` — Framework config
+- `.ultimate-sdlc/config.yaml` — Framework config
 - `CLAUDE.md`, `README.md`, `ARCHITECTURE.md` — Framework docs
 - Source code (`src/`, `app/`, etc.)
 
@@ -188,7 +188,7 @@ This creates a point-in-time snapshot of all specs as of this cycle's completion
 
 ### Step A6: Update Project Manifest
 
-Add completed cycle entry to `.antigravity/project-manifest.md` Cycle History table.
+Add completed cycle entry to `.ultimate-sdlc/project-manifest.md` Cycle History table.
 
 ---
 
@@ -197,7 +197,7 @@ Add completed cycle entry to `.antigravity/project-manifest.md` Cycle History ta
 ### Step 1: Gather Context
 
 Read these files to understand the project:
-- `.antigravity/project-manifest.md` — Project identity, tech stack, cycle history
+- `.ultimate-sdlc/project-manifest.md` — Project identity, tech stack, cycle history
 - `specs/feature-inventory.md` — What features exist (if file exists)
 - `specs/adrs/` — Architecture decisions still in effect (list files, read key ones)
 
@@ -224,10 +224,10 @@ Cycle ID: cycle-{NNN}-{slug}
 #### 3b: Create Directory Structure
 
 ```bash
-mkdir -p .antigravity/council-state/planning
-mkdir -p .antigravity/council-state/development
-mkdir -p .antigravity/council-state/audit
-mkdir -p .antigravity/council-state/validation/screenshots
+mkdir -p .ultimate-sdlc/council-state/planning
+mkdir -p .ultimate-sdlc/council-state/development
+mkdir -p .ultimate-sdlc/council-state/audit
+mkdir -p .ultimate-sdlc/council-state/validation/screenshots
 mkdir -p handoffs
 mkdir -p .memory/episodic/planning
 mkdir -p .memory/episodic/development
@@ -242,7 +242,7 @@ mkdir -p .metrics/tasks/validation
 mkdir -p .metrics/summaries/weekly
 ```
 
-### Step 3c: Create .antigravity/project-context.md
+### Step 3c: Create .ultimate-sdlc/project-context.md
 
 ```markdown
 | [NNN] | cycle-{NNN}-{slug} | [Type] | Active | [today] → ... | [user's intent summary] |
@@ -307,9 +307,9 @@ Use **Display Template** from `council-development.md` to show: New Cycle Create
 ### If previous cycle state files are corrupted
 - Attempt to archive what exists
 - Create fresh state regardless
-- Note corruption in .antigravity/progress.md
+- Note corruption in .ultimate-sdlc/progress.md
 
-### If .antigravity/project-manifest.md is malformed
+### If .ultimate-sdlc/project-manifest.md is malformed
 - Attempt to parse what exists
 - If unrecoverable, offer to regenerate from available information
 

@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/quality-assessment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/test-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/quality-assessment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-gate-i4 - Gate I4 Verification
@@ -87,7 +87,7 @@ Gate I4 ensures the backend is complete and stable before investing in UI develo
 
 **SCOPE**: In multi-run mode, verify criteria for current run's AIOUs only.
 
-Load criteria from `~/.claude/skills/antigravity/context/gate-criteria.md` § Development Council Gates → Gate I4.
+Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Development Council Gates → Gate I4.
 
 Run automated verification:
 // turbo
@@ -107,19 +107,19 @@ Include: wave completion table, test results, quality metrics, and gate status.
 
 **If ALL criteria pass:**
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Gate I4: Passed (for current run)
 
-2. Update `.antigravity/council-state/development/current-state.md`:
+2. Update `.ultimate-sdlc/council-state/development/current-state.md`:
    - Mark Gate I4 passed with timestamp
 
-3. **If multi-run mode**, update `.antigravity/council-state/development/run-tracker.md`:
+3. **If multi-run mode**, update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Set Gate I4 status to ✅ for current run
    - Update waves 0-4 columns to Complete for current run's AIOUs
    - Verify no AIOUs were skipped or truncated
 
 4. **If frontend project** (`project_type` is web-app or mobile-app):
-   - Check if UI Design Phases are complete (look for `.antigravity/council-state/development/ui-design-plan.md`)
+   - Check if UI Design Phases are complete (look for `.ultimate-sdlc/council-state/development/ui-design-plan.md`)
    - If NOT complete: Display:
      ```
      Gate I4 PASSED. Backend complete.
@@ -142,11 +142,11 @@ Include: wave completion table, test results, quality metrics, and gate status.
 List failures with remediation steps. Next step: fix issues, re-run `/dev-gate-i4`.
 
 **If FAIL in multi-run mode:**
-1. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+1. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Document issues found for current run
    - Track what needs fixing
 
-2. Update `.antigravity/council-state/development/run-tracker.md`:
+2. Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Note gate failure for current run
    - Do NOT update wave completion columns until fixed
 

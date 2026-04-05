@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/design-tokens/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/frontend-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/accessibility-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/design-tokens/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/accessibility-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # UI/UX Pro Max - Design Intelligence
@@ -96,39 +96,39 @@ winget install Python.Python.3.12
 ### How to Use This Workflow
 
 ```bash
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n <max_results>]
 ```
 
 ### Step 3: Stack Guidelines
 
 ```bash
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "<keyword>" --stack html-tailwind
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "<keyword>" --stack html-tailwind
 ```
 
 ### Search Reference
 
 ```bash
 # 1. Search product type
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "beauty spa wellness service" --domain product
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "beauty spa wellness service" --domain product
 
 # 2. Search style (based on industry: beauty, elegant)
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "elegant minimal soft" --domain style
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "elegant minimal soft" --domain style
 
 # 3. Search typography
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "elegant luxury" --domain typography
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "elegant luxury" --domain typography
 
 # 4. Search color palette
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "beauty spa wellness" --domain color
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "beauty spa wellness" --domain color
 
 # 5. Search landing page structure
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "hero-centric social-proof" --domain landing
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "hero-centric social-proof" --domain landing
 
 # 6. Search UX guidelines
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "animation" --domain ux
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "accessibility" --domain ux
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "animation" --domain ux
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "accessibility" --domain ux
 
 # 7. Search stack guidelines (default: html-tailwind)
-python3 ~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/scripts/search.py "layout responsive" --stack html-tailwind
+python3 ~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/scripts/search.py "layout responsive" --stack html-tailwind
 ```
 
 **Then:** Synthesize all search results and implement the design.

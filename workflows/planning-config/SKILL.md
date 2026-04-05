@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/configuration-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/validation-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/configuration-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/validation-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Configuration Management
@@ -74,7 +74,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Purpose
 
-The `.antigravity/config.yaml` file allows customization of framework behavior:
+The `.ultimate-sdlc/config.yaml` file allows customization of framework behavior:
 - Project profile (micro/standard/enterprise)
 - Discovery settings
 - Feature discovery agents
@@ -85,9 +85,9 @@ The `.antigravity/config.yaml` file allows customization of framework behavior:
 
 ### At Session Start
 
-1. Check if `.antigravity/config.yaml` exists in project root
+1. Check if `.ultimate-sdlc/config.yaml` exists in project root
 2. If exists: Load and validate
-3. If not exists: Use defaults from framework `.antigravity/config.yaml`
+3. If not exists: Use defaults from framework `.ultimate-sdlc/config.yaml`
 4. Report active configuration
 
 ## Configuration Sections
@@ -174,7 +174,7 @@ models:
   phases_4_to_8: "claude-sonnet-4"
 ```
 
-Recommended models for each phase range. Antigravity can use these for model selection.
+Recommended models for each phase range. Ultimate SDLC can use these for model selection.
 
 ## Output Format
 
@@ -191,7 +191,7 @@ Use **Display Template** from `council-planning.md` to show: In /planning-discov
 
 To customize configuration for a project:
 
-1. Copy `.antigravity/config.yaml` from framework to project root
+1. Copy `.ultimate-sdlc/config.yaml` from framework to project root
 2. Edit values as needed
 3. Run `/planning-config validate` to verify
 4. Configuration applies to all subsequent operations

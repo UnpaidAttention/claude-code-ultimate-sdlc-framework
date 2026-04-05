@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/integration-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/e2e-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/integration-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/e2e-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-wave-6 - Integration
@@ -67,7 +67,7 @@ Load these knowledge skills for reference during this workflow:
 ## Prerequisites
 
 - Wave 5 (UI Components) must be complete
-- **If frontend project**: UI Wiring Verification (`/dev-ui-verify`) must have PASSED for this run. Check for `.antigravity/council-state/development/ui-verify-run-[N].md` with PASS verdict.
+- **If frontend project**: UI Wiring Verification (`/dev-ui-verify`) must have PASSED for this run. Check for `.ultimate-sdlc/council-state/development/ui-verify-run-[N].md` with PASS verdict.
 
 If prerequisites not met:
 ```
@@ -86,7 +86,7 @@ Run /dev-ui-verify to verify navigation, interactive elements, and state complet
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: development
 - Set `Current Wave`: 6 - Integration
 - Set `Status`: in_progress
@@ -96,7 +96,7 @@ Update `.antigravity/project-context.md`:
 **SCOPE**: In multi-run mode, process only current run's AIOUs.
 
 **Feature Verification Pre-Check (MANDATORY):**
-Before starting Wave 6, verify that ALL features (in current run) have passed `/dev-verify-feature`. Check `.antigravity/council-state/development/feature-verifications/` for FEAT-XXX-verified.md files.
+Before starting Wave 6, verify that ALL features (in current run) have passed `/dev-verify-feature`. Check `.ultimate-sdlc/council-state/development/feature-verifications/` for FEAT-XXX-verified.md files.
 
 If any feature has NOT been verified:
 ```
@@ -192,10 +192,10 @@ Before completing this wave, verify:
 
 When all criteria met:
 
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Wave 6 status: Complete
 
-2. Update `.antigravity/council-state/development/WORKING-MEMORY.md`:
+2. Update `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md`:
    - Mark completed AIOUs
    - Record session learnings
 

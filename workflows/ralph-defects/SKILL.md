@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/defect-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/root-cause-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-debugging/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/defect-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/root-cause-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-debugging/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: ralph-defects
@@ -154,11 +154,11 @@ git tag ralph-defects-start
    - If VERIFIED: Update defect-log.md status to RESOLVED
      Commit with message 'Fix DEF-XXX: [brief description]'
      Update audit-context.md defect counts
-   - If FAILED: Track attempt count in .antigravity/progress.md
+   - If FAILED: Track attempt count in .ultimate-sdlc/progress.md
      If 3 attempts exhausted, mark as BLOCKED in defect-log.md with reason
      Move to the next defect
 
-5. LOG PROGRESS: Update .antigravity/progress.md with what you fixed this iteration
+5. LOG PROGRESS: Update .ultimate-sdlc/progress.md with what you fixed this iteration
 
 ## SEVERITY PRIORITY ORDER
 Process defects in this order:

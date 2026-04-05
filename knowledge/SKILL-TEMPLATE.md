@@ -1,6 +1,6 @@
 # Skill Template
 
-Use this template when creating new skills for the Antigravity Ultimate SDLC Framework.
+Use this template when creating new skills for the Ultimate SDLC Framework.
 
 ## File Location
 

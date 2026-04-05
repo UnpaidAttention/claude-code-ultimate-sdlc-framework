@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/ui-ux-pro-max/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/component-patterns/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-pro-max/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/component-patterns/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-polish-research - Phase 3: Research Design Alternatives
@@ -68,7 +68,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- `.antigravity/council-state/development/ui-slop-report.md` must exist (Phase 2 complete)
+- `.ultimate-sdlc/council-state/development/ui-slop-report.md` must exist (Phase 2 complete)
 - `design-system.md` exists (even if informal)
 
 If prerequisite not met:
@@ -89,7 +89,7 @@ For each finding category in the slop report, research replacements that:
 
 ### Step 1: Understand Project Identity
 
-Read `.antigravity/project-context.md`, `design-system.md`, and any product concept docs. Answer:
+Read `.ultimate-sdlc/project-context.md`, `design-system.md`, and any product concept docs. Answer:
 - What does this product do?
 - Who is the target audience?
 - What emotion should it evoke?
@@ -149,7 +149,7 @@ For each flagged text pattern:
 
 ## Output
 
-Save research results to `.antigravity/council-state/development/ui-polish-alternatives.md`:
+Save research results to `.ultimate-sdlc/council-state/development/ui-polish-alternatives.md`:
 
 ```markdown
 # Design Alternatives Research
@@ -199,7 +199,7 @@ Save research results to `.antigravity/council-state/development/ui-polish-alter
 - Colors: at least 2 palette options with contrast ratios verified
 - Layout: specific structural alternatives for each flagged page
 - All alternatives are cohesive (work together as a design system)
-- Results saved to `.antigravity/council-state/development/ui-polish-alternatives.md`
+- Results saved to `.ultimate-sdlc/council-state/development/ui-polish-alternatives.md`
 
 ---
 
@@ -212,7 +212,7 @@ Save research results to `.antigravity/council-state/development/ui-polish-alter
 **Color options**: [N] palette options researched
 **Layout/component/copy alternatives**: documented
 
-**Results saved to**: .antigravity/council-state/development/ui-polish-alternatives.md
+**Results saved to**: .ultimate-sdlc/council-state/development/ui-polish-alternatives.md
 
 **Next step**: Run `/dev-ui-polish-plan` to create the specific remediation plan from researched alternatives.
 ```

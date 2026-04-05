@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/multi-perspective-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/feature-spec/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/prioritization/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-perspective-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-spec/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/prioritization/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # Planning Feature Discovery Workflow
@@ -226,8 +226,8 @@ Before finalizing, verify with all agents:
 ### Step 10: Save and Update Progress
 
 1. Save Comprehensive Feature Specification to `specs/features/comprehensive-feature-specification.md`
-2. Update `.antigravity/project-context.md` with Phase 2.5 completion
-3. Update `.antigravity/progress.md` with deliberation summary
+2. Update `.ultimate-sdlc/project-context.md` with Phase 2.5 completion
+3. Update `.ultimate-sdlc/progress.md` with deliberation summary
 4. Save to Knowledge Base: `{PROJECT}-PLANNING-FEATURE-DISCOVERY-COMPLETE`
 
 ## Artifacts Generated

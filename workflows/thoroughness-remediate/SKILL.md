@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,12 +51,12 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/correction-planning/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/feature-deep-dive/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/aiou-decomposition/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/gap-analysis/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/correction-planning/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-deep-dive/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/aiou-decomposition/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/gap-analysis/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /thoroughness-remediate - Thoroughness Remediation
@@ -75,7 +75,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Prerequisites
 
-- `.antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md` must exist
+- `.ultimate-sdlc/council-state/audit/thoroughness/thoroughness-audit-report.md` must exist
 - The audit report must contain at least one gap matching the severity filter
 
 If prerequisites not met:
@@ -89,7 +89,7 @@ No audit report found. Run /thoroughness-audit first.
 
 ### Step 1: Load Audit Report
 
-Read `.antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md`. Extract:
+Read `.ultimate-sdlc/council-state/audit/thoroughness/thoroughness-audit-report.md`. Extract:
 - All gaps from the Consolidated Gap Inventory
 - Retroactive deep-dive analyses (for DIVE file creation)
 - Connectivity analysis (for matrix creation)
@@ -98,8 +98,8 @@ Read `.antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md
 
 Also read:
 - `specs/scope-lock.md` — canonical feature list
-- `.antigravity/config.yaml` — `thoroughness.severity_threshold`
-- `.antigravity/project-context.md` — current project state
+- `.ultimate-sdlc/config.yaml` — `thoroughness.severity_threshold`
+- `.ultimate-sdlc/project-context.md` — current project state
 
 ### Step 2: Triage and Prioritize
 
@@ -254,12 +254,12 @@ For each Code-type gap (Criteria 5, 7, 8):
 If total remediation AIOUs exceed run limits (config: `development.max_aious_per_run` / `development.max_effort_per_run`):
 
 1. Group AIOUs into runs respecting:
-   - Max 15 AIOUs per run (or `.antigravity/config.yaml` value)
-   - Max 45 effort per run (or `.antigravity/config.yaml` value)
+   - Max 15 AIOUs per run (or `.ultimate-sdlc/config.yaml` value)
+   - Max 45 effort per run (or `.ultimate-sdlc/config.yaml` value)
    - Wave ordering within each run (Wave 2 → 3 → 4 → 5 → 6)
    - Feature cohesion where possible (keep a feature's AIOUs together)
 
-2. Create `.antigravity/council-state/development/remediation-tracker.md`:
+2. Create `.ultimate-sdlc/council-state/development/remediation-tracker.md`:
 
 ```markdown
 # Remediation Tracker
@@ -334,7 +334,7 @@ To proceed:
 
 ### Step 8: Update State
 
-1. Append to `.antigravity/progress.md`:
+1. Append to `.ultimate-sdlc/progress.md`:
 ```
 ### [DATE] - Thoroughness Remediation
 
@@ -345,12 +345,12 @@ To proceed:
 **Integration Recommendation**: [A/B/C]
 ```
 
-2. Create `.antigravity/council-state/audit/thoroughness/remediation-status.md`:
+2. Create `.ultimate-sdlc/council-state/audit/thoroughness/remediation-status.md`:
 ```markdown
 # Remediation Status
 
 **Date**: [DATE]
-**Source Audit**: .antigravity/council-state/audit/thoroughness/thoroughness-audit-report.md
+**Source Audit**: .ultimate-sdlc/council-state/audit/thoroughness/thoroughness-audit-report.md
 
 ## Summary
 
@@ -392,8 +392,8 @@ Code Remediation:
 Integration: [Recommendation A/B/C]
 
 Files:
-  Remediation tracker:  .antigravity/council-state/development/remediation-tracker.md
-  Remediation status:   .antigravity/council-state/audit/thoroughness/remediation-status.md
+  Remediation tracker:  .ultimate-sdlc/council-state/development/remediation-tracker.md
+  Remediation status:   .ultimate-sdlc/council-state/audit/thoroughness/remediation-status.md
   AIOU specs:           specs/aious/AIOU-REM-*.md
 
 Next: Execute remediation runs, then re-run /thoroughness-audit to verify 0 Critical/Major gaps.

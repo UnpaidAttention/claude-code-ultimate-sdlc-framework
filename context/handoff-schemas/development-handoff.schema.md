@@ -34,7 +34,7 @@ A valid `development-handoff.md` MUST contain ALL of these sections:
 - [ ] Environment variables required
 - [ ] Deployment steps
 - [ ] Rollback procedure
-- [ ] Operational runbook reference (`.antigravity/specs/operations/runbook.md`) — or N/A if Lightweight/Standard
+- [ ] Operational runbook reference (`.ultimate-sdlc/specs/operations/runbook.md`) — or N/A if Lightweight/Standard
 - [ ] SLI/SLO baselines from production (or "pending — first deploy")
 
 ### 5b. Technical Documentation (Standard/Enterprise only)

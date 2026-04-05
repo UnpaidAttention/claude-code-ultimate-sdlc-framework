@@ -19,7 +19,7 @@ When in doubt, apply the most stringent interpretation.
 
 ## Governance Mode Activation
 
-Not all gates are active in every mode. Read `.antigravity/config.yaml → governance_mode` to determine which gates apply:
+Not all gates are active in every mode. Read `.ultimate-sdlc/config.yaml → governance_mode` to determine which gates apply:
 
 | Gate | Lightweight | Standard | Enterprise |
 |------|------------|----------|------------|
@@ -39,9 +39,9 @@ Not all gates are active in every mode. Read `.antigravity/config.yaml → gover
 
 **Simplified** gates use the same criteria but fewer items (skip informational criteria, keep quality-floor criteria).
 
-> **Playbook document gate criteria**: Criteria checking for BRD, PRD cross-cutting, API spec, Database Design, Runbook, Tech Docs, and Consistency Audits are automatically N/A in Lightweight mode. See `~/.claude/skills/antigravity/context/governance-modes.md § Playbook Document Requirements` for the full matrix.
+> **Playbook document gate criteria**: Criteria checking for BRD, PRD cross-cutting, API spec, Database Design, Runbook, Tech Docs, and Consistency Audits are automatically N/A in Lightweight mode. See `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Playbook Document Requirements` for the full matrix.
 
-See `~/.claude/skills/antigravity/context/governance-modes.md` for full mode definitions.
+See `~/.claude/skills/ultimate-sdlc/context/governance-modes.md` for full mode definitions.
 
 ---
 
@@ -81,19 +81,19 @@ Adapt to your stack. At minimum, run at the indicated gates:
 | # | Criterion | PASS if |
 |---|-----------|---------|
 | 1 | Product concept analyzed | Every sentence reviewed for features |
-| 2 | Feature candidates list | `.antigravity/specs/features/feature-candidates.md` exists |
+| 2 | Feature candidates list | `.ultimate-sdlc/specs/features/feature-candidates.md` exists |
 | 3 | Cross-reference verified | features_found >= features_in_concept |
 | 4 | Anti-truncation signed | Signature in feature-candidates.md |
 | 5 | No silent omissions | 100% concept coverage |
 | 6 | User scope confirmation | User explicitly confirmed all features in scope (or excluded specific features with documented reasons) |
 | 7 | User journeys mapped | All touchpoints → features |
-| 8 | Feature categories | Category checklist completed (per `project_type` — see `~/.claude/skills/antigravity/context/project-presets.md`) |
-| 9 | Scope lock ready | All data needed to generate `.antigravity/specs/scope-lock.md` is present |
+| 8 | Feature categories | Category checklist completed (per `project_type` — see `~/.claude/skills/ultimate-sdlc/context/project-presets.md`) |
+| 9 | Scope lock ready | All data needed to generate `.ultimate-sdlc/specs/scope-lock.md` is present |
 | 10 | Complexity classified | Every feature has Simple/Moderate/Complex classification |
-| 11 | BRD exists (Standard/Enterprise) | `.antigravity/specs/business/brd.md` exists with all 10 sections (or N/A if Lightweight) |
-| 12 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/skills/antigravity/context/consistency-audit-template.md § Gate 1.5`): 0 BLOCKING issues (or N/A if Lightweight) |
+| 11 | BRD exists (Standard/Enterprise) | `.ultimate-sdlc/specs/business/brd.md` exists with all 10 sections (or N/A if Lightweight) |
+| 12 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/skills/ultimate-sdlc/context/consistency-audit-template.md § Gate 1.5`): 0 BLOCKING issues (or N/A if Lightweight) |
 
-**On PASS**: Generate `.antigravity/specs/scope-lock.md` — the canonical list of all in-scope features. This file is referenced by all downstream phases and gates.
+**On PASS**: Generate `.ultimate-sdlc/specs/scope-lock.md` — the canonical list of all in-scope features. This file is referenced by all downstream phases and gates.
 
 ```markdown
 ## Gate 1.5 Verification
@@ -117,7 +117,7 @@ Adapt to your stack. At minimum, run at the indicated gates:
 
 | # | Criterion | PASS if |
 |---|-----------|---------|
-| 1 | Full scope coverage | Every feature in `.antigravity/specs/scope-lock.md` has ≥1 AIOU |
+| 1 | Full scope coverage | Every feature in `.ultimate-sdlc/specs/scope-lock.md` has ≥1 AIOU |
 | 2 | Features decomposed | AIOU-*.md count ≥ 1 |
 | 3 | Acceptance criteria | 100% of AIOUs have criteria |
 | 4 | ≥3 criteria each | All AIOUs have ≥3 `- [ ]` items |
@@ -127,12 +127,12 @@ Adapt to your stack. At minimum, run at the indicated gates:
 | 7 | Dependencies documented | All have Dependencies field |
 | 8 | No circular deps | Manual review — no cycles |
 | 9 | No blocking TBD/DEFERRED | 0 matches for current phase |
-| 10 | Connectivity matrix | `.antigravity/specs/connectivity-matrix.md` exists with all features represented |
+| 10 | Connectivity matrix | `.ultimate-sdlc/specs/connectivity-matrix.md` exists with all features represented |
 | 11 | FEAT spec completeness | Every FEAT spec has all required sections per Feature Specification Matrix in `council-planning.md` — with substantive content (not 1-line placeholders). Sections: Purpose, User Stories, Acceptance Criteria, Data Requirements, API Contracts, UI Requirements, Edge Cases, Dependencies, Component Inventory, Navigation & Placement, Security Test Scenarios (as applicable per `project_type`) |
-| 12 | PRD cross-cutting exists (Standard/Enterprise) | `.antigravity/specs/prd-crosscutting.md` exists with NFR targets defined (or N/A if Lightweight) |
-| 13 | API specification exists (Standard/Enterprise) | `.antigravity/specs/architecture/api-specification.md` exists with all endpoints from FEAT specs (or N/A if Lightweight) |
-| 14 | Database design exists (Standard/Enterprise) | `.antigravity/specs/architecture/database-design.md` exists (or N/A if Lightweight) |
-| 15 | Cross-document consistency | Consistency audit run (per `~/.claude/skills/antigravity/context/consistency-audit-template.md`): 0 BLOCKING issues |
+| 12 | PRD cross-cutting exists (Standard/Enterprise) | `.ultimate-sdlc/specs/prd-crosscutting.md` exists with NFR targets defined (or N/A if Lightweight) |
+| 13 | API specification exists (Standard/Enterprise) | `.ultimate-sdlc/specs/architecture/api-specification.md` exists with all endpoints from FEAT specs (or N/A if Lightweight) |
+| 14 | Database design exists (Standard/Enterprise) | `.ultimate-sdlc/specs/architecture/database-design.md` exists (or N/A if Lightweight) |
+| 15 | Cross-document consistency | Consistency audit run (per `~/.claude/skills/ultimate-sdlc/context/consistency-audit-template.md`): 0 BLOCKING issues |
 
 ```markdown
 ## Gate 3.5 Verification
@@ -155,19 +155,19 @@ Adapt to your stack. At minimum, run at the indicated gates:
 | # | Criterion | PASS if |
 |---|-----------|---------|
 | 1 | All phases complete | current-state.md shows all complete |
-| 2 | Full scope coverage | Every feature in `.antigravity/specs/scope-lock.md` has a FEAT spec AND ≥1 AIOU AND is represented in handoff |
-| 3 | No TBD items | grep TBD in .antigravity/specs/ = 0 |
+| 2 | Full scope coverage | Every feature in `.ultimate-sdlc/specs/scope-lock.md` has a FEAT spec AND ≥1 AIOU AND is represented in handoff |
+| 3 | No TBD items | grep TBD in .ultimate-sdlc/specs/ = 0 |
 | 4 | No blocking DEFERRED | grep DEFERRED Phase-[1-8] = 0 |
-| 5 | Security reviewed | `.antigravity/specs/security/threat-model.md` exists |
+| 5 | Security reviewed | `.ultimate-sdlc/specs/security/threat-model.md` exists |
 | 6 | ADRs complete | All Status: Accepted |
-| 7 | Handoff generated | `.antigravity/handoffs/planning-handoff.md` exists |
+| 7 | Handoff generated | `.ultimate-sdlc/handoffs/planning-handoff.md` exists |
 | 8 | Handoff validates against schema | All 8 sections per `planning-handoff.schema.md` have content |
 | 9 | Cross-document consistency | Consistency audit run: 0 BLOCKING issues across all specs |
 | 10 | BRD traceability (Standard/Enterprise) | Every BR-XXX in BRD has ≥1 FEAT spec covering it (or N/A if Lightweight) |
 
-**Handoff validation**: Use `~/.claude/skills/antigravity/context/handoff-schemas/planning-handoff.schema.md` as the single source of truth for required sections (8 sections including Design Direction).
+**Handoff validation**: Use `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/planning-handoff.schema.md` as the single source of truth for required sections (8 sections including Design Direction).
 
-**Scope coverage validation**: Cross-reference `.antigravity/specs/scope-lock.md` against FEAT specs, AIOUs, and handoff content. Every feature must be traceable end-to-end. Missing features = automatic FAIL.
+**Scope coverage validation**: Cross-reference `.ultimate-sdlc/specs/scope-lock.md` against FEAT specs, AIOUs, and handoff content. Every feature must be traceable end-to-end. Missing features = automatic FAIL.
 
 **Adversarial review** (after all criteria pass, before declaring PASS):
 Challenge the plan with these questions:
@@ -211,8 +211,8 @@ If the adversarial review identifies genuine gaps: add them as findings, fix bef
 | 10 | **If frontend**: Design direction implemented | CSS custom properties match design doc values |
 | 11 | **If frontend**: No banned fonts | No Inter, Arial, Roboto, system-ui |
 | 12 | **If frontend**: Color palette defined | CSS custom properties or OKLCH/HSL values |
-| 13 | API spec coverage (Standard/Enterprise) | All implemented endpoints exist in `.antigravity/specs/architecture/api-specification.md` (or N/A if Lightweight) |
-| 14 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/skills/antigravity/context/consistency-audit-template.md § Gate I4`): 0 BLOCKING issues between planned specs and implemented code (or N/A if Lightweight) |
+| 13 | API spec coverage (Standard/Enterprise) | All implemented endpoints exist in `.ultimate-sdlc/specs/architecture/api-specification.md` (or N/A if Lightweight) |
+| 14 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/skills/ultimate-sdlc/context/consistency-audit-template.md § Gate I4`): 0 BLOCKING issues between planned specs and implemented code (or N/A if Lightweight) |
 
 > Criteria 10-12 apply only if the project includes Wave 5 AIOUs (frontend work). For backend-only or non-web projects, mark as N/A.
 
@@ -239,11 +239,11 @@ If the adversarial review identifies genuine gaps: add them as findings, fix bef
 | 4 | Build succeeds | Exit 0 |
 | 5 | No vulnerabilities | 0 high/critical |
 | 6 | All AIOUs complete | 100% |
-| 7 | Performance acceptable | p99 < `.antigravity/config.yaml → quality.performance.p99_threshold_ms` (default 500ms) measured at `.antigravity/config.yaml → quality.performance.concurrent_load` concurrent requests (default 10). Single-user p99 is NOT sufficient — test must simulate concurrent load. If no load test tool available, document baseline with concurrency count and method used |
+| 7 | Performance acceptable | p99 < `.ultimate-sdlc/config.yaml → quality.performance.p99_threshold_ms` (default 500ms) measured at `.ultimate-sdlc/config.yaml → quality.performance.concurrent_load` concurrent requests (default 10). Single-user p99 is NOT sufficient — test must simulate concurrent load. If no load test tool available, document baseline with concurrency count and method used |
 | 7a | Feature verification | All features passed `/dev-verify-feature` (reports in `feature-verifications/`) |
 | 7c | Dependencies verified | Package manager verify exits clean; no unresolved or extraneous packages |
 | 7d | Test integrity preserved | No test assertions weakened, no `.skip` added, no coverage thresholds reduced vs. original test specs |
-| 7b | Connectivity verified | All interactions in `.antigravity/specs/connectivity-matrix.md` verified PASS. "Verified PASS" means: (1) the happy-path interaction works (Feature A calls Feature B → correct result), AND (2) ≥1 error path tested per interaction (Feature B returns error → Feature A handles gracefully, no crash, user sees appropriate feedback). Interactions verified only at happy-path level = FAIL |
+| 7b | Connectivity verified | All interactions in `.ultimate-sdlc/specs/connectivity-matrix.md` verified PASS. "Verified PASS" means: (1) the happy-path interaction works (Feature A calls Feature B → correct result), AND (2) ≥1 error path tested per interaction (Feature B returns error → Feature A handles gracefully, no crash, user sees appropriate feedback). Interactions verified only at happy-path level = FAIL |
 | 8 | Handoff generated | development-handoff.md exists |
 | 9 | **If frontend**: Anti-slop compliance | No banned fonts/patterns (load `ANTI-SLOP-VISUAL.md`) |
 | 10 | **If frontend**: Design consistency | All components match design tokens |
@@ -253,7 +253,7 @@ If the adversarial review identifies genuine gaps: add them as findings, fix bef
 | 14 | **If frontend**: UI wiring verification passed | All runs have `ui-verify-run-[N].md` with PASS verdict (0 CRITICAL, 0 HIGH) |
 | 15 | **If frontend**: Navigation architecture complete | All routes from `ui-design-plan.md` navigation map exist and render |
 | 16 | **If frontend**: Interactive elements wired | All buttons, forms, modals from `ui-design-plan.md` inventory are functional |
-| 17 | Runbook exists (Enterprise) | `.antigravity/specs/operations/runbook.md` exists with all applicable scenarios from checklist (or N/A if Lightweight/Standard) |
+| 17 | Runbook exists (Enterprise) | `.ultimate-sdlc/specs/operations/runbook.md` exists with all applicable scenarios from checklist (or N/A if Lightweight/Standard) |
 | 18 | Tech docs generated (Standard/Enterprise) | `docs/` contains README.md and ARCHITECTURE.md at minimum (or N/A if Lightweight) |
 | 19 | Cross-document consistency | Consistency audit run: 0 BLOCKING issues |
 
@@ -476,7 +476,7 @@ Used at Gate C4 and for correction verification.
 
 Mark N/A for non-applicable layers per fix.
 
-> **Project-type adaptation**: The 8-layer model is for web-apps. For other project types, use the verification layers defined in `~/.claude/skills/antigravity/context/project-presets.md`. CLI tools use 5 layers (Input→Logic→Output→Error→Edge Cases), libraries use 5 layers (API→Logic→Types→Error→Docs), etc.
+> **Project-type adaptation**: The 8-layer model is for web-apps. For other project types, use the verification layers defined in `~/.claude/skills/ultimate-sdlc/context/project-presets.md`. CLI tools use 5 layers (Input→Logic→Output→Error→Edge Cases), libraries use 5 layers (API→Logic→Types→Error→Docs), etc.
 
 ---
 
@@ -510,7 +510,7 @@ Mark N/A for non-applicable layers per fix.
 ### Maximum Attempts
 
 - **Per gate**: 5 total attempts maximum
-- **After 5th failure**: Mandatory session end. Write comprehensive failure report to WORKING-MEMORY.md and .antigravity/progress.md. User must intervene before proceeding.
+- **After 5th failure**: Mandatory session end. Write comprehensive failure report to WORKING-MEMORY.md and .ultimate-sdlc/progress.md. User must intervene before proceeding.
 
 ### Remediation Decision Tree
 

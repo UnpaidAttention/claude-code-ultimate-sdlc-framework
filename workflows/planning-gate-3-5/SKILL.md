@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/aiou-decomposition/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/aiou-decomposition/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-gate-3-5 - Gate 3.5 Verification
@@ -85,7 +85,7 @@ Gate 3.5 ensures all features are properly decomposed before investing in securi
 
 ### Step 1: Load Gate 3.5 Criteria
 
-Load criteria from `~/.claude/skills/antigravity/context/gate-criteria.md` § Planning Council Gates → Gate 3.5.
+Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Planning Council Gates → Gate 3.5.
 
 Verify each criterion against the authoritative checklist. Run automated checks where applicable.
 
@@ -112,14 +112,14 @@ Use **Display Template** from `council-planning.md` to show: Gate 3.5: FAILED
 ### Step 4: Update State
 
 If PASS:
-1. Update `.antigravity/project-context.md`:
+1. Update `.ultimate-sdlc/project-context.md`:
    - Set Gate 3.5: Passed
 
-2. Update `.antigravity/council-state/planning/current-state.md`:
+2. Update `.ultimate-sdlc/council-state/planning/current-state.md`:
    - Mark Gate 3.5 passed with timestamp
 
 If FAIL:
-1. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+1. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Document issues found
    - Track what needs fixing
 

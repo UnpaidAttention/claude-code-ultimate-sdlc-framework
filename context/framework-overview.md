@@ -1,4 +1,4 @@
-# Antigravity SDLC Framework Overview
+# Ultimate SDLC Framework Overview
 
 ## Purpose
 
@@ -23,10 +23,10 @@ For existing codebases: use `/adopt` instead of `/init`.
 
 | File | Scope | Purpose |
 |------|-------|---------|
-| `.antigravity/project-manifest.md` | **Persistent** (all cycles) | Project identity, cycle history, feature inventory |
-| `.antigravity/project-context.md` | **Per-cycle** (archived by `/close-cycle`) | Active council, phase, cycle info |
-| `.antigravity/progress.md` | **Per-cycle** | Session history |
-| `.antigravity/council-state/` | **Per-cycle** | Council progress, working memory |
+| `.ultimate-sdlc/project-manifest.md` | **Persistent** (all cycles) | Project identity, cycle history, feature inventory |
+| `.ultimate-sdlc/project-context.md` | **Per-cycle** (archived by `/close-cycle`) | Active council, phase, cycle info |
+| `.ultimate-sdlc/progress.md` | **Per-cycle** | Session history |
+| `.ultimate-sdlc/council-state/` | **Per-cycle** | Council progress, working memory |
 | `.cycles/` | **Archive** | Completed cycle state |
 
 ## Council Flow
@@ -51,23 +51,23 @@ Patch and Maintenance cycles skip Audit Council.
 3. **Between**: `/close-cycle` → archives work, extracts learnings, updates manifest
 
 ### 3. Progress Through Councils
-Each council has phases/waves/tracks (sequential steps), gates (blocking checkpoints), and handoffs (documents for next council, validated against `~/.claude/skills/antigravity/context/handoff-schemas/`).
+Each council has phases/waves/tracks (sequential steps), gates (blocking checkpoints), and handoffs (documents for next council, validated against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/`).
 
-MCP tools for testing, security, performance: see `~/.claude/skills/antigravity/reference/mcp-tool-guide.md`.
+MCP tools for testing, security, performance: see `~/.claude/skills/ultimate-sdlc/reference/mcp-tool-guide.md`.
 
 ### 4. State Management
-- `.antigravity/project-manifest.md`: Persistent project identity (survives all cycles)
-- `.antigravity/project-context.md`: Current cycle state
-- `.antigravity/progress.md`: Session history (per cycle)
-- `.antigravity/council-state/{council}/`: Council-specific state
+- `.ultimate-sdlc/project-manifest.md`: Persistent project identity (survives all cycles)
+- `.ultimate-sdlc/project-context.md`: Current cycle state
+- `.ultimate-sdlc/progress.md`: Session history (per cycle)
+- `.ultimate-sdlc/council-state/{council}/`: Council-specific state
 
-**Cycle state resolution**: `.antigravity/project-context.md` exists → active cycle. Only `.antigravity/project-manifest.md` → between cycles. Neither → not initialized.
+**Cycle state resolution**: `.ultimate-sdlc/project-context.md` exists → active cycle. Only `.ultimate-sdlc/project-manifest.md` → between cycles. Neither → not initialized.
 
 ### 5. Skill Loading
-**Maximum 7 skills per workflow. Always include `rarv-cycle`.** See `~/.claude/skills/antigravity/reference/skill-loading-guide.md` and `~/.claude/skills/antigravity/reference/skills-index.md`.
+**Maximum 7 skills per workflow. Always include `rarv-cycle`.** See `~/.claude/skills/ultimate-sdlc/reference/skill-loading-guide.md` and `~/.claude/skills/ultimate-sdlc/reference/skills-index.md`.
 
 ### 6. Governance Modes
-The framework scales governance to project size (Lightweight/Standard/Enterprise). See `~/.claude/skills/antigravity/context/governance-modes.md`.
+The framework scales governance to project size (Lightweight/Standard/Enterprise). See `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`.
 
 ### 7. On-Demand File Loading
 Files load when first referenced, not preemptively. Governance files (P0 rules) are internalized once per session. See UNIVERSAL-RULES §0.9.
@@ -110,7 +110,7 @@ WORKFLOW (specifies agent + skills_required) → AGENT (domain expertise) → SK
 | Audit | `/audit-TX`, `/audit-AX`, `/audit-EX` | `/audit-t2`, `/audit-gate-t3` |
 | Validation | `/validate-VX`, `/validate-CX`, etc. | `/validate-c1`, `/validate-gate-v5` |
 
-Full map: `~/.claude/skills/antigravity/reference/workflow-reference.md`
+Full map: `~/.claude/skills/ultimate-sdlc/reference/workflow-reference.md`
 
 ## Multi-Run System (Development Only)
 
@@ -121,7 +121,7 @@ AI models lose context with many items. Multi-run:
 - Tracks AIOU completion explicitly
 - Prevents truncation during implementation
 
-**Flow**: After Gate 8 → `/dev-scope-analysis` → creates `.antigravity/council-state/development/run-tracker.md`. Each run processes only its assigned AIOUs through Waves 0-6.
+**Flow**: After Gate 8 → `/dev-scope-analysis` → creates `.ultimate-sdlc/council-state/development/run-tracker.md`. Each run processes only its assigned AIOUs through Waves 0-6.
 
 ### Integrity Rules
 
@@ -142,14 +142,14 @@ Every UI project MUST complete dedicated UI design phases BEFORE Wave 5 implemen
 - **Artifacts**: `design-system.md`, `ui-design-research.md`, `ui-design-plan.md` before any UI components
 - **Gates**: I4 verifies design direction; UI-V verifies functional wiring; I8 verifies anti-slop compliance + WCAG 2.2 AA + UI completeness
 - **Redesign**: `/dev-ui-redesign` archives existing UI and restarts the full UI pipeline. Preserves backend. Options: `--keep-design-system`, `--keep-research`, `--scope feature FEAT-XXX`
-- **Reference**: `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`, `~/.claude/skills/antigravity/reference/wave5-special-handling.md`
+- **Reference**: `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`, `~/.claude/skills/ultimate-sdlc/reference/wave5-special-handling.md`
 
 ---
 
 ## Quality Gates
 
 Gates BLOCK progression until ALL criteria pass. Binary PASS/FAIL with specific tests.
-**Reference**: `~/.claude/skills/antigravity/context/gate-criteria.md` for criteria and checklist templates.
+**Reference**: `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` for criteria and checklist templates.
 
 | Gate | Council | Criteria |
 |------|---------|----------|
@@ -173,37 +173,37 @@ After Gate S2 + `/deploy`: Monitor (health checks, error rates), follow incident
 
 ## State Files
 
-**Protocol**: `~/.claude/skills/antigravity/context/state-management.md`
+**Protocol**: `~/.claude/skills/ultimate-sdlc/context/state-management.md`
 
 | File | Scope | Purpose | Update Timing |
 |------|-------|---------|---------------|
-| `.antigravity/project-manifest.md` | Persistent | Project identity, cycle history | After cycle close/start |
-| `.antigravity/project-context.md` | Per-cycle | Authoritative position | After phase complete |
-| `.antigravity/council-state/*/current-state.md` | Per-cycle | Council progress | After phase in council |
-| `.antigravity/council-state/*/WORKING-MEMORY.md` | Per-cycle | Session state | After each action |
-| `.antigravity/council-state/*/run-tracker.md` | Per-cycle | Run progress (if multi-run) | After each item complete |
-| `.antigravity/progress.md` | Per-cycle | Historical log | Session end only |
+| `.ultimate-sdlc/project-manifest.md` | Persistent | Project identity, cycle history | After cycle close/start |
+| `.ultimate-sdlc/project-context.md` | Per-cycle | Authoritative position | After phase complete |
+| `.ultimate-sdlc/council-state/*/current-state.md` | Per-cycle | Council progress | After phase in council |
+| `.ultimate-sdlc/council-state/*/WORKING-MEMORY.md` | Per-cycle | Session state | After each action |
+| `.ultimate-sdlc/council-state/*/run-tracker.md` | Per-cycle | Run progress (if multi-run) | After each item complete |
+| `.ultimate-sdlc/progress.md` | Per-cycle | Historical log | Session end only |
 
 ```
 project-root/
-├── .antigravity/project-manifest.md          # Persistent (survives all cycles)
-├── .antigravity/project-context.md           # Current cycle state
-├── .antigravity/progress.md                  # Current cycle history
-├── .antigravity/council-state/{council}/     # current-state.md, WORKING-MEMORY.md, run-tracker.md
-├── .antigravity/handoffs/                    # planning-, development-, audit-, validation-handoff.md
-├── .antigravity/specs/features/, aious/, adrs/
+├── .ultimate-sdlc/project-manifest.md          # Persistent (survives all cycles)
+├── .ultimate-sdlc/project-context.md           # Current cycle state
+├── .ultimate-sdlc/progress.md                  # Current cycle history
+├── .ultimate-sdlc/council-state/{council}/     # current-state.md, WORKING-MEMORY.md, run-tracker.md
+├── .ultimate-sdlc/handoffs/                    # planning-, development-, audit-, validation-handoff.md
+├── .ultimate-sdlc/specs/features/, aious/, adrs/
 └── .cycles/cycle-NNN-slug/      # Archived cycle state
 ```
 
 ## Agents
 
-41 specialist agents organized by council. See `~/.claude/skills/antigravity/agents/` for full list.
-- **Agent Selection Guide**: `~/.claude/skills/antigravity/reference/agent-selection-guide.md`
-- **Model Selection Guide**: `~/.claude/skills/antigravity/reference/model-selection-guide.md`
+41 specialist agents organized by council. See `~/.claude/skills/ultimate-sdlc/agents/` for full list.
+- **Agent Selection Guide**: `~/.claude/skills/ultimate-sdlc/reference/agent-selection-guide.md`
+- **Model Selection Guide**: `~/.claude/skills/ultimate-sdlc/reference/model-selection-guide.md`
 
 ### Constitutional Principles
 
-All agents self-critique against `~/.claude/skills/antigravity/rules/CONSTITUTION.md`: Safety (no destructive ops without backup), Quality (verify before claiming), Process (read before modify), Communication (state what was done).
+All agents self-critique against `~/.claude/skills/ultimate-sdlc/rules/CONSTITUTION.md`: Safety (no destructive ops without backup), Quality (verify before claiming), Process (read before modify), Communication (state what was done).
 
 ## Rules Priority
 
@@ -214,4 +214,4 @@ P2: Agent-specific rules                      (When agent invoked)
 P3: Skill-specific rules                      (When skill loaded)
 ```
 
-**Conflict Resolution**: `~/.claude/skills/antigravity/rules/conflict-resolution.md`
+**Conflict Resolution**: `~/.claude/skills/ultimate-sdlc/rules/conflict-resolution.md`

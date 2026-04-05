@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,10 +51,10 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/frontend-design/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-ui-verify - UI Wiring & Completeness Verification
@@ -74,7 +74,7 @@ Systematically verify that the implemented frontend is complete, fully wired, an
 ## Prerequisites
 
 - Wave 5 complete for current run (all Wave 5 AIOUs implemented)
-- `.antigravity/council-state/development/ui-design-plan.md` exists
+- `.ultimate-sdlc/council-state/development/ui-design-plan.md` exists
 - `design-system.md` exists
 
 If prerequisites not met:
@@ -89,7 +89,7 @@ Complete all Wave 5 AIOUs first, then run /dev-ui-verify.
 
 ### Step 1: Load Verification Inputs
 
-1. Read `.antigravity/council-state/development/ui-design-plan.md` — the source of truth for:
+1. Read `.ultimate-sdlc/council-state/development/ui-design-plan.md` — the source of truth for:
    - Page inventory (what pages should exist)
    - Navigation architecture (what routes and links should work)
    - Interactive element inventory (what buttons, forms, modals should function)
@@ -100,7 +100,7 @@ Complete all Wave 5 AIOUs first, then run /dev-ui-verify.
    - Font families (to check for banned fonts)
    - Spacing values (to check for ad-hoc spacing)
 
-3. Read `.antigravity/council-state/development/run-tracker.md` — identify which features/AIOUs are in the current run's scope.
+3. Read `.ultimate-sdlc/council-state/development/run-tracker.md` — identify which features/AIOUs are in the current run's scope.
 
 4. **Scope determination**: If this is a per-run verification, verify ONLY the pages and elements from the current run's features. If this is a global verification (after all runs), verify EVERYTHING.
 
@@ -417,7 +417,7 @@ If no screenshot tool: search each page component for responsive classes (sm:, m
 
 ### Step 7: Generate Verification Report
 
-Save to `.antigravity/council-state/development/ui-verify-run-[N].md` (or `ui-verify-global.md` for global verification):
+Save to `.ultimate-sdlc/council-state/development/ui-verify-run-[N].md` (or `ui-verify-global.md` for global verification):
 
 ```markdown
 # UI Wiring Verification Report — [Run N / Global]
@@ -499,7 +499,7 @@ If verification fails:
 ### Step 9: Update State
 
 **If PASS:**
-1. Update `.antigravity/council-state/development/run-tracker.md`:
+1. Update `.ultimate-sdlc/council-state/development/run-tracker.md`:
    - Set UI-V status to ✅ for current run
 2. Announce:
    ```
@@ -514,7 +514,7 @@ If verification fails:
    ```
    ## UI Verification FAILED — Run [N]
    [X] issues remain unresolved after 3 fix attempts.
-   Review .antigravity/council-state/development/ui-verify-run-[N].md for details.
+   Review .ultimate-sdlc/council-state/development/ui-verify-run-[N].md for details.
    User intervention needed before proceeding to Wave 6.
    ```
 

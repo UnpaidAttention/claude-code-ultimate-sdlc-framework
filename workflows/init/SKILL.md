@@ -1,7 +1,7 @@
 ---
 name: init
 description: |
-  Initialize a new project with the Antigravity Ultimate SDLC Framework. Creates all state files and guides to Planning Council.
+  Initialize a new project with the Ultimate SDLC Framework. Creates all state files and guides to Planning Council.
 allowed-tools:
   - Bash
   - Read
@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/project-setup/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/conversation-manager/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/project-setup/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/conversation-manager/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /init - Initialize New Project
@@ -64,7 +64,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/antigravity/rules/the active council rules file`
+> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/the active council rules file`
 
 ## Arguments
 | Argument | Required | Description |
@@ -76,7 +76,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Purpose
 
-This is the **entry point** for the Antigravity SDLC Framework when starting a **brand new project**. It creates all necessary state files, the project manifest, and prepares for Planning Council.
+This is the **entry point** for the Ultimate SDLC Framework when starting a **brand new project**. It creates all necessary state files, the project manifest, and prepares for Planning Council.
 
 **For existing projects or subsequent development cycles, use these instead:**
 - `/adopt` — Onboard an existing codebase to the framework
@@ -92,9 +92,9 @@ This is the **entry point** for the Antigravity SDLC Framework when starting a *
 
 Before initializing, verify:
 1. This is the project root directory
-2. No existing `.antigravity/project-manifest.md` or `.antigravity/project-context.md`
+2. No existing `.ultimate-sdlc/project-manifest.md` or `.ultimate-sdlc/project-context.md`
 
-**If `.antigravity/project-manifest.md` exists** (project already adopted/initialized):
+**If `.ultimate-sdlc/project-manifest.md` exists** (project already adopted/initialized):
 ```
 This project is already set up with the framework.
 - To start a new development cycle: Run /new-cycle
@@ -102,7 +102,7 @@ This project is already set up with the framework.
 - To resume work: Run /continue
 ```
 
-**If `.antigravity/project-context.md` exists but no `.antigravity/project-manifest.md`** (legacy initialization):
+**If `.ultimate-sdlc/project-context.md` exists but no `.ultimate-sdlc/project-manifest.md`** (legacy initialization):
 ```
 ⚠️ Project has existing framework state but no project manifest.
 Use /status to see current state, or /new-cycle to start a new cycle.
@@ -146,7 +146,7 @@ Use **Display Template** from `the active council rules file` to show: 📋 Prod
 If `product-concept.md` does NOT exist:
 
 Use **Display Template** to show the appropriate status
-Use **Display Template** from `the active council rules file` to show: 🚀 Welcome to the Antigravity SDLC Framework!
+Use **Display Template** from `the active council rules file` to show: 🚀 Welcome to the Ultimate SDLC Framework!
 
 **If Option 1 (Create Product Concept)** → Go to Step 2A
 **If Option 2 (Quick Start)** → Go to Step 2B
@@ -198,8 +198,8 @@ Governance mode is auto-detected from feature count (or overridden by `--mode` a
 
 1. Count features from `product-concept.md` (or user-provided list)
 2. Apply thresholds: `<8 → lightweight`, `8-25 → standard`, `>25 → enterprise`
-3. Write to `.antigravity/config.yaml → governance_mode`
-4. Write project type to `.antigravity/config.yaml → project_type`
+3. Write to `.ultimate-sdlc/config.yaml → governance_mode`
+4. Write project type to `.ultimate-sdlc/config.yaml → project_type`
 
 Use **Display Template** to show the appropriate status
 Use **Display Template** from `the active council rules file` to show: ⚙️ Configuration
@@ -209,7 +209,7 @@ Use **Display Template** from `the active council rules file` to show: ⚙️ Co
 Only create directories needed for initialization. Other councils create their own dirs on activation.
 
 ```bash
-mkdir -p .antigravity/council-state/planning
+mkdir -p .ultimate-sdlc/council-state/planning
 mkdir -p handoffs
 mkdir -p specs/features
 mkdir -p specs/aious
@@ -219,7 +219,7 @@ mkdir -p .cycles
 
 ### Step 5: Create Project Manifest
 
-Create `.antigravity/project-manifest.md` in the project root with:
+Create `.ultimate-sdlc/project-manifest.md` in the project root with:
 - Project name, type, creation date
 - Reference to `product-concept.md` (if exists)
 - Cycle history section (initially: cycle-001)
@@ -227,7 +227,7 @@ Create `.antigravity/project-manifest.md` in the project root with:
 
 ### Step 6: Create Project Context
 
-Copy `templates/.antigravity/project-context.md` → `.antigravity/project-context.md` in project root. Populate:
+Copy `templates/.ultimate-sdlc/project-context.md` → `.ultimate-sdlc/project-context.md` in project root. Populate:
 - Active Council: planning
 - Current Phase: 1
 - Status: not_started
@@ -235,19 +235,19 @@ Copy `templates/.antigravity/project-context.md` → `.antigravity/project-conte
 
 ### Step 7: Create Config
 
-Write `.antigravity/config.yaml` with:
+Write `.ultimate-sdlc/config.yaml` with:
 - `governance_mode`: from Step 3 detection
 - `project_type`: from user input or product concept
 - Council configurations per framework defaults
 
 ### Step 8: Create Progress and Working Memory
 
-1. Copy `templates/.antigravity/progress.md` → `.antigravity/progress.md`
-2. Copy `templates/working-memory.md` → `.antigravity/council-state/planning/WORKING-MEMORY.md`
+1. Copy `templates/.ultimate-sdlc/progress.md` → `.ultimate-sdlc/progress.md`
+2. Copy `templates/working-memory.md` → `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`
 
 ### Step 9: Read Config Protocol
 
-Read `~/.claude/skills/antigravity/context/config-reader.md` to understand how config values are used by workflows.
+Read `~/.claude/skills/ultimate-sdlc/context/config-reader.md` to understand how config values are used by workflows.
 
 ### Step 10: Display Welcome
 
@@ -268,7 +268,7 @@ Include:
 **If template files not found:**
 ```
 ❌ Error: Template files not found.
-Checking: templates/.antigravity/project-context.md, templates/.antigravity/progress.md, templates/working-memory.md
+Checking: templates/.ultimate-sdlc/project-context.md, templates/.ultimate-sdlc/progress.md, templates/working-memory.md
 ```
 
 **If product-concept.md is malformed or incomplete:**

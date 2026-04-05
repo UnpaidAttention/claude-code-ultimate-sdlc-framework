@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Antigravity SDLC Framework — Claude Code Plugin Setup
-# Converts the Antigravity Ultimate SDLC Framework for use with Claude Code.
+# Ultimate SDLC Framework — Claude Code Plugin Setup
+# Converts the Ultimate SDLC Framework for use with Claude Code.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-AG_HOME="$HOME/.antigravity"
+AG_HOME="$HOME/.ultimate-sdlc"
 CLAUDE_DIR="$HOME/.claude"
 SKILLS_DIR="$CLAUDE_DIR/skills"
 AGENTS_DIR="$CLAUDE_DIR/agents"
-RULES_DIR="$CLAUDE_DIR/rules/antigravity"
+RULES_DIR="$CLAUDE_DIR/rules/ultimate-sdlc"
 CLAUDE_MD="$CLAUDE_DIR/CLAUDE.md"
 
 # Colors
@@ -26,7 +26,7 @@ warn()  { echo -e "${YELLOW}[warn]${NC}  $*"; }
 error() { echo -e "${RED}[error]${NC} $*"; }
 
 echo ""
-echo -e "${BOLD}Antigravity SDLC Framework — Claude Code Plugin Setup${NC}"
+echo -e "${BOLD}Ultimate SDLC Framework — Claude Code Plugin Setup${NC}"
 echo "======================================================"
 echo ""
 
@@ -37,7 +37,7 @@ fi
 
 # ── Check if already installed ───────────────────────────────────────
 if [[ -f "$AG_HOME/config.yaml" ]]; then
-    warn "Antigravity is already installed (found $AG_HOME/config.yaml)."
+    warn "Ultimate SDLC is already installed (found $AG_HOME/config.yaml)."
     read -rp "Re-install? This will overwrite your config. [y/N] " answer
     if [[ "${answer,,}" != "y" ]]; then
         echo "Aborted."
@@ -64,12 +64,12 @@ fi
 info "Naming mode: ${BOLD}${NAMING_MODE}${NC}"
 echo ""
 
-# ── Create ~/.antigravity/ ───────────────────────────────────────────
+# ── Create ~/.ultimate-sdlc/ ───────────────────────────────────────────
 info "Creating $AG_HOME/ ..."
 mkdir -p "$AG_HOME"/{analytics,sessions}
 
 cat > "$AG_HOME/config.yaml" <<EOF
-# Antigravity SDLC Framework — Global Config
+# Ultimate SDLC Framework — Global Config
 naming_mode: ${NAMING_MODE}
 governance_mode: standard
 project_type: web-app
@@ -84,9 +84,9 @@ chmod +x "$SCRIPT_DIR/bin/"* 2>/dev/null || true
 ok "bin/ scripts are executable"
 
 # ── Patch skill names based on naming mode ───────────────────────────
-if [[ -x "$SCRIPT_DIR/bin/ag-patch-names" ]]; then
+if [[ -x "$SCRIPT_DIR/bin/sdlc-patch-names" ]]; then
     info "Patching skill names for ${NAMING_MODE} mode ..."
-    "$SCRIPT_DIR/bin/ag-patch-names"
+    "$SCRIPT_DIR/bin/sdlc-patch-names"
     ok "Skill names patched"
 fi
 
@@ -121,7 +121,7 @@ if [[ -d "$SCRIPT_DIR/agents" ]]; then
         agent_name="$(basename "$agent_file")"
         # Prefix with ag- if not already
         if [[ "$agent_name" != ag-* ]]; then
-            agent_name="ag-${agent_name}"
+            agent_name="sdlc-${agent_name}"
         fi
         cp "$agent_file" "$AGENTS_DIR/$agent_name"
         ((AGENT_COUNT++))
@@ -143,7 +143,7 @@ fi
 ok "Installed $RULE_COUNT rule(s)"
 
 # ── Append routing block to CLAUDE.md ────────────────────────────────
-ROUTING_MARKER="## Antigravity SDLC Framework"
+ROUTING_MARKER="## Ultimate SDLC Framework"
 if [[ -f "$CLAUDE_MD" ]] && grep -qF "$ROUTING_MARKER" "$CLAUDE_MD"; then
     info "Routing block already present in CLAUDE.md — skipping"
 else
@@ -151,11 +151,11 @@ else
     mkdir -p "$(dirname "$CLAUDE_MD")"
     cat >> "$CLAUDE_MD" <<'ROUTING_EOF'
 
-## Antigravity SDLC Framework
+## Ultimate SDLC Framework
 
-### Available skills (Antigravity)
+### Available skills (Ultimate SDLC)
 
-- `/init` — Initialize a new project with Antigravity SDLC
+- `/init` — Initialize a new project with Ultimate SDLC
 - `/adopt` — Onboard an existing codebase
 - `/status` — Check current council/phase/gate progress
 - `/continue` — Auto-advance to next step
@@ -166,9 +166,9 @@ else
 - `/new-cycle` — Start a new development cycle
 - `/close-cycle` — Archive current cycle
 - `/release` — Ship/release workflow
-- `/ag-help` — Full command reference
+- `/help` — Full command reference
 
-Use `/antigravity` for framework overview and routing.
+Use `/ultimate-sdlc` for framework overview and routing.
 ROUTING_EOF
     ok "Routing block appended to CLAUDE.md"
 fi
@@ -185,8 +185,8 @@ echo -e "  Rules:       ${GREEN}${RULE_COUNT} installed${NC}"
 echo -e "  Plugin dir:  ${GREEN}$SCRIPT_DIR${NC}"
 echo ""
 echo "Next steps:"
-echo "  1. Run /antigravity or /ag-help in Claude Code"
+echo "  1. Run /ultimate-sdlc or /help in Claude Code"
 echo "  2. Run /init in a project directory to start"
 echo ""
-echo "To uninstall: $SCRIPT_DIR/bin/ag-uninstall"
+echo "To uninstall: $SCRIPT_DIR/bin/sdlc-uninstall"
 echo ""

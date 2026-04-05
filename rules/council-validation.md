@@ -58,8 +58,8 @@ The Validation Council has 22 phases across 5 tracks. It is designed for **manda
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/antigravity/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate V5**: Correction Plan → see `gate-criteria.md § Gate V5`
 - **Gate C4**: Regression Validation → see `gate-criteria.md § Gate C4`
@@ -73,14 +73,14 @@ Mode-specific activation: see `~/.claude/skills/antigravity/context/governance-m
 
 Standard session start/resume sequence for all Validation Council workflows:
 
-1. Read `.antigravity/config.yaml` → extract `governance_mode`, `project_type`
-2. Read `.antigravity/project-context.md` → confirm Active Council = Validation, get current track/phase
-3. Read `.antigravity/handoffs/audit-handoff.md` → load quality assessment results
-4. Read `.antigravity/council-state/validation/WORKING-MEMORY.md` → check for incomplete tasks
+1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
+2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Validation, get current track/phase
+3. Read `.ultimate-sdlc/handoffs/audit-handoff.md` → load quality assessment results
+4. Read `.ultimate-sdlc/council-state/validation/WORKING-MEMORY.md` → check for incomplete tasks
 5. Check for checkpoint artifacts (`validation-checkpoint-*.md`) → resume from last checkpoint
 6. **If resuming**: Display resume summary from checkpoint, continue from next track
 7. **If new session**: Display welcome with track overview
-8. Check governance_mode → skip non-applicable tracks per `~/.claude/skills/antigravity/context/governance-modes.md`
+8. Check governance_mode → skip non-applicable tracks per `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`
 9. **Lazy initialization**: Only create supporting documents (correction-log.md, enhancement-ideas.md) when their track starts, not at V1 setup
 
 ## Evidence Protocol
@@ -110,7 +110,7 @@ Steps:
 
 ## Verification Layers
 
-Verification layers are determined by `project_type` — see `~/.claude/skills/antigravity/context/project-presets.md` for type-specific layers.
+Verification layers are determined by `project_type` — see `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for type-specific layers.
 
 Default (web-app): 1. UI Interaction → 2. Event Handler → 3. Frontend Logic → 4. API/IPC Bridge → 5. Backend Handler → 6. Service Logic → 7. Persistence → 8. Load on Restart
 
@@ -155,7 +155,7 @@ Default (web-app): 1. UI Interaction → 2. Event Handler → 3. Frontend Logic 
 
 validation-handoff.md containing: Validation summary, Corrections applied, Production hardening status, Enhancement backlog, Release checklist, RELEASE READY status
 
-Validate against `~/.claude/skills/antigravity/context/handoff-schemas/validation-handoff.schema.md`.
+Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/validation-handoff.schema.md`.
 
 ## Recovery
 

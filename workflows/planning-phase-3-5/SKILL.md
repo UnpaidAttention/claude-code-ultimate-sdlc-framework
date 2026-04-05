@@ -17,9 +17,9 @@ allowed-tools:
 
 ```bash
 # Detect project state
-AG_HOME="${HOME}/.antigravity"
-AG_PROJECT=".antigravity"
-AG_SKILLS="${HOME}/.claude/skills/antigravity"
+AG_HOME="${HOME}/.Ultimate SDLC"
+AG_PROJECT=".ultimate-sdlc"
+AG_SKILLS="${HOME}/.claude/skills/ultimate-sdlc"
 
 # Check if project is initialized
 if [ -d "$AG_PROJECT" ]; then
@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/antigravity/knowledge/aiou-decomposition/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/dependency-management/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/wave-assignment/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/antigravity/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/aiou-decomposition/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/dependency-management/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/wave-assignment/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-phase-3-5 - AIOU Decomposition
@@ -80,7 +80,7 @@ Phase 3 not complete. Run /planning-phase-3 first.
 
 ### Step 1: Update Project State
 
-Update `.antigravity/project-context.md`:
+Update `.ultimate-sdlc/project-context.md`:
 - Set `Active Council`: planning
 - Set `Current Phase`: 3.5 - AIOU Decomposition
 - Set `Status`: in_progress
@@ -89,7 +89,7 @@ Update `.antigravity/project-context.md`:
 
 Read feature specifications:
 - `specs/scope-lock.md` — canonical feature list
-- `.antigravity/council-state/planning/planning-tracker.md` — batch assignments (if batched)
+- `.ultimate-sdlc/council-state/planning/planning-tracker.md` — batch assignments (if batched)
 - All `specs/features/FEAT-XXX.md` files (or current batch's FEAT files if batched)
 
 **Scope Verification**: Every feature in scope-lock.md must have a FEAT spec. If any are missing, STOP and return to Phase 3.
@@ -261,10 +261,10 @@ When all criteria met (all batches complete, or single pass complete):
 
 Use **Display Template** from `council-planning.md` to show: Wave Summary
 
-3. Update `.antigravity/project-context.md`:
+3. Update `.ultimate-sdlc/project-context.md`:
    - Set Phase 3.5 status: Complete
 
-4. Update `.antigravity/council-state/planning/WORKING-MEMORY.md`:
+4. Update `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md`:
    - Mark completed tasks
    - Record session learnings
 
