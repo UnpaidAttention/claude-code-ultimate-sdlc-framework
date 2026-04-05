@@ -123,20 +123,30 @@ Run any gate check with: `/sdlc-planning-gate-1-5`, `/sdlc-dev-gate-i4`, `/sdlc-
 
 ## Focus Lens Agents
 
-8 analytical perspectives that can be applied individually or in combination during any workflow. These replace the traditional "separate agent per role" model with lightweight cognitive frames that the AI applies to its analysis.
+8 analytical perspectives that can be applied individually or in combination during any workflow. These are **not** slash commands — they are subagent definitions installed to `~/.claude/agents/` that Claude invokes automatically during relevant workflow phases, or on demand when you ask for a specific analysis.
+
+**How to use them**: Ask Claude to apply a lens directly:
+- "Apply the security lens to this code"
+- "Run the architecture agent on this design"
+- "Analyze this feature with the quality lens"
+- "What does the operations lens say about this deployment plan?"
+
+Claude will invoke the appropriate agent as a subagent via the Agent tool.
 
 | Lens | What It Analyzes | Key Questions | When Used |
 |------|-----------------|---------------|-----------|
-| **sdlc-architecture** | System structure, API design, data models, dependencies, scalability | "Is this the right structure? Does it scale? Are dependencies managed?" | Planning phases 2-3, dev wave setup |
-| **sdlc-security** | Threat modeling, input validation, auth, secrets, OWASP Top 10 | "What could be exploited? Are inputs validated? Are secrets exposed?" | All gates, every AIOU, Audit T5, Validation P3-P4 |
-| **sdlc-quality** | Test coverage, code review, defect analysis, completeness, regression | "Is this tested? What edge cases exist? Does this match the spec?" | Dev code review, Audit T1-T4/A1-A3, Validation C1-C4 |
-| **sdlc-performance** | Profiling, optimization, benchmarks, resource usage, throughput | "Is this fast enough? Where are the bottlenecks? What's the memory footprint?" | Audit T5, Validation P1-P3 |
-| **sdlc-ux** | Usability, accessibility, navigation, visual design, user journeys | "Can users accomplish their goals? Is this accessible? Is the flow intuitive?" | Audit T3, Validation E1-E4 (frontend projects only) |
-| **sdlc-operations** | Deployment, monitoring, failure modes, runbooks, rollback | "What happens when this fails? Is it observable? Can we roll back?" | Validation P1-P2, deployment workflows |
-| **sdlc-requirements** | Feature completeness, user stories, acceptance criteria, scope | "Is every requirement captured? What's missing? Does this solve the user's problem?" | Planning phases 1-1.5, gate reviews |
-| **sdlc-documentation** | Technical docs, user guides, API references, handoff completeness | "Would someone new understand this? Is the handoff complete? Are docs current?" | Validation S1, all handoff generation |
+| **Architecture** | System structure, API design, data models, dependencies, scalability | "Is this the right structure? Does it scale? Are dependencies managed?" | Planning phases 2-3, dev wave setup |
+| **Security** | Threat modeling, input validation, auth, secrets, OWASP Top 10 | "What could be exploited? Are inputs validated? Are secrets exposed?" | All gates, every AIOU, Audit T5, Validation P3-P4 |
+| **Quality** | Test coverage, code review, defect analysis, completeness, regression | "Is this tested? What edge cases exist? Does this match the spec?" | Dev code review, Audit T1-T4/A1-A3, Validation C1-C4 |
+| **Performance** | Profiling, optimization, benchmarks, resource usage, throughput | "Is this fast enough? Where are the bottlenecks? What's the memory footprint?" | Audit T5, Validation P1-P3 |
+| **UX** | Usability, accessibility, navigation, visual design, user journeys | "Can users accomplish their goals? Is this accessible? Is the flow intuitive?" | Audit T3, Validation E1-E4 (frontend projects only) |
+| **Operations** | Deployment, monitoring, failure modes, runbooks, rollback | "What happens when this fails? Is it observable? Can we roll back?" | Validation P1-P2, deployment workflows |
+| **Requirements** | Feature completeness, user stories, acceptance criteria, scope | "Is every requirement captured? What's missing? Does this solve the user's problem?" | Planning phases 1-1.5, gate reviews |
+| **Documentation** | Technical docs, user guides, API references, handoff completeness | "Would someone new understand this? Is the handoff complete? Are docs current?" | Validation S1, all handoff generation |
 
 **Lenses combine**: During development, `[Security] + [Quality]` is automatically applied to every AIOU. For Wave 5 UI work, `[UX] + [Quality] + [Security]` all apply simultaneously.
+
+> **Technical detail**: Agent definitions live at `~/.claude/agents/sdlc-*.md`. They are installed by the `./setup` script and persist across all sessions.
 
 ---
 
