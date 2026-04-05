@@ -1,5 +1,5 @@
 ---
-name: validate-s1
+name: sdlc-validate-s1
 description: |
   Execute Synthesis Track S1 - Documentation Update. Update all documentation for release.
 allowed-tools:

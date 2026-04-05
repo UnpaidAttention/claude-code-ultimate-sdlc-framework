@@ -1,5 +1,5 @@
 ---
-name: audit-defect
+name: sdlc-audit-defect
 description: |
   Log a defect with proper documentation and evidence
 allowed-tools:

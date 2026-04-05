@@ -1,5 +1,5 @@
 ---
-name: validate-p2
+name: sdlc-validate-p2
 description: |
   Execute Production Track P2 - Failure Mode Analysis. Identify and mitigate potential failure modes.
 allowed-tools:

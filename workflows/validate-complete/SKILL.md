@@ -1,5 +1,5 @@
 ---
-name: validate-complete
+name: sdlc-validate-complete
 description: |
   Complete Validation Council and mark project as release-ready.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: continue
+name: sdlc-continue
 description: |
   Auto-advance through framework phases. Reads state, determines next step, executes it. Pauses at gates and council transitions.
 allowed-tools:

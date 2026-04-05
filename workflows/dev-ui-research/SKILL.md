@@ -1,5 +1,5 @@
 ---
-name: dev-ui-research
+name: sdlc-dev-ui-research
 description: |
   Conduct UI design research using external platforms before any frontend implementation. Executes once after first Gate I4 pass.
 allowed-tools:

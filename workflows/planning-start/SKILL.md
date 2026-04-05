@@ -1,5 +1,5 @@
 ---
-name: planning-start
+name: sdlc-planning-start
 description: |
   Initialize or resume Planning Council session. Guides through phases 1-8 with gates at 3.5 and 8.
 allowed-tools:

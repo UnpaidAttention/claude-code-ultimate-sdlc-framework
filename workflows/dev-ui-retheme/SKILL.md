@@ -1,5 +1,5 @@
 ---
-name: dev-ui-retheme
+name: sdlc-dev-ui-retheme
 description: |
   Orchestrate a complete UI retheme across 5 phases — snapshot current theme, research direction, propose design system, implement changes, verify results. Auto-resumes from last incomplete phase.
 allowed-tools:

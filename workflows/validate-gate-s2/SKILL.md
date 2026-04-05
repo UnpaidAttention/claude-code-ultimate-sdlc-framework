@@ -1,5 +1,5 @@
 ---
-name: validate-gate-s2
+name: sdlc-validate-gate-s2
 description: |
   Verify FINAL Gate S2 criteria. Software must pass all criteria to be release ready.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: close-cycle
+name: sdlc-close-cycle
 description: |
   Close and archive the current development cycle. Merges specs to project level, updates manifest, and prepares for next cycle.
 allowed-tools:

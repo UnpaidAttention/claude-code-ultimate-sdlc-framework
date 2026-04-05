@@ -1,5 +1,5 @@
 ---
-name: audit-start
+name: sdlc-audit-start
 description: |
   Initialize or resume Audit Council session. Guides through 2 tracks (Testing, Audit) with gates at T3, A2, A3.
 allowed-tools:

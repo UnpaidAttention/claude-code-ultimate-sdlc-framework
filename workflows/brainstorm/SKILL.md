@@ -1,5 +1,5 @@
 ---
-name: brainstorm
+name: sdlc-brainstorm
 description: |
   Structured brainstorming with Socratic questioning and documentation workflow. Turns ideas into validated designs.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: audit-trace
+name: sdlc-audit-trace
 description: |
   Verify implementation matches planning specifications
 allowed-tools:

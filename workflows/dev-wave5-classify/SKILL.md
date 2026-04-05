@@ -1,5 +1,5 @@
 ---
-name: dev-wave5-classify
+name: sdlc-dev-wave5-classify
 description: |
   Classify Wave 5 AIOUs for optimal model routing when not done during planning
 allowed-tools:

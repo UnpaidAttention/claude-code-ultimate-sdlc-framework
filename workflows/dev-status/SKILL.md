@@ -1,5 +1,5 @@
 ---
-name: dev-status
+name: sdlc-dev-status
 description: |
   Quick status overview of development progress
 allowed-tools:

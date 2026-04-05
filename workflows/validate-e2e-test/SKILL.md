@@ -1,5 +1,5 @@
 ---
-name: validate-e2e-test
+name: sdlc-validate-e2e-test
 description: |
   End-to-end runtime testing with GUI-to-backend verification
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: ralph-defects
+name: sdlc-ralph-defects
 description: |
   Process and fix all open defects autonomously using Ralph Wiggum loop strategy
 allowed-tools:

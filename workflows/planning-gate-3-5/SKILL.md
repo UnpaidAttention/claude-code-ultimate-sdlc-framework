@@ -1,5 +1,5 @@
 ---
-name: planning-gate-3-5
+name: sdlc-planning-gate-3-5
 description: |
   Verify Planning Gate 3.5 criteria. All features must be decomposed into AIOUs with wave assignments before proceeding.
 allowed-tools:

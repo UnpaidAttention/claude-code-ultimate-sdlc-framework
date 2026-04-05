@@ -1,5 +1,5 @@
 ---
-name: init
+name: sdlc-init
 description: |
   Initialize a new project with the Ultimate SDLC Framework. Creates all state files and guides to Planning Council.
 allowed-tools:

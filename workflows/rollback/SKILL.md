@@ -1,5 +1,5 @@
 ---
-name: rollback
+name: sdlc-rollback
 description: |
   Roll back development to a specific wave completion point. Use when a wave introduces fundamental issues that require reverting.
 allowed-tools:

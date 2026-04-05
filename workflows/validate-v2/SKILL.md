@@ -1,5 +1,5 @@
 ---
-name: validate-v2
+name: sdlc-validate-v2
 description: |
   Execute Validation Track V2 - Gap Analysis. Identify gaps between intent and implementation.
 allowed-tools:

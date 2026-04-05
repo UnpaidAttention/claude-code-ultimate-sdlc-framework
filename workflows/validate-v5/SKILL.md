@@ -1,5 +1,5 @@
 ---
-name: validate-v5
+name: sdlc-validate-v5
 description: |
   Execute Validation Track V5 - Correction Planning. Create detailed correction plan for identified gaps.
 allowed-tools:

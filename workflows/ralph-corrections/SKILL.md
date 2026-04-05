@@ -1,5 +1,5 @@
 ---
-name: ralph-corrections
+name: sdlc-ralph-corrections
 description: |
   Process all pending corrections autonomously using Ralph Wiggum loop strategy
 allowed-tools:

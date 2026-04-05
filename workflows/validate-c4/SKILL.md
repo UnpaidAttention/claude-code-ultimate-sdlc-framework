@@ -1,5 +1,5 @@
 ---
-name: validate-c4
+name: sdlc-validate-c4
 description: |
   Execute Correction Track C4 - Regression Validation. Ensure no regressions introduced by corrections.
 allowed-tools:

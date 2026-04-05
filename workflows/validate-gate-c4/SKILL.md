@@ -1,5 +1,5 @@
 ---
-name: validate-gate-c4
+name: sdlc-validate-gate-c4
 description: |
   Verify Correction Gate C4 criteria. All corrections must be validated before production track.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: planning-phase-1-5
+name: sdlc-planning-phase-1-5
 description: |
   Execute Planning Phase 1.5 - Deliberation. Multi-perspective evaluation of requirements to consolidate complete feature list, verify coverage, and confirm scope with user.
 allowed-tools:

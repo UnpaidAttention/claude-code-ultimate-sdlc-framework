@@ -1,5 +1,5 @@
 ---
-name: validate-report
+name: sdlc-validate-report
 description: |
   Generate comprehensive validation and perfection report
 allowed-tools:

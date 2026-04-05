@@ -1,5 +1,5 @@
 ---
-name: dev-ui-retheme-direction
+name: sdlc-dev-ui-retheme-direction
 description: |
   "Phase 2 of UI Retheme: Research new theme direction — present options to user, wait for input, research based on choice. Produces retheme-direction artifact."
 allowed-tools:

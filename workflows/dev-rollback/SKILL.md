@@ -1,5 +1,5 @@
 ---
-name: dev-rollback
+name: sdlc-dev-rollback
 description: |
   Rollback to a previous git checkpoint
 allowed-tools:

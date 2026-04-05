@@ -1,5 +1,5 @@
 ---
-name: audit-complete
+name: sdlc-audit-complete
 description: |
   Complete Audit Council and generate handoff to Validation Council.
 allowed-tools:

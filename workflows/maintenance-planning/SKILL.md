@@ -1,5 +1,5 @@
 ---
-name: maintenance-planning
+name: sdlc-maintenance-planning
 description: |
   Abbreviated planning for maintenance cycles. Analyzes dependencies, security patches, and infrastructure changes, creates targeted AIOUs.
 allowed-tools:

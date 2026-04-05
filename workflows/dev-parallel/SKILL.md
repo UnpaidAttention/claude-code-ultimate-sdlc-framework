@@ -1,5 +1,5 @@
 ---
-name: dev-parallel
+name: sdlc-dev-parallel
 description: |
   Execute parallel AIOU development with safety checks
 allowed-tools:

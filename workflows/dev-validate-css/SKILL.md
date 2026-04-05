@@ -1,5 +1,5 @@
 ---
-name: dev-validate-css
+name: sdlc-dev-validate-css
 description: |
   Verify all CSS variables are defined and synchronized
 allowed-tools:

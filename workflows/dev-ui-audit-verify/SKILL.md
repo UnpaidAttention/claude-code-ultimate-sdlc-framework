@@ -1,5 +1,5 @@
 ---
-name: dev-ui-audit-verify
+name: sdlc-dev-ui-audit-verify
 description: |
   "Phase 6 of UI Audit: Verify completeness — run full UI-V verification to confirm all gaps are closed. PASS requires 0 CRITICAL, 0 HIGH issues."
 allowed-tools:

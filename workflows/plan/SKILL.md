@@ -1,5 +1,5 @@
 ---
-name: plan
+name: sdlc-plan
 description: |
   Create project plan using Planning Council. No code writing - only plan file generation.
 allowed-tools:

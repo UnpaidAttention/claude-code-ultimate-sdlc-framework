@@ -1,5 +1,5 @@
 ---
-name: validate-ui-action
+name: sdlc-validate-ui-action
 description: |
   Verify individual UI elements actually perform their intended actions
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: dev-wave-6
+name: sdlc-dev-wave-6
 description: |
   Execute Development Wave 6 - Integration. Full system integration, E2E testing, and final assembly.
 allowed-tools:

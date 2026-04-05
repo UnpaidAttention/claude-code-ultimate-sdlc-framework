@@ -1,5 +1,5 @@
 ---
-name: dev-upgrade
+name: sdlc-dev-upgrade
 description: |
   Upgrade framework to a new version
 allowed-tools:

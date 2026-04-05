@@ -1,5 +1,5 @@
 ---
-name: dev-visual-assets
+name: sdlc-dev-visual-assets
 description: |
   Manage visual assets during UI development (Wave 5)
 allowed-tools:

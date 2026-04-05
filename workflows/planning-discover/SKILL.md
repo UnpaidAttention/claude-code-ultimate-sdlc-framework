@@ -1,5 +1,5 @@
 ---
-name: planning-discover
+name: sdlc-planning-discover
 description: |
   Discover and capture a new project idea through structured questioning
 allowed-tools:

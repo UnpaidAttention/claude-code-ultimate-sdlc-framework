@@ -1,5 +1,5 @@
 ---
-name: dev-scope-analysis
+name: sdlc-dev-scope-analysis
 description: |
   Analyze AIOU scope and create run division plan for development. Executes after planning complete, before /dev-start.
 allowed-tools:

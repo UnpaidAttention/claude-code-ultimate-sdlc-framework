@@ -1,5 +1,5 @@
 ---
-name: enhance
+name: sdlc-enhance
 description: |
   Add or update features in existing application. Used for iterative development.
 allowed-tools:

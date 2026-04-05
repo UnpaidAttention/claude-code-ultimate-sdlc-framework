@@ -1,5 +1,5 @@
 ---
-name: planning-parallel
+name: sdlc-planning-parallel
 description: |
   Execute parallel planning for independent features
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: validate-before-after
+name: sdlc-validate-before-after
 description: |
   Capture before/after evidence for corrections
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: ralph-wave
+name: sdlc-ralph-wave
 description: |
   Execute an entire wave autonomously using Ralph Wiggum loop strategy
 allowed-tools:

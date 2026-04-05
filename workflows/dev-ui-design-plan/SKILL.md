@@ -1,5 +1,5 @@
 ---
-name: dev-ui-design-plan
+name: sdlc-dev-ui-design-plan
 description: |
   Create comprehensive UI design plan with page layouts, navigation architecture, and interactive element inventory before frontend implementation.
 allowed-tools:

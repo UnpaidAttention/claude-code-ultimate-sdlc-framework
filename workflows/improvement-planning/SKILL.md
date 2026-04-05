@@ -1,5 +1,5 @@
 ---
-name: improvement-planning
+name: sdlc-improvement-planning
 description: |
   Abbreviated planning for improvement cycles. Analyzes code quality, identifies refactoring targets, creates improvement AIOUs for tech debt, performance, and architecture.
 allowed-tools:

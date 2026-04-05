@@ -1,5 +1,5 @@
 ---
-name: dev-ui-retheme-apply
+name: sdlc-dev-ui-retheme-apply
 description: |
   "Phase 4 of UI Retheme: Implement approved design system — update tokens, global styles, components, layouts, and remaining hardcoded values in dependency order. Verifies build after each step."
 allowed-tools:

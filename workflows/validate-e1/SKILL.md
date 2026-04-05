@@ -1,5 +1,5 @@
 ---
-name: validate-e1
+name: sdlc-validate-e1
 description: |
   Execute Enhancement Track E1 - Feature Richness. Evaluate feature richness and identify enhancement opportunities.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: dev-start
+name: sdlc-dev-start
 description: |
   Initialize or resume Development Council session. Guides through waves 0-6 with gates at I4 and I8.
 allowed-tools:

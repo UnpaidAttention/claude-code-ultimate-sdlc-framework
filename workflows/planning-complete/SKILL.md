@@ -1,5 +1,5 @@
 ---
-name: planning-complete
+name: sdlc-planning-complete
 description: |
   Complete Planning Council and generate handoff to Development Council.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: dev-checkpoint
+name: sdlc-dev-checkpoint
 description: |
   Create a git checkpoint for safe rollback
 allowed-tools:

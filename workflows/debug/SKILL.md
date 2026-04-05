@@ -1,5 +1,5 @@
 ---
-name: debug
+name: sdlc-debug
 description: |
   Debugging command. Activates systematic 4-phase debugging with root cause analysis and evidence-based verification.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: planning-verify
+name: sdlc-planning-verify
 description: |
   Validate planning deliverables with evidence
 allowed-tools:

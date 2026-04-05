@@ -1,5 +1,5 @@
 ---
-name: validate-c1
+name: sdlc-validate-c1
 description: |
   Execute Correction Track C1 - Targeted Corrections. Implement priority corrections with before/after documentation.
 allowed-tools:

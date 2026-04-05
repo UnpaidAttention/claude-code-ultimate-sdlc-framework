@@ -1,5 +1,5 @@
 ---
-name: dev-verify-handoff
+name: sdlc-dev-verify-handoff
 description: |
   Validate planning handoff document before development
 allowed-tools:

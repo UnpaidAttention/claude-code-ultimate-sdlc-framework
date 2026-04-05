@@ -1,5 +1,5 @@
 ---
-name: audit-report
+name: sdlc-audit-report
 description: |
   Generate comprehensive final audit report
 allowed-tools:

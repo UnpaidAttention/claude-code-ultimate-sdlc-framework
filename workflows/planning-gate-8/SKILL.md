@@ -1,5 +1,5 @@
 ---
-name: planning-gate-8
+name: sdlc-planning-gate-8
 description: |
   Verify Planning Gate 8 criteria. Final gate before transitioning to Development Council.
 allowed-tools:

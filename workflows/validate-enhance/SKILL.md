@@ -1,5 +1,5 @@
 ---
-name: validate-enhance
+name: sdlc-validate-enhance
 description: |
   Propose and implement a feature enhancement
 allowed-tools:

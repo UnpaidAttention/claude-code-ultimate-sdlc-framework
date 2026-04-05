@@ -1,5 +1,5 @@
 ---
-name: planning-handoff
+name: sdlc-planning-handoff
 description: |
   Generate final planning-handoff.md for Development Council
 allowed-tools:

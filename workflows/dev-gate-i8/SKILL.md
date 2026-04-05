@@ -1,5 +1,5 @@
 ---
-name: dev-gate-i8
+name: sdlc-dev-gate-i8
 description: |
   Verify Development Gate I8 criteria. Final gate before transitioning to Audit Council.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: dev-wave5-status
+name: sdlc-dev-wave5-status
 description: |
   Show Wave 5 UI development status with model distribution and layer progress
 allowed-tools:

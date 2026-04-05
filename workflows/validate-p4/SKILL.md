@@ -1,5 +1,5 @@
 ---
-name: validate-p4
+name: sdlc-validate-p4
 description: |
   Execute Production Track P4 - Security Hardening. Final security review and hardening before release.
 allowed-tools:

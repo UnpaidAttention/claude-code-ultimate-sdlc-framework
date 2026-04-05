@@ -1,5 +1,5 @@
 ---
-name: create
+name: sdlc-create
 description: |
   Create new application command. Triggers App Builder skill and starts interactive dialogue with user.
 allowed-tools:

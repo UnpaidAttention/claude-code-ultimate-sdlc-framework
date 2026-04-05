@@ -1,5 +1,5 @@
 ---
-name: validate-verify-correction
+name: sdlc-validate-verify-correction
 description: |
   Verify correction with test evidence and certificate
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: patch-planning
+name: sdlc-patch-planning
 description: |
   Abbreviated planning for patch/bugfix cycles. Analyzes defects, creates targeted fix AIOUs, and generates a lightweight planning handoff.
 allowed-tools:

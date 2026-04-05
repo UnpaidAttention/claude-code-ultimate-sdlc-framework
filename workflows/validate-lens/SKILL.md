@@ -1,5 +1,5 @@
 ---
-name: validate-lens
+name: sdlc-validate-lens
 description: |
   Apply multi-lens analysis to a feature or system
 allowed-tools:

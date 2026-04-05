@@ -1,5 +1,5 @@
 ---
-name: dev-ui-retheme-propose
+name: sdlc-dev-ui-retheme-propose
 description: |
   "Phase 3 of UI Retheme: Propose complete new design system — color palette, typography, spacing, component styles, before/after comparison. Requires explicit user approval before implementation."
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: preview
+name: sdlc-preview
 description: |
   Preview server start, stop, and status check. Local development server management.
 allowed-tools:

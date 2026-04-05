@@ -1,5 +1,5 @@
 ---
-name: validate-e3
+name: sdlc-validate-e3
 description: |
   Execute Enhancement Track E3 - Enhancement Implementation. Implement approved enhancements.
 allowed-tools:

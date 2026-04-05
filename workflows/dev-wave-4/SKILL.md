@@ -1,5 +1,5 @@
 ---
-name: dev-wave-4
+name: sdlc-dev-wave-4
 description: |
   Execute Development Wave 4 - API Layer. Implement controllers, routes, and API endpoints.
 allowed-tools:

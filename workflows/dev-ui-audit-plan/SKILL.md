@@ -1,5 +1,5 @@
 ---
-name: dev-ui-audit-plan
+name: sdlc-dev-ui-audit-plan
 description: |
   "Phase 4 of UI Audit: Create prioritized implementation plan for closing UI gaps. Presents plan to user for review before implementation proceeds."
 allowed-tools:

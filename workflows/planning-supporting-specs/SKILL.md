@@ -1,5 +1,5 @@
 ---
-name: planning-supporting-specs
+name: sdlc-planning-supporting-specs
 description: |
   Execute Planning Phases 4-7 combined. Security, testing, infrastructure, and sprint planning in one session.
 allowed-tools:

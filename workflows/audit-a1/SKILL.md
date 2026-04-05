@@ -1,5 +1,5 @@
 ---
-name: audit-a1
+name: sdlc-audit-a1
 description: |
   Execute Audit Track A1 - Purpose Alignment. Critically analyze if the implemented features align with the stated product purpose.
 allowed-tools:

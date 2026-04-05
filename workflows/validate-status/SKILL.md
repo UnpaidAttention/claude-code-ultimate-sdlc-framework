@@ -1,5 +1,5 @@
 ---
-name: validate-status
+name: sdlc-validate-status
 description: |
   Quick status overview of current validation progress
 allowed-tools:

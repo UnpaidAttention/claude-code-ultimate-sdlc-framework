@@ -1,5 +1,5 @@
 ---
-name: dev-config
+name: sdlc-dev-config
 description: |
   Read and validate framework configuration
 allowed-tools:

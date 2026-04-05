@@ -1,5 +1,5 @@
 ---
-name: validate-persistence
+name: sdlc-validate-persistence
 description: |
   Verify configuration and state changes persist across app restart
 allowed-tools:

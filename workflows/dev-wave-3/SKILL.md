@@ -1,5 +1,5 @@
 ---
-name: dev-wave-3
+name: sdlc-dev-wave-3
 description: |
   Execute Development Wave 3 - Services. Implement business logic services and domain operations.
 allowed-tools:

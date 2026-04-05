@@ -1,5 +1,5 @@
 ---
-name: planning-upgrade
+name: sdlc-planning-upgrade
 description: |
   Upgrade framework to a new version
 allowed-tools:

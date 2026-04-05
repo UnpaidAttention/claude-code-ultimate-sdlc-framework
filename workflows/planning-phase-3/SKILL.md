@@ -1,5 +1,5 @@
 ---
-name: planning-phase-3
+name: sdlc-planning-phase-3
 description: |
   Execute Planning Phase 3 - Features. Create detailed feature specifications (FEAT-XXX) with acceptance criteria.
 allowed-tools:

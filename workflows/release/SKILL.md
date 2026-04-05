@@ -1,5 +1,5 @@
 ---
-name: release
+name: sdlc-release
 description: |
   Final release certification. Verify all gates passed and generate release documentation.
 allowed-tools:

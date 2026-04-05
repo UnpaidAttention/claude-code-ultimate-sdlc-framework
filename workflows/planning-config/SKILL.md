@@ -1,5 +1,5 @@
 ---
-name: planning-config
+name: sdlc-planning-config
 description: |
   Read and validate framework configuration
 allowed-tools:

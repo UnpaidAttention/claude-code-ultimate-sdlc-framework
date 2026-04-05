@@ -1,5 +1,5 @@
 ---
-name: audit-gate-t3
+name: sdlc-audit-gate-t3
 description: |
   Verify Audit Gate T3 criteria. GUI analysis must be complete before proceeding.
 allowed-tools:

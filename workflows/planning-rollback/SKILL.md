@@ -1,5 +1,5 @@
 ---
-name: planning-rollback
+name: sdlc-planning-rollback
 description: |
   Revert to a previous phase checkpoint
 allowed-tools:

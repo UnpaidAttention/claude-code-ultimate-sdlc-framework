@@ -1,5 +1,5 @@
 ---
-name: council-switch
+name: sdlc-council-switch
 description: |
   Switch between councils (Planning, Development, Audit, Validation) with state preservation.
 allowed-tools:

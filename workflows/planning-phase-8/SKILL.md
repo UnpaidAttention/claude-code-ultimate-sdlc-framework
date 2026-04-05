@@ -1,5 +1,5 @@
 ---
-name: planning-phase-8
+name: sdlc-planning-phase-8
 description: |
   Execute Planning Phase 8 - Launch Ready. Final planning review and handoff preparation for Development Council.
 allowed-tools:

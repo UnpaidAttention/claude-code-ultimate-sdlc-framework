@@ -1,5 +1,5 @@
 ---
-name: audit-t3
+name: sdlc-audit-t3
 description: |
   Execute Audit Track T3 - GUI Analysis. UI/UX analysis, screenshots, and usability assessment.
 allowed-tools:

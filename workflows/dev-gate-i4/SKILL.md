@@ -1,5 +1,5 @@
 ---
-name: dev-gate-i4
+name: sdlc-dev-gate-i4
 description: |
   Verify Development Gate I4 criteria. Backend must be complete before proceeding to UI development.
 allowed-tools:

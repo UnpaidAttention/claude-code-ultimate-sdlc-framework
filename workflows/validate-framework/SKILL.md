@@ -1,5 +1,5 @@
 ---
-name: validate-framework
+name: sdlc-validate-framework
 description: |
   Validate framework integrity by checking file existence, reference consistency, and structural validity.
 allowed-tools:

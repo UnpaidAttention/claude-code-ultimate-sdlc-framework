@@ -1,5 +1,5 @@
 ---
-name: dev-ui-polish-apply
+name: sdlc-dev-ui-polish-apply
 description: |
   Phase 5 of UI Polish — implement the approved remediation plan in order (typography, colors, components, layouts, copy), verifying build after each category.
 allowed-tools:

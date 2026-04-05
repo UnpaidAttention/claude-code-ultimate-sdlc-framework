@@ -1,5 +1,5 @@
 ---
-name: validate-production
+name: sdlc-validate-production
 description: |
   Production readiness assessment for component or system
 allowed-tools:

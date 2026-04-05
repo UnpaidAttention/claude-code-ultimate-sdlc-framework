@@ -1,5 +1,5 @@
 ---
-name: audit-a2
+name: sdlc-audit-a2
 description: |
   Execute Audit Track A2 - Completeness. Gap analysis and missing functionality assessment.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: dev-ui-retheme-verify
+name: sdlc-dev-ui-retheme-verify
 description: |
   "Phase 5 of UI Retheme: Visual verification — build and test, screenshot comparison, consistency check, anti-slop audit, WCAG contrast verification. Produces retheme-verification artifact."
 allowed-tools:

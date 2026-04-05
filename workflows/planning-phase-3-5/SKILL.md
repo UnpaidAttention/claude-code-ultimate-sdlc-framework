@@ -1,5 +1,5 @@
 ---
-name: planning-phase-3-5
+name: sdlc-planning-phase-3-5
 description: |
   Execute Planning Phase 3.5 - AIOU Decomposition. Break features into Atomic Independently Ownable Units and assign to development waves.
 allowed-tools:

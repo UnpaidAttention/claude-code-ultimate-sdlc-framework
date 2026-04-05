@@ -1,5 +1,5 @@
 ---
-name: dev-ui-polish-scan
+name: sdlc-dev-ui-polish-scan
 description: |
   Phase 1 of UI Polish — systematically scan all frontend code for AI-generated design patterns (slop) across typography, color, layout, components, and copy.
 allowed-tools:

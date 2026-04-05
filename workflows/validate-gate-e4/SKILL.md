@@ -1,5 +1,5 @@
 ---
-name: validate-gate-e4
+name: sdlc-validate-gate-e4
 description: |
   Verify Enhancement Gate E4 criteria. All enhancements must be polished before synthesis track.
 allowed-tools:

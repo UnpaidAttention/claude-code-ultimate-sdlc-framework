@@ -1,5 +1,5 @@
 ---
-name: planning-status
+name: sdlc-planning-status
 description: |
   Quick status overview of current planning progress
 allowed-tools:

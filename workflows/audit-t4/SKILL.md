@@ -1,5 +1,5 @@
 ---
-name: audit-t4
+name: sdlc-audit-t4
 description: |
   Execute Audit Track T4 - Integration Testing. System integration and cross-component testing.
 allowed-tools:

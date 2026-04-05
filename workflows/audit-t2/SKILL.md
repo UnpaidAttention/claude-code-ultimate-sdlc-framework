@@ -1,5 +1,5 @@
 ---
-name: audit-t2
+name: sdlc-audit-t2
 description: |
   Execute Audit Track T2 - Functional Testing. Systematic functional testing of all features.
 allowed-tools:

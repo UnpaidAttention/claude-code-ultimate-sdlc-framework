@@ -1,5 +1,5 @@
 ---
-name: audit-enhancement
+name: sdlc-audit-enhancement
 description: |
   Log enhancement idea discovered during audit
 allowed-tools:

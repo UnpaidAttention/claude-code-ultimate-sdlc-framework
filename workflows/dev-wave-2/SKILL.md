@@ -1,5 +1,5 @@
 ---
-name: dev-wave-2
+name: sdlc-dev-wave-2
 description: |
   Execute Development Wave 2 - Data Layer. Implement database models, repositories, and migrations.
 allowed-tools:

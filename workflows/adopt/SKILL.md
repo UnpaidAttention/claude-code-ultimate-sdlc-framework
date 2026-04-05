@@ -1,5 +1,5 @@
 ---
-name: adopt
+name: sdlc-adopt
 description: |
   Onboard an existing codebase to the Ultimate SDLC Framework. Scans code, generates feature inventory, extracts architecture, creates project manifest.
 allowed-tools:

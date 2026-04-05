@@ -1,5 +1,5 @@
 ---
-name: validate-s2
+name: sdlc-validate-s2
 description: |
   Execute Synthesis Track S2 - Release Readiness. Final release checklist and preparation.
 allowed-tools:

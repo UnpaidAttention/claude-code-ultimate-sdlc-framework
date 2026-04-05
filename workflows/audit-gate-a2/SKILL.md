@@ -1,5 +1,5 @@
 ---
-name: audit-gate-a2
+name: sdlc-audit-gate-a2
 description: |
   Verify Audit Gate A2 criteria. Completeness assessment must be done before quality assessment.
 allowed-tools:

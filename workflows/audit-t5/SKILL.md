@@ -1,5 +1,5 @@
 ---
-name: audit-t5
+name: sdlc-audit-t5
 description: |
   Execute Audit Track T5 - Performance and Security Testing. Load testing and security vulnerability assessment.
 allowed-tools:

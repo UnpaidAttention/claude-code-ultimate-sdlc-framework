@@ -1,5 +1,5 @@
 ---
-name: dev-wave5-next
+name: sdlc-dev-wave5-next
 description: |
   Move to the next Wave 5 AIOU with model switch suggestion
 allowed-tools:

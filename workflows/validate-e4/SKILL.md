@@ -1,5 +1,5 @@
 ---
-name: validate-e4
+name: sdlc-validate-e4
 description: |
   Execute Enhancement Track E4 - UX Polish. Final user experience polish and refinement.
 allowed-tools:

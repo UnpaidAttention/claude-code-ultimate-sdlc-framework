@@ -1,5 +1,5 @@
 ---
-name: ui-ux-pro-max
+name: sdlc-ui-ux-pro-max
 description: |
   Plan and implement UI
 allowed-tools:

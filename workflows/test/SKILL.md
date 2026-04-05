@@ -1,5 +1,5 @@
 ---
-name: test
+name: sdlc-test
 description: |
   Test-Driven Development command. Follows RED-GREEN-REFACTOR cycle with Iron Law enforcement.
 allowed-tools:

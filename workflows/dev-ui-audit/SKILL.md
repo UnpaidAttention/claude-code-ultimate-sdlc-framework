@@ -1,5 +1,5 @@
 ---
-name: dev-ui-audit
+name: sdlc-dev-ui-audit
 description: |
   Non-destructive audit of existing UI. Orchestrates 6 phases to identify missing routes, unwired components, incomplete interactions — then plans and builds only what's missing. Does NOT delete existing code.
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: audit-screenshot
+name: sdlc-audit-screenshot
 description: |
   Capture screenshot evidence for defects and findings
 allowed-tools:

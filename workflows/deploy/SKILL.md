@@ -1,5 +1,5 @@
 ---
-name: deploy
+name: sdlc-deploy
 description: |
   Deployment command for production releases. Pre-flight checks and deployment execution.
 allowed-tools:

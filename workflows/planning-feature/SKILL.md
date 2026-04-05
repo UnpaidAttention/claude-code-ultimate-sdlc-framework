@@ -1,5 +1,5 @@
 ---
-name: planning-feature
+name: sdlc-planning-feature
 description: |
   Create comprehensive 8-section feature matrix specification
 allowed-tools:

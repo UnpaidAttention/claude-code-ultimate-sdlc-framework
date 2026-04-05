@@ -1,5 +1,5 @@
 ---
-name: thoroughness-audit
+name: sdlc-thoroughness-audit
 description: |
   Audit features against 8 thoroughness criteria (deep-dive, connectivity, component inventory, run sizing, PRH compliance). Non-destructive — reads and reports only. Generates gap report with TG-XXX IDs.
 allowed-tools:

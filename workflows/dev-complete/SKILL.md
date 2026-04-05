@@ -1,5 +1,5 @@
 ---
-name: dev-complete
+name: sdlc-dev-complete
 description: |
   Complete Development Council and generate handoff to Audit Council.
 allowed-tools:

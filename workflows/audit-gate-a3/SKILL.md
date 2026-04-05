@@ -1,5 +1,5 @@
 ---
-name: audit-gate-a3
+name: sdlc-audit-gate-a3
 description: |
   Verify Audit Gate A3 criteria. Quality assessment must be complete before enhancement track.
 allowed-tools:

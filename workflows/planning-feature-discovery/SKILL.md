@@ -1,5 +1,5 @@
 ---
-name: planning-feature-discovery
+name: sdlc-planning-feature-discovery
 description: |
   Multi-agent deliberation to discover and specify ALL features for the product
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: audit-think
+name: sdlc-audit-think
 description: |
   Switch between cognitive thinking modes for audit tasks
 allowed-tools:

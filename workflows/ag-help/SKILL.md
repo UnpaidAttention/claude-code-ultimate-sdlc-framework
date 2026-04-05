@@ -1,5 +1,5 @@
 ---
-name: help
+name: sdlc-help
 description: |
   Show all available Ultimate SDLC Framework commands organized by council and purpose.
   Use when asked for help, command list, or framework overview.

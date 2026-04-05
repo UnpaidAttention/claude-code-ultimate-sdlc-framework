@@ -1,5 +1,5 @@
 ---
-name: audit-reset-feature
+name: sdlc-audit-reset-feature
 description: |
   Reset and re-test a specific feature from scratch
 allowed-tools:

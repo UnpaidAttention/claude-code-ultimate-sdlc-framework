@@ -1,5 +1,5 @@
 ---
-name: dev-ui-polish-research
+name: sdlc-dev-ui-polish-research
 description: |
   Phase 3 of UI Polish — research distinctive design alternatives for each slop finding category using design skills and search tools.
 allowed-tools:

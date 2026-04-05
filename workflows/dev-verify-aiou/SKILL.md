@@ -1,5 +1,5 @@
 ---
-name: dev-verify-aiou
+name: sdlc-dev-verify-aiou
 description: |
   Verify AIOU completion against acceptance criteria
 allowed-tools:

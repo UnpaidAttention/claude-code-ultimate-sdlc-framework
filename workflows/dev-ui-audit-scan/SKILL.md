@@ -1,5 +1,5 @@
 ---
-name: dev-ui-audit-scan
+name: sdlc-dev-ui-audit-scan
 description: |
   "Phase 1 of UI Audit: Inventory existing UI — scan routes, components, interactive elements, and design system tokens. Produces existing inventory artifact."
 allowed-tools:

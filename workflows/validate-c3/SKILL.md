@@ -1,5 +1,5 @@
 ---
-name: validate-c3
+name: sdlc-validate-c3
 description: |
   Execute Correction Track C3 - Verification Testing. Verify all corrections work as expected.
 allowed-tools:

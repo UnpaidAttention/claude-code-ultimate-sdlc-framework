@@ -1,5 +1,5 @@
 ---
-name: dev-search-patterns
+name: sdlc-dev-search-patterns
 description: |
   Search codebase for reusable patterns before implementing AIOU
 allowed-tools:

@@ -1,5 +1,5 @@
 ---
-name: planning-feature-deep-dive
+name: sdlc-planning-feature-deep-dive
 description: |
   Execute Planning Phase 2.5 - Feature Deep-Dive Analysis. Structured deep analysis of EVERY feature before FEAT specs are written. Produces component inventories, user journeys, navigation maps, and cross-feature integration points.
 allowed-tools:

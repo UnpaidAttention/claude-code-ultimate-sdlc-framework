@@ -1,5 +1,5 @@
 ---
-name: validate-feature
+name: sdlc-validate-feature
 description: |
   Deep validation of feature through intent alignment and completeness
 allowed-tools:

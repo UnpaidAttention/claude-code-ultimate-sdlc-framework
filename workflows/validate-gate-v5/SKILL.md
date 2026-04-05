@@ -1,5 +1,5 @@
 ---
-name: validate-gate-v5
+name: sdlc-validate-gate-v5
 description: |
   Verify Validation Gate V5 criteria. Correction planning must be complete before correction track.
 allowed-tools:

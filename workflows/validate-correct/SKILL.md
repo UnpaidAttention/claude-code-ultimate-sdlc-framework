@@ -1,5 +1,5 @@
 ---
-name: validate-correct
+name: sdlc-validate-correct
 description: |
   Apply verified correction following verification-first protocol
 allowed-tools:

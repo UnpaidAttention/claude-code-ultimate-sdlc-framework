@@ -1,5 +1,5 @@
 ---
-name: dev-ui-polish-report
+name: sdlc-dev-ui-polish-report
 description: |
   Phase 2 of UI Polish — transform raw anti-slop scan results into a structured report with severity ratings and summary counts per category.
 allowed-tools:

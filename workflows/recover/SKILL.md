@@ -1,5 +1,5 @@
 ---
-name: recover
+name: sdlc-recover
 description: |
   Recover from interrupted session. Diagnoses state, identifies incomplete work, and guides resumption.
 allowed-tools:

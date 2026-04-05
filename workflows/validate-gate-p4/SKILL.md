@@ -1,5 +1,5 @@
 ---
-name: validate-gate-p4
+name: sdlc-validate-gate-p4
 description: |
   Verify Production Gate P4 criteria. Production readiness must be verified before enhancement track.
 allowed-tools:

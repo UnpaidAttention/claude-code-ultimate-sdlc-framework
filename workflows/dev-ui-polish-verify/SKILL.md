@@ -1,5 +1,5 @@
 ---
-name: dev-ui-polish-verify
+name: sdlc-dev-ui-polish-verify
 description: |
   Phase 6 of UI Polish — re-run the anti-slop scan to verify 0 findings remain, verify design token consistency, WCAG AA contrast, and no mixed old/new styles.
 allowed-tools:

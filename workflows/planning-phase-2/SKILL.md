@@ -1,5 +1,5 @@
 ---
-name: planning-phase-2
+name: sdlc-planning-phase-2
 description: |
   Execute Planning Phase 2 - Architecture. Define system architecture, create ADRs, and establish technical foundation.
 allowed-tools:

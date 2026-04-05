@@ -1,5 +1,5 @@
 ---
-name: validate-v3
+name: sdlc-validate-v3
 description: |
   Execute Validation Track V3 - Completeness Assessment. Build completeness matrix against requirements.
 allowed-tools:

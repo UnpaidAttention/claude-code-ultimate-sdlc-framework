@@ -1,5 +1,5 @@
 ---
-name: audit-status
+name: sdlc-audit-status
 description: |
   Quick status overview of audit progress
 allowed-tools:

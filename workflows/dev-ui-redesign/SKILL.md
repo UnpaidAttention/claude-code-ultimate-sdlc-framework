@@ -1,5 +1,5 @@
 ---
-name: dev-ui-redesign
+name: sdlc-dev-ui-redesign
 description: |
   Reset and restart UI development on an existing project. Archives current UI artifacts and code, then re-executes the full UI pipeline (research, design plan, implementation, verification).
 allowed-tools:

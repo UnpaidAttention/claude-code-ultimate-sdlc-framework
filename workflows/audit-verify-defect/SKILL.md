@@ -1,5 +1,5 @@
 ---
-name: audit-verify-defect
+name: sdlc-audit-verify-defect
 description: |
   Verify defect documentation with evidence certificate
 allowed-tools:

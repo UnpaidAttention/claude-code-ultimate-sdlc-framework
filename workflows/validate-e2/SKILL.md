@@ -1,5 +1,5 @@
 ---
-name: validate-e2
+name: sdlc-validate-e2
 description: |
   Execute Enhancement Track E2 - Innovation Opportunities. Identify innovation and differentiation opportunities.
 allowed-tools:

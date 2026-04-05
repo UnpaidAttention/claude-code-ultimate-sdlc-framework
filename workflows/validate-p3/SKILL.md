@@ -1,5 +1,5 @@
 ---
-name: validate-p3
+name: sdlc-validate-p3
 description: |
   Execute Production Track P3 - Performance Optimization. Optimize application performance for production.
 allowed-tools:

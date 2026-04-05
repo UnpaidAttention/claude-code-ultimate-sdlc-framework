@@ -1,5 +1,5 @@
 ---
-name: planning-adr
+name: sdlc-planning-adr
 description: |
   Create Architecture Decision Record for technical decisions
 allowed-tools:

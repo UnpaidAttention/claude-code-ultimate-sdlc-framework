@@ -1,5 +1,5 @@
 ---
-name: dev-ui-audit-gaps
+name: sdlc-dev-ui-audit-gaps
 description: |
   "Phase 3 of UI Audit: Gap analysis — compare existing UI inventory against target state to identify missing routes, unwired components, and CRUD gaps."
 allowed-tools:

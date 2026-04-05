@@ -1,5 +1,5 @@
 ---
-name: validate-data-flow
+name: sdlc-validate-data-flow
 description: |
   Trace data flow from GUI action through all layers to final effect
 allowed-tools:

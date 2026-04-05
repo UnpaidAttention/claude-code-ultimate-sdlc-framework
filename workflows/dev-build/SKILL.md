@@ -1,5 +1,5 @@
 ---
-name: dev-build
+name: sdlc-dev-build
 description: |
   Verify build succeeds with evidence artifact
 allowed-tools:

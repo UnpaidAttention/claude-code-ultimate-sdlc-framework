@@ -1,5 +1,5 @@
 ---
-name: audit-a3
+name: sdlc-audit-a3
 description: |
   Execute Audit Track A3 - Quality Assessment. Code quality, maintainability, and best practices evaluation.
 allowed-tools:

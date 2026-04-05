@@ -1,5 +1,5 @@
 ---
-name: dev-wave-1
+name: sdlc-dev-wave-1
 description: |
   Execute Development Wave 1 - Utilities and Helpers. Implement shared utility functions and helper modules.
 allowed-tools:

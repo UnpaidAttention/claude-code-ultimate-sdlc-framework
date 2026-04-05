@@ -1,5 +1,5 @@
 ---
-name: audit-feature
+name: sdlc-audit-feature
 description: |
   Test and audit a specific feature
 allowed-tools:

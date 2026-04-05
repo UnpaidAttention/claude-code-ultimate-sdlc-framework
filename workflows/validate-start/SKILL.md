@@ -1,5 +1,5 @@
 ---
-name: validate-start
+name: sdlc-validate-start
 description: |
   Initialize or resume Validation Council session. Guides through 5 tracks with gates at V5, C4, P4, E4, S2.
 allowed-tools:

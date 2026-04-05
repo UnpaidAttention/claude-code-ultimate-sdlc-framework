@@ -1,5 +1,5 @@
 ---
-name: dev-verify-feature
+name: sdlc-dev-verify-feature
 description: |
   Verify complete feature implementation after all feature AIOUs are done. Checks component inventory completeness, user journey coverage, navigation placement, and cross-feature connections.
 allowed-tools:

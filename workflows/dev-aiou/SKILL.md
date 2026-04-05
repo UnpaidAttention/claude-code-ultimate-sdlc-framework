@@ -1,5 +1,5 @@
 ---
-name: dev-aiou
+name: sdlc-dev-aiou
 description: |
   Execute a specific AIOU from the planning handoff. Follow acceptance criteria strictly.
 allowed-tools:

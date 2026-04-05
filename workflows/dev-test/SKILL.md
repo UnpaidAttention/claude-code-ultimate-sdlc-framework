@@ -1,5 +1,5 @@
 ---
-name: dev-test
+name: sdlc-dev-test
 description: |
   Run tests and capture results with evidence artifact
 allowed-tools:

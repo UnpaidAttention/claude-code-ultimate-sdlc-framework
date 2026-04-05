@@ -1,5 +1,5 @@
 ---
-name: validate-p1
+name: sdlc-validate-p1
 description: |
   Execute Production Track P1 - Operational Assessment. Assess operational readiness for production.
 allowed-tools:
