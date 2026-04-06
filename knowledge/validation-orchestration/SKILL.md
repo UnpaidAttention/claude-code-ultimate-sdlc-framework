@@ -1,5 +1,7 @@
+---
 name: validation-orchestration
 description: Orchestrates Validation Council tracks from intent to release readiness. Use when running Validation Council.
+---
 
 # Validation Orchestration
 

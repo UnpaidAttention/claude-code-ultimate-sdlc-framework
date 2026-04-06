@@ -1,5 +1,7 @@
+---
 name: telegram-mini-app
 description: "Use when building Telegram Mini Apps (TWA) - including Telegram Web App API, TON ecosystem, payments, user authentication, and viral app design."
+---
 
 # Telegram Mini App
 

@@ -1,6 +1,8 @@
+---
 name: state-management
 description: |
   Implement frontend state management patterns and solutions.
+---
 
   Use when: (1) Designing state architecture for Wave 5 UI work,
   (2) Choosing between local, shared, and server state,

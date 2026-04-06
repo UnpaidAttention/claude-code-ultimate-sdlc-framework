@@ -1,5 +1,7 @@
+---
 name: frontend-design
 description: Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating aesthetic interfaces.
+---
 
 # Frontend Design System
 

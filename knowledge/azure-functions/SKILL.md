@@ -1,5 +1,7 @@
+---
 name: azure-functions
 description: "Use when developing Azure Functions - including isolated worker model, Durable Functions orchestration, cold start optimization, and .NET/Python/Node.js patterns."
+---
 
 # Azure Functions
 

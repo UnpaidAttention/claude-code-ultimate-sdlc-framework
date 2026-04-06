@@ -1,6 +1,8 @@
+---
 name: test-strategy
 description: |
   Plan comprehensive testing approach for software projects.
+---
 
   Use when: (1) Creating test plans during Phase 6,
   (2) Defining coverage targets and test types,

@@ -1,5 +1,7 @@
+---
 name: API Fuzzing for Bug Bounty
 description: "Use when testing API security for bug bounty - including fuzzing REST/SOAP/GraphQL APIs, finding IDOR vulnerabilities, authentication bypass, and API-specific attack vectors."
+---
 
 # API Fuzzing for Bug Bounty
 

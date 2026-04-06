@@ -1,5 +1,7 @@
+---
 name: browser-automation
 description: "Use when automating browsers with Playwright or Puppeteer - including web testing, scraping, selectors, waiting strategies, and anti-detection patterns."
+---
 
 # Browser Automation
 

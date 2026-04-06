@@ -1,5 +1,7 @@
+---
 name: algorithmic-art
 description: "Use when creating algorithmic/generative art with p5.js - including flow fields, particle systems, seeded randomness, and interactive parameter exploration."
+---
 
 Algorithmic philosophies are computational aesthetic movements that are then expressed through code. Output .md files (philosophy), .html files (interactive viewer), and .js files (generative algorithms).
 

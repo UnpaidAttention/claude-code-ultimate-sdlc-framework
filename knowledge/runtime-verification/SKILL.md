@@ -1,5 +1,7 @@
+---
 name: runtime-verification
 description: 8-layer runtime verification protocol for validating corrections. Use after any code fix.
+---
 
 # Runtime Verification
 

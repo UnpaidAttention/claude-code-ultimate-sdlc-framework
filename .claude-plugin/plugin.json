@@ -33,5 +33,5 @@
     "./agents/sdlc-ux.md"
   ],
   "commands": ["./commands/"],
-  "skills": ["./workflows/"]
+  "skills": ["./skills/"]
 }

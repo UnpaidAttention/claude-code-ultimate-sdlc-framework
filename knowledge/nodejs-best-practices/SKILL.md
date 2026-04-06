@@ -1,5 +1,7 @@
+---
 name: nodejs-best-practices
 description: Node.js development principles and decision-making. Use when selecting frameworks, implementing async patterns, securing Node.js applications, or designing backend architecture.
+---
 
 # Node.js Best Practices
 

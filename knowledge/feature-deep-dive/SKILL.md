@@ -1,5 +1,5 @@
 ---
-name: feature-deep-dive
+name: sdlc-feature-deep-dive
 description: Guides structured deep-dive analysis of software features. Produces 7-section analysis covering functional behavior, complete component inventories, UI placement and navigation, user journey maps, cross-feature integration points, state and data flows, and prerequisite components. Ensures no feature is shallowly specified by requiring exact component counts, concrete navigation paths, and documented error journeys.
 version: 1.0.0
 ---

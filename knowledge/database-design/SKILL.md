@@ -1,5 +1,7 @@
+---
 name: database-design
 description: Covers database schema design including normalization, entity relationships, constraints, and naming conventions. Use when designing new schemas, evaluating database technology choices, planning data relationships, optimizing queries, or reviewing existing schema designs.
+---
 
 # Database Design
 

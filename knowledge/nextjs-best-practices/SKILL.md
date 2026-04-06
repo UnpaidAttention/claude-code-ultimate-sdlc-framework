@@ -1,5 +1,7 @@
+---
 name: nextjs-best-practices
 description: Next.js App Router principles. Use when working with Server Components, implementing data fetching strategies, configuring routing, or building Next.js applications.
+---
 
 # Next.js Best Practices
 

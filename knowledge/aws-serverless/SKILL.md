@@ -1,5 +1,7 @@
+---
 name: aws-serverless
 description: "Use when building serverless applications on AWS - including Lambda functions, API Gateway, DynamoDB, SQS/SNS patterns, SAM/CDK deployment, and cold start optimization."
+---
 
 # AWS Serverless
 

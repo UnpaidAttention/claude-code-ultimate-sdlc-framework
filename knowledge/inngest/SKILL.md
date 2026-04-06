@@ -1,5 +1,7 @@
+---
 name: inngest
 description: "Use when implementing Inngest for serverless background jobs - including event-driven workflows, durable execution, and step functions without managing queues."
+---
 
 # Inngest Integration
 

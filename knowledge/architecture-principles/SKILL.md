@@ -1,5 +1,7 @@
+---
 name: architecture-principles
 description: Provides system architecture guidance including SOLID principles, layered and hexagonal patterns, and quality attribute trade-offs. Use when designing new systems, evaluating architectural decisions, reviewing system structure, or planning for scalability and maintainability.
+---
 
 # Architecture Principles
 

@@ -1,5 +1,7 @@
+---
 name: brainstorming
 description: Socratic questioning protocol and user communication. Use when handling complex requests, new features, unclear requirements, or when clarification is needed before implementation.
+---
 
 # Brainstorming & Communication Protocol
 

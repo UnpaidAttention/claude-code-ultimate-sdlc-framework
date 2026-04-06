@@ -1,5 +1,7 @@
+---
 name: ai-product
 description: "Use when building AI-powered products - including LLM integration patterns, RAG architecture, prompt engineering, AI UX design, cost optimization, and production reliability."
+---
 
 # AI Product Development
 

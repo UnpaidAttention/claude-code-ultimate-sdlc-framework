@@ -1,5 +1,7 @@
+---
 name: functional-testing
 description: Provides systematic functional testing techniques including boundary analysis, equivalence partitioning, and defect documentation. Use during Audit Track T2 phase, when verifying feature implementations against specifications, regression testing, pre-release validation, or integration point verification.
+---
 
 # Functional Testing
 

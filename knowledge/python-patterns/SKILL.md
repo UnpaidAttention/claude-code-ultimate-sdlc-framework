@@ -1,5 +1,7 @@
+---
 name: python-patterns
 description: Python development principles and decision-making. Use when selecting Python frameworks, implementing async patterns, adding type hints, or structuring Python projects.
+---
 
 # Python Patterns
 

@@ -1,5 +1,7 @@
+---
 name: voice-agents
 description: "Use when building voice AI agents - including speech-to-speech (OpenAI Realtime API), STT/LLM/TTS pipelines, latency optimization, and conversation flow."
+---
 
 # Voice Agents
 

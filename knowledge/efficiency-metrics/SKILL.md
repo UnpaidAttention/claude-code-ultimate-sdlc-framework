@@ -1,5 +1,7 @@
+---
 name: efficiency-metrics
 description: Use when completing tasks to track performance and identify bottlenecks across council workflows
+---
 
 # Efficiency Metrics
 

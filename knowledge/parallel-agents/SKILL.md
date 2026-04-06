@@ -1,5 +1,7 @@
+---
 name: parallel-agents
 description: Multi-agent orchestration patterns. Use when multiple independent tasks can run in parallel, when different domain expertise is needed, or when comprehensive analysis requires multiple perspectives.
+---
 
 # Native Parallel Agents
 

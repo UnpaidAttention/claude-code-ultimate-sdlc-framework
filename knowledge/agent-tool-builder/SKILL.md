@@ -1,5 +1,7 @@
+---
 name: agent-tool-builder
 description: "Use when building tools for AI agents - including JSON Schema design, tool descriptions, MCP protocol, validation, error handling, and function calling patterns."
+---
 
 # Agent Tool Builder
 

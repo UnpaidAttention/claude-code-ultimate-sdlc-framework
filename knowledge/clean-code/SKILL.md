@@ -1,5 +1,7 @@
+---
 name: clean-code
 description: Pragmatic coding standards for concise, direct code. Use when writing new code, refactoring existing code, or reviewing code quality to avoid over-engineering and unnecessary complexity.
+---
 
 # Clean Code - Pragmatic AI Coding Standards
 

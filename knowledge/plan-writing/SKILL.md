@@ -1,5 +1,7 @@
+---
 name: plan-writing
 description: Structured task planning with clear breakdowns and verification criteria. Use when implementing features, refactoring code, or planning any multi-step work with dependencies.
+---
 
 # Plan Writing
 

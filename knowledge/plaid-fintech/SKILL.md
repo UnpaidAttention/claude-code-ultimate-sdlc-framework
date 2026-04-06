@@ -1,5 +1,7 @@
+---
 name: plaid-fintech
 description: "Use when integrating Plaid for fintech - including Link token flows, transactions sync, identity verification, ACH, balance checks, and webhooks."
+---
 
 # Plaid Fintech
 

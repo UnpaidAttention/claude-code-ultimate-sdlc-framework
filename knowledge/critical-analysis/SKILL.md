@@ -1,6 +1,8 @@
+---
 name: critical-analysis
 description: |
   Apply rigorous logical analysis and Socratic questioning to evaluate software quality.
+---
 
   Use when: (1) Challenging assumptions about features or architecture, (2) detecting
   logical fallacies in design decisions, (3) evaluating evidence strength for claims,

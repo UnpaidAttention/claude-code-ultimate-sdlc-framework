@@ -1,6 +1,8 @@
+---
 name: systematic-evaluation
 description: |
   Apply structured frameworks for methodical quality assessment using scoring rubrics.
+---
 
   Use when: (1) Phase A3 requires quality scorecard generation, (2) weighted criteria
   evaluation for decision making, (3) checklist-based feature completeness assessment,

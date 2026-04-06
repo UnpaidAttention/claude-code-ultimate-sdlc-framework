@@ -1,5 +1,7 @@
+---
 name: voice-ai-development
 description: "Use when building voice AI applications - including OpenAI Realtime API, Vapi, Deepgram, ElevenLabs, LiveKit, and WebRTC integration."
+---
 
 # Voice AI Development
 

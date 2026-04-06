@@ -1,5 +1,7 @@
+---
 name: scroll-experience
 description: "Use when building scroll-driven web experiences - including parallax storytelling, scroll animations, interactive narratives, and cinematic websites."
+---
 
 # Scroll Experience
 

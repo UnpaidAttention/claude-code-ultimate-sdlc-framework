@@ -1,6 +1,8 @@
+---
 name: intuitive-reasoning
 description: |
   Apply pattern recognition and experiential intuition to detect software quality issues.
+---
 
   Use when: (1) Initial exploration needs "gut feeling" assessment, (2) detecting
   "something feels off" signals that warrant investigation, (3) gestalt evaluation

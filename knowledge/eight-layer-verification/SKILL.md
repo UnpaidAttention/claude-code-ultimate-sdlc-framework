@@ -1,5 +1,7 @@
+---
 name: eight-layer-verification
 description: 8-layer runtime verification protocol for validating corrections across UI, Event, Frontend, API, Backend, Service, Persistence, and Restart layers. Use after any code fix, during Validation Council correction verification, or when proving corrections work end-to-end.
+---
 
 # 8-Layer Runtime Verification Procedure
 

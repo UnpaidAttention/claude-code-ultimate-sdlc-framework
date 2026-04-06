@@ -1,5 +1,7 @@
+---
 name: algolia-search
 description: "Use when implementing Algolia search - including indexing strategies, React InstantSearch, relevance tuning, and search API integration."
+---
 
 # Algolia Search Integration
 

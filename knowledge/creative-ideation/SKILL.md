@@ -1,6 +1,8 @@
+---
 name: creative-ideation
 description: |
   Generate innovative ideas through structured creative thinking techniques.
+---
 
   Use when: (1) Phase E2 requires creative brainstorming, (2) applying SCAMPER method
   (Substitute, Combine, Adapt, Modify, Put to other uses, Eliminate, Rearrange),

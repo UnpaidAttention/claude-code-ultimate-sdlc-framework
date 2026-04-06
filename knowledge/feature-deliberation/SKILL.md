@@ -1,5 +1,7 @@
+---
 name: feature-deliberation
 description: Provides framework for evaluating feature trade-offs and building stakeholder consensus. Use during MVP scoping decisions, feature prioritization sessions, resolving competing feature requests, post-discovery scope refinement, or Planning Phase 1.5 deliberation.
+---
 
 # Feature Deliberation
 

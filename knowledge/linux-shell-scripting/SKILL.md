@@ -1,5 +1,7 @@
+---
 name: Linux Production Shell Scripts
 description: "Use when writing Linux shell scripts - including backup scripts, system monitoring, user management, log analysis, and production automation templates."
+---
 
 # Linux Production Shell Scripts
 

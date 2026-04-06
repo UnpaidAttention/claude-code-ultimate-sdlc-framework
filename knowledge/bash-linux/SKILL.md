@@ -1,5 +1,7 @@
+---
 name: bash-linux
 description: Bash and Linux terminal patterns. Use when working on macOS or Linux systems, writing shell scripts, handling piping, or troubleshooting terminal commands.
+---
 
 # Bash Linux Patterns
 

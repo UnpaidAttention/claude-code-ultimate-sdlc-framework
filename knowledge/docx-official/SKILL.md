@@ -1,5 +1,7 @@
+---
 name: docx
 description: "Use when working with Word documents (.docx) - including document creation, editing, tracked changes, comments, formatting preservation, and text extraction."
+---
 
 # DOCX creation, editing, and analysis
 

@@ -1,5 +1,7 @@
+---
 name: regression-validation
 description: Ensure corrections and code changes don't break existing functionality. Use during Validation Council Gate C4, after applying corrections, when running regression test suites, or when verifying that fixes in one area haven't introduced defects elsewhere.
+---
 
 # Regression Validation
 

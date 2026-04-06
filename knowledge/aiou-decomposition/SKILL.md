@@ -1,5 +1,7 @@
+---
 name: aiou-decomposition
 description: Decomposes features into AI-Implementable Operational Units with dependency ordering and wave assignment. Use during Planning Phase 3.5, when breaking features into development tasks, ordering work by dependencies for parallel execution, estimating project effort, or creating implementation roadmaps.
+---
 
 # AIOU Decomposition
 

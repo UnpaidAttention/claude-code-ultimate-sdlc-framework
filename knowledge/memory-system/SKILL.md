@@ -1,5 +1,7 @@
+---
 name: memory-system
 description: Use when learning from past work, recording decisions, or retrieving patterns for current tasks
+---
 
 # Three-Tier Memory System
 

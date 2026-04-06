@@ -1,6 +1,8 @@
+---
 name: regression-testing
 description: |
   Verify existing functionality remains intact after changes through systematic re-testing.
+---
 
   Use when: (1) Bug fixes need validation that they don't break related functionality,
   (2) New features require testing at integration points, (3) Refactoring requires full

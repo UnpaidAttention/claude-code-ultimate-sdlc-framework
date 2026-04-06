@@ -1,5 +1,7 @@
+---
 name: agent-memory-systems
 description: "Use when designing memory systems for AI agents - including short-term context, long-term vector stores, chunking strategies, embedding models, and retrieval architectures."
+---
 
 # Agent Memory Systems
 

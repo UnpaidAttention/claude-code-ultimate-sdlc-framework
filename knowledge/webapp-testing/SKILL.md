@@ -1,5 +1,7 @@
+---
 name: webapp-testing
 description: Web application testing principles. Use when writing E2E tests, configuring Playwright, performing deep audits, or implementing comprehensive web application test coverage.
+---
 
 # Web App Testing
 

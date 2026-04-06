@@ -1,5 +1,7 @@
+---
 name: requirements-engineering
 description: Guides requirements gathering and documentation using elicitation techniques, INVEST criteria, and prioritization frameworks. Use when clarifying project scope, writing user stories, creating acceptance criteria, or establishing requirement traceability during discovery phases.
+---
 
 # Requirements Engineering
 

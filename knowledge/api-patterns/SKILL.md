@@ -1,5 +1,7 @@
+---
 name: api-patterns
 description: Guides API development decisions including REST vs GraphQL selection, versioning strategies, authentication patterns, and error handling. Use when designing new APIs, choosing API styles, planning versioning, implementing auth, or troubleshooting API integration issues.
+---
 
 # API Patterns
 

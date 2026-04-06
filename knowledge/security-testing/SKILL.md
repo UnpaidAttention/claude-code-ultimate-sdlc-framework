@@ -1,6 +1,8 @@
+---
 name: security-testing
 description: |
   Identify security vulnerabilities including OWASP Top 10 and authentication flaws.
+---
 
   Use when: (1) Phase T5 requires security assessment, (2) testing for SQL injection,
   XSS, and other injection attacks, (3) validating authentication and session management,

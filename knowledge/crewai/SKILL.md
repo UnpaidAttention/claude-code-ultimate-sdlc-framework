@@ -1,5 +1,7 @@
+---
 name: crewai
 description: "Use when building multi-agent systems with CrewAI - including agent roles/goals, task definition, crew orchestration, process types, and memory systems."
+---
 
 # CrewAI
 

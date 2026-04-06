@@ -1,5 +1,7 @@
+---
 name: typescript-expert
 description: TypeScript and JavaScript expert. Use when working with complex types, type-level programming, build performance, monorepo management, migration strategies, or debugging TypeScript issues.
+---
 
 # TypeScript Expert
 

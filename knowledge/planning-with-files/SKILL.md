@@ -1,5 +1,7 @@
+---
 name: planning-with-files
 description: File-based planning for complex tasks. Use when starting complex multi-step tasks, research projects, or any task requiring more than five tool calls to track progress systematically.
+---
 
 # Planning with Files
 

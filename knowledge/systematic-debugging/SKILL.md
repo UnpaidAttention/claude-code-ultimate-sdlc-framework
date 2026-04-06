@@ -1,5 +1,7 @@
+---
 name: systematic-debugging
 description: Four-phase systematic debugging methodology with root cause analysis. Use when encountering any bug, test failure, or unexpected behavior to find and fix the actual cause.
+---
 
 # Systematic Debugging
 

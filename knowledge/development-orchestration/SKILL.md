@@ -1,5 +1,7 @@
+---
 name: development-orchestration
 description: Orchestrates Development Council waves and coordinates AIOU execution. Use when running Development Council.
+---
 
 # Development Orchestration
 

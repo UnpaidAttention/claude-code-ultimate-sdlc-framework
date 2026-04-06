@@ -1,5 +1,7 @@
+---
 name: edge-case-handling
 description: Systematically identify and handle unusual inputs, boundary conditions, and unexpected scenarios. Use during Audit Council quality assessment, when cataloguing edge cases, designing defensive error handling, or validating robustness beyond happy-path testing.
+---
 
 # Edge Case Handling
 

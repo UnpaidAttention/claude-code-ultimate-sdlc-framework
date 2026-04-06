@@ -1,5 +1,7 @@
+---
 name: mcp-builder
 description: MCP (Model Context Protocol) server building principles. Use when building MCP servers, designing tools and resources, or implementing MCP protocol patterns.
+---
 
 # MCP Builder
 

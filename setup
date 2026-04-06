@@ -227,7 +227,7 @@ ok "Installed $RULE_COUNT rule(s)"
 
 # ── Count commands and skills ───────────────────────────────────────
 COMMAND_COUNT=$(find "$PLUGIN_CACHE/commands" -name "*.md" 2>/dev/null | wc -l)
-SKILL_COUNT=$(find "$PLUGIN_CACHE/workflows" -name "SKILL.md" 2>/dev/null | wc -l)
+SKILL_COUNT=$(find "$PLUGIN_CACHE/skills" -name "SKILL.md" 2>/dev/null | wc -l)
 
 # ── Summary ──────────────────────────────────────────────────────────
 echo ""

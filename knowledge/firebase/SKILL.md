@@ -1,5 +1,7 @@
+---
 name: firebase
 description: "Use when building with Firebase - including Authentication, Firestore, Realtime Database, Cloud Functions, Cloud Storage, security rules, and hosting."
+---
 
 # Firebase
 

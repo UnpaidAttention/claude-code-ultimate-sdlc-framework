@@ -1,5 +1,7 @@
+---
 name: rarv-cycle
 description: Use before every significant action to ensure deliberate reasoning and verification
+---
 
 # RARV Cycle - Reason, Act, Reflect, Verify
 

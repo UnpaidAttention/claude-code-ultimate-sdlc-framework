@@ -1,5 +1,7 @@
+---
 name: file-uploads
 description: "Use when handling file uploads and cloud storage - including S3, Cloudflare R2, presigned URLs, multipart uploads, and image optimization."
+---
 
 # File Uploads & Storage
 

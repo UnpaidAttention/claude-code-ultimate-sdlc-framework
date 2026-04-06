@@ -1,5 +1,7 @@
+---
 name: docker-expert
 description: Docker containerization expert. Use when optimizing Dockerfiles, debugging container issues, reducing image sizes, hardening security, configuring networking, or orchestrating with Docker Compose.
+---
 
 # Docker Expert
 

@@ -1,5 +1,7 @@
+---
 name: behavioral-modes
 description: AI operational modes for different task types. Use when needing to switch between brainstorm, implement, debug, review, teach, ship, or orchestrate modes.
+---
 
 # Behavioral Modes - Adaptive AI Operating Modes
 

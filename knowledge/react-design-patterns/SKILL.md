@@ -1,5 +1,7 @@
+---
 name: react-design-patterns
 description: React component architecture, UI state management, and design patterns. Use when implementing React hooks, component composition, TypeScript integration, loading states, error handling, empty states, form submission, or data fetching UI patterns.
+---
 
 # React Design Patterns
 

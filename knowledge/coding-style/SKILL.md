@@ -1,5 +1,7 @@
+---
 name: coding-style
 description: Naming conventions, formatting, and commenting standards. Use when starting implementation, naming functions or variables, deciding file organization, or writing and reviewing code.
+---
 
 # Skill: Coding Style
 

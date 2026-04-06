@@ -1,5 +1,7 @@
+---
 name: server-management
 description: Server management principles and decision-making. Use when managing processes, setting up monitoring, making scaling decisions, or configuring production servers.
+---
 
 # Server Management
 

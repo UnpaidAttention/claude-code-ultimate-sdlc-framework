@@ -1,5 +1,7 @@
+---
 name: prompt-caching
 description: "Use when implementing LLM prompt caching - including Anthropic prompt caching, response caching, semantic similarity caching, and Cache Augmented Generation (CAG)."
+---
 
 # Prompt Caching
 

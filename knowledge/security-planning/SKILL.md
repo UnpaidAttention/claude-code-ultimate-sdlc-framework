@@ -1,5 +1,7 @@
+---
 name: security-planning
 description: Provides security requirements analysis including STRIDE threat modeling, OWASP Top 10 mitigations, and authentication/authorization patterns. Use when designing authentication systems, planning data protection, analyzing security requirements, or conducting threat modeling during planning phases.
+---
 
 # Security Planning
 

@@ -1,5 +1,7 @@
+---
 name: nextjs-supabase-auth
 description: "Use when integrating Supabase Auth with Next.js App Router - including middleware, Server Components, Client Components, and protected routes."
+---
 
 # Next.js + Supabase Auth
 

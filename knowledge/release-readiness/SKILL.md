@@ -1,5 +1,7 @@
+---
 name: release-readiness
 description: Final verification that software is ready for production release. Use during Validation Council Gate S2, when preparing launch checklists, verifying all quality gates passed, checking deployment prerequisites, and confirming documentation and rollback procedures are complete.
+---
 
 # Release Readiness
 

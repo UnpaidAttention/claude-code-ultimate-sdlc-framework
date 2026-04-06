@@ -1,5 +1,7 @@
+---
 name: Top 100 Web Vulnerabilities Reference
 description: "Use for web vulnerability reference - including OWASP-aligned taxonomy, injection attacks, access control, API security, and mitigation strategies."
+---
 
 # Top 100 Web Vulnerabilities Reference
 

@@ -1,5 +1,7 @@
+---
 name: rag-engineer
 description: "Use when building RAG systems - including embedding models, vector databases, chunking strategies, semantic search, and retrieval optimization."
+---
 
 # RAG Engineer
 

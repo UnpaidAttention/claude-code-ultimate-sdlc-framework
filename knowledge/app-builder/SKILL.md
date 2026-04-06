@@ -1,5 +1,7 @@
+---
 name: app-builder
 description: Main application building orchestrator. Use when creating full-stack applications from natural language requests, determining project types, selecting tech stacks, or coordinating multi-agent workflows.
+---
 
 # App Builder - Application Building Orchestrator
 

@@ -1,5 +1,7 @@
+---
 name: internal-comms
 description: "Use when writing internal communications - including 3P updates, status reports, leadership updates, company newsletters, FAQs, incident reports, and project updates."
+---
 
 ## When to use this skill
 To write internal communications, use this skill for:

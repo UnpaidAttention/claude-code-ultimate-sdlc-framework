@@ -1,5 +1,7 @@
+---
 name: context-window-management
 description: "Use when managing LLM context windows - including summarization, trimming, routing, avoiding context rot, and optimizing token usage."
+---
 
 # Context Window Management
 

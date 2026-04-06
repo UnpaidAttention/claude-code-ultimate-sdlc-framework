@@ -1,5 +1,7 @@
+---
 name: personal-tool-builder
 description: "Use when building personal tools to solve your own problems - including rapid prototyping, local-first apps, CLI tools, and scripts that grow into products."
+---
 
 # Personal Tool Builder
 

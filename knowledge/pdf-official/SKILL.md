@@ -1,5 +1,7 @@
+---
 name: pdf
 description: "Use when working with PDF files - including text/table extraction, PDF creation, merging/splitting documents, form filling, and document analysis."
+---
 
 # PDF Processing Guide
 

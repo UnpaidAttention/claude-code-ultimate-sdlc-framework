@@ -1,5 +1,7 @@
+---
 name: completeness-matrix
 description: Evaluate features across 10 quality dimensions for comprehensive completeness assessment. Use during Audit Council Phase A2, when scoring feature quality, assessing gaps across functional, error-handling, edge-case, validation, accessibility, performance, security, logging, documentation, and testing dimensions.
+---
 
 # Completeness Matrix
 

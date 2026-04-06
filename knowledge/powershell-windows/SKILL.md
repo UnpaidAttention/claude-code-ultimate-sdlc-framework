@@ -1,5 +1,7 @@
+---
 name: powershell-windows
 description: PowerShell Windows patterns. Use when working on Windows systems, writing PowerShell scripts, handling operator syntax pitfalls, or implementing error handling.
+---
 
 # PowerShell Windows Patterns
 

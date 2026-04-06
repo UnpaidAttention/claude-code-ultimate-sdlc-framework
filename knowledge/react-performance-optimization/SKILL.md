@@ -1,5 +1,7 @@
+---
 name: react-performance-optimization
 description: React and Next.js performance optimization guidelines from Vercel Engineering. Use when optimizing React/Next.js performance, eliminating waterfalls, reducing bundle size, improving server-side rendering, or refactoring for re-render efficiency. Covers 45 rules across 8 priority categories.
+---
 
 # React Performance Optimization
 

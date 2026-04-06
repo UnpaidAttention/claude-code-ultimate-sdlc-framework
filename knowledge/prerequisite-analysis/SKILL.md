@@ -1,5 +1,7 @@
+---
 name: prerequisite-analysis
 description: Verify all dependencies and prerequisites exist before making code changes. Use when starting a new development task, before implementing corrections, or when checking that APIs, databases, libraries, and configurations are in place before writing code.
+---
 
 # Prerequisite Analysis
 

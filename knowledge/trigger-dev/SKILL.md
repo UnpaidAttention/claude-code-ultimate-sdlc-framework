@@ -1,5 +1,7 @@
+---
 name: trigger-dev
 description: "Use when implementing Trigger.dev for background jobs - including AI workflows, long-running tasks, and TypeScript-first async execution."
+---
 
 # Trigger.dev Integration
 

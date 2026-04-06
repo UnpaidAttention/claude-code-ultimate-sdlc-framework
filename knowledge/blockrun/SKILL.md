@@ -1,5 +1,7 @@
+---
 name: blockrun
 description: External model integration for capabilities Claude lacks. Use when user needs image generation, real-time X/Twitter data, or explicitly requests external models like Grok, GPT, DALL-E, or DeepSeek.
+---
 
 # BlockRun
 

@@ -1,6 +1,8 @@
+---
 name: error-handling
 description: |
   Implement robust error handling and recovery patterns.
+---
 
   Use when: (1) Designing error handling strategy for services,
   (2) Implementing API error responses,

@@ -1,5 +1,7 @@
+---
 name: planning-orchestration
 description: Orchestrates multi-phase planning sessions with specialist agent coordination and quality gates. Use when running Planning Council sessions, transitioning between planning phases, coordinating multiple agents, preparing Development Council handoffs, or recovering from interrupted planning sessions.
+---
 
 # Planning Orchestration
 

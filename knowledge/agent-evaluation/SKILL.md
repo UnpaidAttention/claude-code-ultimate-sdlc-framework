@@ -1,5 +1,7 @@
+---
 name: agent-evaluation
 description: "Use when testing and benchmarking LLM agents - including behavioral testing, capability assessment, reliability metrics, regression testing, and production monitoring."
+---
 
 # Agent Evaluation
 

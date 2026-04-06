@@ -1,5 +1,7 @@
+---
 name: conversation-memory
 description: "Use when implementing persistent memory for LLM conversations - including short-term, long-term, and entity-based memory systems."
+---
 
 # Conversation Memory
 

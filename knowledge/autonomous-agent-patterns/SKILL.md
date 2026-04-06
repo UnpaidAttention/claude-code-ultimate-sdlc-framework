@@ -1,5 +1,7 @@
+---
 name: autonomous-agent-patterns
 description: "Design patterns for building autonomous coding agents. Covers tool integration, permission systems, browser automation, human-in-the-loop workflows, ReAct loops, Plan-Execute patterns, goal decomposition, reflection, and production reliability strategies. Use when building AI agents, designing tool APIs, implementing permission systems, creating autonomous coding assistants, or designing agent guardrails."
+---
 
 # 🕹️ Autonomous Agent Patterns
 

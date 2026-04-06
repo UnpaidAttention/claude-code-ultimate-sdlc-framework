@@ -1,4 +1,6 @@
+---
 description: Master orchestration skill for the validation and perfection workflow. Coordinates intent extraction, gap analysis, correction planning, production hardening, and release readiness across all validation tracks.
+---
 
 # Validation & Perfection Orchestration
 

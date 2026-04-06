@@ -1,6 +1,8 @@
+---
 name: feature-ideation
 description: |
   Generate innovative feature ideas to enhance products beyond current capabilities.
+---
 
   Use when: (1) Phase E1 requires opportunity discovery, (2) mining user needs, pain
   points, and workarounds for ideas, (3) competitor gap analysis, (4) applying feature

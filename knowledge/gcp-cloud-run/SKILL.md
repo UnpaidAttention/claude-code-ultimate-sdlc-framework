@@ -1,5 +1,7 @@
+---
 name: gcp-cloud-run
 description: "Use when deploying to GCP Cloud Run - including containerized services, event-driven functions, cold start optimization, and Pub/Sub integration."
+---
 
 # GCP Cloud Run
 

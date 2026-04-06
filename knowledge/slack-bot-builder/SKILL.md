@@ -1,5 +1,7 @@
+---
 name: slack-bot-builder
 description: "Use when building Slack apps with Bolt framework - including Block Kit, interactive components, slash commands, event handling, and OAuth flows."
+---
 
 # Slack Bot Builder
 

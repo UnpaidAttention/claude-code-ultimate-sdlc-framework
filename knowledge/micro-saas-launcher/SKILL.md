@@ -1,5 +1,7 @@
+---
 name: micro-saas-launcher
 description: "Use when launching micro-SaaS products - including idea validation, MVP development, pricing, launch strategies, and growing to sustainable indie hacker revenue."
+---
 
 # Micro-SaaS Launcher
 

@@ -1,6 +1,8 @@
+---
 name: performance-testing
 description: |
   Evaluate system performance under load including response times, throughput, and resources.
+---
 
   Use when: (1) Phase T5 requires performance and load testing, (2) validating response
   time targets (P50, P95, P99), (3) stress testing to find system breaking points,

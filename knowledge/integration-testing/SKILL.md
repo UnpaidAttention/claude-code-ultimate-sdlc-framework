@@ -1,6 +1,8 @@
+---
 name: integration-testing
 description: |
   Test interactions between system components including API contracts and data flow.
+---
 
   Use when: (1) Phase T4 requires cross-component testing, (2) API contract verification
   between frontend and backend, (3) Database integration testing for data persistence,

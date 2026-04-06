@@ -1,5 +1,7 @@
+---
 name: architecture
 description: Architectural decision-making framework. Use when making architecture decisions, analyzing system design, evaluating trade-offs, or documenting ADRs.
+---
 
 # Architecture Decision Framework
 

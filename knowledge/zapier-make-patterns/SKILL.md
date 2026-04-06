@@ -1,5 +1,7 @@
+---
 name: zapier-make-patterns
 description: "Use when building no-code automations with Zapier or Make - including Zap/Scenario design, integration patterns, and knowing when to graduate to code."
+---
 
 # Zapier & Make Patterns
 

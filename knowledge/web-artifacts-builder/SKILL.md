@@ -1,5 +1,7 @@
+---
 name: web-artifacts-builder
 description: "Use when building complex HTML artifacts with React, Tailwind, and shadcn/ui - including state management, routing, and multi-component designs."
+---
 
 # Web Artifacts Builder
 

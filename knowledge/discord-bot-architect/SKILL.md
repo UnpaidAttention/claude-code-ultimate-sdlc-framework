@@ -1,5 +1,7 @@
+---
 name: discord-bot-architect
 description: "Use when building Discord bots - including Discord.js, Pycord, gateway intents, slash commands, interactive components, rate limiting, and sharding."
+---
 
 # Discord Bot Architect
 

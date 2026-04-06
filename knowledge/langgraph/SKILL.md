@@ -1,5 +1,7 @@
+---
 name: langgraph
 description: "Use when building stateful AI agents with LangGraph - including graph construction, state management, persistence, human-in-the-loop patterns, and ReAct agents."
+---
 
 # LangGraph
 

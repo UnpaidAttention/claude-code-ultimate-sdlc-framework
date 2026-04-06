@@ -1,5 +1,7 @@
+---
 name: component-patterns
 description: Covers UI component design patterns including composition, props design, state management, and testing strategies. Use when building UI components during Wave 5, designing component architecture, reviewing frontend code, establishing component library patterns, or refactoring complex components.
+---
 
 # Component Patterns
 

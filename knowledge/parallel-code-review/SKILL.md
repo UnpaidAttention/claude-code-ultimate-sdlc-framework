@@ -1,5 +1,7 @@
+---
 name: parallel-code-review
 description: Use when code needs review before commit or merge to catch issues through diverse perspectives
+---
 
 # Parallel 3-Reviewer Code Review
 

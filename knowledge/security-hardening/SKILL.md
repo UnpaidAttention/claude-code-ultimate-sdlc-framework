@@ -1,5 +1,7 @@
+---
 name: security-hardening
 description: Security hardening procedures for production deployment. Use when preparing for security gates, hardening application surfaces, implementing OWASP Top 10 mitigations, reviewing authentication and authorization, or running security checklists before launch.
+---
 
 # Security Hardening
 

@@ -1,5 +1,7 @@
+---
 name: tailwind-patterns
 description: Tailwind CSS v4 principles and patterns. Use when configuring Tailwind, implementing container queries, setting up design tokens, or applying utility-first CSS patterns.
+---
 
 # Tailwind CSS Patterns (v4 - 2025)
 

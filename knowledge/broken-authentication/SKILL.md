@@ -1,5 +1,7 @@
+---
 name: Broken Authentication Testing
 description: "Use when testing for authentication vulnerabilities - including session management, credential stuffing, password policies, session fixation, and authentication bypass."
+---
 
 # Broken Authentication Testing
 

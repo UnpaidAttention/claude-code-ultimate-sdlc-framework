@@ -1,5 +1,7 @@
+---
 name: rag-implementation
 description: "Use when implementing RAG patterns - including chunking strategies, embeddings, vector stores, retrieval optimization, and reranking."
+---
 
 # RAG Implementation
 

@@ -1,5 +1,7 @@
+---
 name: operational-assessment
 description: Evaluate production readiness across logging, monitoring, alerting, and recovery dimensions. Use during Audit Council operations review, when assessing deployment readiness, reviewing observability gaps, or checking disaster recovery and incident response procedures.
+---
 
 # Operational Assessment
 

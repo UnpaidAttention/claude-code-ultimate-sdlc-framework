@@ -1,6 +1,8 @@
+---
 name: usability-audit
 description: |
   Evaluate software usability using Nielsen's 10 heuristics and user-centered criteria.
+---
 
   Use when: (1) Phase T3 requires usability evaluation, (2) assessing visibility of
   system status and feedback, (3) checking consistency and standards across UI,

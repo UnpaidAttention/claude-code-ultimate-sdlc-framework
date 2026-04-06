@@ -1,6 +1,8 @@
+---
 name: gap-analysis
 description: |
   Systematically identify gaps between current and ideal software state.
+---
 
   Use when: (1) Phase A2 requires completeness audit, (2) discovering missing
   functional capabilities, (3) identifying usability gaps and friction points,

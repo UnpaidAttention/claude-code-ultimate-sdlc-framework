@@ -1,4 +1,6 @@
+---
 description: Refine user experience to professional, delightful standard. Covers visual polish, interaction refinement, micro-animations, accessibility compliance, and UX quality assessment.
+---
 
 # UX Polish
 

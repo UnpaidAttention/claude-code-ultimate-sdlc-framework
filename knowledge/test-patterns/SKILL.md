@@ -1,5 +1,7 @@
+---
 name: test-patterns
 description: Covers testing patterns including unit test structures, mocking strategies, fixtures, test organization, and the testing pyramid. Use when writing unit tests for new code, creating integration tests, setting up test infrastructure, refactoring test suites, establishing testing standards, reviewing test quality, or choosing the right test type.
+---
 
 # Test Patterns
 

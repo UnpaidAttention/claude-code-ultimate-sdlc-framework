@@ -1,5 +1,7 @@
+---
 name: stripe-integration
 description: "Use when integrating Stripe payments - including subscriptions, billing portal, webhooks, metered billing, Stripe Connect, and handling payment edge cases."
+---
 
 # Stripe Integration
 

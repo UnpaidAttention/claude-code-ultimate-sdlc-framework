@@ -1,5 +1,7 @@
+---
 name: seo-fundamentals
 description: SEO fundamentals and Google algorithm principles. Use when optimizing for search engines, implementing E-E-A-T signals, improving Core Web Vitals, or analyzing search visibility.
+---
 
 # SEO Fundamentals
 

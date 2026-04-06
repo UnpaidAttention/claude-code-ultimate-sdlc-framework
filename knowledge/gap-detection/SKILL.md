@@ -1,4 +1,6 @@
+---
 description: Systematically compare intended functionality to actual implementation and identify all gaps. Covers gap detection methodology, completeness assessment, and gap classification for correction planning.
+---
 
 # Gap Detection
 

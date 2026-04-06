@@ -1,5 +1,7 @@
+---
 name: correction-planning
 description: Create prioritized correction plans for identified defects and gaps. Use during Validation Council C1-C2 phases, when triaging audit defects, planning fix implementation order, estimating correction effort, and establishing verification criteria for each fix.
+---
 
 # Correction Planning
 

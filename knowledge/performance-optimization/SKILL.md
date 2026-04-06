@@ -1,5 +1,7 @@
+---
 name: performance-optimization
 description: Identify and resolve performance bottlenecks across frontend rendering, API latency, database queries, and memory usage. Use during Enhancement Council phases, when profiling application performance, optimizing critical paths, or establishing performance budgets and targets.
+---
 
 # Performance Optimization
 

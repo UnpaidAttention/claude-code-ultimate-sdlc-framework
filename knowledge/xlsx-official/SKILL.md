@@ -1,5 +1,7 @@
+---
 name: xlsx
 description: "Use when working with spreadsheets (.xlsx, .xlsm, .csv) - including formulas, formatting, data analysis, visualization, and formula recalculation."
+---
 
 # Requirements for Outputs
 

@@ -275,7 +275,7 @@ Per-project state lives in `.ultimate-sdlc/` within your project directory:
 │   ├── sdlc-state               # Project state management
 │   ├── sdlc-uninstall           # Clean removal
 │   └── sdlc-patch-names         # Toggle short/namespaced naming
-├── workflows/                   # 167 invokable workflow skills
+├── skills/                      # 167 invokable workflow skills
 ├── knowledge/                   # 240 reference knowledge skills
 ├── agents/                      # 8 focus lens agent definitions
 ├── context/                     # Gate criteria, governance modes, state management

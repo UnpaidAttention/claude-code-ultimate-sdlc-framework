@@ -1,5 +1,7 @@
+---
 name: computer-use-agents
 description: Build AI agents that interact with computers like humans. Use when building computer use agents, desktop automation, screen control AI, vision-based agents, or GUI automation systems.
+---
 
 # Computer Use Agents
 

@@ -1,5 +1,7 @@
+---
 name: documentation-standards
 description: Establishes standards for technical documentation including READMEs, API docs, ADRs, and user guides. Use when writing project specifications, creating API documentation, documenting architecture decisions, preparing handoff documents, or establishing documentation conventions.
+---
 
 # Documentation Standards
 

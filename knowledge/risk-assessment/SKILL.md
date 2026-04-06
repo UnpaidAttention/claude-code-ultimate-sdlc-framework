@@ -1,6 +1,8 @@
+---
 name: risk-assessment
 description: |
   Identify, analyze, and plan mitigation for project risks.
+---
 
   Use when: (1) Starting Phase 1.5 Deliberation to assess project risks,
   (2) Evaluating technical decisions for potential downsides,

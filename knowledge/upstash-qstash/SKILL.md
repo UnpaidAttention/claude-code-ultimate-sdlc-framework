@@ -1,5 +1,7 @@
+---
 name: upstash-qstash
 description: "Use when implementing Upstash QStash for serverless message queues - including scheduled jobs, HTTP-based task delivery, and reliable messaging."
+---
 
 # Upstash QStash
 

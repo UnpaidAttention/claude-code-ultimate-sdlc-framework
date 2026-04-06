@@ -1,5 +1,7 @@
+---
 name: feature-richness
 description: Compare features against best-in-class industry standards and identify enhancement opportunities. Use during Enhancement Council phases, when benchmarking feature quality, assessing competitive gaps, or planning feature improvements beyond minimum viable implementation.
+---
 
 # Feature Richness
 

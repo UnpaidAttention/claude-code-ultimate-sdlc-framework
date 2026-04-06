@@ -1,5 +1,7 @@
+---
 name: email-systems
 description: "Use when building email infrastructure - including transactional email, marketing automation, SPF/DKIM/DMARC, deliverability optimization, and inbox placement."
+---
 
 # Email Systems
 

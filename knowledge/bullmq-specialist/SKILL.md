@@ -1,5 +1,7 @@
+---
 name: bullmq-specialist
 description: "Use when implementing BullMQ for Redis-backed job queues - including background processing, worker concurrency, job flows, and reliable async execution in Node.js/TypeScript."
+---
 
 # BullMQ Specialist
 

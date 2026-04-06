@@ -50,7 +50,7 @@ patch_skill_file() {
 echo "Patching skill names (mode: ${NAMING_MODE}) ..."
 
 # Patch workflow skills
-for skill_file in "$SCRIPT_DIR/workflows"/*/SKILL.md; do
+for skill_file in "$SCRIPT_DIR/skills"/*/SKILL.md; do
     patch_skill_file "$skill_file"
 done
 

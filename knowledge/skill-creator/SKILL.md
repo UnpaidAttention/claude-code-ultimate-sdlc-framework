@@ -1,5 +1,7 @@
+---
 name: skill-creator
 description: "Use when creating or updating skills - including specialized knowledge packages, workflows, and tool integrations that extend Claude's capabilities."
+---
 
 # Skill Creator
 

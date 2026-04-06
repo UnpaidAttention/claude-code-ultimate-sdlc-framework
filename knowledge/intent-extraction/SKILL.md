@@ -1,5 +1,7 @@
+---
 name: intent-extraction
 description: Extract and analyze user intent from requirements, feature requests, and existing code. Use during Discovery phase, when decomposing ambiguous requirements, clarifying stakeholder needs, establishing feature acceptance criteria, or determining what a feature SHOULD do before validating what it DOES.
+---
 
 # Intent Extraction
 

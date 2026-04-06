@@ -1,5 +1,7 @@
+---
 name: graphql
 description: "Use when building GraphQL APIs - including schema design, resolvers, DataLoader for N+1 prevention, federation, and Apollo/urql client integration."
+---
 
 # GraphQL
 

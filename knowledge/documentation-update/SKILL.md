@@ -1,5 +1,7 @@
+---
 name: documentation-update
 description: Keep all documentation synchronized with code changes across README, API docs, changelogs, and inline comments. Use after implementing corrections or enhancements, during release preparation, or when auditing documentation freshness and accuracy.
+---
 
 # Documentation Update
 

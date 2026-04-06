@@ -1,5 +1,7 @@
+---
 name: tdd-workflow
 description: Test-Driven Development workflow with RED-GREEN-REFACTOR cycle. Use when implementing any feature or bugfix to write tests first and verify through the TDD methodology.
+---
 
 # Test-Driven Development (TDD)
 

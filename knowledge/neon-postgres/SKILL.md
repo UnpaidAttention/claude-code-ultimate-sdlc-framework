@@ -1,5 +1,7 @@
+---
 name: neon-postgres
 description: "Use when working with Neon serverless Postgres - including database branching, connection pooling, and Prisma/Drizzle integration."
+---
 
 # Neon Postgres
 

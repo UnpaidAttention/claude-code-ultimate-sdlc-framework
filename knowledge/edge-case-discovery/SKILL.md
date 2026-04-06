@@ -1,6 +1,8 @@
+---
 name: edge-case-discovery
 description: |
   Systematically discover edge cases, boundary conditions, and unusual scenarios.
+---
 
   Use when: (1) Testing requires boundary value analysis, (2) identifying input
   boundaries (empty, max length, special characters), (3) exploring state boundaries

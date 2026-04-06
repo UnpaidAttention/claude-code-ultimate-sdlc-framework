@@ -1,5 +1,7 @@
+---
 name: targeted-correction
 description: Systematic defect correction with before/after evidence. Use during Validation C1 phase.
+---
 
 # Targeted Correction
 

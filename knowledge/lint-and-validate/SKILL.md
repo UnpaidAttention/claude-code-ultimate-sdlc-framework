@@ -1,5 +1,7 @@
+---
 name: lint-and-validate
 description: Automatic quality control, linting, and static analysis. Use after code modifications to ensure syntax correctness, run formatters, check types, or validate project standards.
+---
 
 # Lint and Validate Skill
 

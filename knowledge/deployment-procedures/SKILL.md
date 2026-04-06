@@ -1,5 +1,7 @@
+---
 name: deployment-procedures
 description: Production deployment principles and decision-making. Use when deploying to production, planning rollback strategies, verifying deployments, or establishing safe deployment workflows.
+---
 
 # Deployment Procedures
 

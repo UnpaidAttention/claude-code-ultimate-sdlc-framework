@@ -1,5 +1,7 @@
+---
 name: performance-profiling
 description: Performance profiling principles. Use when measuring application performance, analyzing bottlenecks, running Lighthouse audits, or optimizing response times.
+---
 
 # Performance Profiling
 

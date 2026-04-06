@@ -1,5 +1,7 @@
+---
 name: Security Scanning Tools
 description: "Use when performing security scans - including network port scanning, vulnerability assessment, web app testing, wireless scanning, and compliance validation."
+---
 
 # Security Scanning Tools
 

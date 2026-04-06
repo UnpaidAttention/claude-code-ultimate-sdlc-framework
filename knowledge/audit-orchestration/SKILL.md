@@ -1,5 +1,7 @@
+---
 name: audit-orchestration
 description: Orchestrates Audit Council tracks and coordinates quality assessment. Use when running Audit Council.
+---
 
 # Audit Orchestration
 

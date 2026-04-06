@@ -1,3 +1,4 @@
+---
 name: shadcn-ui
 description: Expert guidance for integrating and building applications with shadcn/ui components, including component discovery, installation, customization, and best practices.
 allowed-tools:
@@ -7,6 +8,7 @@ allowed-tools:
   - "Write"
   - "Bash"
   - "web_fetch"
+---
 
 # shadcn/ui Component Integration
 

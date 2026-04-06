@@ -1,5 +1,7 @@
+---
 name: ai-wrapper-product
 description: "Use when building products that wrap AI APIs (OpenAI, Anthropic) - including prompt engineering, cost management, rate limiting, and creating defensible AI SaaS businesses."
+---
 
 # AI Wrapper Product
 

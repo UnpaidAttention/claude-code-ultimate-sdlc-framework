@@ -1,5 +1,7 @@
+---
 name: telegram-bot-builder
 description: "Use when building Telegram bots - including Bot API, conversation design, AI-powered bots, monetization, and scaling to thousands of users."
+---
 
 # Telegram Bot Builder
 

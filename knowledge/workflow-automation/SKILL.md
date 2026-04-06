@@ -1,5 +1,7 @@
+---
 name: workflow-automation
 description: "Use when building workflow automation - including n8n, Temporal, Inngest, durable execution patterns, and sequential/parallel workflow design."
+---
 
 # Workflow Automation
 

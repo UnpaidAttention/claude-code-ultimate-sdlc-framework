@@ -1,6 +1,8 @@
+---
 name: navigation-flow
 description: |
   Analyze user navigation paths and information architecture for efficiency.
+---
 
   Use when: (1) Phase T3 requires navigation mapping, (2) documenting all screens and
   page states, (3) identifying dead ends and circular navigation, (4) evaluating

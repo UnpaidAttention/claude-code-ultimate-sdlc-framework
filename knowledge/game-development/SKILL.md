@@ -1,5 +1,7 @@
+---
 name: game-development
 description: Game development orchestrator. Use when building games, implementing game mechanics, or needing guidance on platform-specific game development patterns.
+---
 
 # Game Development
 

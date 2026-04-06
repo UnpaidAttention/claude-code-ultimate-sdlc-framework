@@ -1,6 +1,8 @@
+---
 name: purpose-alignment
 description: |
   Validate that features serve their intended purpose and help users achieve goals.
+---
 
   Use when: (1) Phase A1 requires purpose alignment assessment, (2) mapping user needs
   to feature implementations, (3) detecting purpose drift where features diverge from

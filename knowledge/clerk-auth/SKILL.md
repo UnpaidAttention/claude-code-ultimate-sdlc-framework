@@ -1,5 +1,7 @@
+---
 name: clerk-auth
 description: "Use when implementing Clerk authentication - including middleware setup, organizations, webhooks, user sync, and Next.js App Router integration."
+---
 
 # Clerk Authentication
 

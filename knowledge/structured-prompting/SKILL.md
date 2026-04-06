@@ -1,5 +1,7 @@
+---
 name: structured-prompting
 description: Use when dispatching subagents or starting new council phases to ensure consistent context transfer
+---
 
 # Structured Prompting for Subagents
 

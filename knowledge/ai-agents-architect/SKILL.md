@@ -1,5 +1,7 @@
+---
 name: ai-agents-architect
 description: "Use when designing and building autonomous AI agents - including tool use, memory systems, planning strategies, multi-agent orchestration, and function calling."
+---
 
 # AI Agents Architect
 

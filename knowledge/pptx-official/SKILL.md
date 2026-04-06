@@ -1,5 +1,7 @@
+---
 name: pptx
 description: "Use when working with PowerPoint presentations (.pptx) - including creation, editing, layouts, speaker notes, and presentation analysis."
+---
 
 # PPTX creation, editing, and analysis
 

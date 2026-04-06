@@ -1,5 +1,7 @@
+---
 name: verification-testing
 description: Systematic verification testing protocol for confirming fixes and validating code changes. Use when running gate verifications, testing corrections, confirming regression fixes, or proving that corrections work across unit, integration, E2E, and visual verification layers.
+---
 
 # Verification Testing
 

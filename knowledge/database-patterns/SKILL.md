@@ -1,5 +1,7 @@
+---
 name: database-patterns
 description: Covers database design patterns including Repository, Unit of Work, CQRS, indexing strategies, and connection pooling. Use when implementing data access layers, optimizing query performance, planning database migrations, or choosing between SQL and NoSQL approaches.
+---
 
 # Database Patterns
 

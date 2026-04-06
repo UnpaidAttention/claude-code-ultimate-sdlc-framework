@@ -1,4 +1,6 @@
+---
 description: Generate creative, original improvements and innovations aligned with software product goals. Covers ideation frameworks, brainstorming techniques, and innovation evaluation criteria.
+---
 
 # Innovation Ideation
 

@@ -1,5 +1,7 @@
+---
 name: browser-extension-builder
 description: "Use when building browser extensions for Chrome or Firefox - including manifest v3, content scripts, popup UIs, and Chrome Web Store publishing."
+---
 
 # Browser Extension Builder
 

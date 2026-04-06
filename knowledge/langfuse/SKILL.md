@@ -1,5 +1,7 @@
+---
 name: langfuse
 description: "Use when implementing Langfuse for LLM observability - including tracing, prompt management, evaluation, datasets, and LangChain/OpenAI integration."
+---
 
 # Langfuse
 

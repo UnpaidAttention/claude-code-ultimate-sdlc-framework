@@ -1,5 +1,7 @@
+---
 name: api-design
 description: Covers RESTful API design including resource modeling, endpoint conventions, and OpenAPI specifications. Use when designing new API endpoints, reviewing API contracts, creating OpenAPI specs, establishing API standards, or implementing contract-first development during Wave 4.
+---
 
 # API Design
 

@@ -1,5 +1,7 @@
+---
 name: multi-lens-analysis
 description: Analyze software through 5 stakeholder perspectives (end-user, developer, business, operations, security) to overcome AI's narrow focus. Use during Audit Council Phase A1-A2, when evaluating feature completeness from multiple viewpoints, or when ensuring all stakeholder needs are considered.
+---
 
 # Multi-Lens Analysis
 

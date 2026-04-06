@@ -1,5 +1,7 @@
+---
 name: i18n-localization
 description: Internationalization and localization patterns. Use when detecting hardcoded strings, managing translations, configuring locale files, or implementing RTL support.
+---
 
 # i18n & Localization
 

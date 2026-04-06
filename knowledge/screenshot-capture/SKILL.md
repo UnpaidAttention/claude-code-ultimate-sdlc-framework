@@ -1,5 +1,7 @@
+---
 name: screenshot-capture
 description: Capture and organize screenshot evidence for defect documentation and correction verification. Use when logging defects with visual evidence, creating before/after correction proofs, or documenting 8-layer verification results.
+---
 
 # Screenshot Capture Guide
 

@@ -1,6 +1,8 @@
+---
 name: integration-patterns
 description: |
   Implement integration patterns for connecting services and components.
+---
 
   Use when: (1) Building Wave 6 integration layer,
   (2) Connecting frontend to backend APIs,

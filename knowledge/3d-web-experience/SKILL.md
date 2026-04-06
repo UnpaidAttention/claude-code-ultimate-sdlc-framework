@@ -1,5 +1,7 @@
+---
 name: 3d-web-experience
 description: "Use when building 3D web experiences with Three.js, React Three Fiber, Spline, or WebGL - including product configurators, 3D portfolios, immersive websites, and interactive 3D scenes."
+---
 
 # 3D Web Experience
 

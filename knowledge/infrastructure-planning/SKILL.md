@@ -1,6 +1,8 @@
+---
 name: infrastructure-planning
 description: |
   Design cloud infrastructure, CI/CD pipelines, and deployment architecture.
+---
 
   Use when: (1) Planning infrastructure during Phase 7,
   (2) Designing CI/CD pipelines and deployment strategies,

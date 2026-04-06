@@ -1,5 +1,7 @@
+---
 name: code-review-checklist
 description: Provides structured code review guidelines including checklists for correctness, security, and performance. Use when reviewing pull requests, conducting code audits, onboarding team members to codebase standards, performing self-review before PR submission, or establishing team coding standards.
+---
 
 # Code Review Checklist
 

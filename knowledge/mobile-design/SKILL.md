@@ -1,5 +1,7 @@
+---
 name: mobile-design
 description: Mobile-first design thinking for iOS and Android apps. Use when building React Native, Flutter, or native mobile apps, implementing touch interactions, or applying platform conventions.
+---
 
 # Mobile Design System
 

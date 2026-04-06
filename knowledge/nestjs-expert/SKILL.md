@@ -1,5 +1,7 @@
+---
 name: nestjs-expert
 description: Nest.js framework expert. Use when working with Nest.js module architecture, dependency injection, middleware, guards, interceptors, testing, TypeORM/Mongoose integration, or authentication.
+---
 
 # Nest.js Expert
 

@@ -1,5 +1,7 @@
+---
 name: handoff-validation
 description: Validate handoff documents against schemas before council transitions. Use when transitioning between Planning, Development, Audit, and Validation councils, or when checking handoff document completeness.
+---
 
 # Handoff Document Validation
 

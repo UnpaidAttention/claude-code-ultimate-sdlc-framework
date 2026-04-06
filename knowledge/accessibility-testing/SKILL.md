@@ -1,6 +1,8 @@
+---
 name: accessibility-testing
 description: |
   Test software for WCAG 2.2 compliance and assistive technology compatibility.
+---
 
   Use when: (1) Phase T3 requires accessibility testing, (2) verifying WCAG 2.2 Level AA
   conformance, (3) testing keyboard-only navigation and focus indicators, (4) screen
