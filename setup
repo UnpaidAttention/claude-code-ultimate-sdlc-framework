@@ -2,15 +2,18 @@
 set -euo pipefail
 
 # Ultimate SDLC Framework — Claude Code Plugin Setup
-# Converts the Ultimate SDLC Framework for use with Claude Code.
+# Installs the framework as a proper Claude Code plugin.
+# Source repo is NOT the install target — files are copied to the plugin cache.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 AG_HOME="$HOME/.ultimate-sdlc"
 CLAUDE_DIR="$HOME/.claude"
-SKILLS_DIR="$CLAUDE_DIR/skills"
 AGENTS_DIR="$CLAUDE_DIR/agents"
 RULES_DIR="$CLAUDE_DIR/rules/ultimate-sdlc"
-CLAUDE_MD="$CLAUDE_DIR/CLAUDE.md"
+
+PLUGIN_ID="ultimate-sdlc@ultimate-sdlc"
+PLUGIN_VERSION="3.1.0"
+PLUGIN_CACHE="$CLAUDE_DIR/plugins/cache/ultimate-sdlc/ultimate-sdlc/$PLUGIN_VERSION"
 
 # Colors
 RED='\033[0;31m'
@@ -36,35 +39,36 @@ if ! command -v claude &>/dev/null; then
 fi
 
 # ── Check if already installed ───────────────────────────────────────
-if [[ -f "$AG_HOME/config.yaml" ]]; then
-    warn "Ultimate SDLC is already installed (found $AG_HOME/config.yaml)."
-    read -rp "Re-install? This will overwrite your config. [y/N] " answer
+if [[ -d "$PLUGIN_CACHE" ]]; then
+    warn "Ultimate SDLC is already installed at $PLUGIN_CACHE"
+    read -rp "Re-install? This will overwrite the installed copy. [y/N] " answer
     if [[ "${answer,,}" != "y" ]]; then
         echo "Aborted."
         exit 0
     fi
+    rm -rf "$PLUGIN_CACHE"
 fi
 
 # ── Naming mode selection ────────────────────────────────────────────
 echo "Select naming mode for workflow commands:"
 echo ""
-echo "  1) ${BOLD}Short names${NC} (default)"
-echo "     /init, /planning-start, /dev-wave-1, /continue, etc."
-echo ""
-echo "  2) ${BOLD}Namespaced names${NC}"
+echo "  1) ${BOLD}Namespaced names${NC} (default, recommended)"
 echo "     /sdlc-init, /sdlc-planning-start, /sdlc-dev-wave-1, /sdlc-continue, etc."
+echo ""
+echo "  2) ${BOLD}Short names${NC}"
+echo "     /init, /planning-start, /dev-wave-1, /continue, etc."
 echo ""
 read -rp "Choice [1/2]: " naming_choice
 
-NAMING_MODE="short"
+NAMING_MODE="namespaced"
 if [[ "${naming_choice}" == "2" ]]; then
-    NAMING_MODE="namespaced"
+    NAMING_MODE="short"
 fi
 
 info "Naming mode: ${BOLD}${NAMING_MODE}${NC}"
 echo ""
 
-# ── Create ~/.ultimate-sdlc/ ───────────────────────────────────────────
+# ── Create ~/.ultimate-sdlc/ config ──────────────────────────────────
 info "Creating $AG_HOME/ ..."
 mkdir -p "$AG_HOME"/{analytics,sessions}
 
@@ -75,40 +79,48 @@ governance_mode: standard
 project_type: web-app
 telemetry: off
 proactive: true
+source_repo: ${SCRIPT_DIR}
 EOF
 ok "Config written to $AG_HOME/config.yaml"
 
+# ── Copy source to plugin cache ──────────────────────────────────────
+info "Installing to plugin cache: $PLUGIN_CACHE ..."
+mkdir -p "$PLUGIN_CACHE"
+
+# Copy all framework files to the plugin cache (excluding .git)
+rsync -a --exclude='.git' "$SCRIPT_DIR/" "$PLUGIN_CACHE/"
+ok "Copied framework to plugin cache"
+
 # ── Make bin/ scripts executable ─────────────────────────────────────
-info "Making bin/ scripts executable ..."
-chmod +x "$SCRIPT_DIR/bin/"* 2>/dev/null || true
-ok "bin/ scripts are executable"
+chmod +x "$PLUGIN_CACHE/bin/"* 2>/dev/null || true
 
 # ── Patch skill names based on naming mode ───────────────────────────
-if [[ -x "$SCRIPT_DIR/bin/sdlc-patch-names" ]]; then
+if [[ -x "$PLUGIN_CACHE/bin/sdlc-patch-names" ]]; then
     info "Patching skill names for ${NAMING_MODE} mode ..."
-    "$SCRIPT_DIR/bin/sdlc-patch-names"
+    # Temporarily update config path for the patch script
+    SDLC_CONFIG="$AG_HOME/config.yaml" "$PLUGIN_CACHE/bin/sdlc-patch-names"
     ok "Skill names patched"
 fi
 
-# ── Clean old symlinks/hardlinks from previous installs ─────────────
-info "Cleaning old workflow installations ..."
+# ── Clean old installations ──────────────────────────────────────────
+info "Cleaning old installations ..."
 CLEANED=0
-for link in "$SKILLS_DIR"/sdlc-*/; do
+# Remove old hard-linked skill directories from previous install method
+for link in "$CLAUDE_DIR/skills"/sdlc-*/; do
     [[ -d "${link%/}" ]] || continue
-    # Only remove dirs that look like our installed workflow skills
-    if [[ -f "${link%/}/SKILL.md" ]] && [[ ! -f "${link%/}/commands" ]]; then
+    if [[ -f "${link%/}/SKILL.md" ]] && [[ "$(basename "${link%/}")" == sdlc-* ]]; then
+        # Don't remove the source repo if it happens to be under skills/
+        [[ "${link%/}" == "$SCRIPT_DIR" ]] && continue
         rm -rf "${link%/}"
         ((CLEANED++))
     fi
 done
-[[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old installation(s)"
+[[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old skill directory installation(s)"
 
 # ── Register as Claude Code plugin ──────────────────────────────────
 info "Registering as Claude Code plugin ..."
 PLUGINS_DIR="$CLAUDE_DIR/plugins"
 INSTALLED_PLUGINS="$PLUGINS_DIR/installed_plugins.json"
-PLUGIN_ID="ultimate-sdlc@ultimate-sdlc"
-PLUGIN_VERSION="3.1.0"
 NOW="$(date -u +%Y-%m-%dT%H:%M:%S.000Z)"
 
 mkdir -p "$PLUGINS_DIR"
@@ -118,16 +130,16 @@ if [[ ! -f "$INSTALLED_PLUGINS" ]]; then
     echo '{"version":2,"plugins":{}}' > "$INSTALLED_PLUGINS"
 fi
 
-# Add/update plugin entry using python (available everywhere, handles JSON safely)
+# Add/update plugin entry — installPath points to the CACHE copy, not the source
 python3 -c "
-import json, sys
+import json
 with open('$INSTALLED_PLUGINS', 'r') as f:
     data = json.load(f)
 if 'plugins' not in data:
     data['plugins'] = {}
 data['plugins']['$PLUGIN_ID'] = [{
     'scope': 'user',
-    'installPath': '$SCRIPT_DIR',
+    'installPath': '$PLUGIN_CACHE',
     'version': '$PLUGIN_VERSION',
     'installedAt': '$NOW',
     'lastUpdated': '$NOW'
@@ -158,11 +170,10 @@ ok "Enabled plugin in settings.json"
 info "Installing agents ..."
 mkdir -p "$AGENTS_DIR"
 AGENT_COUNT=0
-if [[ -d "$SCRIPT_DIR/agents" ]]; then
-    for agent_file in "$SCRIPT_DIR/agents/"*.md; do
+if [[ -d "$PLUGIN_CACHE/agents" ]]; then
+    for agent_file in "$PLUGIN_CACHE/agents/"*.md; do
         [[ -f "$agent_file" ]] || continue
         agent_name="$(basename "$agent_file")"
-        # Prefix with sdlc- if not already
         if [[ "$agent_name" != sdlc-* ]]; then
             agent_name="sdlc-${agent_name}"
         fi
@@ -176,8 +187,8 @@ ok "Installed $AGENT_COUNT agent(s)"
 info "Installing rules ..."
 mkdir -p "$RULES_DIR"
 RULE_COUNT=0
-if [[ -d "$SCRIPT_DIR/rules" ]]; then
-    for rule_file in "$SCRIPT_DIR/rules/"*.md; do
+if [[ -d "$PLUGIN_CACHE/rules" ]]; then
+    for rule_file in "$PLUGIN_CACHE/rules/"*.md; do
         [[ -f "$rule_file" ]] || continue
         cp "$rule_file" "$RULES_DIR/"
         ((RULE_COUNT++))
@@ -186,25 +197,29 @@ fi
 ok "Installed $RULE_COUNT rule(s)"
 
 # ── Count commands and skills ───────────────────────────────────────
-COMMAND_COUNT=$(find "$SCRIPT_DIR/commands" -name "*.md" 2>/dev/null | wc -l)
-SKILL_COUNT=$(find "$SCRIPT_DIR/workflows" -name "SKILL.md" 2>/dev/null | wc -l)
+COMMAND_COUNT=$(find "$PLUGIN_CACHE/commands" -name "*.md" 2>/dev/null | wc -l)
+SKILL_COUNT=$(find "$PLUGIN_CACHE/workflows" -name "SKILL.md" 2>/dev/null | wc -l)
 
 # ── Summary ──────────────────────────────────────────────────────────
 echo ""
 echo -e "${BOLD}Installation complete!${NC}"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo -e "  Source:      ${GREEN}$SCRIPT_DIR${NC}"
+echo -e "  Installed:   ${GREEN}$PLUGIN_CACHE${NC}"
 echo -e "  Config:      ${GREEN}$AG_HOME/config.yaml${NC}"
 echo -e "  Plugin ID:   ${GREEN}${PLUGIN_ID}${NC}"
 echo -e "  Commands:    ${GREEN}${COMMAND_COUNT} registered${NC}"
 echo -e "  Skills:      ${GREEN}${SKILL_COUNT} available${NC}"
 echo -e "  Agents:      ${GREEN}${AGENT_COUNT} installed${NC}"
 echo -e "  Rules:       ${GREEN}${RULE_COUNT} installed${NC}"
-echo -e "  Plugin dir:  ${GREEN}$SCRIPT_DIR${NC}"
 echo ""
 echo "Next steps:"
 echo "  1. Restart Claude Code for the plugin to load"
 echo "  2. Type /sdlc-init to start a new project"
 echo "  3. Type /sdlc-ag-help for the full command reference"
 echo ""
-echo "To uninstall: $SCRIPT_DIR/bin/sdlc-uninstall"
+echo "Source repo at $SCRIPT_DIR is safe to modify — changes won't"
+echo "affect the installed copy. Run ./setup again to reinstall."
+echo ""
+echo "To uninstall: $PLUGIN_CACHE/bin/sdlc-uninstall"
 echo ""

@@ -7,10 +7,12 @@ A structured, gate-driven, multi-council orchestration system for AI-assisted so
 ## Install
 
 ```bash
-git clone https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework.git ~/.claude/skills/ultimate-sdlc && cd ~/.claude/skills/ultimate-sdlc && ./setup
+git clone https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework.git ~/ultimate-sdlc && cd ~/ultimate-sdlc && ./setup
 ```
 
-That's it. All `/commands` are now available in Claude Code.
+The setup script copies the framework into the Claude Code plugin cache (`~/.claude/plugins/cache/`), registers it as a plugin, and installs agents and rules. The source repo at `~/ultimate-sdlc` stays separate — safe to modify, update, and push without affecting the installed copy.
+
+Restart Claude Code after setup. All `/sdlc-*` commands will be available.
 
 ## Quick Start
 
@@ -310,7 +312,7 @@ Namespaced mode is recommended if you have other plugins that might conflict (e.
 ## Update
 
 ```bash
-cd ~/.claude/skills/ultimate-sdlc && git pull && ./setup
+cd ~/ultimate-sdlc && git pull && ./setup
 ```
 
 ## Uninstall
