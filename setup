@@ -11,9 +11,9 @@ CLAUDE_DIR="$HOME/.claude"
 AGENTS_DIR="$CLAUDE_DIR/agents"
 RULES_DIR="$CLAUDE_DIR/rules/ultimate-sdlc"
 
-PLUGIN_ID="ultimate-sdlc@ultimate-sdlc"
+PLUGIN_ID="ultimate-sdlc@claude-plugins-official"
 PLUGIN_VERSION="3.1.0"
-PLUGIN_CACHE="$CLAUDE_DIR/plugins/cache/ultimate-sdlc/ultimate-sdlc/$PLUGIN_VERSION"
+PLUGIN_CACHE="$CLAUDE_DIR/plugins/cache/claude-plugins-official/ultimate-sdlc/$PLUGIN_VERSION"
 
 # Colors
 RED='\033[0;31m'
@@ -165,35 +165,6 @@ with open('$SETTINGS', 'w') as f:
     json.dump(data, f, indent=2)
 "
 ok "Enabled plugin in settings.json"
-
-# Register marketplace so the plugin loader can find us
-MARKETPLACES_DIR="$PLUGINS_DIR/marketplaces"
-MARKETPLACES_JSON="$PLUGINS_DIR/known_marketplaces.json"
-mkdir -p "$MARKETPLACES_DIR"
-
-# Create marketplace symlink pointing to our cache
-ln -sfn "$PLUGIN_CACHE" "$MARKETPLACES_DIR/ultimate-sdlc"
-
-# Add marketplace entry to known_marketplaces.json
-if [[ ! -f "$MARKETPLACES_JSON" ]]; then
-    echo '{}' > "$MARKETPLACES_JSON"
-fi
-python3 -c "
-import json
-with open('$MARKETPLACES_JSON', 'r') as f:
-    data = json.load(f)
-data['ultimate-sdlc'] = {
-    'source': {
-        'source': 'github',
-        'repo': 'UnpaidAttention/claude-code-ultimate-sdlc-framework'
-    },
-    'installLocation': '$MARKETPLACES_DIR/ultimate-sdlc',
-    'lastUpdated': '$NOW'
-}
-with open('$MARKETPLACES_JSON', 'w') as f:
-    json.dump(data, f, indent=2)
-"
-ok "Registered marketplace: ultimate-sdlc"
 
 # ── Install agents to ~/.claude/agents/ ─────────────────────────────
 info "Installing agents ..."
