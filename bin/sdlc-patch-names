@@ -42,7 +42,7 @@ patch_skill_file() {
 
     if [[ "$new_name" != "$current_name" ]]; then
         sed -i "s/^name:[[:space:]]*${current_name}$/name: ${new_name}/" "$skill_file"
-        ((PATCHED++))
+        PATCHED=$((PATCHED + 1))
         echo "  ${current_name} -> ${new_name}"
     fi
 }

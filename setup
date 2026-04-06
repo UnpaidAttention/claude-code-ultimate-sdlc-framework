@@ -112,7 +112,7 @@ for link in "$CLAUDE_DIR/skills"/sdlc-*/; do
         # Don't remove the source repo if it happens to be under skills/
         [[ "${link%/}" == "$SCRIPT_DIR" ]] && continue
         rm -rf "${link%/}"
-        ((CLEANED++))
+        CLEANED=$((CLEANED + 1))
     fi
 done
 [[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old skill directory installation(s)"
@@ -178,7 +178,7 @@ if [[ -d "$PLUGIN_CACHE/agents" ]]; then
             agent_name="sdlc-${agent_name}"
         fi
         cp "$agent_file" "$AGENTS_DIR/$agent_name"
-        ((AGENT_COUNT++))
+        AGENT_COUNT=$((AGENT_COUNT + 1))
     done
 fi
 ok "Installed $AGENT_COUNT agent(s)"
@@ -191,7 +191,7 @@ if [[ -d "$PLUGIN_CACHE/rules" ]]; then
     for rule_file in "$PLUGIN_CACHE/rules/"*.md; do
         [[ -f "$rule_file" ]] || continue
         cp "$rule_file" "$RULES_DIR/"
-        ((RULE_COUNT++))
+        RULE_COUNT=$((RULE_COUNT + 1))
     done
 fi
 ok "Installed $RULE_COUNT rule(s)"
