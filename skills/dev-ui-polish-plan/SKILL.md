@@ -221,3 +221,13 @@ Save remediation plan to `.ultimate-sdlc/council-state/development/ui-polish-pla
 Run `/dev-ui-polish-apply` to implement the approved remediation plan.
 
 ---
+
+## Agent Invocations
+
+### Agent: planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Slop report, researched alternatives, current design system, file change estimates
+- **Request**: Create the remediation plan — select best-fit alternatives for cohesion, order changes by dependency (typography first, then colors, components, layouts, copy), estimate scope per category
+- **Apply**: Use the prioritized plan as the implementation roadmap; present to user for approval
+
+---

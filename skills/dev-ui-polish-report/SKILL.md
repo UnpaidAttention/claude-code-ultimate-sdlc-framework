@@ -176,3 +176,13 @@ Save structured report to `.ultimate-sdlc/council-state/development/ui-slop-repo
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Raw scan results from Phase 1, project context, target audience
+- **Request**: Evaluate slop findings for UX impact — assign severity based on how each finding affects user perception, first impressions, and brand credibility; consolidate and deduplicate findings
+- **Apply**: Integrate UX-informed severity ratings into the structured slop report
+
+---

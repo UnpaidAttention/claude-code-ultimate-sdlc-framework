@@ -228,3 +228,11 @@ V5: Correction Planning (with E2E-identified gaps)
 | Confidence | Low-Medium | High |
 
 **Both are needed**, but E2E testing provides the definitive answer.
+
+## Agent Invocations
+
+### Agent: sdlc-integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Feature name, test scenarios from Step 2, application URL, feature intent from intent-map.md
+- **Request**: Execute end-to-end runtime tests covering GUI-to-backend verification, persistence checks, and integration point mapping
+- **Apply**: Use E2E test results in Steps 3-6 to populate the test report and identify integration gaps

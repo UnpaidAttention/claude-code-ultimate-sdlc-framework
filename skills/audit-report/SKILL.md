@@ -120,3 +120,11 @@ Generates the comprehensive final audit report after all phases complete.
 - Checklist Artifact: Completeness verification
 - Documentation Artifact: Full audit report
 - Report Artifact: Executive summary
+
+## Agent Invocations
+
+### Agent: sdlc-quality
+Invoke via Agent tool with `subagent_type: "sdlc-quality"`:
+- **Provide**: Testing summary (T1-T5), audit summary (A1-A3), enhancement proposals (E1-E3), defect counts by severity
+- **Request**: Compile quality scorecard with weighted metrics across all audit dimensions and generate executive summary recommendations
+- **Apply**: Integrate quality scorecard into the final report structure in Step 6

@@ -91,3 +91,17 @@ Use **Display Template** from `council-validation.md` to show: Feature Validatio
 - Score honestly against completeness dimensions
 - Specific gap identification with file:line references
 - Clear correction recommendations
+
+## Agent Invocations
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Feature name, planning handoff specification, product concept, acceptance criteria
+- **Request**: Verify intent alignment between the original feature requirements and the current implementation
+- **Apply**: Use intent alignment results in Steps 2-3 to identify drift and missing requirements
+
+### Agent: sdlc-integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Feature name, completeness matrix dimensions, implementation file paths, test coverage data
+- **Request**: Validate feature completeness across all dimensions including functional, integration, and edge case coverage
+- **Apply**: Integrate validation results into the completeness scoring in Steps 4-6

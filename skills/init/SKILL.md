@@ -285,3 +285,11 @@ Present options:
 **WAIT** for user to select an option before proceeding.
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Product concept (if exists), user responses from guided creation, project type, feature count
+- **Request**: Guide project setup — validate product concept completeness, determine governance mode, and prepare the project for Planning Council entry
+- **Apply**: Use setup guidance in Steps 1-3 to validate inputs and configure the project correctly

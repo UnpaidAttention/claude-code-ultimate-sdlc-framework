@@ -224,3 +224,13 @@ Save raw scan results to `.ultimate-sdlc/council-state/development/ui-slop-scan.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Full frontend codebase file paths, CSS/Tailwind configuration, component directories
+- **Request**: Scan for AI-generated slop patterns across all 5 categories (typography, color, layout, component style, copy) — record every finding with file paths and evidence
+- **Apply**: Compile raw findings into the scan artifact for structured reporting in Phase 2
+
+---

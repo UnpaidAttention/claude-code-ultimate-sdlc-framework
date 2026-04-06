@@ -158,3 +158,13 @@ Next step: Run /dev-ui-audit-gaps to compare existing vs. target.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Feature specs, deep-dives, design direction from planning handoff
+- **Request**: Build the complete target state from design specs — define target route tree, feature interaction maps, CRUD completeness matrix, and interactive element inventory
+- **Apply**: Use UX-informed target state as the canonical reference for gap analysis in Phase 3
+
+---

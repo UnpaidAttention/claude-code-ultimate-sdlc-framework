@@ -176,3 +176,17 @@ error TS2345: Argument of type 'string' is not assignable...
 /deploy production --skip-tests
 /deploy rollback
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: Deployment target platform, build configuration, environment variables, health check endpoints
+- **Request**: Execute pre-deployment checklist including build verification, environment validation, rollback plan confirmation, and post-deploy health checks
+- **Apply**: Use operations checklist results to gate the deployment flow — block deployment if pre-flight checks fail
+
+### Agent: sdlc-security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Build artifacts, environment configuration, dependency list, deployment platform
+- **Request**: Run pre-deploy security scan covering secrets exposure, dependency vulnerabilities, and configuration hardening
+- **Apply**: Block deployment if critical security issues found; include security scan results in deployment report

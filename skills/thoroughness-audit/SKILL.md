@@ -301,3 +301,11 @@ Next Step: Run /thoroughness-remediate to address gaps.
   --severity Critical    → Fix only critical gaps
   --spec-only            → Fix spec artifacts only (no code AIOUs)
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-quality
+Invoke via Agent tool with `subagent_type: "sdlc-quality"`:
+- **Provide**: Feature list from scope-lock.md, FEAT specs, DIVE files, connectivity matrix, run-tracker data
+- **Request**: Assess thoroughness across all 8 criteria per feature — complexity classification, deep-dive completeness, FEAT sections, connectivity, verification, run sizing, PRH-008/009 compliance
+- **Apply**: Use thoroughness assessment to populate per-feature audit results and consolidated gap inventory in Step 7

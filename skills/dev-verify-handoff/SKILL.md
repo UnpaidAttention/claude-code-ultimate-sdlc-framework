@@ -138,3 +138,11 @@ Run this workflow BEFORE starting any development work to ensure handoff quality
 ## Output Format
 
 Use **Display Template** from `council-development.md` to show: Handoff Verification Report
+
+## Agent Invocations
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Planning handoff document, scope-lock.md, AIOU specs, feature specifications
+- **Request**: Validate planning handoff completeness — verify structure, feature coverage, AIOU traceability, wave integrity, and dependency consistency
+- **Apply**: Use handoff validation results to generate the Verification Report with PASS/FAIL verdict

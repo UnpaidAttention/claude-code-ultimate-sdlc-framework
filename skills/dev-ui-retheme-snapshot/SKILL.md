@@ -201,3 +201,13 @@ Next step: Run /dev-ui-retheme-direction to research the new theme direction.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Frontend codebase, CSS/Tailwind configuration, component directories, design-system.md (if exists)
+- **Request**: Document the current theme comprehensively — extract all design tokens (colors, typography, spacing, borders, shadows), identify component style patterns, and catalog source file paths
+- **Apply**: Integrate extracted theme data into the current-theme-snapshot artifact
+
+---

@@ -223,3 +223,17 @@ Before delivering UI code, verify these items:
 - [ ] Form inputs have labels
 - [ ] Color is not the only indicator
 - [ ] `prefers-reduced-motion` respected
+
+## Agent Invocations
+
+### Agent: sdlc-frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Design search results (style, typography, color, layout), project tech stack, component framework
+- **Request**: Plan UI implementation based on design research — component structure, design token mapping, responsive breakpoints, and accessibility requirements
+- **Apply**: Use UI planning results to guide the implementation phase after search synthesis
+
+### Agent: sdlc-ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: UI implementation code, design reference, pre-delivery checklist items
+- **Request**: Review UI implementation for visual quality, interaction design, accessibility compliance, and light/dark mode correctness
+- **Apply**: Address UX review findings before delivery using the Pre-Delivery Checklist

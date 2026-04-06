@@ -116,3 +116,11 @@ Logs a new defect with proper documentation and evidence capture.
 | High | Feature broken, major functionality impaired |
 | Medium | Feature works but with issues, workaround exists |
 | Low | Cosmetic, minor inconvenience, edge case |
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Defect evidence (screenshots, steps to reproduce), affected feature, console output
+- **Request**: Classify root cause category (logic error, integration failure, data corruption, UI rendering, etc.) and identify the specific code path responsible
+- **Apply**: Include root cause classification in the defect log entry in Step 5 for faster resolution during Validation Council

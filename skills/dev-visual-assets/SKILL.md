@@ -185,3 +185,13 @@ Use **Display Template** from `council-development.md` to show: Visual Assets Ch
 
 ### Capture Output
 Use **Display Template** from `council-development.md` to show: Screenshot Captured
+
+---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Captured implementation screenshots, mockups/wireframes (if available), design system, fidelity level
+- **Request**: Evaluate visual asset quality — compare implementation against mockups at the appropriate fidelity level, verify layout structure, spacing hierarchy, color accuracy, and responsive behavior
+- **Apply**: Integrate visual comparison findings into the visual tracking file and AIOU verification evidence

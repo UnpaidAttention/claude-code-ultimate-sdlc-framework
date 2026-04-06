@@ -398,3 +398,17 @@ Files:
 
 Next: Execute remediation runs, then re-run /thoroughness-audit to verify 0 Critical/Major gaps.
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Code-type gaps (Criteria 5, 7, 8), missing component details, feature verification requirements
+- **Request**: Design test coverage for remediation AIOUs — verification tests for missing components and integration tests for unimplemented connections
+- **Apply**: Include test designs in the AIOU-REM specs generated in Step 4
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Spec remediation artifacts (DIVE files, FEAT updates, connectivity matrix), code remediation AIOU specs
+- **Request**: Review remediation quality — verify DIVE files are complete, FEAT sections are accurate, and code AIOUs have clear implementation instructions
+- **Apply**: Address quality gaps before finalizing the remediation tracker in Step 5

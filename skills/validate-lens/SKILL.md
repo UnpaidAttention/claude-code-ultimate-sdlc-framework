@@ -101,3 +101,23 @@ Use **Display Template** from `council-validation.md` to show: Multi-Lens Analys
 - Don't skip any lens for "all"
 - Be specific about gaps
 - Actionable recommendations
+
+## Agent Invocations
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Feature/component under analysis, codebase structure, deployment architecture
+- **Request**: Evaluate from Operations and Performance lens perspectives — monitorability, scalability, failure modes, and architectural fitness
+- **Apply**: Integrate architecture findings into the Operations and Performance lens sections
+
+### Agent: sdlc-security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Feature/component under analysis, authentication flows, data handling paths, API surface
+- **Request**: Evaluate from Security lens — attack surface, authentication gaps, input validation, data protection
+- **Apply**: Integrate security findings into the Security lens section
+
+### Agent: sdlc-quality
+Invoke via Agent tool with `subagent_type: "sdlc-quality"`:
+- **Provide**: Feature/component under analysis, test coverage data, code quality metrics
+- **Request**: Evaluate from User and Business lens — usability gaps, accessibility issues, business value alignment
+- **Apply**: Integrate quality findings into the User and Business lens sections

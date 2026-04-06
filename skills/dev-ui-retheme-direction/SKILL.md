@@ -186,3 +186,13 @@ Next step: Run /dev-ui-retheme-propose to create the complete new design system 
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Current theme snapshot, project identity, user's direction input, competitive/reference analysis
+- **Request**: Research the new theme direction — analyze reference sites, validate user choices for contrast/readability/cohesion, synthesize research into a clear direction statement with rationale
+- **Apply**: Integrate UX-informed direction into the retheme-direction artifact
+
+---

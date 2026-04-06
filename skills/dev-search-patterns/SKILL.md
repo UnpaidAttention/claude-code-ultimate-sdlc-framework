@@ -184,3 +184,11 @@ This workflow integrates with:
 - Better to spend time searching than duplicating code
 - If you find patterns that should be standardized, propose adding to `.standards/`
 - Document even negative findings ("no similar features found")
+
+## Agent Invocations
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: AIOU specification, current codebase structure, existing service/utility/component patterns
+- **Request**: Identify reusable architectural patterns, naming conventions, and existing implementations that the AIOU should follow or extend
+- **Apply**: Use pattern identification results in Steps 2-5 to inform the Reuse Analysis documentation

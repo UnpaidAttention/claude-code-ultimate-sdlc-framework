@@ -155,3 +155,13 @@ Next step: Run /dev-ui-audit-target to build the target state.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Project router configuration, frontend directory structure, component file paths
+- **Request**: Inventory all existing components — scan routes, interactive elements, design system tokens, and classify each element as wired/unwired/missing
+- **Apply**: Integrate component inventory into the existing inventory artifact before proceeding to Phase 2
+
+---

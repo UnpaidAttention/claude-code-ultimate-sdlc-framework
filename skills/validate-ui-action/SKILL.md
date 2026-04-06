@@ -272,3 +272,11 @@ Use **Display Template** from `council-validation.md` to show: UI Element Verifi
     ↓
 /validate-persistence [related-setting]  ← Check storage
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: UI element type, element name, component code, event binding details, expected behavior
+- **Request**: Verify UI element performs its intended action — click/toggle/input produces correct backend effect with proper error handling and edge cases
+- **Apply**: Use frontend verification results in Steps 3-6 to populate the Element Verification Report

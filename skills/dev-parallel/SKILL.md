@@ -211,3 +211,11 @@ If parallel execution causes problems:
 | Test failures after merge | Sequential merge with tests |
 | Lost work | Branch per AIOU + checkpoints |
 | Inconsistent state | Full test suite after each merge |
+
+## Agent Invocations
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Current wave AIOUs, file ownership candidates, shared dependency list, AIOU specifications
+- **Request**: Analyze dependencies between AIOUs to determine which can safely run in parallel and generate the file ownership map with conflict detection
+- **Apply**: Use dependency analysis in Steps 1-2 to create the File Ownership Artifact and determine parallel vs serial execution

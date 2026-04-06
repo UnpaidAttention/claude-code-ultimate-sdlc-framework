@@ -302,3 +302,13 @@ The phase is complete when ALL of the following are true:
 - The phase still completes — the design plan will rely more heavily on the skill's built-in knowledge
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Design direction from planning handoff, feature specs, page inventory, competitive analysis results
+- **Request**: Conduct design research — analyze Dribbble references, competitive applications, and design patterns; synthesize findings into a specific visual direction with per-page design references and component style guidance
+- **Apply**: Integrate research findings into the ui-design-research artifact to inform the design plan
+
+---

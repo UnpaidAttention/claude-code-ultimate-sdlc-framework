@@ -178,3 +178,11 @@ docs/plans/YYYY-MM-DD-<topic>-design.md
 | **Incremental validation** | Present in sections |
 | **Document to git** | Write validated designs |
 | **Be flexible** | Go back and clarify |
+
+## Agent Invocations
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: User's idea/topic, project context, existing codebase state, constraints
+- **Request**: Apply structured ideation — Socratic questioning to explore approaches, evaluate trade-offs, and validate design decisions
+- **Apply**: Use structured ideation results in Phases 1-3 to guide the brainstorming process and document validated designs

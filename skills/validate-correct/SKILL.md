@@ -122,3 +122,23 @@ Use **Display Template** from `council-validation.md` to show: Verification Resu
 - ALWAYS write and run verification test
 - ALWAYS check for regressions
 - Document everything in correction-log.md
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Issue ID, symptoms, affected code paths, reproduction steps
+- **Request**: Perform root cause analysis to identify the true underlying cause (not just symptoms)
+- **Apply**: Use root cause findings in Step 2 to plan the minimal correction in Step 4
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Root cause analysis, planned correction, affected code areas
+- **Request**: Design verification test that proves the fix works and catches regressions
+- **Apply**: Use designed test in Step 6 before confirming the fix in Step 7
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Before/after code diff, verification test results, correction plan
+- **Request**: Review the correction for code quality, unintended side effects, and completeness
+- **Apply**: Address review findings before logging the result in Step 10

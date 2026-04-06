@@ -128,3 +128,11 @@ Use **Display Template** from `council-validation.md` to show: Correction Depend
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Gap/incompleteness list from V3, correction dependencies, resource availability, blocker list
+- **Request**: Analyze prerequisites for all corrections, build dependency graph, determine optimal correction order, and identify resolution paths for blockers
+- **Apply**: Use prerequisite analysis in Steps 2-3 to create the dependency graph and correction order

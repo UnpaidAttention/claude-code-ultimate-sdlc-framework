@@ -240,3 +240,13 @@ All functionality preserved — only visual design changed.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Post-remediation codebase, original slop report, remediation plan, WCAG contrast results
+- **Request**: Verify anti-slop compliance — confirm 0 remaining slop findings, design tokens are consistent, typography and color choices create a distinctive identity, and accessibility standards are met
+- **Apply**: Integrate UX verification results into the final verification report; flag any remaining issues for remediation
+
+---

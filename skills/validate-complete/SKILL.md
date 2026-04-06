@@ -222,3 +222,17 @@ Congratulations on completing the Ultimate SDLC Framework!
 - All previous work is preserved in handoff documents
 - Git tag allows exact reproduction of release state
 - Framework journey is complete
+
+## Agent Invocations
+
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: All track completion checklists from Step 1, gate statuses (V5, C4, P4, E4, S2), release checklist from Step 2
+- **Request**: Verify all validation gates pass and final release checklist is satisfied with no blocking issues
+- **Apply**: Gate verification determines whether the project proceeds to release or stops with missing items
+
+### Agent: sdlc-documentation
+Invoke via Agent tool with `subagent_type: "sdlc-documentation"`:
+- **Provide**: Validation results across all tracks, gate verification status, release checklist, quality metrics
+- **Request**: Generate the final validation-to-release handoff document with complete statistics and release certification
+- **Apply**: Use generated handoff in Step 3 to create handoffs/validation-handoff.md

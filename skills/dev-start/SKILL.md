@@ -331,3 +331,17 @@ When Gate I8 passes:
 Follow **Code Review Protocol** from `council-development.md` after each AIOU.
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Planning handoff, run-tracker (if exists), project-context.md, cycle type and intent
+- **Request**: Validate run planning completeness and determine whether /dev-scope-analysis is needed before development begins
+- **Apply**: Use planning validation in Step 4 to decide between new session setup or scope analysis redirect
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Planning handoff architecture decisions, tech stack requirements, existing codebase (if non-initial cycle)
+- **Request**: Review architecture decisions and validate they are implementable with the current tech stack and codebase state
+- **Apply**: Use architecture review in Step 5 to inform project structure initialization and Wave 0 implementation

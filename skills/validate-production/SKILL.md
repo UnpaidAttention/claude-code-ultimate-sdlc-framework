@@ -89,3 +89,11 @@ Use **Display Template** from `council-validation.md` to show: Production Readin
 - Consider real-world scenarios
 - Identify ALL gaps before production
 - Clear go/no-go recommendation
+
+## Agent Invocations
+
+### Agent: sdlc-operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: Component/system name, deployment configuration, monitoring setup, failure mode analysis
+- **Request**: Assess production readiness across logging, monitoring, alerting, backup, rollback, and operational runbooks
+- **Apply**: Use operations assessment to populate the production readiness report with go/no-go recommendation

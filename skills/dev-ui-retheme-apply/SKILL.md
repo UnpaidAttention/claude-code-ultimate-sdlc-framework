@@ -206,3 +206,19 @@ Next step: Run /dev-ui-retheme-verify for visual verification and consistency ch
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Approved design system proposal, current theme snapshot (old values to replace), frontend codebase structure
+- **Request**: Implement the theme in strict dependency order (tokens, global styles, components, layouts, hardcoded values) — verify build after each step, grep for remaining old values, ensure zero old theme values remain
+- **Apply**: Complete all implementation steps before proceeding to verification
+
+### Agent: code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: All modified files from theme implementation
+- **Request**: Review for design token consistency, no hardcoded old values, WCAG AA contrast compliance, no functionality regressions, clean build and passing tests
+- **Apply**: Address review findings before marking implementation as complete
+
+---

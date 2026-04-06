@@ -293,3 +293,11 @@ This workflow is called by:
 | 3 | Persistence Write | High | Add missing write call |
 | 4 | API Not Exposed | Medium | Add to preload contextBridge |
 | 5 | Event Not Bound | Medium | Wire up event handler |
+
+## Agent Invocations
+
+### Agent: sdlc-integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: UI element name, data flow architecture layers, source code locations for each layer
+- **Request**: Execute 8-layer data flow trace from GUI action through all layers to persistence and back, identifying break points at each layer
+- **Apply**: Use trace results to populate the Layer Status Summary and Break Points tables in Step 7

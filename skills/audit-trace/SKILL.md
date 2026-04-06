@@ -137,3 +137,11 @@ Use **Display Template** from `council-audit.md` to show: Traceability Audit Rep
 - Run this workflow after T2 (Functional Testing) for best results
 - Results feed into A2 (Completeness) phase
 - Update `audit-context.md` with traceability score
+
+## Agent Invocations
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Planning handoff AIOUs, implemented feature inventory from T1, traceability matrix from Step 3
+- **Request**: Verify end-to-end traceability from requirements through AIOUs to implementation, identify coverage gaps and undocumented additions
+- **Apply**: Integrate traceability verification results into the gap analysis in Step 4 and coverage calculation in Step 5

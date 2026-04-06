@@ -157,3 +157,13 @@ Next step: Run /dev-ui-audit-plan to create the implementation plan.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Existing inventory artifact (Phase 1), target state artifact (Phase 2)
+- **Request**: Perform systematic gap analysis — compare every target route, interaction, and CRUD operation against the existing inventory and classify each as OK/MISSING/INCOMPLETE
+- **Apply**: Integrate gap analysis findings into the audit report artifact before proceeding to Phase 4
+
+---

@@ -119,3 +119,17 @@ This command adds features or makes updates to existing application.
 - Get approval for major changes
 - Warn on conflicting requests (e.g., "use Firebase" when project uses PostgreSQL)
 - Commit each change with git
+
+## Agent Invocations
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Requested enhancement, current codebase structure, existing features, tech stack
+- **Request**: Analyze impact of the enhancement on existing architecture — identify affected files, dependencies, and potential conflicts
+- **Apply**: Use impact analysis in Step 2 to plan changes and detect affected files
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Enhancement implementation code, test results, affected file diffs
+- **Request**: Review enhancement for code quality, pattern consistency, and regression risk
+- **Apply**: Address review findings before committing the enhancement in Step 4

@@ -259,3 +259,13 @@ Verification report: .ultimate-sdlc/council-state/development/retheme-verificati
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Before/after screenshots, new design system, WCAG contrast results, anti-slop scan results
+- **Request**: Perform visual verification — confirm the new theme creates a cohesive, distinctive identity; verify accessibility, readability, and visual hierarchy across all pages and breakpoints
+- **Apply**: Integrate UX verification findings into the retheme-verification report
+
+---

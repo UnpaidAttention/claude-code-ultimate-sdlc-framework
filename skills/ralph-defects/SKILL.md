@@ -203,3 +203,17 @@ When no OPEN defects remain in defect-log.md (all are RESOLVED or BLOCKED):
 - Run full test suite after Ralph completes
 - Review git log: `git log ralph-defects-start..HEAD`
 - Plugin state stored in `.claude/ralph-loop.local.md`
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Defect details from defect-log.md, reproduction steps, screenshot evidence
+- **Request**: Reproduce defect, identify root cause through systematic debugging, and determine the minimal fix
+- **Apply**: Use root cause analysis within the Ralph loop's Step 3d to implement targeted fixes
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Defect root cause, fix implementation, affected code paths
+- **Request**: Design regression test that captures the defect scenario and verifies the fix prevents recurrence
+- **Apply**: Use regression test in the Ralph loop's verification step to confirm defect resolution

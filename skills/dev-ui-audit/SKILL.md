@@ -155,3 +155,19 @@ Next step: Run /dev-ui-polish to audit design quality and remove AI slop.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Existing UI inventory, target state from specs, gap analysis results
+- **Request**: Orchestrate the 6-phase audit — assess component inventory, identify wiring gaps, validate interaction depth across all 4 layers
+- **Apply**: Integrate findings before proceeding to each subsequent phase
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Feature specs, deep-dives, existing UI inventory, gap analysis
+- **Request**: Evaluate usability of existing UI — identify UX gaps beyond functional completeness (confusing flows, poor information hierarchy, missing affordances)
+- **Apply**: Incorporate UX findings into the gap implementation plan alongside functional gaps
+
+---

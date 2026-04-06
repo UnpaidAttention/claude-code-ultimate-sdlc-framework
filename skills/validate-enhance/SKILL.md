@@ -96,3 +96,11 @@ Use **Display Template** from `council-validation.md` to show: Verification Resu
 - Consider ROI
 - Enhance deliberately, not randomly
 - Verify enhancement before logging
+
+## Agent Invocations
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Enhancement proposal, implementation code, verification results, affected files
+- **Request**: Review the enhancement for code quality, alignment with existing patterns, and potential regressions
+- **Apply**: Address review findings before updating enhancement-proposals.md in Step 8

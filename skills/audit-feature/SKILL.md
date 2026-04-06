@@ -182,3 +182,17 @@ Update `.ultimate-sdlc/progress.md`:
 5. **Log defects immediately** - Don't wait until end
 6. **Note enhancements** - Capture ideas as you go
 7. **Be systematic** - Follow the checklist, don't skip
+
+## Agent Invocations
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Feature name, test plan from Step 3, acceptance criteria from planning handoff
+- **Request**: Design comprehensive test cases covering functional, edge, and error scenarios for this feature
+- **Apply**: Integrate test designs into the Feature Test Plan before executing Steps 4-6
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Feature test results from Steps 4-6, defect findings, code locations under test
+- **Request**: Quality check the feature implementation for code smells, missed error handling, and untested paths
+- **Apply**: Incorporate quality findings into the Feature Test Report in Step 7

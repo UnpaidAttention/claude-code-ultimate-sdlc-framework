@@ -326,3 +326,13 @@ This workflow should be run:
 
 - `wave5-foundation-validation.md` - Full Layer 1 validation
 - `wave5-ui-layers.md` - Layer completion requirements
+
+---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: globals.css, tailwind.config, tokens.ts (if exists), component files using CSS variables
+- **Request**: Verify all CSS variables are defined and synchronized — scan for used vs. defined variables, check semantic color completeness, validate token synchronization across files, verify Tailwind config references CSS variables correctly
+- **Apply**: Integrate validation results into the CSS validation report; fix any missing or mismatched variables before marking Layer 1 complete

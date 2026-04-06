@@ -531,3 +531,19 @@ PASS when ALL of the following are true:
 **Efficiency note**: This verification is rigorous but scoped. It checks the DESIGN PLAN against the CODE. If the design plan says a button does X, verify the button does X. Don't invent new requirements — verify what was planned.
 
 ---
+
+## Agent Invocations
+
+### Agent: integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: UI design plan (routes, navigation map, interactive elements, feature interaction maps), implemented frontend code
+- **Request**: Verify UI wiring completeness — check every route exists and renders, every navigation element links correctly, every interactive element has a functional handler, every CRUD operation works end-to-end
+- **Apply**: Integrate wiring verification results into the verification report
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Verification report, design system, responsive behavior specs
+- **Request**: Perform final UX check — verify visual consistency (no hardcoded colors, no banned fonts, design tokens used), responsive behavior at all breakpoints, and state completeness (loading, empty, error states)
+- **Apply**: Incorporate UX findings into the verification report; flag remaining issues by severity
+
+---

@@ -303,3 +303,13 @@ Next step: Run /dev-ui-retheme-apply to implement the new theme.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Current theme snapshot, retheme direction, design system requirements (color palette, typography, spacing, component styles)
+- **Request**: Propose a complete new design system — define all token values, verify WCAG AA contrast for every text/background combination, build before/after comparison table, assess implementation feasibility
+- **Apply**: Integrate the proposed design system into the retheme-proposal artifact for user approval
+
+---

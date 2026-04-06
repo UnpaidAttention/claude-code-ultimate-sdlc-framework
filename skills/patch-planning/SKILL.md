@@ -158,3 +158,17 @@ Use **Display Template** from `council-development.md` to show: Patch Planning C
 Patch Planning [DONE] → Development [ ] → Validation [ ] → Close Cycle
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Defect descriptions from cycle-baseline.md or user input, affected code areas, reproduction information
+- **Request**: Analyze each defect to identify root cause, assess impact on other components, and determine fix approach
+- **Apply**: Use bug analysis results in Step 2 defect analysis for each defect's root cause and fix approach
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Defect analysis results, fix approaches, architecture impact assessment, AIOU specs
+- **Request**: Plan patch cycle — create fix AIOUs with proper wave assignments, generate planning handoff, and determine if architectural changes are needed
+- **Apply**: Use patch planning results in Steps 3-5 to create AIOU specs and the planning handoff document

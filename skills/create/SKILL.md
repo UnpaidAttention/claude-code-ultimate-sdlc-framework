@@ -117,3 +117,17 @@ If request is unclear, ask these questions:
 - Who will use it?
 
 Use defaults, add details later.
+
+## Agent Invocations
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: User's application request, determined tech stack, planned file structure
+- **Request**: Validate tech stack selection and design the application architecture including directory structure, data flow, and component organization
+- **Apply**: Use architecture design in Step 2 project planning to inform file structure and agent coordination
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Application requirements, tech stack, architecture design, feature list
+- **Request**: Create structured project plan with task breakdown, agent assignments, and dependency ordering
+- **Apply**: Use structured plan in Step 2 to guide the application building process in Step 3

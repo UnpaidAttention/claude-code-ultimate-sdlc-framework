@@ -218,3 +218,13 @@ Save research results to `.ultimate-sdlc/council-state/development/ui-polish-alt
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Slop report findings, project identity, current design system, technical framework (Tailwind/CSS/etc.)
+- **Request**: Research technically feasible design alternatives for each finding category — verify font availability, color contrast ratios, component library compatibility, and implementation effort
+- **Apply**: Integrate researched alternatives into the alternatives artifact with feasibility ratings
+
+---

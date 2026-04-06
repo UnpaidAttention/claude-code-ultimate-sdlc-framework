@@ -657,3 +657,19 @@ This allows targeted design plan updates without regenerating the entire plan.
 - When in doubt, add the element to the inventory. Over-specifying is better than under-specifying.
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: UI design research, feature specs, deep-dives, design direction from planning handoff
+- **Request**: Create the design plan — define design system tokens, page layouts with visual hierarchy, navigation architecture, feature interaction maps, and responsive behavior for every route
+- **Apply**: Integrate UX-informed design decisions into the ui-design-plan artifact
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Design plan draft, feature specs, deep-dive component inventories
+- **Request**: Validate the component hierarchy — verify every interactive element has a complete interaction flow, every route has implementation-ready specifications, and the component architecture is buildable
+- **Apply**: Incorporate frontend feasibility validation into the design plan review gate
+
+---

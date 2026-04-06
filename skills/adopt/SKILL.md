@@ -266,3 +266,17 @@ Use **Display Template** from `the active council rules file` to show: Project A
 - Note limitations in baseline report
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Project directory, detected tech stack, file structure, dependency files
+- **Request**: Analyze codebase architecture patterns (monolith vs microservices, API style, data access patterns) and extract architectural decisions into ADR format
+- **Apply**: Use architecture analysis in Steps 1b and 3 for pattern identification and ADR generation
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Route/endpoint analysis, component/module analysis, data model analysis from Step 2
+- **Request**: Generate comprehensive feature inventory from discovered code, mapping routes, components, and data models to user-facing features
+- **Apply**: Use feature inventory in Step 2d and present to user for verification

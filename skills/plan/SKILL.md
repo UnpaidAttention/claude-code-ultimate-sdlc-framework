@@ -145,3 +145,11 @@ Next steps:
 /plan mobile app for fitness tracking
 /plan SaaS dashboard with analytics
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: User request, project context, existing codebase (if any), constraints
+- **Request**: Apply planning methodology — Socratic Gate questioning, task breakdown, agent assignments, and verification checklist generation
+- **Apply**: Use planning results to generate the PLAN-{slug}.md file with complete task breakdown and agent assignments

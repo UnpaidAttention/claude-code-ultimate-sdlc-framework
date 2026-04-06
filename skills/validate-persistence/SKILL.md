@@ -227,3 +227,11 @@ Use this matrix to track all persistent items:
 | Item | Storage | Write Verified | Read Verified | Restart Verified |
 |------|---------|----------------|---------------|------------------|
 | [setting-1] | [type] | ✅ / ❌ | ✅ / ❌ | ✅ / ❌ |
+
+## Agent Invocations
+
+### Agent: sdlc-database-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-database-specialist"`:
+- **Provide**: Setting/state name, persistence type (config file, database, localStorage, etc.), write/read code paths, storage location
+- **Request**: Verify persistence implementation correctness — write path, read path, serialization, and restart survival
+- **Apply**: Use persistence verification results in Steps 4-7 to confirm or diagnose persistence failures

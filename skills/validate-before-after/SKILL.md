@@ -228,3 +228,11 @@ Before capturing AFTER:
 - [ ] Fix is fully implemented
 - [ ] Application restarted/reloaded if needed
 - [ ] Ready to capture at moment of success
+
+## Agent Invocations
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Before/after evidence pair, code diff between captures, test scenario documentation
+- **Request**: Review the before/after diff to confirm the change is minimal, targeted, and free of unintended side effects
+- **Apply**: Use diff review findings in Step 7 evidence pair validation

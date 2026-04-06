@@ -222,3 +222,11 @@ Before marking any defect as logged:
 /audit-verify-defect all         # Verify all unverified defects
 /audit-verify-defect recent      # Verify defects from current session
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Defect ID, documented reproduction steps, expected vs actual behavior, application state
+- **Request**: Verify reproduction of the defect independently and confirm the root cause matches the documented analysis
+- **Apply**: Use reproduction confirmation in Step 3 and severity cross-check in Step 6

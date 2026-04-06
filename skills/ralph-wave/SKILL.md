@@ -198,3 +198,17 @@ When all Wave {N} AIOUs show VERIFIED in .ultimate-sdlc/project-context.md:
 - Always run `/dev-test` after wave completes to verify integration
 - Gate waves (3, I8) still require explicit `/dev-gate` after Ralph completes
 - Plugin state stored in `.claude/ralph-loop.local.md`
+
+## Agent Invocations
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Current AIOU spec, wave number, acceptance criteria, existing test patterns
+- **Request**: Enforce TDD cycle for each AIOU — write tests first, verify they fail, then guide implementation to pass
+- **Apply**: Use TDD enforcement within the Ralph loop's Step 3 AIOU implementation (write tests before code)
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Completed AIOU implementation, test results, code diff for the AIOU
+- **Request**: Review implemented AIOU for code quality, pattern consistency, and test adequacy before marking as VERIFIED
+- **Apply**: Use review results in Step 3 after verification — block VERIFIED status if critical issues found

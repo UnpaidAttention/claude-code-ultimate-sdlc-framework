@@ -307,3 +307,11 @@ Output run assignments with:
 - Recommend reviewing AIOU specs
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Planning handoff AIOUs, AIOU specs with sizes, feature dependencies, wave assignments
+- **Request**: Calculate effort units, determine run division, group AIOUs into balanced runs respecting feature cohesion and wave progression
+- **Apply**: Use scope and run division results in Steps 2-6 to create the run-tracker.md

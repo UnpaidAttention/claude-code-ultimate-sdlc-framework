@@ -143,3 +143,17 @@ Use **Display Template** from `council-audit.md` to show: Audit Council Complete
 - Quality score should be at least 3/5 to proceed
 - Critical defects should be addressed before Validation
 - Handoff includes prioritized work for Validation Council
+
+## Agent Invocations
+
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Track completion checklists from Step 1, quality scorecard from A3, gate criteria from gate-criteria.md
+- **Request**: Verify all audit gates (T3, A2, A3) pass their criteria and no blocking issues remain
+- **Apply**: Gate verification results determine whether Step 3 handoff generation proceeds or stops with missing items
+
+### Agent: sdlc-documentation
+Invoke via Agent tool with `subagent_type: "sdlc-documentation"`:
+- **Provide**: Compiled audit results from Step 2, gate verification status, enhancement ideas
+- **Request**: Generate the audit-to-validation handoff document with proper structure and completeness
+- **Apply**: Use generated handoff in Step 3 to create handoffs/audit-handoff.md

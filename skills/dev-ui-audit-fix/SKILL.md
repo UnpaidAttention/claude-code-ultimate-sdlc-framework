@@ -166,3 +166,19 @@ Next step: Run /dev-ui-audit-verify to verify all gaps are closed.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Approved implementation plan, existing design system tokens, target interaction maps, gap details
+- **Request**: Implement all gaps — create missing routes, wire unwired components, complete incomplete pages following the 4-layer Component Interaction Depth Rule
+- **Apply**: Update plan status for each completed item before proceeding to review
+
+### Agent: code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: All code changes from gap implementation (new files, modified files)
+- **Request**: Review implemented gap fixes for code quality, design system compliance, test coverage, and non-destructive adherence (no existing code deleted)
+- **Apply**: Address CRITICAL and HIGH review findings before marking items as DONE
+
+---

@@ -132,3 +132,17 @@ Use **Display Template** from `the active council rules file` to show: Release C
 /release
 /release v1.0.0
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: All gate statuses from project-context.md, defect summary from defect-log.md, documentation checklist
+- **Request**: Perform final release verification confirming all gates passed, no P0/P1 defects open, and all handoff documents exist
+- **Apply**: Gate verification determines whether the Release Certificate is generated or release is blocked
+
+### Agent: sdlc-operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: Release version, deployment guide, rollback procedures, monitoring configuration
+- **Request**: Validate release checklist including deployment readiness, monitoring setup, and operational runbook completeness
+- **Apply**: Include operations validation in the Release Certificate

@@ -336,6 +336,22 @@ The safety branch preserves the EXACT state before the redesign, including all U
 
 ---
 
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Current UI codebase, project structure, run tracker state, feature specs
+- **Request**: Assess the current UI state — inventory existing components, identify what to archive vs. preserve, verify backend build integrity after UI removal, reset run tracker appropriately
+- **Apply**: Use assessment to drive the archive and reset process safely
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Current UI assessment, feature specs, design direction
+- **Request**: Evaluate what went wrong with the current UI — identify root causes of inadequacy (poor navigation, broken flows, inconsistent styling) to inform the fresh design approach
+- **Apply**: Incorporate UX lessons learned into WORKING-MEMORY.md to prevent repeating the same issues
+
+---
+
 ## Feature-Scoped Redesign Notes
 
 When using `--scope feature FEAT-XXX`:

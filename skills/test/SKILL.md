@@ -246,3 +246,11 @@ Testing is part of implementation, not optional follow-up
 - **Minimal implementation** - Just enough to pass
 - **One behavior per test** - Keep focused
 - **Describe behavior** - Not implementation details
+
+## Agent Invocations
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Target file/feature, existing test patterns, acceptance criteria, Iron Law constraints
+- **Request**: Enforce TDD workflow — RED (write failing test), GREEN (minimal implementation), REFACTOR (clean up) with mandatory verification at each phase
+- **Apply**: Use TDD enforcement throughout the entire /test workflow to ensure no production code exists without a failing test first

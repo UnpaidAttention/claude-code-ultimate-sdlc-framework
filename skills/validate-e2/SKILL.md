@@ -121,3 +121,11 @@ Use **Display Template** from `council-validation.md` to show: Innovation Roadma
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: E1 feature richness results, current feature inventory, project goals and user personas
+- **Request**: Identify innovation and differentiation opportunities aligned with product vision, evaluate feasibility and strategic fit
+- **Apply**: Use innovation findings in Step 2 ideation and Step 3 evaluation to build the innovation roadmap

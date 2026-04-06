@@ -208,3 +208,11 @@ Route to the appropriate next workflow based on the recovery type and current co
   │
   └─→ Type E (mid-run): Scope to current run, resume from last AIOU
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: State file contents (project-context.md, progress.md, WORKING-MEMORY.md, current-state.md), git log, interruption symptoms
+- **Request**: Diagnose state inconsistencies, identify interruption type (A-E), and recommend specific recovery actions
+- **Apply**: Use state diagnosis in Steps 2-4 to determine the correct recovery path and resolve conflicts

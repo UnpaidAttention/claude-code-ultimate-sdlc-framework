@@ -167,3 +167,11 @@ Use **Display Template** from `council-development.md` to show: Improvement Plan
 Improvement Planning [DONE] → Development [ ] → Audit [ ] → Validation [ ] → Close Cycle
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Improvement scope (refactoring/performance/tech debt/architecture), current codebase state, cycle baseline, previous audit quality scorecard
+- **Request**: Plan improvement cycle — analyze improvement targets, create AIOU specifications, and generate planning handoff compatible with development workflows
+- **Apply**: Use improvement planning results in Steps 2-5 to create AIOUs and the planning handoff document

@@ -132,3 +132,17 @@ Use **Display Template** from `council-validation.md` to show: Enhancement: [Nam
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Enhancement backlog from Step 2, implementation approach from Step 3, affected code areas
+- **Request**: Design test-first implementation strategy for each enhancement with RED-GREEN-REFACTOR cycle
+- **Apply**: Use TDD strategy in Step 3 implementation process to ensure tests are written before enhancement code
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Implemented enhancement code, test results, before/after diff
+- **Request**: Review enhancement implementation for quality, regressions, and adherence to existing patterns
+- **Apply**: Address review findings before completing Step 5 phase completion criteria

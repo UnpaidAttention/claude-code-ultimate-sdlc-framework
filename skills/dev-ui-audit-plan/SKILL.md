@@ -173,3 +173,13 @@ Next step: Run /dev-ui-audit-fix to implement the approved plan.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Gap analysis report (Phase 3), feature specs, dependency graph between gaps
+- **Request**: Prioritize the implementation plan — order gaps by structural dependencies, effort, and user impact; group into implementable batches
+- **Apply**: Use prioritized plan as the implementation roadmap for Phase 5
+
+---

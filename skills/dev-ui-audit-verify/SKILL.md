@@ -200,3 +200,19 @@ Next step: Run /dev-ui-polish to audit design quality and remove AI slop.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Target state artifact, verification results for routes/interactions/CRUD/states
+- **Request**: Verify UI completeness from a usability perspective — confirm all user flows are intuitive, all states are handled, and the experience is coherent end-to-end
+- **Apply**: Incorporate UX verification findings into the verification report
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Implemented code, original existing inventory, gap analysis report
+- **Request**: Perform anti-slop check on new code — verify no generic AI patterns introduced, design system tokens used consistently, no placeholder content remains
+- **Apply**: Flag any anti-slop issues as MEDIUM severity in the verification report for remediation
+
+---

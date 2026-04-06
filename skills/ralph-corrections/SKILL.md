@@ -229,3 +229,17 @@ When no PENDING corrections remain (all are COMPLETE or BLOCKED):
 - Review git log: `git log ralph-corrections-start..HEAD`
 - Certificates stored in `verification/certificates/COR-XXX.md`
 - Plugin state stored in `.claude/ralph-loop.local.md`
+
+## Agent Invocations
+
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Correction details from correction-log.md, root cause analysis, reproduction steps
+- **Request**: Verify root cause accuracy independently and identify the minimal fix addressing the true underlying cause
+- **Apply**: Use root cause verification within the Ralph loop's Step 3c to ensure fixes target root causes, not symptoms
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Correction code diff, before/after evidence, verification test results
+- **Request**: Review correction implementation for quality, completeness, and absence of regressions
+- **Apply**: Use review results in Step 3e verification — block COMPLETE status if quality issues found

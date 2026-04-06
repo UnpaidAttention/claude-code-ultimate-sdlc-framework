@@ -211,3 +211,17 @@ The standard correction protocol (`/validate-correct`) should END with this veri
 11. VERIFY CORRECTION ← /validate-verify-correction
 12. Log to correction-log.md (only if verified)
 ```
+
+## Agent Invocations
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Correction ID, before/after code diff, correction plan, affected code paths
+- **Request**: Design and validate verification test evidence proving the fix works correctly
+- **Apply**: Use test evidence in Step 5 to confirm the fix passes verification
+
+### Agent: sdlc-integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Correction ID, affected features and integration points, existing test suite
+- **Request**: Run regression checks to verify the fix did not break related functionality
+- **Apply**: Use regression results in Step 6 to confirm no new failures before generating the certificate

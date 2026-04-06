@@ -144,3 +144,19 @@ Theme changes are visual — they require complete, working code to restyle.
 - Before/After screenshots available for comparison
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Current theme snapshot, approved design system proposal, frontend codebase structure
+- **Request**: Orchestrate the 5-phase retheme — document current tokens, implement new design system in dependency order, verify zero old theme values remain
+- **Apply**: Integrate findings to drive each phase's execution
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Current theme analysis, retheme direction, proposed design system, project identity
+- **Request**: Evaluate the new theme direction for usability — verify contrast, readability, visual hierarchy, and emotional fit with the product's target audience
+- **Apply**: Incorporate UX evaluation into direction research and proposal review
+
+---

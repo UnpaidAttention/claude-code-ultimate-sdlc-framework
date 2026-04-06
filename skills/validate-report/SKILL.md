@@ -89,3 +89,11 @@ Use **Display Template** from `council-validation.md` to show: Software Validati
 - Include all statistics
 - Provide clear recommendation
 - Reference all supporting documents
+
+## Agent Invocations
+
+### Agent: sdlc-documentation
+Invoke via Agent tool with `subagent_type: "sdlc-documentation"`:
+- **Provide**: All state files, correction log, gap analysis, completeness matrix, enhancement proposals, quality metrics
+- **Request**: Generate comprehensive validation and perfection report with executive summary, statistics, and actionable recommendations
+- **Apply**: Use generated report as the final validation deliverable in Step 5

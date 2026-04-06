@@ -225,3 +225,19 @@ Implementation log appended to: .ultimate-sdlc/council-state/development/ui-poli
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Approved remediation plan, current design token files, component file paths, build configuration
+- **Request**: Implement remediation in dependency order (typography, colors, components, layouts, copy) — update tokens, global styles, component files, and verify build after each category
+- **Apply**: Update implementation log in the plan file after each category completes
+
+### Agent: code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: All modified files from remediation implementation
+- **Request**: Review changes for design token consistency, no hardcoded values, WCAG AA contrast compliance, and no functional regressions
+- **Apply**: Address review findings before marking each category as COMPLETE
+
+---

@@ -201,3 +201,11 @@ If validation fails critically:
 ```
 
 No arguments required. Run anytime to verify framework health.
+
+## Agent Invocations
+
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Validation report from Step 8, directory structure results, reference consistency findings
+- **Request**: Verify framework structural integrity against all framework gate criteria and flag blocking issues
+- **Apply**: Use gate verification to determine whether framework is operational or requires /recover

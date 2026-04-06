@@ -226,3 +226,11 @@ Use **Display Template** from `council-development.md` to show: Wave 5 Classific
 - When unsure, default to LOGIC (Claude handles uncertainty better)
 - Layer assignment is critical for execution order
 - Always validate dependency graph for cycles
+
+## Agent Invocations
+
+### Agent: sdlc-frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Wave 5 AIOU list with scope descriptions, acceptance criteria, UI dependencies, component framework
+- **Request**: Classify each AIOU complexity (VISUAL/LOGIC/HYBRID), assign UI layer (1-7), determine execution order, and validate dependency graph for cycles
+- **Apply**: Use classification results in Steps 3-5 to populate the Wave 5 AIOU Classification summary and update planning handoff

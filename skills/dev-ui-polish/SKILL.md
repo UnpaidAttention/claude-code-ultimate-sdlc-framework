@@ -181,3 +181,19 @@ All functionality preserved — only visual design changed.
 ```
 
 ---
+
+## Agent Invocations
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Current UI codebase, design system tokens, slop scan results
+- **Request**: Orchestrate the 6-phase polish process — scan for AI slop patterns, implement design remediation, verify token consistency across all components
+- **Apply**: Integrate findings to drive each phase's execution
+
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Slop report findings, design alternatives research, project identity
+- **Request**: Evaluate proposed design alternatives for usability impact — ensure remediation improves user experience, maintains accessibility, and creates a distinctive visual identity
+- **Apply**: Incorporate UX evaluation into alternative selection and remediation planning
+
+---

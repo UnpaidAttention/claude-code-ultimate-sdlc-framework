@@ -160,3 +160,17 @@ Use **Display Template** from `council-development.md` to show: Maintenance Plan
 Maintenance Planning [DONE] → Development [ ] → Validation [ ] → Close Cycle
 
 ---
+
+## Agent Invocations
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Maintenance scope (dependency updates/security patches/infrastructure/database migrations), current dependency versions, vulnerability reports
+- **Request**: Plan maintenance cycle — perform impact analysis, create targeted maintenance AIOUs, and generate planning handoff
+- **Apply**: Use maintenance planning results in Steps 2-4 to create AIOUs and the planning handoff document
+
+### Agent: sdlc-security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Current dependency list, npm audit / pip audit results, known CVEs, infrastructure configuration
+- **Request**: Audit dependencies for security vulnerabilities, prioritize patches by severity, and identify exposure assessment
+- **Apply**: Use security audit results in Step 2 impact analysis for dependency updates and security patches
