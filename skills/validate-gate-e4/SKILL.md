@@ -77,11 +77,18 @@ E4 not complete. Run /validate-e4 first.
 
 ## Workflow
 
-### Step 1: Load Gate E4 Criteria
+### Agent: gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate E4 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate E4, E-track phase outputs (feature richness assessment, innovation list, enhancement implementations, UX polish report)
+- **Request**: Verify each Gate E4 criterion against evidence, run automated checks where applicable, and produce PASS/FAIL determination with justification per criterion
+- **Apply**: Use gate-keeper's determination for the gate decision below
 
-Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate E4.
+### Step 1: Gate Verification
 
-Verify each criterion against the authoritative checklist. Run automated checks where applicable.
+The gate-keeper agent performs the full gate verification including:
+- Loading criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate E4
+- Verifying each criterion against the authoritative checklist
+- Running automated checks where applicable
 
 ### Step 2: Gate Decision
 

@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: S2 - Release Readiness
 - Set `Status`: in_progress
 
+### Agent: gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: All previous gate results (V5, C4, P4, E4), validation handoff draft, release checklist, full test suite results, documentation status
+- **Request**: Conduct final S2 certification pre-check — verify all previous gates remain valid, confirm no regressions since last gate, and validate release readiness across all dimensions
+- **Apply**: Use gate-keeper's pre-check to confirm release readiness before generating the final handoff
+
 ### Step 2: Release Checklist
 
 Complete final release checklist:

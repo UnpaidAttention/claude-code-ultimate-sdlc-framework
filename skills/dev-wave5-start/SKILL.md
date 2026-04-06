@@ -29,6 +29,19 @@ begins the UI implementation phase.
 3. Discover available MCP servers (Stitch, shadcn/ui, Playwright, etc.)
 4. Classify AIOUs for model routing (Opus for complex, Sonnet for standard)
 5. Create `wave5-context.md` with classifications and MCP choices
-6. Begin first AIOU implementation
+6. Establish component architecture and accessibility baseline
+7. Begin first AIOU implementation
+
+### Agent: sdlc-frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Wave 5 AIOU list, ui-design-plan.md, design-system.md, route tree, component inventory
+- **Request**: Design component architecture — shared layout components, state management strategy, routing structure, and reusable UI patterns
+- **Apply**: Record architecture decisions in wave5-context.md before starting individual AIOUs
+
+### Agent: sdlc-ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: UI design plan, design system tokens, WCAG requirements, target user profiles
+- **Request**: Define accessibility baseline (ARIA patterns, keyboard navigation plan, color contrast requirements) and usability heuristics for Wave 5
+- **Apply**: Record a11y requirements in wave5-context.md as mandatory constraints for all Wave 5 AIOUs
 
 Use `/sdlc-dev-wave5-status` to check progress, `/sdlc-dev-wave5-next` to advance.

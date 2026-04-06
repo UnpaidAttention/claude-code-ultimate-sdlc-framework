@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: P4 - Security Hardening
 - Set `Status`: in_progress
 
+### Agent: security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Full codebase, dependency manifests, T5 security findings, previous vulnerability scan results, deployment configuration
+- **Request**: Conduct final security hardening review — verify all previous findings are resolved, run fresh SAST/DAST scans, check dependency vulnerabilities, validate security headers and configurations for production
+- **Apply**: Use security agent findings to populate security checklist and vulnerability scan results
+
 ### Step 2: Security Checklist
 
 Complete security hardening checklist:

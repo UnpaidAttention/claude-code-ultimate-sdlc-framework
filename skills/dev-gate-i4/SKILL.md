@@ -89,6 +89,12 @@ Gate I4 ensures the backend is complete and stable before investing in UI develo
 
 Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Development Council Gates → Gate I4.
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate I4 criteria from gate-criteria.md, wave completion status (Waves 0-4), test results, coverage reports, lint output, AIOU completion artifacts
+- **Request**: Verify all Gate I4 criteria — wave completion, test coverage thresholds, build success, code quality metrics, and AIOU traceability
+- **Apply**: Use the gate-keeper's verdict as the gate decision. If FAIL, address all listed remediation items before re-running
+
 Run automated verification:
 // turbo
 ```bash

@@ -158,6 +158,12 @@ Check if `handoffs/development-handoff.md` exists:
 **If any track is in progress:**
 → RESUME SESSION - Go to Step 6
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: `product-concept.md`, `specs/scope-lock.md`, `handoffs/audit-handoff.md` (or `development-handoff.md` for Patch/Maintenance cycles)
+- **Request**: Extract documented intents — for each feature, identify the stated purpose, target users, success criteria, and expected behaviors
+- **Apply**: Use extracted intents to populate `intent-map.md` during session setup
+
 ### Step 5: New Session Setup
 
 1. Update `.ultimate-sdlc/project-context.md`:

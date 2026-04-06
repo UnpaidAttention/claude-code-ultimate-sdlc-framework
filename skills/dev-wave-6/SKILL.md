@@ -111,6 +111,20 @@ Read from `specs/wave-summary.md` and `specs/aious/`:
 - Understand integration requirements
 - Review E2E test requirements
 
+### Step 2.5: Integration Agent Pipeline
+
+### Agent: sdlc-integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: All feature specs, connectivity matrix, Wave 6 AIOU list, API contracts, frontend-backend integration points
+- **Request**: Design E2E test plan covering critical user journeys, cross-feature interactions, error propagation paths, and performance baselines
+- **Apply**: Use the test plan as the blueprint for E2E test implementation in Step 3
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: All implemented code across waves, E2E test results, integration verification evidence, connectivity matrix results
+- **Request**: Final review of full system — architectural consistency, cross-layer error handling, logging completeness, and deployment readiness
+- **Apply**: Fix all CRITICAL and HIGH issues before completing Wave 6
+
 ### Step 3: Integration Activities
 
 #### System Assembly

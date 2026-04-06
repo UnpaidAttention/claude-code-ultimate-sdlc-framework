@@ -83,6 +83,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: P2 - Failure Mode Analysis
 - Set `Status`: in_progress
 
+### Agent: operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: System architecture, component dependencies, external service integrations, infrastructure topology
+- **Request**: Conduct FMEA — for each component, identify failure modes, assess severity/occurrence/detection, calculate RPN, and recommend mitigations for high-RPN items
+- **Apply**: Populate FMEA table and mitigation plans with findings
+
+### Agent: architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: System architecture, component dependency graph, failure mode list from operations agent
+- **Request**: Conduct blast radius analysis — for each high-RPN failure mode, map the cascading impact across dependent components, identify isolation boundaries, and recommend circuit breakers or bulkheads
+- **Apply**: Add blast radius maps to failure scenario documentation and inform mitigation priorities
+
 ### Step 2: FMEA Process
 
 Conduct Failure Mode and Effects Analysis:

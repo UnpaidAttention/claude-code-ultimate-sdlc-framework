@@ -82,6 +82,12 @@ Gate 3.5 not passed. Run /planning-gate-3-5 first.
 **Lens**: `[Security]` — Apply security analysis perspective.
 **Load skills**: threat-modeling, security-patterns, risk-assessment
 
+### Agent: sdlc-security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: System architecture (ADRs, component diagram), scope-lock.md features, API specification, database design, deployment architecture
+- **Request**: Perform comprehensive security analysis — asset inventory, trust zone mapping, STRIDE threat modeling with DREAD scoring, security controls matrix, attack surface enumeration, and security requirements per AIOU
+- **Apply**: Use as the authoritative input for all Sub-Phase A steps (A1 through A5)
+
 ### A1: Asset Inventory
 
 Identify and document:
@@ -216,6 +222,12 @@ Before proceeding to Sub-Phase B:
 **Lens**: `[Quality]` — Apply testing and validation perspective.
 **Swap skills**: test-strategy, test-patterns, coverage-planning
 
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: All FEAT-XXX specs, all AIOU-XXX specs, technology stack (ADRs), security requirements from Sub-Phase A
+- **Request**: Design comprehensive testing strategy — test levels (unit/integration/e2e/performance/security), coverage targets, framework selection, test data strategy, CI/CD test integration plan, and per-AIOU test requirements
+- **Apply**: Use as the authoritative input for all Sub-Phase B steps (B1 through B4)
+
 ### B1: Define Test Levels
 
 #### Unit Testing
@@ -339,6 +351,12 @@ Before proceeding to Sub-Phase C:
 **Lens**: `[Operations]` — Apply infrastructure and deployment perspective.
 **Swap skills**: infrastructure-design, cicd-patterns, monitoring-observability
 
+### Agent: sdlc-operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: System architecture (ADRs), technology stack, security requirements, testing strategy, scope-lock.md features, performance requirements from PRD cross-cutting
+- **Request**: Design deployment architecture, CI/CD pipeline specification, monitoring and observability plan (SLI/SLO definitions, alerting rules), disaster recovery strategy, and infrastructure-as-code approach
+- **Apply**: Use as the authoritative input for all Sub-Phase C steps (C1 through C5)
+
 ### C1: Deployment Architecture
 
 #### Environments
@@ -436,6 +454,12 @@ Before proceeding to Sub-Phase D:
 
 **Lens**: `[Requirements]` — Apply planning and prioritization perspective.
 **Swap skills**: sprint-planning, estimation, risk-assessment
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: All AIOU-XXX specs with wave assignments, dependency graph, security/testing/infrastructure requirements from Sub-Phases A-C, risk assessment from Phase 1.5
+- **Request**: Estimate AIOU complexity and effort, organize into sprints by wave, perform critical path analysis, create risk register, define global Definition of Done, and generate development timeline
+- **Apply**: Use as the authoritative input for all Sub-Phase D steps (D1 through D5)
 
 ### D1: Estimate AIOUs
 

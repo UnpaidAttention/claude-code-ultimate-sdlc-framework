@@ -89,6 +89,24 @@ Create `.ultimate-sdlc/council-state/validation/completeness-matrix.md`:
 
 Use **Display Template** from `council-validation.md` to show: Completeness Matrix
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Completeness matrix, `specs/scope-lock.md`, acceptance criteria from AIOUs
+- **Request**: Verify requirement traceability — confirm every scope-lock feature has implementation evidence and test coverage
+- **Apply**: Integrate traceability findings into completeness matrix
+
+### Agent: security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Security requirements from threat model and AIOUs, current implementation
+- **Request**: Assess security completeness — verify all security requirements are implemented and tested
+- **Apply**: Add security lens results to multi-lens analysis
+
+### Agent: operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: Deployment configs, monitoring setup, operational procedures
+- **Request**: Assess operational completeness — verify deployability, monitoring coverage, and operational readiness
+- **Apply**: Add operations lens results to multi-lens analysis
+
 ### Step 3: Multi-Lens Analysis
 
 Apply multiple analysis perspectives:

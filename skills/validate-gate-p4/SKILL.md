@@ -77,11 +77,18 @@ P4 not complete. Run /validate-p4 first.
 
 ## Workflow
 
-### Step 1: Load Gate P4 Criteria
+### Agent: gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate P4 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate P4, P-track phase outputs (operational assessment, FMEA, performance report, security hardening report)
+- **Request**: Verify each Gate P4 criterion against evidence, run automated checks where applicable, and produce PASS/FAIL determination with justification per criterion
+- **Apply**: Use gate-keeper's determination for the gate decision below
 
-Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate P4.
+### Step 1: Gate Verification
 
-Verify each criterion against the authoritative checklist. Run automated checks where applicable.
+The gate-keeper agent performs the full gate verification including:
+- Loading criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate P4
+- Verifying each criterion against the authoritative checklist
+- Running automated checks where applicable
 
 ### Step 2: Gate Decision
 

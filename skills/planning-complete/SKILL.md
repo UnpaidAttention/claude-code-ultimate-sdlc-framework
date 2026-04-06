@@ -101,6 +101,18 @@ Check all Gate 8 criteria:
 
 **If any criterion fails**: Stop and report what's missing.
 
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: All planning artifacts, scope-lock.md, product-concept.md, planning-handoff.md (if already generated)
+- **Request**: Final handoff validation — verify end-to-end traceability (product concept to FEAT specs to AIOUs), confirm all acceptance criteria are testable, verify no requirements were lost across planning phases
+- **Apply**: Integrate validation findings before generating/finalizing handoff document
+
+### Agent: sdlc-documentation
+Invoke via Agent tool with `subagent_type: "sdlc-documentation"`:
+- **Provide**: All planning artifacts, handoff verification results from requirements agent
+- **Request**: Validate handoff document quality — verify all required sections are present, cross-references are correct, referenced files exist, document is self-contained enough for Development Council to begin work without ambiguity
+- **Apply**: Fix any documentation gaps before marking Planning Council complete
+
 ### Step 2: Generate Handoff Document
 
 Create `handoffs/planning-handoff.md` with this structure:

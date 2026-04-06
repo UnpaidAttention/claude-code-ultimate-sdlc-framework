@@ -89,6 +89,12 @@ This is a **BLOCKING** gate - development cannot begin without passing.
 
 ## Workflow
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: All Gate 8 criteria from gate-criteria.md, all planning artifacts (scope-lock.md, FEAT specs, AIOU specs, ADRs, wave-summary, security specs, testing strategy, infrastructure plan, sprint plan, planning-handoff.md), project-context.md phase completion status
+- **Request**: Verify ALL Gate 8 criteria — all phases complete, all artifacts exist, quality standards met (testable acceptance criteria, security requirements, test strategy), handoff completeness verified, full end-to-end traceability from requirements to AIOUs. Return PASS/FAIL with detailed findings per criterion.
+- **Apply**: Use gate-keeper's verdict as the authoritative gate decision. If FAIL, address cited gaps before re-evaluation.
+
 ### Step 1: Gate Criteria Checklist
 
 Verify each criterion:

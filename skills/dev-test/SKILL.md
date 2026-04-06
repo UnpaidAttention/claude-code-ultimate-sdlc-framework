@@ -150,6 +150,12 @@ npm test -- --testPathPattern="[pattern]"
 
 If tests fail:
 
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Failing test output, test file paths, implementation code under test, error messages
+- **Request**: Diagnose each failure — categorize as actual bug, test bug, or environment issue. For actual bugs, identify root cause in implementation. For test bugs, identify incorrect assertion or setup
+- **Apply**: Fix implementation (not tests) for actual bugs. Fix test code only for confirmed test bugs. Re-run to verify
+
 1. **Analyze each failure**
    - Read error message
    - Identify likely cause

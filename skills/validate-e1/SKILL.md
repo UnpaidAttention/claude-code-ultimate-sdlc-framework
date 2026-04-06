@@ -84,6 +84,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: E1 - Feature Richness
 - Set `Status`: in_progress
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: `product-concept.md`, `specs/scope-lock.md`, current feature inventory, competitive landscape
+- **Request**: Analyze feature richness — evaluate depth and breadth of each feature against original vision, identify features that are thin/shallow vs rich/complete, and suggest enrichment opportunities
+- **Apply**: Integrate richness analysis into feature assessment and enhancement candidates
+
 ### Step 2: Feature Richness Assessment
 
 Evaluate current feature set:

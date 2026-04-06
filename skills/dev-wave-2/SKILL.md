@@ -103,6 +103,12 @@ Record feature context in WORKING-MEMORY.md before beginning implementation.
 
 **Lens**: `[Architecture]` (primary focus on data modeling)
 
+### Agent: sdlc-database-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-database-specialist"`:
+- **Provide**: Wave 2 AIOU specs, data architecture ADRs, entity relationships from feature specs
+- **Request**: Design database schema including entities, relationships, indexes, constraints, and migration strategy
+- **Apply**: Use the specialist's schema design as the blueprint for implementation below
+
 **Task**:
 Define the database schema, models, and migrations.
 
@@ -123,6 +129,18 @@ Implement the repository layer that interacts with the database.
 3.  **Add any custom queries** required by the AIOUs.
 4.  **Implement data validation** and transaction handling where necessary.
 5.  **Write unit tests** for the repository layer.
+
+   ### Agent: sdlc-tdd-guide
+   Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+   - **Provide**: Repository interfaces, AIOU acceptance criteria, data model schema
+   - **Request**: Generate test cases for all CRUD operations, custom queries, validation rules, and transaction handling
+   - **Apply**: Write tests first (RED), implement repository to pass (GREEN), then refactor
+
+   ### Agent: sdlc-code-reviewer
+   Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+   - **Provide**: Implemented repository code, schema, migration files, and test results
+   - **Request**: Review for N+1 query issues, missing indexes, validation gaps, and transaction safety
+   - **Apply**: Fix all CRITICAL and HIGH issues before marking AIOU complete
 
 ### Step 4: Quality Standards
 

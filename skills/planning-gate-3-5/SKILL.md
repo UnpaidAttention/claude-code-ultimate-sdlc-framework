@@ -87,6 +87,12 @@ Gate 3.5 ensures all features are properly decomposed before investing in securi
 
 Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Planning Council Gates → Gate 3.5.
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate 3.5 criteria from gate-criteria.md, scope-lock.md, all FEAT-XXX specs, all AIOU-XXX specs, wave-summary.md, connectivity-matrix.md, PRD cross-cutting specs, API specification
+- **Request**: Verify ALL Gate 3.5 criteria — every feature has AIOUs, all AIOUs have acceptance criteria and wave assignments, no circular dependencies, FEAT-to-AIOU traceability complete, connectivity matrix covers all features. Return PASS/FAIL with detailed findings per criterion.
+- **Apply**: Use gate-keeper's verdict as the authoritative gate decision. If FAIL, address cited gaps before re-evaluation.
+
 Verify each criterion against the authoritative checklist. Run automated checks where applicable.
 
 ### Step 2: Generate Gate Report

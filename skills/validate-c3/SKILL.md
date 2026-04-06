@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: C3 - Verification Testing
 - Set `Status`: in_progress
 
+### Agent: integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Correction log, before/after documentation, test suites, component dependency map
+- **Request**: Design and execute verification tests — for each correction, verify the fix works across all affected integration points and does not break dependent components
+- **Apply**: Use verification test results to populate the verification plan and document pass/fail per correction
+
 ### Step 2: Verification Test Plan
 
 For each correction:

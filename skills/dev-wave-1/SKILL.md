@@ -103,9 +103,23 @@ For each Wave 1 AIOU:
 
 1. **Read AIOU spec** - Understand requirements
 2. **Write tests first** (TDD)
+
+   ### Agent: sdlc-tdd-guide
+   Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+   - **Provide**: AIOU spec, acceptance criteria, file targets, and project test framework
+   - **Request**: Generate failing test cases for all acceptance criteria before implementation
+   - **Apply**: Integrate generated tests, confirm they fail (RED), then implement to pass (GREEN)
+
 3. **Implement utility**
 4. **Run tests** - Verify passing
 5. **Self-review** - Check quality
+
+   ### Agent: sdlc-code-reviewer
+   Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+   - **Provide**: Implemented code, AIOU acceptance criteria, and test results
+   - **Request**: Review code against acceptance criteria, clean code standards, and edge case coverage
+   - **Apply**: Fix all CRITICAL and HIGH issues before marking AIOU complete
+
 6. **Commit** - Atomic commit with AIOU reference
 
 ### Step 4: Common Wave 1 Components

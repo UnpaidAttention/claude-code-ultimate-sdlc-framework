@@ -77,15 +77,19 @@ T3 not complete. Run /audit-t3 first.
 
 ## Workflow
 
-### Step 1: Load Gate T3 Criteria
+### Agent: gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate T3 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates → Gate T3, T3 phase outputs (screenshots, usability report, navigation flows, defect log), Security Checklist from § Standard Terms
+- **Request**: Verify each Gate T3 criterion against evidence, complete security checklist, run automated checks where applicable, and produce PASS/FAIL determination with justification per criterion
+- **Apply**: Use gate-keeper's determination for the gate decision below
 
-Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates → Gate T3.
+### Step 1: Gate Verification
 
-Verify each criterion against the authoritative checklist. Run automated checks where applicable.
-
-### Step 1.5: Security Checklist
-
-Complete the Security Checklist from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Standard Terms.
+The gate-keeper agent performs the full gate verification including:
+- Loading criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates → Gate T3
+- Verifying each criterion against the authoritative checklist
+- Completing the Security Checklist from § Standard Terms
+- Running automated checks where applicable
 
 ### Step 2: Gate Decision
 

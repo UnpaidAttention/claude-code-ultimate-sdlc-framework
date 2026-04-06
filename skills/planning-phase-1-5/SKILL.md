@@ -110,6 +110,18 @@ For each feature, ask:
 - Add any missing dependencies to the list
 - Document the dependency relationships
 
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: All features from Step 3a, original product concept, user personas
+- **Request**: Perform requirements gap analysis — identify missing functional areas, implicit requirements, dependency gaps, and cross-cutting concerns not yet captured
+- **Apply**: Add any discovered gaps to the feature candidate list before proceeding
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Complete feature candidate list from Steps 3a-3b, project type, constraints
+- **Request**: Consolidate and deduplicate feature list, group by module/domain, verify completeness against project type preset categories
+- **Apply**: Use consolidated list as the authoritative feature candidate set for user confirmation
+
 **Step 3c: Gap Analysis Against Concept**
 Re-read the original product concept with fresh eyes:
 - Highlight every noun (potential entity/feature)

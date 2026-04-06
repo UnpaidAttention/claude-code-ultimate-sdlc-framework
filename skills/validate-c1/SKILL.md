@@ -84,6 +84,24 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: C1 - Targeted Corrections
 - Set `Status`: in_progress
 
+### Agent: debugger (then tdd-guide, then code-reviewer)
+Invoke sequentially via Agent tool:
+
+**Step A** — `subagent_type: "sdlc-debugger"`:
+- **Provide**: Defect details, reproduction steps, affected code paths
+- **Request**: Conduct root cause analysis for each correction — identify the exact root cause, not just symptoms, and recommend targeted fix
+- **Apply**: Use root cause findings to guide correction implementation
+
+**Step B** — `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Root cause analysis from debugger, affected code, existing tests
+- **Request**: Write tests that verify the fix — regression test for the bug, plus boundary tests around the affected code path
+- **Apply**: Run tests to confirm they fail before fix (RED), then pass after fix (GREEN)
+
+**Step C** — `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: The correction diff, test results, root cause analysis
+- **Request**: Review the correction for quality — verify minimal change, no side effects, proper error handling, and code standards compliance
+- **Apply**: Address any review findings before marking the correction complete
+
 ### Step 2: Before/After Protocol
 
 **CRITICAL**: For EVERY correction:

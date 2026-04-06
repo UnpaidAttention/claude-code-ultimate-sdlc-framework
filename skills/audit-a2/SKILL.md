@@ -83,6 +83,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: A2 - Completeness
 - Set `Status`: in_progress
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: `specs/scope-lock.md`, `specs/feature-inventory.md`, acceptance criteria from AIOUs, implementation evidence
+- **Request**: Conduct gap analysis — identify features specified but not implemented, partially implemented, or implemented but not specified
+- **Apply**: Populate the completeness matrix with gap analysis results
+
+### Agent: security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: `specs/security/threat-model.md`, AIOU security annotations, T5 security audit results
+- **Request**: Verify all security requirements from planning are implemented — cross-reference threat model mitigations and AIOU security requirements against code evidence
+- **Apply**: Add security verification results to Step 3a and log unimplemented security requirements as SEC-HIGH defects
+
 ### Step 2: Feature Completeness Matrix
 
 | Feature | Specified | Implemented | Complete | Notes |

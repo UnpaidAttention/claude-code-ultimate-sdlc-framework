@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: P3 - Performance Optimization
 - Set `Status`: in_progress
 
+### Agent: performance
+Invoke via Agent tool with `subagent_type: "sdlc-performance"`:
+- **Provide**: Current performance baselines, Lighthouse reports, load test results, profiling data, bundle analysis
+- **Request**: Analyze performance data and recommend optimizations — identify top bottlenecks by impact, suggest specific database/application/frontend optimizations, and define target metrics
+- **Apply**: Use optimization recommendations to guide Steps 3 and 4
+
 ### Step 2: Performance Baseline
 
 Establish baseline metrics using available tools:

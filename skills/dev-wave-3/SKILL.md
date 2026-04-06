@@ -123,7 +123,21 @@ Follow clean architecture:
 For each service:
 
 1. **Define service interface**
+
+   ### Agent: sdlc-backend-specialist
+   Invoke via Agent tool with `subagent_type: "sdlc-backend-specialist"`:
+   - **Provide**: AIOU spec, feature requirements, data layer interfaces from Wave 2, architecture ADRs
+   - **Request**: Design service interface, dependency injection strategy, business validation rules, and error handling patterns
+   - **Apply**: Use the specialist's service design as the blueprint for implementation
+
 2. **Write unit tests** (TDD)
+
+   ### Agent: sdlc-tdd-guide
+   Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+   - **Provide**: Service interface definition, AIOU acceptance criteria, business validation rules
+   - **Request**: Generate failing test cases covering business logic, error paths, edge cases, and dependency mocking
+   - **Apply**: Integrate tests, confirm RED, then implement to GREEN
+
 3. **Implement service**
    - Single responsibility
    - Dependency injection
@@ -131,6 +145,13 @@ For each service:
    - Error handling
 4. **Run tests** - Verify passing
 5. **Self-review** - Check quality
+
+   ### Agent: sdlc-code-reviewer
+   Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+   - **Provide**: Implemented service code, test results, AIOU acceptance criteria
+   - **Request**: Review for SRP violations, leaky abstractions, missing error handling, and direct DB access
+   - **Apply**: Fix all CRITICAL and HIGH issues before marking AIOU complete
+
 6. **Commit**
 
 ### Step 5: Common Wave 3 Components

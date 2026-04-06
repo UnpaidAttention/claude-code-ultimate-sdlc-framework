@@ -83,6 +83,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: T4 - Integration Testing
 - Set `Status`: in_progress
 
+### Agent: integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: API specs, endpoint definitions, component dependency map, service contracts
+- **Request**: Verify API contracts between frontend and backend — identify mismatches in request/response schemas, missing error handling, and undocumented endpoints
+- **Apply**: Integrate contract verification results into integration test areas
+
+### Agent: database-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-database-specialist"`:
+- **Provide**: Database schema, migration files, data flow diagrams, ORM models
+- **Request**: Verify data flow integrity — trace data from API input through business logic to persistence and back, identify missing validations, transaction gaps, and data consistency risks
+- **Apply**: Add data flow findings to database integration test scenarios
+
 ### Step 2: Integration Test Areas
 
 #### API Integration

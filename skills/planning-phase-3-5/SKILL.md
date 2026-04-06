@@ -112,6 +112,24 @@ Read feature specifications:
 5. Present summary to user for review of NFR targets
 6. Update WORKING-MEMORY.md
 
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: All FEAT-XXX.md specs (or current batch), deep-dive component inventories, scope-lock.md
+- **Request**: Decompose each feature into Atomic Independently Ownable Units — ensure each AIOU has single responsibility, clear boundaries, and testable acceptance criteria. Verify no functional gaps between AIOUs.
+- **Apply**: Use as the basis for AIOU specs in Step 3
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Proposed AIOU list from planner, system architecture, ADRs, dependency graph
+- **Request**: Assign AIOUs to development waves (0-6) based on architectural layering, validate no circular dependencies, verify wave ordering respects architectural constraints
+- **Apply**: Use wave assignments in Step 4 and dependency validation in Step 5
+
+### Agent: sdlc-api-designer
+Invoke via Agent tool with `subagent_type: "sdlc-api-designer"`:
+- **Provide**: All FEAT-XXX API requirements, database design, architecture ADRs, AIOU list
+- **Request**: Generate comprehensive API specification — endpoint definitions with request/response schemas for all status codes, error envelope, authentication requirements, and FEAT-to-endpoint traceability
+- **Apply**: Use as input for Step 6B API Design Specification generation
+
 ### Step 3: Decompose into AIOUs
 
 For each feature in scope-lock.md (or current batch if batched), create AIOUs in `specs/aious/`. Every feature gets thorough decomposition — no feature receives abbreviated treatment.

@@ -140,6 +140,12 @@ python -m py_compile *.py 2>&1 || python -m compileall . 2>&1
 
 **If build FAILS:**
 
+### Agent: sdlc-build-resolver
+Invoke via Agent tool with `subagent_type: "sdlc-build-resolver"`:
+- **Provide**: Full build error output, project build system config (package.json/Cargo.toml/etc.), recent file changes
+- **Request**: Diagnose build failure root cause and propose the minimal fix — do not refactor or change unrelated code
+- **Apply**: Apply the resolver's minimal fix, then re-run the build to verify success
+
 Generate **Build Failure Artifact**:
 Use **Display Template** from `council-development.md` to show: Build Verification: FAILED
 [Full error output]

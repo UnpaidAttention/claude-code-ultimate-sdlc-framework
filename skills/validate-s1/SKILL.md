@@ -84,6 +84,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: S1 - Documentation Update
 - Set `Status`: in_progress
 
+### Agent: documentation
+Invoke via Agent tool with `subagent_type: "sdlc-documentation"`:
+- **Provide**: All project documentation (README, API docs, code comments, setup guides, changelog), current codebase state, corrections and enhancements from C-track and E-track
+- **Request**: Review all documentation for accuracy and completeness — identify outdated content, missing sections, broken links, stale screenshots, and code examples that no longer match implementation
+- **Apply**: Use documentation review findings to guide documentation updates in Steps 3 and 4
+
 ### Step 2: Documentation Inventory
 
 Review and update all documentation:

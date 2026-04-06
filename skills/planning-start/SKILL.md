@@ -173,6 +173,18 @@ When the cycle type is **Feature**, planning is scoped to NEW features only:
 If `product-concept.md` exists:
 
 1. Read and parse the file
+
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Full product-concept.md contents, project type, governance mode
+- **Request**: Elicit implicit requirements, identify ambiguities, flag missing requirement categories
+- **Apply**: Integrate findings into discovery context before proceeding
+
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Product concept summary, project type preset categories
+- **Request**: Structure discovery agenda, identify feature categories to explore, recommend questioning strategy
+- **Apply**: Use structured discovery plan to guide Thoroughness Protocol execution
 2. **If Feature cycle**: Also read and display `cycle-baseline.md` summary — frame discovery around ADDING to existing product, not starting fresh
 3. Display welcome with pre-loaded context:
 

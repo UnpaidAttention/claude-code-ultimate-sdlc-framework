@@ -137,6 +137,12 @@ Then [expected result]
 #### 7. Dependencies & Integration Points
 
 #### 8. AIOU Candidates
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Completed 8-section FEAT spec draft, original feature requirements, user stories, scope-lock.md entry for this feature
+- **Request**: Validate FEAT spec completeness — verify all acceptance criteria are testable, data requirements are specific, edge cases are comprehensive, and no requirement from scope-lock is unaddressed
+- **Apply**: Incorporate validation findings and fix any gaps before finalizing
+
 ### Step 4: Verify Completeness
 
 Before finalizing, verify:

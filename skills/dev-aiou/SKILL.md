@@ -103,7 +103,39 @@ VERIFY all dependencies complete:
 - Fail if any dependency incomplete
 ```
 
-### 3. Implementation
+### 3. Wave-Aware Agent Selection
+
+Based on the AIOU's wave assignment, invoke the appropriate specialist agent before implementation:
+
+| Wave | Specialist Agent | Purpose |
+|------|-----------------|---------|
+| Wave 1 | (none) | Utilities are straightforward |
+| Wave 2 | `sdlc-database-specialist` | Schema/migration design |
+| Wave 3 | `sdlc-backend-specialist` | Service patterns and business logic |
+| Wave 4 | `sdlc-api-designer` | Endpoint design and response matrix |
+| Wave 5 | `sdlc-frontend-specialist` | Component architecture and UI patterns |
+| Wave 6 | `sdlc-integration-tester` | E2E test design and integration strategy |
+
+Invoke the specialist via Agent tool with `subagent_type` matching the table above:
+- **Provide**: AIOU spec, acceptance criteria, relevant wave context, and dependency artifacts
+- **Request**: Domain-specific design guidance for this AIOU's implementation
+- **Apply**: Use the specialist's output as the implementation blueprint
+
+Then ALWAYS invoke these two agents in sequence:
+
+### Agent: sdlc-tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: AIOU spec, acceptance criteria, specialist's design output, project test framework
+- **Request**: Generate failing test cases for all acceptance criteria before implementation
+- **Apply**: Write tests first (RED), implement to pass (GREEN), then refactor
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Implemented code, test results, AIOU acceptance criteria, specialist's design output
+- **Request**: Review against acceptance criteria, clean code standards, and wave-specific quality requirements
+- **Apply**: Fix all CRITICAL and HIGH issues before marking AIOU complete
+
+### 4. Implementation
 
 ```
 IMPLEMENT following:
@@ -113,7 +145,7 @@ IMPLEMENT following:
 - Test coverage
 ```
 
-### 4. Verification
+### 5. Verification
 
 ```
 VERIFY:
@@ -123,7 +155,7 @@ VERIFY:
 - [ ] Follows project conventions
 ```
 
-### 5. Completion
+### 6. Completion
 
 ```
 UPDATE:

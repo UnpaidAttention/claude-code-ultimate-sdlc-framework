@@ -77,7 +77,15 @@ S2 not complete. Run /validate-s2 first.
 
 ## Workflow
 
-### Step 1: Final Gate Criteria Checklist
+### Agent: gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate S2 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate S2, all track outputs (V/C/P/E/S), all previous gate results, validation handoff, release checklist, full test suite results
+- **Request**: Verify each FINAL Gate S2 criterion against evidence — confirm all previous gates still valid, documentation complete, release checklist complete, validation handoff generated; produce PASS/FAIL determination with justification per criterion
+- **Apply**: Use gate-keeper's determination for the gate decision below
+
+### Step 1: Gate Verification
+
+The gate-keeper agent verifies all final gate criteria including:
 
 #### Criterion 1: All Previous Gates Passed
 - [ ] Gate V5 (Validation) - PASSED

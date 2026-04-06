@@ -90,6 +90,12 @@ Verify Development Council completion, generate handoff document, and prepare fo
 
 ### Step 1: Verify Gate I8
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate I8 criteria, all wave completion statuses, test/coverage/lint/build results, E2E results, feature verification reports, development handoff draft
+- **Request**: Final Gate I8 verification — confirm all criteria pass, all AIOUs traceable from scope-lock through implementation, and development is ready for Audit Council handoff
+- **Apply**: If the gate-keeper returns FAIL, stop and fix all listed issues before proceeding. Do NOT generate the handoff document until Gate I8 passes
+
 Check all Gate I8 criteria:
 
 - [ ] All AIOUs marked complete in `.ultimate-sdlc/council-state/development/current-state.md`

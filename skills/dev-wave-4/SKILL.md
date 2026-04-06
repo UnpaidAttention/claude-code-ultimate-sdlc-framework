@@ -116,8 +116,22 @@ Request → Router → Middleware → Controller → Service → Response
 For each API endpoint:
 
 1. **Define route**
+
+   ### Agent: sdlc-api-designer
+   Invoke via Agent tool with `subagent_type: "sdlc-api-designer"`:
+   - **Provide**: AIOU spec, feature API requirements, service interfaces from Wave 3, authentication needs
+   - **Request**: Design endpoint routes, request/response schemas, validation rules, middleware chain, and response matrix (all applicable status codes)
+   - **Apply**: Use the designer's API specification as the blueprint for implementation
+
 2. **Create request validation schema**
 3. **Write integration tests** (TDD)
+
+   ### Agent: sdlc-tdd-guide
+   Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+   - **Provide**: API endpoint design, response matrix, validation schemas, auth requirements
+   - **Request**: Generate integration tests for all response codes (200, 400, 401, 403, 404, 409, 422, 429, 500 as applicable)
+   - **Apply**: Write tests first (RED), implement controller to pass (GREEN)
+
 4. **Implement controller**
    - Validate input
    - Call service
@@ -125,6 +139,19 @@ For each API endpoint:
 5. **Add middleware** (auth, validation)
 6. **Run tests**
 7. **Document API**
+
+   ### Agent: sdlc-code-reviewer
+   Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+   - **Provide**: Controller code, middleware, test results, API documentation, AIOU acceptance criteria
+   - **Request**: Review for input validation gaps, response format consistency, error handling completeness, and API documentation accuracy
+   - **Apply**: Fix all CRITICAL and HIGH issues before marking AIOU complete
+
+   ### Agent: sdlc-security
+   Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+   - **Provide**: API endpoint code, authentication/authorization middleware, validation schemas, rate limiting config
+   - **Request**: Review for auth bypass vulnerabilities, injection risks, missing rate limits, and sensitive data exposure in error responses
+   - **Apply**: Fix all security findings before marking AIOU complete
+
 8. **Commit**
 
 ### Step 5: Common Wave 4 Components

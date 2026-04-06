@@ -95,6 +95,12 @@ Generate a **Documentation Artifact** using this template:
 
 Use **Display Template** from `council-planning.md` to show: ADR-[XXX]: [Decision Title]
 
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Draft ADR (context, options considered, recommended decision, consequences), existing ADRs for consistency check, system architecture context
+- **Request**: Review ADR for architectural soundness — validate that options analysis is thorough, trade-offs are honest, consequences (positive and negative) are complete, decision aligns with existing architectural principles and ADRs, and no conflicting decisions exist
+- **Apply**: Incorporate architecture review findings before finalizing the ADR
+
 ### Step 3: Verify ADR Quality
 
 Before finalizing, verify:

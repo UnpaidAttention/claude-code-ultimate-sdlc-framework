@@ -83,6 +83,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: A3 - Quality Assessment
 - Set `Status`: in_progress
 
+### Agent: quality
+Invoke via Agent tool with `subagent_type: "sdlc-quality"`:
+- **Provide**: Full codebase, test suites, coverage reports, linter output, documentation
+- **Request**: Produce quality scorecard across all dimensions — code quality, architecture, testing, documentation, security, performance — with scores and evidence per dimension
+- **Apply**: Use quality scorecard results to populate Step 3 and identify priority recommendations
+
+### Agent: architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: Codebase structure, dependency graph, module boundaries, API contracts
+- **Request**: Conduct structural review — evaluate separation of concerns, layering, dependency management, scalability, and identify architectural debt
+- **Apply**: Integrate architectural findings into the Architecture Quality dimension and recommendations
+
 ### Step 2: Quality Dimensions
 
 #### Code Quality

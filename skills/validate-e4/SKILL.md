@@ -83,6 +83,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: E4 - UX Polish
 - Set `Status`: in_progress
 
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: All screens/pages, design system, accessibility standards, user journey maps
+- **Request**: Conduct final usability review — identify remaining UX friction, inconsistent patterns, missing feedback states, and accessibility gaps
+- **Apply**: Add UX findings to the polish checklist
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Frontend source code, screenshots, design system specs
+- **Request**: Conduct anti-slop verification — identify AI-generated placeholder text, generic copy, inconsistent styling, unused components, and visual artifacts that indicate unfinished work
+- **Apply**: Add anti-slop findings to the polish implementation list
+
 ### Step 2: UX Review Checklist
 
 Complete UX polish checklist:

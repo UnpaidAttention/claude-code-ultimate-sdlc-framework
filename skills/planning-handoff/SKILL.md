@@ -85,6 +85,12 @@ Generates the final `planning-handoff.md` document for the Development Council.
    - Verify AIOU specs exist for all units
    - Generate verification Checklist Artifact
 
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: scope-lock.md, all FEAT-XXX specs, all AIOU-XXX specs, planning-handoff.md draft, product-concept.md
+- **Request**: Perform completeness check — verify every requirement from product concept traces to at least one FEAT spec and one AIOU, verify no orphan requirements, verify all acceptance criteria are testable, flag any gaps in handoff coverage
+- **Apply**: Address any completeness gaps before compiling the final handoff document
+
 2. **Compile Handoff Document**
    - Assemble all feature matrices
    - Assemble all AIOU specifications organized by wave (0-6)

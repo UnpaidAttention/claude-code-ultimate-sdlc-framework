@@ -127,6 +127,18 @@ For each feature in `specs/scope-lock.md` (or current batch if batched), create 
 **Template**:
 Use **Display Template** from `council-planning.md` to show: FEAT-XXX: [Feature Name]
 
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: All draft FEAT-XXX.md specs from Step 3a, scope-lock.md, deep-dive analyses
+- **Request**: Validate each FEAT spec — verify acceptance criteria are testable and measurable, user stories cover all personas, data requirements are complete, no requirement from scope-lock is unaddressed
+- **Apply**: Fix validation gaps in FEAT specs before architecture review
+
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: All draft FEAT-XXX.md specs, ADRs from Phase 2, system architecture, database design
+- **Request**: Assess technical feasibility of each FEAT spec — verify API designs align with architecture, data models are consistent with database design, dependencies are realistic, no architectural constraints are violated
+- **Apply**: Integrate technical findings into Step 3b architecture review
+
 ### Step 3b: Validate and Refine Specifications (Lens: `[Architecture]`)
 
 **Lens**: `[Architecture]`

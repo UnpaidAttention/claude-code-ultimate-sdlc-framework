@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: C2 - Edge Case Implementation
 - Set `Status`: in_progress
 
+### Agent: tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: Feature specs, current test suites, edge case categories below, boundary conditions
+- **Request**: Design boundary tests for each edge case category — empty inputs, max lengths, special characters, race conditions, pagination limits, and numeric bounds; write test cases before implementation
+- **Apply**: Use generated test cases as the test-first scaffold for edge case implementation
+
 ### Step 2: Edge Case Categories
 
 Address edge cases by category:

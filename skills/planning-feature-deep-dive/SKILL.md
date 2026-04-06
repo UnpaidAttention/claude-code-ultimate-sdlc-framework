@@ -108,6 +108,18 @@ Read and understand:
 
 ### Step 3: Feature Deep-Dive Analysis
 
+### Agent: sdlc-planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Current feature from scope-lock.md, architecture from Phase 2 (ADRs, system design), project type
+- **Request**: Generate complete component inventory for the feature — enumerate every UI component, service, API endpoint, data entity, and supporting component with exact counts
+- **Apply**: Use as authoritative input for Section 2 (Component Inventory) of each DIVE analysis
+
+### Agent: sdlc-ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"` (invoke only for features with UI surfaces):
+- **Provide**: Current feature description, user personas, architecture context, navigation structure
+- **Request**: Map complete user journeys (primary, secondary, error paths), define UI placement and navigation, document screen layouts and entry points
+- **Apply**: Use as authoritative input for Section 3 (UI Placement), Section 4 (User Journey Map), and Section 6 (State & Data Flow) of each DIVE analysis
+
 For each feature in scope-lock.md (or current batch if batched), create a deep-dive analysis file `specs/deep-dives/DIVE-[Feature-ID].md`.
 
 **Process ONE feature at a time.** Complete all 7 sections for a feature before moving to the next.

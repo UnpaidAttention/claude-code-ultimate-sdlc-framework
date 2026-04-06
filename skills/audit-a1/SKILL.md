@@ -88,6 +88,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: A1 - Purpose Alignment
 - Set `Status`: in_progress
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: `product-concept.md`, `planning-handoff.md`, `development-handoff.md`, feature catalogue from T1
+- **Request**: Verify intent alignment — for each feature, confirm it directly supports the stated product purpose and user personas, flag features that drift from core intent
+- **Apply**: Integrate alignment findings into the alignment report (Step 4)
+
 ### Step 2: Review Inputs
 
 - `product-concept.md`

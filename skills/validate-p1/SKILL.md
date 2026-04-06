@@ -84,6 +84,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: P1 - Operational Assessment
 - Set `Status`: in_progress
 
+### Agent: operations
+Invoke via Agent tool with `subagent_type: "sdlc-operations"`:
+- **Provide**: Deployment configs, infrastructure setup, monitoring configuration, CI/CD pipeline, environment variables
+- **Request**: Assess deployment and monitoring readiness — verify deployment procedure, rollback capability, monitoring coverage, alerting configuration, and operational runbook completeness
+- **Apply**: Integrate operational assessment findings into deployment checklist and monitoring assessment
+
 ### Step 2: Deployment Readiness
 
 Assess deployment requirements:

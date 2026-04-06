@@ -84,6 +84,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: T3 - GUI Analysis
 - Set `Status`: in_progress
 
+### Agent: ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Screen inventory, screenshots, design system specs, accessibility standards
+- **Request**: Evaluate usability and accessibility — identify UX friction points, a11y violations, and design inconsistencies
+- **Apply**: Integrate UX findings into usability assessment (Step 5) and issue log (Step 6)
+
+### Agent: frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: Frontend source code, component library, responsive breakpoints
+- **Request**: Review frontend implementation quality — component reuse, responsive behavior, CSS consistency, performance anti-patterns
+- **Apply**: Log implementation quality issues as defects or recommendations
+
 ### Step 2: Screen Inventory
 
 Document all screens/pages:

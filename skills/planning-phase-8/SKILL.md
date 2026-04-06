@@ -84,6 +84,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: 8 - Launch Ready
 - Set `Status`: in_progress
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: All planning artifacts (scope-lock.md, FEAT specs, AIOU specs, ADRs, wave-summary, security specs, testing strategy, infrastructure plan, sprint plan, planning-handoff.md draft)
+- **Request**: Perform pre-gate review of all Gate 8 criteria — verify all phases complete, all artifacts exist and are internally consistent, no critical open questions, full traceability from requirements through AIOUs. Identify any gaps before formal gate evaluation.
+- **Apply**: Address any gaps identified before proceeding to formal Gate 8 verification
+
 ### Step 2: Final Review Checklist
 
 Review all planning artifacts:

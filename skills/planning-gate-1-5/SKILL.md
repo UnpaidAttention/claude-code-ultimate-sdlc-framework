@@ -89,6 +89,12 @@ Gate 1.5 ensures **ALL features** are identified before investing in architectur
 
 Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Planning Council Gates → Gate 1.5.
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate 1.5 criteria from gate-criteria.md, specs/features/feature-candidates.md, product-concept.md, anti-truncation declaration, scope confirmation evidence
+- **Request**: Verify ALL Gate 1.5 criteria — feature completeness, user scope confirmation, anti-truncation declaration signed, feature count consistency. Return PASS/FAIL with detailed findings per criterion.
+- **Apply**: Use gate-keeper's verdict as the authoritative gate decision. If FAIL, address cited gaps before re-evaluation.
+
 Verify each criterion against the authoritative checklist. Run automated checks where applicable.
 
 ### Step 2: Generate Gate Report

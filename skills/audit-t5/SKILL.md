@@ -98,6 +98,18 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: T5 - Performance & Security
 - Set `Status`: in_progress
 
+### Agent: performance
+Invoke via Agent tool with `subagent_type: "sdlc-performance"`:
+- **Provide**: Application URLs, existing performance baselines, load testing scripts, infrastructure specs
+- **Request**: Profile application performance — identify bottlenecks, analyze load test results, establish performance baselines, and recommend optimization targets
+- **Apply**: Integrate profiling findings into performance metrics documentation
+
+### Agent: security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Full codebase, `specs/security/threat-model.md`, AIOU security annotations, dependency manifests
+- **Request**: Conduct OWASP Top 10 and STRIDE-based security audit — work through each section of Step 3 systematically, produce PASS/FAIL per check with evidence
+- **Apply**: Integrate security audit findings into Step 3 results and defect log
+
 ### Step 2: Performance Testing
 
 #### Web Vitals Baseline

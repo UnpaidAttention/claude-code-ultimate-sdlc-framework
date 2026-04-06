@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: C4 - Regression Validation
 - Set `Status`: in_progress
 
+### Agent: integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Full test suites, correction log, component dependency map, C3 verification results
+- **Request**: Execute full regression suite — run unit, integration, and E2E tests; identify any regressions introduced by corrections; trace regression root causes to specific corrections
+- **Apply**: Use regression analysis to populate regression report and identify corrections needing rollback or re-work
+
 ### Step 2: Regression Test Suite
 
 Run full regression test suite:

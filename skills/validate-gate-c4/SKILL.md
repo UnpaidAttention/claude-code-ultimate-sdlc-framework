@@ -77,11 +77,18 @@ C4 not complete. Run /validate-c4 first.
 
 ## Workflow
 
-### Step 1: Load Gate C4 Criteria
+### Agent: gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate C4 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate C4, C-track phase outputs (correction log, verification results, regression report, test suite results)
+- **Request**: Verify each Gate C4 criterion against evidence, run automated checks where applicable, and produce PASS/FAIL determination with justification per criterion
+- **Apply**: Use gate-keeper's determination for the gate decision below
 
-Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate C4.
+### Step 1: Gate Verification
 
-Verify each criterion against the authoritative checklist. Run automated checks where applicable.
+The gate-keeper agent performs the full gate verification including:
+- Loading criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate C4
+- Verifying each criterion against the authoritative checklist
+- Running automated checks where applicable
 
 ### Step 2: Gate Decision
 

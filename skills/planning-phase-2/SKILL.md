@@ -93,6 +93,24 @@ Read and understand:
 - Non-functional requirements
 - Existing system context (if any)
 
+### Agent: sdlc-architecture
+Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
+- **Provide**: scope-lock.md (full feature list), technical constraints, non-functional requirements, project type
+- **Request**: Design high-level system architecture — component decomposition, service boundaries, integration patterns, technology stack recommendations with trade-off analysis
+- **Apply**: Use architecture agent's design as the foundation for Step 3 outputs and ADR creation
+
+### Agent: sdlc-database-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-database-specialist"`:
+- **Provide**: scope-lock.md features, architecture agent's component design, data-related constraints
+- **Request**: Design conceptual data model — entities, relationships, storage approach, data flow patterns, database technology recommendation with rationale
+- **Apply**: Integrate into Data Architecture section and database design document (Step 4B)
+
+### Agent: sdlc-api-designer
+Invoke via Agent tool with `subagent_type: "sdlc-api-designer"`:
+- **Provide**: scope-lock.md features, architecture agent's service boundaries, integration points
+- **Request**: Define API strategy — internal vs external API boundaries, API style (REST/GraphQL/gRPC), versioning approach, authentication pattern
+- **Apply**: Integrate into Integration Points section and inform ADR creation for API decisions
+
 ### Step 3: High-Level Architecture
 
 Define:

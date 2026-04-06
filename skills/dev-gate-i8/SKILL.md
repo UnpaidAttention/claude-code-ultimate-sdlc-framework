@@ -94,6 +94,18 @@ This is a **BLOCKING** gate.
 
 Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Development Council Gates → Gate I8.
 
+### Agent: sdlc-gate-keeper
+Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
+- **Provide**: Gate I8 criteria from gate-criteria.md, all wave completion statuses (0-6), test results, coverage reports, build output, E2E test results, feature verification reports, AIOU completion artifacts, connectivity matrix results
+- **Request**: Verify all Gate I8 criteria — full wave completion, test coverage, build success, E2E pass rate, feature verification, design quality (if frontend), and end-to-end traceability from scope-lock through implementation
+- **Apply**: Use the gate-keeper's verdict as the gate decision. If FAIL, address all listed remediation items before re-running
+
+### Agent: sdlc-security
+Invoke via Agent tool with `subagent_type: "sdlc-security"`:
+- **Provide**: Full codebase, dependency audit output, authentication/authorization implementation, API endpoints, environment configuration
+- **Request**: Final security scan — dependency vulnerabilities, secrets in code, auth bypass risks, injection vulnerabilities, OWASP Top 10 compliance, and sensitive data exposure
+- **Apply**: Fix all CRITICAL and HIGH security findings before Gate I8 can pass
+
 For `project_type` with frontend: also verify design quality criteria from `gate-criteria.md` (criteria 9-16), including:
 - Anti-slop compliance, design consistency, accessibility, visual QA evidence (criteria 9-12)
 - UI design phases complete, UI wiring verification passed, navigation architecture complete, interactive elements wired (criteria 13-16)

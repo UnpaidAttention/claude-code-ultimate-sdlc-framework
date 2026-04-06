@@ -122,6 +122,28 @@ If queue is empty (all complete):
 - Output: "All Wave 5 AIOUs complete! Run `/dev-wave-6` to proceed to Integration."
 - STOP
 
+### Step 3.5: Per-AIOU Agent Pipeline
+
+Before implementing the next AIOU, invoke the specialist pipeline:
+
+### Agent: sdlc-frontend-specialist
+Invoke via Agent tool with `subagent_type: "sdlc-frontend-specialist"`:
+- **Provide**: AIOU spec, visual requirements, route tree entries, design-system.md, wave5-context.md component architecture
+- **Request**: Design component structure, state management approach, and responsive layout strategy for this specific AIOU
+- **Apply**: Use the specialist's component design as the implementation blueprint
+
+### Agent: sdlc-ux
+Invoke via Agent tool with `subagent_type: "sdlc-ux"`:
+- **Provide**: Implemented AIOU component code, design system tokens, ANTI-SLOP-RULES, a11y baseline from wave5-context.md
+- **Request**: Verify accessibility compliance (ARIA labels, keyboard nav, contrast), anti-slop rules, and usability heuristics
+- **Apply**: Fix all a11y and usability issues before marking AIOU complete
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: Component code, test results, AIOU acceptance criteria, design token compliance
+- **Request**: Review for component quality, proper state management, responsive behavior, and design system adherence
+- **Apply**: Fix all CRITICAL and HIGH issues before marking AIOU complete
+
 ### Step 4: Load AIOU Details
 
 From `planning-handoff.md`, extract:

@@ -152,6 +152,14 @@ Using Navigation & Placement from `DIVE-XXX.md` Section 3 AND `.ultimate-sdlc/co
 
 **For non-UI features**: Mark as N/A.
 
+### Step 4.5: Agent-Assisted Cross-AIOU Verification
+
+### Agent: sdlc-integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Feature spec, deep-dive, all AIOU specs for this feature, connectivity matrix entries, implemented code paths, test results
+- **Request**: Verify cross-AIOU integration — data flows between AIOUs within this feature, handoff points between AIOU boundaries, shared state consistency, and that no deep-dive components were lost between AIOU boundaries
+- **Apply**: Fix any integration gaps identified before proceeding to cross-feature verification
+
 ### Step 5: Verify Cross-Feature Connections
 
 Using `specs/connectivity-matrix.md`, find all rows involving this feature:

@@ -91,6 +91,12 @@ If you haven't completed Phase 1, you cannot propose fixes.
 
 ### Phase 1: Root Cause Investigation (MANDATORY FIRST)
 
+### Agent: sdlc-debugger
+Invoke via Agent tool with `subagent_type: "sdlc-debugger"`:
+- **Provide**: Error messages, stack traces, reproduction steps, recent git changes, and affected component context
+- **Request**: Systematic root cause analysis — trace data flow, identify failure point, gather evidence at layer boundaries, and form ranked hypotheses
+- **Apply**: Use the debugger's root cause analysis to guide Phase 2-4. Do NOT skip to fixes without the debugger's investigation completing first
+
 1. **Read Error Messages Carefully**
    - Don't skip past errors or warnings
    - Read stack traces completely

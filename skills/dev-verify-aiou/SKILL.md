@@ -147,6 +147,14 @@ Use **Display Template** from `council-development.md` to show: Test Results: AI
 - Skipped: Z
 ```
 
+### Step 5.5: Agent-Assisted Acceptance Review
+
+### Agent: sdlc-code-reviewer
+Invoke via Agent tool with `subagent_type: "sdlc-code-reviewer"`:
+- **Provide**: AIOU spec with acceptance criteria, implemented code files, test results, build artifact
+- **Request**: Verify each acceptance criterion is met with evidence — check code paths, test coverage per criterion, edge case handling, and completeness against the AIOU spec
+- **Apply**: If the reviewer identifies unmet criteria, fix them before proceeding to Step 6
+
 ### Step 6: Verify Acceptance Criteria
 
 For EACH acceptance criterion from the spec:

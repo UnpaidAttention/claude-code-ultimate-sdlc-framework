@@ -159,6 +159,12 @@ Check if `handoffs/development-handoff.md` exists:
 **If any track is in progress:**
 → RESUME SESSION - Go to Step 6
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: `specs/scope-lock.md`, `specs/feature-inventory.md`, `handoffs/development-handoff.md`
+- **Request**: Verify feature inventory against scope-lock — identify any features missing from implementation or not in scope-lock
+- **Apply**: Integrate findings into T1 feature catalogue before proceeding
+
 ### Step 5: New Session Setup
 
 1. Update `.ultimate-sdlc/project-context.md`:

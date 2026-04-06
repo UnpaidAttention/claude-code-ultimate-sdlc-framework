@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: V2 - Gap Analysis
 - Set `Status`: in_progress
 
+### Agent: requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: Intent map from V1, implementation code, test results, acceptance criteria
+- **Request**: Conduct intent vs implementation gap analysis — for each documented intent, trace to implementation and identify where behavior diverges from stated purpose
+- **Apply**: Populate gap documentation table with findings before proceeding to categorization
+
 ### Step 2: Gap Analysis Process
 
 For each documented intent from V1:

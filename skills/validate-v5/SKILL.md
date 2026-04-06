@@ -83,6 +83,12 @@ Update `.ultimate-sdlc/project-context.md`:
 - Set `Current Phase`: V5 - Correction Planning
 - Set `Status`: in_progress
 
+### Agent: planner
+Invoke via Agent tool with `subagent_type: "sdlc-planner"`:
+- **Provide**: Gap report from V2, completeness matrix from V3, defect log, verification results from V4
+- **Request**: Prioritize corrections — score each by user impact, technical risk, effort, and dependencies; create sequenced correction plan with dependency ordering
+- **Apply**: Use planner's prioritized output as the correction plan for the C-track
+
 ### Step 2: Prioritize Corrections
 
 Score each correction:

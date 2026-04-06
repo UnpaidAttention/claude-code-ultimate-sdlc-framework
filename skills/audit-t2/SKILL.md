@@ -91,6 +91,18 @@ From T1 outputs:
 - Test case inventory
 - Priority matrix
 
+### Agent: tdd-guide
+Invoke via Agent tool with `subagent_type: "sdlc-tdd-guide"`:
+- **Provide**: T1 feature catalogue, existing test suites, coverage reports
+- **Request**: Assess current test coverage per feature — identify untested paths, missing negative/boundary tests
+- **Apply**: Integrate coverage gaps into test execution plan before proceeding
+
+### Agent: integration-tester
+Invoke via Agent tool with `subagent_type: "sdlc-integration-tester"`:
+- **Provide**: Feature catalogue, component dependency map from development handoff
+- **Request**: Design cross-feature test scenarios that verify feature interactions and shared state
+- **Apply**: Add cross-feature test cases to the functional test plan
+
 ### Step 3: Execute Functional Tests
 
 For each feature:

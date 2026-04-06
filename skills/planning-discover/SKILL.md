@@ -100,6 +100,12 @@ Let them explain freely. Do not interrupt with questions yet.
 
 ### Step 3: Structured Discovery Interview (Questions with Defaults)
 
+### Agent: sdlc-requirements
+Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
+- **Provide**: User's initial idea description from Step 2, project type (if known)
+- **Request**: Apply elicitation techniques (stakeholder analysis, goal modeling, context diagrams) to generate targeted follow-up questions per dimension
+- **Apply**: Incorporate recommended questions into the structured interview below
+
 After their initial description, conduct a structured interview across these 6 dimensions.
 
 **IMPORTANT**: Use "Questions with Defaults" technique from AgentOS:
