@@ -2,7 +2,7 @@
 
 A structured, gate-driven, multi-council orchestration system for AI-assisted software development. Manages the full lifecycle from requirements through deployment: **Planning → Development → Audit → Validation**.
 
-167 workflow commands, 240 knowledge skills, 8 focus lens agents, 13 quality gates, 5 cycle types.
+167 workflow commands, 245 knowledge skills, 19 specialist agents, 13 quality gates, 5 cycle types.
 
 ## Install
 
@@ -123,32 +123,57 @@ Run any gate check with: `/sdlc-planning-gate-1-5`, `/sdlc-dev-gate-i4`, `/sdlc-
 
 ---
 
-## Focus Lens Agents
+## Specialist Agents (19)
 
-8 analytical perspectives that can be applied individually or in combination during any workflow. These are **not** slash commands — they are subagent definitions installed to `~/.claude/agents/` that Claude invokes automatically during relevant workflow phases, or on demand when you ask for a specific analysis.
+19 specialist agents are invoked automatically during workflow execution. Each carries deep domain expertise, embedded rules (anti-slop, integrity, security), and actionable patterns — not just evaluation questions. They are installed to `~/.claude/agents/` and wired into 138 of 167 workflow skills.
 
-**How to use them**: Ask Claude to apply a lens directly:
-- "Apply the security lens to this code"
-- "Run the architecture agent on this design"
-- "Analyze this feature with the quality lens"
-- "What does the operations lens say about this deployment plan?"
+### Analytical Lenses (8)
 
-Claude will invoke the appropriate agent as a subagent via the Agent tool.
+Applied during evaluation, review, and gate verification phases.
 
-| Lens | What It Analyzes | Key Questions | When Used |
-|------|-----------------|---------------|-----------|
-| **Architecture** | System structure, API design, data models, dependencies, scalability | "Is this the right structure? Does it scale? Are dependencies managed?" | Planning phases 2-3, dev wave setup |
-| **Security** | Threat modeling, input validation, auth, secrets, OWASP Top 10 | "What could be exploited? Are inputs validated? Are secrets exposed?" | All gates, every AIOU, Audit T5, Validation P3-P4 |
-| **Quality** | Test coverage, code review, defect analysis, completeness, regression | "Is this tested? What edge cases exist? Does this match the spec?" | Dev code review, Audit T1-T4/A1-A3, Validation C1-C4 |
-| **Performance** | Profiling, optimization, benchmarks, resource usage, throughput | "Is this fast enough? Where are the bottlenecks? What's the memory footprint?" | Audit T5, Validation P1-P3 |
-| **UX** | Usability, accessibility, navigation, visual design, user journeys | "Can users accomplish their goals? Is this accessible? Is the flow intuitive?" | Audit T3, Validation E1-E4 (frontend projects only) |
-| **Operations** | Deployment, monitoring, failure modes, runbooks, rollback | "What happens when this fails? Is it observable? Can we roll back?" | Validation P1-P2, deployment workflows |
-| **Requirements** | Feature completeness, user stories, acceptance criteria, scope | "Is every requirement captured? What's missing? Does this solve the user's problem?" | Planning phases 1-1.5, gate reviews |
-| **Documentation** | Technical docs, user guides, API references, handoff completeness | "Would someone new understand this? Is the handoff complete? Are docs current?" | Validation S1, all handoff generation |
+| Agent | Expertise | When Invoked |
+|-------|-----------|-------------|
+| **Architecture** | System design patterns, ADRs, tech stack evaluation, scalability | Planning phases 2-3, dev wave setup, Audit A3 |
+| **Security** | OWASP Top 10, STRIDE/DREAD, secrets scanning, hardening | All gates, every AIOU, Audit T5, Validation P4 |
+| **Quality** | Code review checklists, quality scoring (6 dimensions), anti-patterns | Dev code review, Audit A3, Validation C1-C4 |
+| **Performance** | Web Vitals targets, load testing, profiling, query optimization | Audit T5, Validation P1-P3 |
+| **UX** | WCAG 2.2 AA, Nielsen's heuristics, anti-slop visual rules | Audit T3, Validation E4, Wave 5 (frontend only) |
+| **Operations** | Deployment checklists, FMEA, monitoring, runbooks, SLOs | Validation P1-P2, deployment workflows |
+| **Requirements** | Elicitation, INVEST criteria, scope-lock enforcement, traceability | Planning phases 1-1.5, gate reviews, Audit A1-A2 |
+| **Documentation** | API docs (OpenAPI), changelogs, handoff templates, ADRs | Validation S1, all handoff generation |
 
-**Lenses combine**: During development, `[Security] + [Quality]` is automatically applied to every AIOU. For Wave 5 UI work, `[UX] + [Quality] + [Security]` all apply simultaneously.
+### Action Specialists (11)
 
-> **Technical detail**: Agent definitions live at `~/.claude/agents/sdlc-*.md`. They are installed by the `./setup` script and persist across all sessions.
+Invoked during implementation, testing, debugging, and correction phases.
+
+| Agent | Expertise | When Invoked |
+|-------|-----------|-------------|
+| **Planner** | Feature decomposition, AIOU creation, batch planning, sprint orchestration | Planning phases 1-8, correction planning |
+| **Code Reviewer** | AIOU-aware review against acceptance criteria, anti-slop code rules | Every AIOU completion, post-correction review |
+| **TDD Guide** | Test-first enforcement, Red-Green-Refactor, coverage analysis, test quality | Every AIOU in waves 1-6, test failures, corrections |
+| **Database Specialist** | Schema design, migrations, indexing, N+1 prevention, query optimization | Wave 2, Audit T4, Validation P3 |
+| **API Designer** | REST conventions, all HTTP status codes, OpenAPI, middleware, rate limiting | Wave 4, planning phase 3.5 API spec |
+| **Frontend Specialist** | Component architecture, state management, anti-slop visual rules, a11y | Wave 5, UI audit/polish/retheme, Validation E4 |
+| **Backend Specialist** | Service patterns, DI, clean architecture, error handling, domain logic | Wave 3, Audit A3 |
+| **Build Resolver** | Minimal-diff build fixes, no architectural drift, PRH-002/003 compliance | Any build failure across all waves |
+| **Gate Keeper** | All 13 gate criteria, evidence-based verification, binary PASS/FAIL | All gate verification skills |
+| **Debugger** | 4-phase root cause analysis, hypothesis testing, "3+ fixes" escalation | `/debug`, Validation C1 corrections |
+| **Integration Tester** | E2E test design, 8-layer verification, API contracts, regression strategy | Wave 6, Audit T4, Validation C3-C4 |
+
+### Agent Pipeline Per Wave
+
+During development, each AIOU follows a specialist pipeline:
+
+| Wave | Pipeline |
+|------|----------|
+| Wave 1 (Types/Utils) | TDD Guide → Code Reviewer |
+| Wave 2 (Data Layer) | Database Specialist → TDD Guide → Code Reviewer |
+| Wave 3 (Services) | Backend Specialist → TDD Guide → Code Reviewer |
+| Wave 4 (API Layer) | API Designer → TDD Guide → Code Reviewer + Security |
+| Wave 5 (UI) | Frontend Specialist → UX → Code Reviewer |
+| Wave 6 (Integration) | Integration Tester → Code Reviewer |
+
+> **Technical detail**: Agent definitions live at `~/.claude/agents/sdlc-*.md` and in the plugin's `agents/` directory. Each agent carries 200-500 lines of domain expertise with embedded framework rules.
 
 ---
 
@@ -182,13 +207,13 @@ Cycle management: `/sdlc-close-cycle` archives the current cycle, `/sdlc-new-cyc
 
 ---
 
-## Knowledge Skills (240)
+## Knowledge Skills (245)
 
-The framework includes 240 reference knowledge skills covering patterns, best practices, and domain expertise. These aren't invoked as slash commands — they're automatically loaded by workflow skills when relevant context is needed.
+The framework includes 245 reference knowledge skills covering patterns, best practices, and domain expertise. These aren't invoked as slash commands — they're automatically loaded by workflow skills when relevant context is needed.
 
 Categories include: clean code, TDD, architecture patterns, security, accessibility, API design, database patterns, performance optimization, and many more.
 
-Browse the full index: `~/.claude/skills/ultimate-sdlc/knowledge/INDEX.md`
+Browse the full index in the `knowledge/` directory.
 
 ---
 
@@ -267,23 +292,22 @@ Per-project state lives in `.ultimate-sdlc/` within your project directory:
 ## Plugin Structure
 
 ```
-~/.claude/skills/ultimate-sdlc/
-├── setup                        # One-time installation script
-├── SKILL.md                     # Root skill (framework overview + routing)
-├── bin/
-│   ├── sdlc-config              # Read/write global config
-│   ├── sdlc-state               # Project state management
-│   ├── sdlc-uninstall           # Clean removal
-│   └── sdlc-patch-names         # Toggle short/namespaced naming
-├── skills/                      # 167 invokable workflow skills
-├── knowledge/                   # 240 reference knowledge skills
-├── agents/                      # 8 focus lens agent definitions
-├── context/                     # Gate criteria, governance modes, state management
-├── rules/                       # Universal rules, integrity rules, council rules
-├── templates/                   # Project initialization templates
-├── scripts/                     # Generator scripts (gen-skill-docs.sh)
-└── references/                  # On-demand reference documentation
+~/ultimate-sdlc/                   # Source repo (your working copy)
+├── .claude-plugin/                # Plugin manifest (plugin.json, marketplace.json)
+├── setup                          # Installation script
+├── SKILL.md                       # Root skill (framework overview + routing)
+├── commands/                      # 167 slash command stubs (/sdlc-init, etc.)
+├── skills/                        # 167 workflow skills (full instructions)
+├── knowledge/                     # 245 reference knowledge skills
+├── agents/                        # 19 specialist agent definitions
+├── contexts/                      # Gate criteria, governance modes, state management
+├── rules/                         # Anti-slop, integrity, council rules (9 files)
+├── bin/                           # CLI utilities (sdlc-config, sdlc-state, etc.)
+├── templates/                     # Project initialization templates
+└── scripts/                       # Generator scripts
 ```
+
+Installed to: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/`
 
 ## Configuration
 
@@ -291,11 +315,11 @@ Global config: `~/.ultimate-sdlc/config.yaml`
 
 ```bash
 # View all settings
-~/.claude/skills/ultimate-sdlc/bin/sdlc-config list
+sdlc-config list
 
 # Change settings
-~/.claude/skills/ultimate-sdlc/bin/sdlc-config set governance_mode enterprise
-~/.claude/skills/ultimate-sdlc/bin/sdlc-config set project_type api-service
+sdlc-config set governance_mode enterprise
+sdlc-config set project_type api-service
 ```
 
 Supported project types: `web-app`, `cli-tool`, `library`, `api-service`, `ml-pipeline`, `mobile-app`
@@ -304,10 +328,10 @@ Supported project types: `web-app`, `cli-tool`, `library`, `api-service`, `ml-pi
 
 During setup you choose how commands appear:
 
-- **Short** (default): `/init`, `/planning-start`, `/dev-wave-1`
-- **Namespaced**: `/sdlc-init`, `/sdlc-planning-start`, `/sdlc-dev-wave-1`
+- **Namespaced** (default, recommended): `/sdlc-init`, `/sdlc-planning-start`, `/sdlc-dev-wave-1`
+- **Short**: `/init`, `/planning-start`, `/dev-wave-1`
 
-Namespaced mode is recommended if you have other plugins that might conflict (e.g., a `/init` from another tool).
+Namespaced mode is recommended to avoid conflicts with other plugins.
 
 ## Update
 
@@ -318,7 +342,7 @@ cd ~/ultimate-sdlc && git pull && ./setup
 ## Uninstall
 
 ```bash
-~/.claude/skills/ultimate-sdlc/bin/sdlc-uninstall
+~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/bin/sdlc-uninstall
 ```
 
 ## Requirements
