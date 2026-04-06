@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-analysis/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/accessibility-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/usability-assessment/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/visual-design-review/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/ui-ux-analysis/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/accessibility-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/usability-assessment/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/visual-design-review/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-t3 - GUI Analysis

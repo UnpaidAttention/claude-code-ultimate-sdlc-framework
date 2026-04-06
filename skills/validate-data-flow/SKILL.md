@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/data-flow-analysis/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/10-layer-tracing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/ipc-debugging/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-debugging/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/data-flow-analysis/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/10-layer-tracing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/ipc-debugging/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/systematic-debugging/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: validate-data-flow

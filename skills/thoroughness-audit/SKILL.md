@@ -51,13 +51,13 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/thoroughness-audit/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/gap-analysis/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-deep-dive/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/thoroughness-audit/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/gap-analysis/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/feature-deep-dive/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /thoroughness-audit - Thoroughness Audit

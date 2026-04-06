@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/e2e-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/runtime-verification/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/integration-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/evidence-capture/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/e2e-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/runtime-verification/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/integration-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/evidence-capture/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: validate-e2e-test

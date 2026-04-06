@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/brainstorming/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/brainstorming/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-start - Begin Planning Council
@@ -93,7 +93,7 @@ Start or resume the Planning Council. This council transforms requirements into 
 Follow **Session Protocol** from `council-planning.md`:
 1. Read `.ultimate-sdlc/config.yaml` → extract `governance_mode`, `project_type`
 2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council, current phase
-3. Read `~/.claude/skills/ultimate-sdlc/context/framework-overview.md`, `.reference/phase-guide.md`
+3. Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/framework-overview.md`, `.reference/phase-guide.md`
 
 ### Step 2: Check Project State
 
@@ -157,9 +157,9 @@ When the cycle type is **Feature**, planning is scoped to NEW features only:
    - Set `Status`: in_progress
 
 2. Load Phase 1 skills if context budget allows (see UNIVERSAL-RULES §0.15):
-   - `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
-   - `~/.claude/skills/ultimate-sdlc/knowledge/brainstorming/SKILL.md`
-   - `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
+   - `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/requirements-engineering/SKILL.md`
+   - `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/brainstorming/SKILL.md`
+   - `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/documentation-standards/SKILL.md`
 
 3. Update `.ultimate-sdlc/progress.md` with new session entry
 
@@ -200,7 +200,7 @@ Ask user to confirm the product concept is accurate before proceeding.
 3. **Execute Thoroughness Protocol** (MANDATORY after initial review):
 
    Follow **Thoroughness Protocol (T1-T5)** from `council-planning.md`.
-   Use **Feature Categories** for the current `project_type` from `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
+   Use **Feature Categories** for the current `project_type` from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`.
 
 ### Step 4B: Start Without Product Concept
 
@@ -217,13 +217,13 @@ Guide user through requirements gathering. Suggest creating `product-concept.md`
 After gathering initial requirements through conversation, **Execute Thoroughness Protocol** (MANDATORY):
 
 Follow **Thoroughness Protocol (T1-T5)** from `council-planning.md`.
-Use **Feature Categories** for the current `project_type` from `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
+Use **Feature Categories** for the current `project_type` from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`.
 
 ### Step 4C: Generate Business Requirements Document (BRD)
 
 > **Governance check**: Read `.ultimate-sdlc/config.yaml → governance_mode`. If `lightweight`, SKIP this step (BRD is optional). If `standard` or `enterprise`, this step is MANDATORY.
 
-1. Read `~/.claude/skills/ultimate-sdlc/context/document-dependencies.md` — confirm BRD dependencies are satisfied (product-concept.md exists)
+1. Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/document-dependencies.md` — confirm BRD dependencies are satisfied (product-concept.md exists)
 2. Read `templates/brd-template.md` for the required structure
 3. Generate `specs/business/brd.md` using the product concept as input:
    - **Section 2 (Business Objectives)**: Extract from product-concept.md Vision + Problem Statement + Success Metrics
@@ -243,7 +243,7 @@ Use **Feature Categories** for the current `project_type` from `~/.claude/skills
 3. Read `.ultimate-sdlc/council-state/planning/current-state.md` for detailed state
 4. Load skills for current phase:
    - Look up phase in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/<skill-name>/SKILL.md`
 
 5. Display status:
 Use **Display Template** from `council-planning.md` to show: Planning Council - Resumed

@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/audit-orchestration/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/navigation-flow/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/test-case-design/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/audit-orchestration/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/navigation-flow/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/test-case-design/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-start - Begin Audit Council
@@ -106,7 +106,7 @@ Start or resume the Audit Council. This council systematically tests and audits 
 ### Step 1: Load Framework Context
 
 Read these files:
-- `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` - Understand the overall process
+- `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/framework-overview.md` - Understand the overall process
 - `.reference/phase-guide.md` - Detailed track and phase information
 - `.reference/skills-index.md` - Skills to load for each phase
 
@@ -190,8 +190,8 @@ Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
    - Document test environment details
 
 5. Load T1 Skills (from `.reference/skills-index.md`):
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/audit-orchestration/SKILL.md`
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/navigation-flow/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/audit-orchestration/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/navigation-flow/SKILL.md`
 
 6. Update `.ultimate-sdlc/progress.md` with new session entry
 
@@ -210,7 +210,7 @@ Use **Display Template** from `council-audit.md` to show: Audit Council - T1: In
 4. Read `.ultimate-sdlc/council-state/audit/defect-log.md` for defects found
 5. Load skills for current phase:
    - Look up phase in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/<skill-name>/SKILL.md`
 
 6. Verify software accessibility:
    - Confirm application is still accessible
@@ -275,7 +275,7 @@ Use `/status`
 
 ## Gate Criteria
 
-See `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates for full criteria:
+See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Audit Council Gates for full criteria:
 - **Gate T3** (after GUI Analysis)
 - **Gate A2** (after Completeness)
 - **Gate A3** (after Quality Assessment)

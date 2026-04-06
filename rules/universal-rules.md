@@ -61,7 +61,7 @@ For COMPLEX requests, ask 2-3 questions BEFORE implementing:
 
 ### 0.8 Skill Loading Protocol
 
-**Maximum 7 skills per workflow.** Knowledge skills are loaded via the Read tool from `~/.claude/skills/ultimate-sdlc/knowledge/`. If absent, use defaults:
+**Maximum 7 skills per workflow.** Knowledge skills are loaded via the Read tool from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/`. If absent, use defaults:
 
 | Prefix | Default Skills |
 |--------|----------------|
@@ -180,7 +180,7 @@ Document conflicts in `.memory/semantic/conflict-resolutions.md`. Never proceed 
 1. Content file count exceeds session type limit
 2. Conversation exceeds ~30 substantive turns
 3. You notice repeating yourself or losing track of earlier decisions
-4. Gate verification fails 3+ times on same criterion (see Gate Failure Protocol in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md`)
+4. Gate verification fails 3+ times on same criterion (see Gate Failure Protocol in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md`)
 
 **Fast context rebuild**: Read `project-intelligence.md` first when resuming — key decisions in ~20 lines, 80% of context at 10% the cost.
 

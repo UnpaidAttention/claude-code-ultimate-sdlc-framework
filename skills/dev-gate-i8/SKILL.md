@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/quality-assessment/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/handoff-protocols/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/quality-assessment/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/handoff-protocols/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-gate-i8 - Gate I8 Verification
@@ -92,7 +92,7 @@ This is a **BLOCKING** gate.
 
 **SCOPE**: In multi-run mode, verify criteria for current run's AIOUs only.
 
-Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Development Council Gates → Gate I8.
+Load criteria from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Development Council Gates → Gate I8.
 
 ### Agent: sdlc-gate-keeper
 Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:

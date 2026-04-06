@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/css-validation/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/design-tokens/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-analysis/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/css-validation/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/design-tokens/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/ui-ux-analysis/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: CSS Variable Validation
@@ -68,7 +68,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/council-development.md`
+> Apply RARV cycle, session protocols per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/council-development.md`
 
 ## Overview
 

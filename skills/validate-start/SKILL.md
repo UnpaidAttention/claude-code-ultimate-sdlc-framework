@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/intent-extraction/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-lens-analysis/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/intent-extraction/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/multi-lens-analysis/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-start - Begin Validation Council
@@ -95,7 +95,7 @@ Start or resume the Validation Council. This council validates software against 
 ### Step 1: Load Framework Context
 
 Read these files:
-- `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` - Understand the overall process
+- `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/framework-overview.md` - Understand the overall process
 - `.reference/phase-guide.md` - Detailed track and phase information
 - `.reference/skills-index.md` - Skills to load for each phase
 
@@ -189,8 +189,8 @@ Invoke via Agent tool with `subagent_type: "sdlc-requirements"`:
    - `.ultimate-sdlc/council-state/validation/enhancement-proposals.md`
 
 5. Load V1 Skills (from `.reference/skills-index.md`):
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/intent-extraction/SKILL.md`
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/multi-lens-analysis/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/intent-extraction/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/multi-lens-analysis/SKILL.md`
 
 6. Update `.ultimate-sdlc/progress.md` with new session entry
 
@@ -210,7 +210,7 @@ Use **Display Template** from `council-validation.md` to show: Validation Counci
    - S-phases: All documents
 5. Load skills for current phase:
    - Look up phase in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/<skill-name>/SKILL.md`
 
 6. Display status:
 Use **Display Template** from `council-validation.md` to show: Validation Council - Resumed

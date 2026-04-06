@@ -130,8 +130,8 @@ Governance mode and project type are independent but interact:
 Project type determines **what** is done (wave content, verification layers, feature categories).
 Governance mode determines **how much** is done (phase count, gate count, ceremony level).
 
-See `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for full project-type-specific configuration.
-See `~/.claude/skills/ultimate-sdlc/context/config-reader.md` for how workflows consume these values.
+See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md` for full project-type-specific configuration.
+See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/config-reader.md` for how workflows consume these values.
 
 ---
 

@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/gate-verification/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/production-readiness/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/security-verification/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/performance-verification/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/gate-verification/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/production-readiness/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/security-verification/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/performance-verification/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /validate-gate-p4 - Gate P4 Verification
@@ -79,14 +79,14 @@ P4 not complete. Run /validate-p4 first.
 
 ### Agent: gate-keeper
 Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
-- **Provide**: Gate P4 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate P4, P-track phase outputs (operational assessment, FMEA, performance report, security hardening report)
+- **Provide**: Gate P4 criteria from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Validation Council Gates → Gate P4, P-track phase outputs (operational assessment, FMEA, performance report, security hardening report)
 - **Request**: Verify each Gate P4 criterion against evidence, run automated checks where applicable, and produce PASS/FAIL determination with justification per criterion
 - **Apply**: Use gate-keeper's determination for the gate decision below
 
 ### Step 1: Gate Verification
 
 The gate-keeper agent performs the full gate verification including:
-- Loading criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Validation Council Gates → Gate P4
+- Loading criteria from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Validation Council Gates → Gate P4
 - Verifying each criterion against the authoritative checklist
 - Running automated checks where applicable
 

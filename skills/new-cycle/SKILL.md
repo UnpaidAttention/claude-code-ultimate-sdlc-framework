@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/project-setup/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/planning-orchestration/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/project-setup/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/planning-orchestration/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /new-cycle - Start a New Development Cycle
@@ -160,8 +160,8 @@ Move these files/directories INTO the archive:
 - `.ultimate-sdlc/project-manifest.md` — Project identity
 - `product-concept.md` — Original vision
 - `specs/` — Accumulated specifications (project-level)
-- `~/.claude/skills/ultimate-sdlc/` — Framework files
-- `~/.claude/skills/ultimate-sdlc/context/` — Framework context
+- `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/` — Framework files
+- `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/` — Framework context
 - `.reference/` — Framework reference
 - `.ultimate-sdlc/config.yaml` — Framework config
 - `CLAUDE.md`, `README.md`, `ARCHITECTURE.md` — Framework docs

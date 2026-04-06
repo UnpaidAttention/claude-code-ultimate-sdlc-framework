@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/typescript-expert/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture-principles/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/typescript-expert/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/clean-code/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/architecture-principles/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /dev-start - Begin Development Council
@@ -209,9 +209,9 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
      - Create git checkpoint: `pre-wave-0`
 
 6. Load Wave 0 Skills (from `.reference/skills-index.md`):
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/typescript-expert/SKILL.md`
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/clean-code/SKILL.md`
-   - Read `~/.claude/skills/ultimate-sdlc/knowledge/architecture/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/typescript-expert/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/clean-code/SKILL.md`
+   - Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/architecture/SKILL.md`
 
 7. Update `.ultimate-sdlc/progress.md` with new session entry
 
@@ -243,7 +243,7 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
 5. Read `handoffs/planning-handoff.md` for AIOU specifications
 6. Load skills for current wave:
    - Look up wave in `.reference/skills-index.md`
-   - Read each skill from `~/.claude/skills/ultimate-sdlc/knowledge/<skill-name>/SKILL.md`
+   - Read each skill from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/<skill-name>/SKILL.md`
 
 7. Verify repository state:
    - Run `git status`
@@ -251,7 +251,7 @@ Otherwise, proceed to `/audit-start` for the Audit Council.
    - Run tests to verify state
 
 8. Display resume status using **Display Template** from `council-development.md` with:
-   - Current wave and progress table (use wave structure from `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for `project_type`)
+   - Current wave and progress table (use wave structure from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md` for `project_type`)
    - **Lens**: per current wave
    - Next AIOU to implement
    - If multi-run: include run progress
@@ -311,7 +311,7 @@ Use `/status`
 
 ## Gate Criteria
 
-Refer to `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` for:
+Refer to `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` for:
 - **Gate I4** criteria (after Wave 4)
 - **Gate I8** criteria (after Wave 6)
 

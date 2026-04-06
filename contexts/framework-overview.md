@@ -51,9 +51,9 @@ Patch and Maintenance cycles skip Audit Council.
 3. **Between**: `/close-cycle` → archives work, extracts learnings, updates manifest
 
 ### 3. Progress Through Councils
-Each council has phases/waves/tracks (sequential steps), gates (blocking checkpoints), and handoffs (documents for next council, validated against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/`).
+Each council has phases/waves/tracks (sequential steps), gates (blocking checkpoints), and handoffs (documents for next council, validated against `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/handoff-schemas/`).
 
-MCP tools for testing, security, performance: see `~/.claude/skills/ultimate-sdlc/reference/mcp-tool-guide.md`.
+MCP tools for testing, security, performance: see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/mcp-tool-guide.md`.
 
 ### 4. State Management
 - `.ultimate-sdlc/project-manifest.md`: Persistent project identity (survives all cycles)
@@ -64,10 +64,10 @@ MCP tools for testing, security, performance: see `~/.claude/skills/ultimate-sdl
 **Cycle state resolution**: `.ultimate-sdlc/project-context.md` exists → active cycle. Only `.ultimate-sdlc/project-manifest.md` → between cycles. Neither → not initialized.
 
 ### 5. Skill Loading
-**Maximum 7 skills per workflow. Always include `rarv-cycle`.** See `~/.claude/skills/ultimate-sdlc/reference/skill-loading-guide.md` and `~/.claude/skills/ultimate-sdlc/reference/skills-index.md`.
+**Maximum 7 skills per workflow. Always include `rarv-cycle`.** See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/skill-loading-guide.md` and `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/skills-index.md`.
 
 ### 6. Governance Modes
-The framework scales governance to project size (Lightweight/Standard/Enterprise). See `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`.
+The framework scales governance to project size (Lightweight/Standard/Enterprise). See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`.
 
 ### 7. On-Demand File Loading
 Files load when first referenced, not preemptively. Governance files (P0 rules) are internalized once per session. See UNIVERSAL-RULES §0.9.
@@ -110,7 +110,7 @@ WORKFLOW (specifies agent + skills_required) → AGENT (domain expertise) → SK
 | Audit | `/audit-TX`, `/audit-AX`, `/audit-EX` | `/audit-t2`, `/audit-gate-t3` |
 | Validation | `/validate-VX`, `/validate-CX`, etc. | `/validate-c1`, `/validate-gate-v5` |
 
-Full map: `~/.claude/skills/ultimate-sdlc/reference/workflow-reference.md`
+Full map: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/workflow-reference.md`
 
 ## Multi-Run System (Development Only)
 
@@ -142,14 +142,14 @@ Every UI project MUST complete dedicated UI design phases BEFORE Wave 5 implemen
 - **Artifacts**: `design-system.md`, `ui-design-research.md`, `ui-design-plan.md` before any UI components
 - **Gates**: I4 verifies design direction; UI-V verifies functional wiring; I8 verifies anti-slop compliance + WCAG 2.2 AA + UI completeness
 - **Redesign**: `/dev-ui-redesign` archives existing UI and restarts the full UI pipeline. Preserves backend. Options: `--keep-design-system`, `--keep-research`, `--scope feature FEAT-XXX`
-- **Reference**: `~/.claude/skills/ultimate-sdlc/knowledge/frontend-design/SKILL.md`, `~/.claude/skills/ultimate-sdlc/reference/wave5-special-handling.md`
+- **Reference**: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/frontend-design/SKILL.md`, `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/wave5-special-handling.md`
 
 ---
 
 ## Quality Gates
 
 Gates BLOCK progression until ALL criteria pass. Binary PASS/FAIL with specific tests.
-**Reference**: `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` for criteria and checklist templates.
+**Reference**: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` for criteria and checklist templates.
 
 | Gate | Council | Criteria |
 |------|---------|----------|
@@ -173,7 +173,7 @@ After Gate S2 + `/deploy`: Monitor (health checks, error rates), follow incident
 
 ## State Files
 
-**Protocol**: `~/.claude/skills/ultimate-sdlc/context/state-management.md`
+**Protocol**: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/state-management.md`
 
 | File | Scope | Purpose | Update Timing |
 |------|-------|---------|---------------|
@@ -197,13 +197,13 @@ project-root/
 
 ## Agents
 
-41 specialist agents organized by council. See `~/.claude/skills/ultimate-sdlc/agents/` for full list.
-- **Agent Selection Guide**: `~/.claude/skills/ultimate-sdlc/reference/agent-selection-guide.md`
-- **Model Selection Guide**: `~/.claude/skills/ultimate-sdlc/reference/model-selection-guide.md`
+41 specialist agents organized by council. See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/` for full list.
+- **Agent Selection Guide**: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/agent-selection-guide.md`
+- **Model Selection Guide**: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/reference/model-selection-guide.md`
 
 ### Constitutional Principles
 
-All agents self-critique against `~/.claude/skills/ultimate-sdlc/rules/CONSTITUTION.md`: Safety (no destructive ops without backup), Quality (verify before claiming), Process (read before modify), Communication (state what was done).
+All agents self-critique against `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/CONSTITUTION.md`: Safety (no destructive ops without backup), Quality (verify before claiming), Process (read before modify), Communication (state what was done).
 
 ## Rules Priority
 
@@ -214,4 +214,4 @@ P2: Agent-specific rules                      (When agent invoked)
 P3: Skill-specific rules                      (When skill loaded)
 ```
 
-**Conflict Resolution**: `~/.claude/skills/ultimate-sdlc/rules/conflict-resolution.md`
+**Conflict Resolution**: `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/conflict-resolution.md`

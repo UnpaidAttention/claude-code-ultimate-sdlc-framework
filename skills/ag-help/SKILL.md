@@ -177,10 +177,10 @@ Available as subagents via the Agent tool:
 
 | Component | Location |
 |-----------|----------|
-| Plugin source | `~/.claude/skills/ultimate-sdlc/` |
+| Plugin source | `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/` |
 | Global config | `~/.ultimate-sdlc/config.yaml` |
 | Project state | `.ultimate-sdlc/` (in project root) |
-| Knowledge skills | `~/.claude/skills/ultimate-sdlc/knowledge/` |
-| Rules | `~/.claude/skills/ultimate-sdlc/rules/` |
-| Context | `~/.claude/skills/ultimate-sdlc/context/` |
-| Agents | `~/.claude/skills/ultimate-sdlc/agents/` |
+| Knowledge skills | `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/` |
+| Rules | `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/` |
+| Context | `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/` |
+| Agents | `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/` |

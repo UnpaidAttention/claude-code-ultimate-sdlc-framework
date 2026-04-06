@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/brainstorming/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/interview-techniques/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/brainstorming/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/interview-techniques/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # Workflow: planning-discover
@@ -85,7 +85,7 @@ Execute these steps in order:
 
 Read these files to understand your role:
 - `CLAUDE.md` - Framework documentation
-- `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` - Your role and purpose
+- `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/framework-overview.md` - Your role and purpose
 
 ### Step 2: Initial Idea Capture
 

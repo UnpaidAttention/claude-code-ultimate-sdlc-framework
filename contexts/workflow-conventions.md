@@ -14,7 +14,7 @@ Before every significant action:
 
 ## Agent Loading
 
-1. READ the agent file at `~/.claude/skills/ultimate-sdlc/agents/{agent-name}.md`
+1. READ the agent file at `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/{agent-name}.md`
 2. APPLY the agent's domain expertise: Use "Core Principles" for decisions, "When to Use" for scope. Framework rules (P0-P3) override agent guidelines.
 3. LOAD ONLY skills from this workflow's `skills_required` frontmatter. Do NOT auto-load agent skills. See UNIVERSAL-RULES §0.8.
 

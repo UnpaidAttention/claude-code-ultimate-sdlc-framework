@@ -36,7 +36,7 @@ These produce a `planning-handoff.md` compatible with standard Development Counc
 
 ### Feed-Forward Reference Protocol
 
-Before generating any deliverable, the agent MUST read all upstream documents listed in `~/.claude/skills/ultimate-sdlc/context/document-dependencies.md § Per-Phase Required Inputs`. This ensures:
+Before generating any deliverable, the agent MUST read all upstream documents listed in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/document-dependencies.md § Per-Phase Required Inputs`. This ensures:
 1. No contradictions with prior decisions
 2. Correct terminology and ID references (BR-XXX, FEAT-XXX, AIOU-XXX)
 3. NFR targets and constraints are respected downstream
@@ -45,8 +45,8 @@ Before generating any deliverable, the agent MUST read all upstream documents li
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate 1.5**: Feature Completeness → see `gate-criteria.md § Gate 1.5`
 - **Gate 3.5**: AIOU Decomposition → see `gate-criteria.md § Gate 3.5`
@@ -62,7 +62,7 @@ Standard session start/resume sequence for all Planning Council workflows:
 4. Read `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md` → check for incomplete tasks
 5. **If resuming**: Display resume summary from WORKING-MEMORY, continue from last position
 6. **If new session**: Display welcome, proceed to current phase
-7. Check governance_mode → skip non-applicable phases per `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`
+7. Check governance_mode → skip non-applicable phases per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
 
 ## Scope Integrity Principle
 
@@ -114,7 +114,7 @@ Used during Discovery (Phase 1) to ensure no features are silently missed. Refer
 **T1**: Read the product concept / feature list completely
 **T2**: Count total features explicitly
 **T3**: Identify implicit features not explicitly stated
-**T4**: Cross-reference against Feature Categories for `project_type` (see `~/.claude/skills/ultimate-sdlc/context/project-presets.md`)
+**T4**: Cross-reference against Feature Categories for `project_type` (see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`)
 **T5**: Anti-Truncation Declaration — confirm every feature is accounted for
 
 ## Display Template
@@ -169,13 +169,13 @@ AIOU > L size → MUST split
 
 ## Wave Organization
 
-Waves are determined by `project_type` — see `~/.claude/skills/ultimate-sdlc/context/project-presets.md` for type-specific wave structures. Default (web-app): Wave 0: Types & Interfaces → Wave 1: Utilities & Helpers → Wave 2: Data Layer → Wave 3: Services → Wave 4: API Layer → Wave 5: UI Components → Wave 6: Integration
+Waves are determined by `project_type` — see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md` for type-specific wave structures. Default (web-app): Wave 0: Types & Interfaces → Wave 1: Utilities & Helpers → Wave 2: Data Layer → Wave 3: Services → Wave 4: API Layer → Wave 5: UI Components → Wave 6: Integration
 
 ## Handoff Requirements
 
 planning-handoff.md MUST contain: Executive summary, Architecture summary, All feature specifications, Design direction, AIOU wave summary, All AIOU specifications, Security requirements, Infrastructure requirements, Appendices (ADRs, data models, API contracts)
 
-Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/planning-handoff.schema.md`.
+Validate against `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/handoff-schemas/planning-handoff.schema.md`.
 
 **Scope Coverage**: Handoff must cover every feature in `.ultimate-sdlc/specs/scope-lock.md`. Gate 8 verifies this.
 

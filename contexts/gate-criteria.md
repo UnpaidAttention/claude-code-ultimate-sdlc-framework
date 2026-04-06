@@ -39,9 +39,9 @@ Not all gates are active in every mode. Read `.ultimate-sdlc/config.yaml → gov
 
 **Simplified** gates use the same criteria but fewer items (skip informational criteria, keep quality-floor criteria).
 
-> **Playbook document gate criteria**: Criteria checking for BRD, PRD cross-cutting, API spec, Database Design, Runbook, Tech Docs, and Consistency Audits are automatically N/A in Lightweight mode. See `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Playbook Document Requirements` for the full matrix.
+> **Playbook document gate criteria**: Criteria checking for BRD, PRD cross-cutting, API spec, Database Design, Runbook, Tech Docs, and Consistency Audits are automatically N/A in Lightweight mode. See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md § Playbook Document Requirements` for the full matrix.
 
-See `~/.claude/skills/ultimate-sdlc/context/governance-modes.md` for full mode definitions.
+See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md` for full mode definitions.
 
 ---
 
@@ -87,11 +87,11 @@ Adapt to your stack. At minimum, run at the indicated gates:
 | 5 | No silent omissions | 100% concept coverage |
 | 6 | User scope confirmation | User explicitly confirmed all features in scope (or excluded specific features with documented reasons) |
 | 7 | User journeys mapped | All touchpoints → features |
-| 8 | Feature categories | Category checklist completed (per `project_type` — see `~/.claude/skills/ultimate-sdlc/context/project-presets.md`) |
+| 8 | Feature categories | Category checklist completed (per `project_type` — see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`) |
 | 9 | Scope lock ready | All data needed to generate `.ultimate-sdlc/specs/scope-lock.md` is present |
 | 10 | Complexity classified | Every feature has Simple/Moderate/Complex classification |
 | 11 | BRD exists (Standard/Enterprise) | `.ultimate-sdlc/specs/business/brd.md` exists with all 10 sections (or N/A if Lightweight) |
-| 12 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/skills/ultimate-sdlc/context/consistency-audit-template.md § Gate 1.5`): 0 BLOCKING issues (or N/A if Lightweight) |
+| 12 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/consistency-audit-template.md § Gate 1.5`): 0 BLOCKING issues (or N/A if Lightweight) |
 
 **On PASS**: Generate `.ultimate-sdlc/specs/scope-lock.md` — the canonical list of all in-scope features. This file is referenced by all downstream phases and gates.
 
@@ -132,7 +132,7 @@ Adapt to your stack. At minimum, run at the indicated gates:
 | 12 | PRD cross-cutting exists (Standard/Enterprise) | `.ultimate-sdlc/specs/prd-crosscutting.md` exists with NFR targets defined (or N/A if Lightweight) |
 | 13 | API specification exists (Standard/Enterprise) | `.ultimate-sdlc/specs/architecture/api-specification.md` exists with all endpoints from FEAT specs (or N/A if Lightweight) |
 | 14 | Database design exists (Standard/Enterprise) | `.ultimate-sdlc/specs/architecture/database-design.md` exists (or N/A if Lightweight) |
-| 15 | Cross-document consistency | Consistency audit run (per `~/.claude/skills/ultimate-sdlc/context/consistency-audit-template.md`): 0 BLOCKING issues |
+| 15 | Cross-document consistency | Consistency audit run (per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/consistency-audit-template.md`): 0 BLOCKING issues |
 
 ```markdown
 ## Gate 3.5 Verification
@@ -165,7 +165,7 @@ Adapt to your stack. At minimum, run at the indicated gates:
 | 9 | Cross-document consistency | Consistency audit run: 0 BLOCKING issues across all specs |
 | 10 | BRD traceability (Standard/Enterprise) | Every BR-XXX in BRD has ≥1 FEAT spec covering it (or N/A if Lightweight) |
 
-**Handoff validation**: Use `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/planning-handoff.schema.md` as the single source of truth for required sections (8 sections including Design Direction).
+**Handoff validation**: Use `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/handoff-schemas/planning-handoff.schema.md` as the single source of truth for required sections (8 sections including Design Direction).
 
 **Scope coverage validation**: Cross-reference `.ultimate-sdlc/specs/scope-lock.md` against FEAT specs, AIOUs, and handoff content. Every feature must be traceable end-to-end. Missing features = automatic FAIL.
 
@@ -212,7 +212,7 @@ If the adversarial review identifies genuine gaps: add them as findings, fix bef
 | 11 | **If frontend**: No banned fonts | No Inter, Arial, Roboto, system-ui |
 | 12 | **If frontend**: Color palette defined | CSS custom properties or OKLCH/HSL values |
 | 13 | API spec coverage (Standard/Enterprise) | All implemented endpoints exist in `.ultimate-sdlc/specs/architecture/api-specification.md` (or N/A if Lightweight) |
-| 14 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/skills/ultimate-sdlc/context/consistency-audit-template.md § Gate I4`): 0 BLOCKING issues between planned specs and implemented code (or N/A if Lightweight) |
+| 14 | Cross-document consistency (Standard/Enterprise) | Consistency audit run (per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/consistency-audit-template.md § Gate I4`): 0 BLOCKING issues between planned specs and implemented code (or N/A if Lightweight) |
 
 > Criteria 10-12 apply only if the project includes Wave 5 AIOUs (frontend work). For backend-only or non-web projects, mark as N/A.
 
@@ -476,7 +476,7 @@ Used at Gate C4 and for correction verification.
 
 Mark N/A for non-applicable layers per fix.
 
-> **Project-type adaptation**: The 8-layer model is for web-apps. For other project types, use the verification layers defined in `~/.claude/skills/ultimate-sdlc/context/project-presets.md`. CLI tools use 5 layers (Input→Logic→Output→Error→Edge Cases), libraries use 5 layers (API→Logic→Types→Error→Docs), etc.
+> **Project-type adaptation**: The 8-layer model is for web-apps. For other project types, use the verification layers defined in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`. CLI tools use 5 layers (Input→Logic→Output→Error→Edge Cases), libraries use 5 layers (API→Logic→Types→Error→Docs), etc.
 
 ---
 

@@ -51,7 +51,7 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /continue - Auto-Advance Framework
@@ -60,7 +60,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: Dynamic (per target workflow) | **Model**: Claude Sonnet 4
-> Conductor workflow. Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/the active council rules file`
+> Conductor workflow. Apply RARV cycle, session protocols per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/the active council rules file`
 
 ## Arguments
 | Argument | Required | Description |
@@ -205,7 +205,7 @@ Use the navigation table below to map current position → next workflow.
 
 If the next workflow is a **gate** (contains "gate" in the name):
 
-1. **Read** the gate workflow file from `~/.claude/skills/ultimate-sdlc/workflows/`
+1. **Read** the gate workflow file from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/skills/`
 2. **Execute** gate verification steps inline
 3. **If PASS**: Update state files, continue to the next phase (loop back to Step 3)
 4. **If FAIL**: STOP immediately. Display:
@@ -286,7 +286,7 @@ After Development Gate I8 passes for a run:
 
 Once the next workflow is determined:
 
-1. **Read** the workflow file from `~/.claude/skills/ultimate-sdlc/workflows/{workflow-name}.md`
+1. **Read** the workflow file from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/skills/{workflow-name}.md`
 2. **Follow** its instructions:
    - Load the specified agent
    - Load the specified skills (from `skills_required` frontmatter)

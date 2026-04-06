@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/ui-ux-analysis/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/accessibility-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/usability-assessment/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/ui-ux-analysis/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/accessibility-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/usability-assessment/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /audit-gate-t3 - Gate T3 Verification
@@ -79,14 +79,14 @@ T3 not complete. Run /audit-t3 first.
 
 ### Agent: gate-keeper
 Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:
-- **Provide**: Gate T3 criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates → Gate T3, T3 phase outputs (screenshots, usability report, navigation flows, defect log), Security Checklist from § Standard Terms
+- **Provide**: Gate T3 criteria from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Audit Council Gates → Gate T3, T3 phase outputs (screenshots, usability report, navigation flows, defect log), Security Checklist from § Standard Terms
 - **Request**: Verify each Gate T3 criterion against evidence, complete security checklist, run automated checks where applicable, and produce PASS/FAIL determination with justification per criterion
 - **Apply**: Use gate-keeper's determination for the gate decision below
 
 ### Step 1: Gate Verification
 
 The gate-keeper agent performs the full gate verification including:
-- Loading criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Audit Council Gates → Gate T3
+- Loading criteria from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Audit Council Gates → Gate T3
 - Verifying each criterion against the authoritative checklist
 - Completing the Security Checklist from § Standard Terms
 - Running automated checks where applicable

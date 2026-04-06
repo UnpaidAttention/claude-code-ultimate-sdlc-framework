@@ -32,8 +32,8 @@ Load when: `/council development` or `/dev-*` commands
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate I4**: Services Complete → see `gate-criteria.md § Gate I4`
 - **UI Design Review Gate**: Design plan complete → see `/dev-ui-design-plan` Step 7
@@ -51,7 +51,7 @@ Standard session start/resume sequence for all Development Council workflows:
 5. Check for `.ultimate-sdlc/council-state/development/run-tracker.md` → if exists, load current run assignment
 6. **If resuming**: Display resume summary, identify next incomplete AIOU
 7. **If new session**: Display welcome with wave overview, proceed to first AIOU
-8. Check governance_mode → apply mode-specific behavior per `~/.claude/skills/ultimate-sdlc/context/governance-modes.md`
+8. Check governance_mode → apply mode-specific behavior per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
 
 ## Context Health Protocol
 
@@ -245,7 +245,7 @@ After the LAST AIOU for any feature completes, run `/dev-verify-feature FEAT-XXX
 
 ## Wave 5 Classification
 
-> **Note**: Wave 5 (UI Components) only applies when `project_type` has a frontend (web-app, mobile-app). For CLI-tool, library, api-service, ml-pipeline: Wave 5 content is determined by `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
+> **Note**: Wave 5 (UI Components) only applies when `project_type` has a frontend (web-app, mobile-app). For CLI-tool, library, api-service, ml-pipeline: Wave 5 content is determined by `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`.
 
 | Type | Examples | Model |
 |------|----------|-------|
@@ -450,7 +450,7 @@ Standard Hero Split (Left Text / Right Image) | Bento Grids as default | Purple 
 
 development-handoff.md containing: Implementation summary, Test results, Coverage metrics, Known issues, Git commit history
 
-Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/development-handoff.schema.md`.
+Validate against `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/handoff-schemas/development-handoff.schema.md`.
 
 ## Session Summary Protocol
 

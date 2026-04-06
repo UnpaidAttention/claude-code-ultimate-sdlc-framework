@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/verification-testing/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/completeness-matrix/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-deliberation/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/verification-testing/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/completeness-matrix/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/feature-deliberation/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-gate-1-5 - Gate 1.5 Verification
@@ -87,7 +87,7 @@ Gate 1.5 ensures **ALL features** are identified before investing in architectur
 
 ### Step 1: Load Gate 1.5 Criteria
 
-Load criteria from `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` § Planning Council Gates → Gate 1.5.
+Load criteria from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` § Planning Council Gates → Gate 1.5.
 
 ### Agent: sdlc-gate-keeper
 Invoke via Agent tool with `subagent_type: "sdlc-gate-keeper"`:

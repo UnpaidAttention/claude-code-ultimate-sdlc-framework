@@ -198,7 +198,7 @@ HISTORICAL (Append-Only)
 - [Insight gained]
 
 ### Files Loaded
-- [ ] ~/.claude/skills/ultimate-sdlc/rules/UNIVERSAL-RULES.md
+- [ ] ~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/UNIVERSAL-RULES.md
 - [ ] (workflow file)
 - [ ] (skill files as loaded)
 (N substantial files — Status: GREEN/YELLOW/RED)
@@ -242,7 +242,7 @@ Created by `/init` (cycle-001) or `/new-cycle` (subsequent).
 
 **MOVED to `.cycles/cycle-NNN-slug/`**: .ultimate-sdlc/project-context.md, .ultimate-sdlc/progress.md, cycle-baseline.md, .ultimate-sdlc/council-state/, .ultimate-sdlc/handoffs/, .memory/, .metrics/
 
-**PERSIST across cycles** (never moved): .ultimate-sdlc/project-manifest.md, product-concept.md, .ultimate-sdlc/specs/, source code, framework files (~/.claude/skills/ultimate-sdlc/)
+**PERSIST across cycles** (never moved): .ultimate-sdlc/project-manifest.md, product-concept.md, .ultimate-sdlc/specs/, source code, framework files (~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/)
 
 ### Cycle State Resolution
 1. `.ultimate-sdlc/project-context.md` exists → active cycle

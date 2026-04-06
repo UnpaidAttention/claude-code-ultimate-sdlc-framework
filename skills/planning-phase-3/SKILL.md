@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/feature-spec/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/requirements-engineering/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/acceptance-criteria/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/feature-spec/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/requirements-engineering/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/acceptance-criteria/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /planning-phase-3 - Features
@@ -108,7 +108,7 @@ Read and understand:
 **Lens**: `[Requirements]`
 
 **Action Required**:
-1. Apply `[Requirements]` lens from `~/.claude/skills/ultimate-sdlc/agents/`
+1. Apply `[Requirements]` lens from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/`
 2. APPLY the agent's domain expertise: Use "Core Principles" for decisions, "When to Use" for scope. Ignore personality descriptions. Framework rules (P0-P3) override agent guidelines..
 3. LOAD the skills specified in the `skills_required` section of this workflow's frontmatter.
 4. PROCEED to Step 1 after loading..
@@ -144,7 +144,7 @@ Invoke via Agent tool with `subagent_type: "sdlc-architecture"`:
 **Lens**: `[Architecture]`
 
 **Action Required**:
-1. Apply `[Architecture]` lens from `~/.claude/skills/ultimate-sdlc/agents/`
+1. Apply `[Architecture]` lens from `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/`
 2. APPLY the agent's domain expertise: Use "Core Principles" for decisions, "When to Use" for scope. Ignore personality descriptions. Framework rules (P0-P3) override agent guidelines..
 3. LOAD the skills specified in the `skills_required` section of this workflow's frontmatter.
 4. PROCEED to Step 1 after loading..

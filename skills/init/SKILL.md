@@ -51,11 +51,11 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/project-setup/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/documentation-standards/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/conversation-manager/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/memory-system/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/project-setup/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/documentation-standards/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/conversation-manager/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/memory-system/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
 
 
 # /init - Initialize New Project
@@ -64,7 +64,7 @@ Load these knowledge skills for reference during this workflow:
 
 ## Lens / Skills / Model
 **Lens**: `[Quality]` | **Model**: Claude Sonnet 4
-> Apply RARV cycle, session protocols per `~/.claude/skills/ultimate-sdlc/rules/the active council rules file`
+> Apply RARV cycle, session protocols per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/the active council rules file`
 
 ## Arguments
 | Argument | Required | Description |
@@ -247,7 +247,7 @@ Write `.ultimate-sdlc/config.yaml` with:
 
 ### Step 9: Read Config Protocol
 
-Read `~/.claude/skills/ultimate-sdlc/context/config-reader.md` to understand how config values are used by workflows.
+Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/config-reader.md` to understand how config values are used by workflows.
 
 ### Step 10: Display Welcome
 

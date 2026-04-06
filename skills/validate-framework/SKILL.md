@@ -51,8 +51,8 @@ After the preamble runs, use the detected state to verify prerequisites for this
 ## Knowledge Skills
 
 Load these knowledge skills for reference during this workflow:
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/rarv-cycle/SKILL.md`
-- Read `~/.claude/skills/ultimate-sdlc/knowledge/systematic-evaluation/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/rarv-cycle/SKILL.md`
+- Read `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/systematic-evaluation/SKILL.md`
 
 
 # /validate-framework - Framework Self-Validation
@@ -83,11 +83,11 @@ Check the integrity of the Ultimate SDLC Framework to catch structural problems,
 Check that all required directories exist:
 
 ```
-□ ~/.claude/skills/ultimate-sdlc/rules/
-□ ~/.claude/skills/ultimate-sdlc/agents/
-□ ~/.claude/skills/ultimate-sdlc/knowledge/
-□ ~/.claude/skills/ultimate-sdlc/workflows/
-□ ~/.claude/skills/ultimate-sdlc/context/
+□ ~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/
+□ ~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/
+□ ~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/
+□ ~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/skills/
+□ ~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/
 □ handoffs/
 ```
 
@@ -101,13 +101,13 @@ Check these files exist and are non-empty:
 
 | File | Required |
 |------|----------|
-| `~/.claude/skills/ultimate-sdlc/rules/UNIVERSAL-RULES.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/rules/CONSTITUTION.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/rules/conflict-resolution.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/rules/council-planning.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/rules/council-development.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/rules/council-audit.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/rules/council-validation.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/UNIVERSAL-RULES.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/CONSTITUTION.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/conflict-resolution.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/council-planning.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/council-development.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/council-audit.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/rules/council-validation.md` | ✓ |
 
 **If any missing**: Report which files are missing.
 
@@ -119,13 +119,13 @@ Check these files exist:
 
 | File | Required |
 |------|----------|
-| `~/.claude/skills/ultimate-sdlc/context/framework-overview.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/framework-overview.md` | ✓ |
 | `.reference/phase-guide.md` | ✓ |
 | `.reference/skills-index.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/context/state-management.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/state-management.md` | ✓ |
 | `.reference/model-selection-guide.md` | ✓ |
 | `.reference/skill-loading-guide.md` | ✓ |
-| `~/.claude/skills/ultimate-sdlc/context/error-catalog.md` | ✓ |
+| `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/error-catalog.md` | ✓ |
 | `.reference/skill-dependencies.md` | ✓ |
 
 ---
@@ -163,9 +163,9 @@ Check these critical workflows exist:
 
 Check for broken references:
 
-1. **Agent references in workflows**: For each workflow with `agents:` section, verify the agent file exists in `~/.claude/skills/ultimate-sdlc/agents/`
+1. **Agent references in workflows**: For each workflow with `agents:` section, verify the agent file exists in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/agents/`
 
-2. **Skill references**: For common skills referenced, verify they exist in `~/.claude/skills/ultimate-sdlc/knowledge/`
+2. **Skill references**: For common skills referenced, verify they exist in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/knowledge/`
 
 3. **File path references**: Scan for `.md` file references and verify they resolve
 

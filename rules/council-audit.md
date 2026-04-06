@@ -30,8 +30,8 @@ Within each track, phases are sequential with mandatory prerequisites.
 
 ## Quality Gates
 
-Gate criteria are defined in `~/.claude/skills/ultimate-sdlc/context/gate-criteria.md` (single source of truth).
-Mode-specific activation: see `~/.claude/skills/ultimate-sdlc/context/governance-modes.md § Per-Council Phase Activation`.
+Gate criteria are defined in `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/gate-criteria.md` (single source of truth).
+Mode-specific activation: see `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md § Per-Council Phase Activation`.
 
 - **Gate T3**: GUI Analysis → see `gate-criteria.md § Gate T3` — **skip if `project_type` has no frontend**
 - **Gate A2**: Completeness → see `gate-criteria.md § Gate A2`
@@ -77,7 +77,7 @@ Standard session start/resume sequence for all Audit Council workflows:
 
 **NO DEFECT WITHOUT REPRODUCTION + EVIDENCE**
 
-> Evidence format is determined by `project_type`: screenshots for web-app/mobile-app, terminal output for cli-tool, request/response diffs for api-service. See `~/.claude/skills/ultimate-sdlc/context/project-presets.md`.
+> Evidence format is determined by `project_type`: screenshots for web-app/mobile-app, terminal output for cli-tool, request/response diffs for api-service. See `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/project-presets.md`.
 
 ## Defect Severity
 
@@ -163,7 +163,7 @@ Switch with `/audit-think [mode]`:
 - audit-handoff.md - Quality assessment
 - defect-log.md - All defects with evidence
 
-Validate against `~/.claude/skills/ultimate-sdlc/context/handoff-schemas/audit-handoff.schema.md`.
+Validate against `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/handoff-schemas/audit-handoff.schema.md`.
 
 ## Recovery
 
