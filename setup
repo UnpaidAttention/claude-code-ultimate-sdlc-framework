@@ -90,44 +90,71 @@ if [[ -x "$SCRIPT_DIR/bin/sdlc-patch-names" ]]; then
     ok "Skill names patched"
 fi
 
-# ── Clean old symlinks from previous installs ───────────────────────
-info "Cleaning old workflow symlinks ..."
+# ── Clean old symlinks/hardlinks from previous installs ─────────────
+info "Cleaning old workflow installations ..."
 CLEANED=0
-for link in "$SKILLS_DIR"/*/; do
-    [[ -L "${link%/}" ]] || continue
-    link_target="$(readlink -f "${link%/}" 2>/dev/null || true)"
-    if [[ "$link_target" == *"$SCRIPT_DIR/workflows"* ]]; then
-        rm "${link%/}"
+for link in "$SKILLS_DIR"/sdlc-*/; do
+    [[ -d "${link%/}" ]] || continue
+    # Only remove dirs that look like our installed workflow skills
+    if [[ -f "${link%/}/SKILL.md" ]] && [[ ! -f "${link%/}/commands" ]]; then
+        rm -rf "${link%/}"
         ((CLEANED++))
     fi
 done
-[[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old symlink(s)"
+[[ $CLEANED -gt 0 ]] && info "Removed $CLEANED old installation(s)"
 
-# ── Install workflow skills ──────────────────────────────────────────
-# Claude Code doesn't follow symlinks into nested skill directories,
-# so we create real directories with hard-linked SKILL.md files.
-info "Installing workflow skills ..."
-WORKFLOW_COUNT=0
-PREFIX=""
-if [[ "$NAMING_MODE" == "namespaced" ]]; then
-    PREFIX="sdlc-"
+# ── Register as Claude Code plugin ──────────────────────────────────
+info "Registering as Claude Code plugin ..."
+PLUGINS_DIR="$CLAUDE_DIR/plugins"
+INSTALLED_PLUGINS="$PLUGINS_DIR/installed_plugins.json"
+PLUGIN_ID="ultimate-sdlc@ultimate-sdlc"
+PLUGIN_VERSION="3.1.0"
+NOW="$(date -u +%Y-%m-%dT%H:%M:%S.000Z)"
+
+mkdir -p "$PLUGINS_DIR"
+
+# Ensure installed_plugins.json exists
+if [[ ! -f "$INSTALLED_PLUGINS" ]]; then
+    echo '{"version":2,"plugins":{}}' > "$INSTALLED_PLUGINS"
 fi
 
-if [[ -d "$SCRIPT_DIR/workflows" ]]; then
-    for wf_dir in "$SCRIPT_DIR/workflows"/*/; do
-        [[ -d "$wf_dir" ]] || continue
-        [[ -f "$wf_dir/SKILL.md" ]] || continue
-        wf_name="$(basename "$wf_dir")"
-        skill_name="${PREFIX}${wf_name}"
-        target_dir="$SKILLS_DIR/$skill_name"
-        mkdir -p "$target_dir"
-        ln -f "$wf_dir/SKILL.md" "$target_dir/SKILL.md"
-        ((WORKFLOW_COUNT++))
-    done
-fi
-ok "Installed $WORKFLOW_COUNT workflow skill(s) (prefix: '${PREFIX:-none}')"
+# Add/update plugin entry using python (available everywhere, handles JSON safely)
+python3 -c "
+import json, sys
+with open('$INSTALLED_PLUGINS', 'r') as f:
+    data = json.load(f)
+if 'plugins' not in data:
+    data['plugins'] = {}
+data['plugins']['$PLUGIN_ID'] = [{
+    'scope': 'user',
+    'installPath': '$SCRIPT_DIR',
+    'version': '$PLUGIN_VERSION',
+    'installedAt': '$NOW',
+    'lastUpdated': '$NOW'
+}]
+with open('$INSTALLED_PLUGINS', 'w') as f:
+    json.dump(data, f, indent=2)
+"
+ok "Registered plugin: $PLUGIN_ID"
 
-# ── Install agents ───────────────────────────────────────────────────
+# Enable plugin in settings.json
+SETTINGS="$CLAUDE_DIR/settings.json"
+if [[ ! -f "$SETTINGS" ]]; then
+    echo '{}' > "$SETTINGS"
+fi
+python3 -c "
+import json
+with open('$SETTINGS', 'r') as f:
+    data = json.load(f)
+if 'enabledPlugins' not in data:
+    data['enabledPlugins'] = {}
+data['enabledPlugins']['$PLUGIN_ID'] = True
+with open('$SETTINGS', 'w') as f:
+    json.dump(data, f, indent=2)
+"
+ok "Enabled plugin in settings.json"
+
+# ── Install agents to ~/.claude/agents/ ─────────────────────────────
 info "Installing agents ..."
 mkdir -p "$AGENTS_DIR"
 AGENT_COUNT=0
@@ -158,51 +185,26 @@ if [[ -d "$SCRIPT_DIR/rules" ]]; then
 fi
 ok "Installed $RULE_COUNT rule(s)"
 
-# ── Append routing block to CLAUDE.md ────────────────────────────────
-ROUTING_MARKER="## Ultimate SDLC Framework"
-if [[ -f "$CLAUDE_MD" ]] && grep -qF "$ROUTING_MARKER" "$CLAUDE_MD"; then
-    info "Routing block already present in CLAUDE.md — skipping"
-else
-    info "Appending routing block to $CLAUDE_MD ..."
-    mkdir -p "$(dirname "$CLAUDE_MD")"
-    cat >> "$CLAUDE_MD" <<'ROUTING_EOF'
-
-## Ultimate SDLC Framework
-
-### Available skills (Ultimate SDLC)
-
-- `/init` — Initialize a new project with Ultimate SDLC
-- `/adopt` — Onboard an existing codebase
-- `/status` — Check current council/phase/gate progress
-- `/continue` — Auto-advance to next step
-- `/planning-start` — Begin Planning Council
-- `/dev-start` — Begin Development Council
-- `/audit-start` — Begin Audit Council
-- `/validate-start` — Begin Validation Council
-- `/new-cycle` — Start a new development cycle
-- `/close-cycle` — Archive current cycle
-- `/release` — Ship/release workflow
-- `/help` — Full command reference
-
-Use `/ultimate-sdlc` for framework overview and routing.
-ROUTING_EOF
-    ok "Routing block appended to CLAUDE.md"
-fi
+# ── Count commands and skills ───────────────────────────────────────
+COMMAND_COUNT=$(find "$SCRIPT_DIR/commands" -name "*.md" 2>/dev/null | wc -l)
+SKILL_COUNT=$(find "$SCRIPT_DIR/workflows" -name "SKILL.md" 2>/dev/null | wc -l)
 
 # ── Summary ──────────────────────────────────────────────────────────
 echo ""
 echo -e "${BOLD}Installation complete!${NC}"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "  Config:      ${GREEN}$AG_HOME/config.yaml${NC}"
-echo -e "  Naming mode: ${GREEN}${NAMING_MODE}${NC}"
-echo -e "  Workflows:   ${GREEN}${WORKFLOW_COUNT} linked${NC}"
+echo -e "  Plugin ID:   ${GREEN}${PLUGIN_ID}${NC}"
+echo -e "  Commands:    ${GREEN}${COMMAND_COUNT} registered${NC}"
+echo -e "  Skills:      ${GREEN}${SKILL_COUNT} available${NC}"
 echo -e "  Agents:      ${GREEN}${AGENT_COUNT} installed${NC}"
 echo -e "  Rules:       ${GREEN}${RULE_COUNT} installed${NC}"
 echo -e "  Plugin dir:  ${GREEN}$SCRIPT_DIR${NC}"
 echo ""
 echo "Next steps:"
-echo "  1. Run /ultimate-sdlc or /help in Claude Code"
-echo "  2. Run /init in a project directory to start"
+echo "  1. Restart Claude Code for the plugin to load"
+echo "  2. Type /sdlc-init to start a new project"
+echo "  3. Type /sdlc-ag-help for the full command reference"
 echo ""
 echo "To uninstall: $SCRIPT_DIR/bin/sdlc-uninstall"
 echo ""

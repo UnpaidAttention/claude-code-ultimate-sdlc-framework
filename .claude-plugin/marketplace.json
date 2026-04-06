@@ -1,0 +1,40 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ultimate-sdlc",
+  "description": "Structured, gate-driven, multi-council orchestration system for AI-assisted software development",
+  "owner": {
+    "name": "UnpaidAttention",
+    "email": "unpaidattention@users.noreply.github.com"
+  },
+  "plugins": [
+    {
+      "name": "ultimate-sdlc",
+      "source": "./",
+      "description": "Ultimate SDLC Framework — 167 workflow commands, 8 focus lens agents, 13 quality gates, 5 cycle types. Planning, Development, Audit, Validation councils.",
+      "version": "3.1.0",
+      "author": {
+        "name": "UnpaidAttention"
+      },
+      "homepage": "https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework",
+      "repository": "https://github.com/UnpaidAttention/claude-code-ultimate-sdlc-framework",
+      "license": "MIT",
+      "keywords": [
+        "sdlc",
+        "planning",
+        "development",
+        "audit",
+        "validation"
+      ],
+      "category": "workflow",
+      "tags": [
+        "sdlc",
+        "planning",
+        "development",
+        "workflow",
+        "gates",
+        "councils"
+      ],
+      "strict": false
+    }
+  ]
+}
