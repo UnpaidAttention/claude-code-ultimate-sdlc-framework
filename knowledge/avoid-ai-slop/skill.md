@@ -979,76 +979,48 @@ function ScrollReveal({ children }: { children: React.ReactNode }) {
 
 ---
 
-## Generic AI Aesthetics to AVOID
+## AI Slop Prevention — STRICT ENFORCEMENT
 
-**NEVER** use these patterns that scream "AI-generated":
+> **Full rules:** See `anti-slop-visual.md` (16 categories, 60+ banned visual patterns) and `anti-slop-code.md` (7 categories, 40+ banned code patterns) in the rules directory. What follows is a quick-reference summary. The full rules are authoritative.
 
-### Visual Slop Patterns
+**ABSOLUTE PROHIBITION**: Every pattern listed below and in the full rule files is BANNED. No exceptions unless the user explicitly approves a specific deviation.
 
-| Anti-Pattern | Why It's Bad | Better Alternative |
-|--------------|--------------|-------------------|
-| Inter/Roboto/Arial fonts | Overused, no character | Distinctive display + refined body fonts |
-| Purple gradients on white | AI's default "pretty" | Commit to a real color story |
-| Centered everything | Boring, predictable | Asymmetry, off-grid positioning |
-| Blue primary buttons | Generic, forgettable | Context-specific accent colors |
-| Evenly-spaced cards grid | Cookie-cutter layout | Varied sizes, overlaps, masonry |
-| Stock illustration style | Instantly recognizable as AI | Custom graphics, photography, abstract shapes |
-| "Clean and modern" as goal | Says nothing, means nothing | Specific aesthetic with clear POV |
-| Rounded corners on everything | Softens everything into sameness | Mix sharp and soft intentionally |
-| Gradient backgrounds only | Lazy depth creation | Textures, patterns, layered elements |
-| Generic hero sections | "Big text + CTA + image" | Unexpected compositions |
+### 30-Second Slop Test (reject if 3+ match)
 
-### Code Slop Patterns
+1. Inter/Roboto/Arial font with no typographic personality
+2. Purple/indigo gradient or accent color
+3. Three equal cards in a row with icons
+4. Uniform `border-radius` and `box-shadow` on everything
+5. White/light-gray background with no texture or atmosphere
 
-| Anti-Pattern | Why It's Bad | Better Alternative |
-|--------------|--------------|-------------------|
-| Mixed import styles | Inconsistent, hard to scan | Strict import ordering (React → external → internal) |
-| `any` type everywhere | Defeats TypeScript's purpose | Proper types, generics, inference |
-| Giant components (300+ lines) | Impossible to maintain | Split into focused subcomponents |
-| Prop drilling 5+ levels | Coupling, hard to refactor | Context, composition, or state management |
-| `useEffect` for everything | Over-complicated, race conditions | Server Components, derived state, event handlers |
-| Copy-pasted code blocks | Maintenance nightmare | Extract to reusable functions/components |
-| Magic numbers/strings | Unclear intent | Named constants, enums, config objects |
-| Nested ternaries | Unreadable | Early returns, switch, lookup objects |
-| Console.log debugging left in | Unprofessional, leaks info | Proper logging, remove before commit |
-| Commented-out code | Clutters, causes confusion | Delete it, use git history |
+### Visual Slop — Key Bans
 
-### Structure Slop Patterns
+| Category | Banned | Required Instead |
+|----------|--------|-----------------|
+| **Fonts** | Inter, Roboto, Open Sans, Lato, Arial, system-ui, Space Grotesk | Distinctive display+body pairing (Playfair, Clash, Fraunces, Satoshi, DM Sans, etc.) |
+| **Colors** | Purple/indigo/violet gradients, `#6366f1`, `#8b5cf6`, `#3b82f6`, Tailwind defaults as primary, timid even-distribution palettes, cold `#ffffff`/`#000000` | Dominant+accent with tension (85-95%/5-15%), warm off-whites, near-black with undertone, CSS custom properties |
+| **Layout** | Three-box trinity, hero formula (centered headline→subline→CTA), stat box bloat, bento grid default, identical element treatment | Asymmetry, varied hierarchy, unexpected compositions, staggered grids |
+| **Depth** | Uniform shadows, blur-everything glassmorphism, same border-radius on all elements | Shadow hierarchy (flush→raised→floating), intentional radius mixing, colored shadows |
+| **Motion** | Zero animation OR everything-animates-same, `ease-in-out` only, hover=color-change-only, `translateY(-4px)` hover lift | Orchestrated reveals, custom beziers, multi-property hover (lift+shadow+scale), press states |
+| **Copy** | "Get Started"/"Learn More", "Empowering X with Y", "Seamless integration", buzzwords (Orchestrate/Elevate/Supercharge/Revolutionize) | Specific CTAs describing what happens, product-specific descriptions |
+| **Components** | Blue/purple primary buttons, generic modals, card-nesting, pill-shape-everywhere, AI emoji set | Project-specific accent, semantic containers, intentional corner mixing |
+| **Dark mode** | Lazy inversion (`#fff`→`#000`), unchanged shadows/accents | Near-black with undertone, off-white text, adjusted shadows and surface layers |
+| **States** | Missing loading/error/empty/disabled/skeleton states | ALL states required for every async operation and interactive element |
 
-| Anti-Pattern | Why It's Bad | Better Alternative |
-|--------------|--------------|-------------------|
-| Everything in one file | Impossible to navigate | One component per file, logical grouping |
-| No folder structure | Chaos at scale | Feature-based or layer-based organization |
-| Mixed concerns in components | Hard to test, reuse | Separate UI, logic, data fetching |
-| API calls in components | Tight coupling | Hooks, services, server actions |
-| Business logic in UI | Hard to test | Extract to pure functions |
-| Styles mixed with logic | Hard to maintain | Separate concerns, design tokens |
+### Code Slop — Key Bans
 
-### Logic Slop Patterns
+| Category | Banned | Required Instead |
+|----------|--------|-----------------|
+| **Types** | `any`, magic numbers/strings | Proper types/generics, named constants |
+| **Structure** | 300+ line components, single-file dumping, mixed concerns, prop drilling 5+ levels | <150 line components, feature-based organization, separated concerns |
+| **Hygiene** | Commented-out code, console.log, copy-pasted blocks, nested ternaries | Git history, structured logging, extracted functions, early returns |
+| **Security** | String concat in queries, tokens in localStorage, no input validation, hardcoded secrets | Parameterized queries, HttpOnly cookies, schema validation, env vars |
+| **Logging** | Logging PII/passwords/tokens, unstructured logs | Safe identifiers only, structured JSON with timestamp/level/service/traceId |
 
-| Anti-Pattern | Why It's Bad | Better Alternative |
-|--------------|--------------|-------------------|
-| Unnecessary state | Re-renders, bugs | Derive from existing state/props |
-| State for server data | Stale data, sync issues | React Query, Server Components |
-| Over-engineering | Complexity without benefit | YAGNI - build what you need |
-| Premature abstraction | Wrong abstractions | Wait for patterns to emerge |
-| God components | Does everything, maintains nothing | Single responsibility |
-| Callback hell | Unreadable async code | async/await, proper error handling |
+### Enforcement
 
-### Slop Detection Checklist
-
-Before committing any code, ask:
-
-- [ ] Can I explain what this code does in one sentence?
-- [ ] Is there duplicated code that should be extracted?
-- [ ] Are there any `any` types I can eliminate?
-- [ ] Is this component under 150 lines?
-- [ ] Are all magic values named constants?
-- [ ] Is there commented-out code to delete?
-- [ ] Are console.logs removed?
-- [ ] Does the file structure make sense?
-- [ ] Would a new developer understand this quickly?
-- [ ] Is there unnecessary state that could be derived?
+Flag violations as: `ANTI-SLOP VIOLATION: [visual|code] - [category] - [specific pattern]`
+P0 — correct immediately before any commit or deliverable.
 
 ```tsx
 // ❌ GENERIC AI SLOP
