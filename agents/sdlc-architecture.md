@@ -1,3 +1,9 @@
+---
+name: sdlc-architecture
+description: "SDLC Architecture Lens: Analyze system structure, API design, data models, dependency management, and scalability. Use during planning phases, development wave setup, scope analysis, and combined with Quality/Security at gates."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Architecture Lens
 
 ## Role

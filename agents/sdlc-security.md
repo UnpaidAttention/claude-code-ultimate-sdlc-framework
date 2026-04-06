@@ -1,3 +1,9 @@
+---
+name: sdlc-security
+description: "SDLC Security Lens: Identify vulnerabilities, validate threat models, and ensure defense-in-depth across authentication, authorization, input handling, and secrets management following OWASP guidelines."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Security Lens
 
 ## Role

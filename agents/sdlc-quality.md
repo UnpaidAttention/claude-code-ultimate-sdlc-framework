@@ -1,3 +1,9 @@
+---
+name: sdlc-quality
+description: "SDLC Quality Lens: Evaluate test coverage, code correctness, defect risk, spec compliance, and completeness to ensure deliverables meet acceptance criteria and maintain regression safety."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Quality Lens
 
 ## Role

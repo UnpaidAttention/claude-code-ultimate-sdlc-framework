@@ -1,3 +1,9 @@
+---
+name: sdlc-operations
+description: "SDLC Operations Lens: Assess deployment readiness, monitoring coverage, failure mode handling, and operational runbooks to ensure the system is observable, recoverable, and safely deployable."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Operations Lens
 
 ## Role

@@ -1,3 +1,9 @@
+---
+name: sdlc-ux
+description: "SDLC UX Lens: Evaluate usability, accessibility, navigation flow, and visual design quality to ensure users can accomplish their goals efficiently and inclusively."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # UX Lens
 
 ## Role

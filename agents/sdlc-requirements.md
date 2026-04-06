@@ -1,3 +1,9 @@
+---
+name: sdlc-requirements
+description: "SDLC Requirements Lens: Validate feature completeness, user story coverage, acceptance criteria clarity, and scope integrity to ensure nothing is missing and every requirement is traceable to implementation."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Requirements Lens
 
 ## Role

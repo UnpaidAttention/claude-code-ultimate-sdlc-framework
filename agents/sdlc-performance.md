@@ -1,3 +1,9 @@
+---
+name: sdlc-performance
+description: "SDLC Performance Lens: Identify performance bottlenecks, validate optimization decisions, and ensure resource usage stays within acceptable bounds through profiling, benchmarking, and load analysis."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Performance Lens
 
 ## Role

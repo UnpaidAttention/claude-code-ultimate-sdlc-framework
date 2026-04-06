@@ -1,3 +1,9 @@
+---
+name: sdlc-documentation
+description: "SDLC Documentation Lens: Evaluate technical documentation, user guides, API references, and handoff materials for completeness, accuracy, and clarity so that someone new can understand and maintain the system."
+tools: ["Read", "Grep", "Glob", "Bash"]
+---
+
 # Documentation Lens
 
 ## Role
