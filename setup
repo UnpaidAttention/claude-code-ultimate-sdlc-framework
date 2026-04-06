@@ -11,9 +11,10 @@ CLAUDE_DIR="$HOME/.claude"
 AGENTS_DIR="$CLAUDE_DIR/agents"
 RULES_DIR="$CLAUDE_DIR/rules/ultimate-sdlc"
 
-PLUGIN_ID="ultimate-sdlc@claude-plugins-official"
+MARKETPLACE="ultimate-sdlc"
+PLUGIN_ID="ultimate-sdlc@${MARKETPLACE}"
 PLUGIN_VERSION="3.1.0"
-PLUGIN_CACHE="$CLAUDE_DIR/plugins/cache/claude-plugins-official/ultimate-sdlc/$PLUGIN_VERSION"
+PLUGIN_CACHE="$CLAUDE_DIR/plugins/cache/${MARKETPLACE}/ultimate-sdlc/$PLUGIN_VERSION"
 
 # Colors
 RED='\033[0;31m'
@@ -165,6 +166,34 @@ with open('$SETTINGS', 'w') as f:
     json.dump(data, f, indent=2)
 "
 ok "Enabled plugin in settings.json"
+
+# Create marketplace directory (real dir with .claude-plugin/ metadata, like other plugins)
+MARKETPLACE_DIR="$PLUGINS_DIR/marketplaces/$MARKETPLACE"
+mkdir -p "$MARKETPLACE_DIR"
+# Copy the full plugin into the marketplace dir (this is how Claude Code expects it)
+rsync -a --exclude='.git' "$PLUGIN_CACHE/" "$MARKETPLACE_DIR/"
+
+# Register marketplace in known_marketplaces.json
+MARKETPLACES_JSON="$PLUGINS_DIR/known_marketplaces.json"
+if [[ ! -f "$MARKETPLACES_JSON" ]]; then
+    echo '{}' > "$MARKETPLACES_JSON"
+fi
+python3 -c "
+import json
+with open('$MARKETPLACES_JSON', 'r') as f:
+    data = json.load(f)
+data['$MARKETPLACE'] = {
+    'source': {
+        'source': 'github',
+        'repo': 'UnpaidAttention/claude-code-ultimate-sdlc-framework'
+    },
+    'installLocation': '$MARKETPLACE_DIR',
+    'lastUpdated': '$NOW'
+}
+with open('$MARKETPLACES_JSON', 'w') as f:
+    json.dump(data, f, indent=2)
+"
+ok "Registered marketplace: $MARKETPLACE"
 
 # ── Install agents to ~/.claude/agents/ ─────────────────────────────
 info "Installing agents ..."
