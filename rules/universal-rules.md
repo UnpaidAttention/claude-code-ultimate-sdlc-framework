@@ -257,3 +257,33 @@ When facing a choice not covered by specs, ADRs, or existing patterns:
 3. **Document**: Record decision + rationale in WORKING-MEMORY.md.
 4. **ADR threshold**: If the decision affects >3 files or >1 feature, create an ADR.
 5. **Bias toward convention**: When equally valid, choose the most common industry convention for the stack.
+
+### 0.21 Feedback-Driven Learning
+
+The framework captures **user corrections with reasoning** as feedback entries that persist across sessions and cycles. Feedback describes HOW the team wants work done; specs describe WHAT the system does — they are orthogonal (FR-1).
+
+**P0 Rule File (Always Loaded, added in this version)**: `feedback-rules.md` — alongside UNIVERSAL-RULES and INTEGRITY-RULES.
+
+**Storage**: `.ultimate-sdlc/feedback/` (per-project, carried forward across cycles via `pattern` entries).
+
+**Four feedback types**: `user-correction` | `user-preference` | `gate-learning` | `pattern`.
+
+**Write triggers** — agent creates a feedback entry when:
+1. User corrects the agent AND explains why → `/sdlc-feedback-log`.
+2. User states a preference unprompted → `/sdlc-feedback-log --type user-preference`.
+3. A gate fails because of a rule/process gap → `/sdlc-feedback-log --type gate-learning`.
+4. Validation S1 synthesizes recurring entries → `/sdlc-feedback-promote`.
+
+**Read triggers** — agent loads feedback at:
+1. Every council's Session Protocol → `/sdlc-feedback-review`.
+2. Before any AIOU implementation (Planning 2.5/3/3.5, all Development waves) → `/sdlc-feedback-review --aiou <AIOU-ID>`.
+3. Before every gate verification → `/sdlc-feedback-review --gate <gate-id>`.
+4. On `/sdlc-new-cycle` bootstrap → load carried-forward `pattern` entries.
+
+**Anti-weaponization** (FR-2): Feedback NEVER justifies a PRH-001..PRH-009 violation. Rejections logged to `.ultimate-sdlc/feedback/REJECTED.md`.
+
+**Framework meta-improvement** (FR-3): `/sdlc-framework-retro` at cycle close drafts proposed edits to framework files as `FR-NNN` in `.ultimate-sdlc/framework-revisions-proposed/`. **Propose-only** — agents never write to the framework repo directory. User reviews and applies manually.
+
+**Cross-project learning** (FR-4): NOT automatic. Feedback stays per-project.
+
+Full protocol: see `feedback-rules.md`. Schema: see `contexts/feedback-schema.md`. Templates: `feedback-entry.md`, `feedback-index.md`, `framework-revision.md`.

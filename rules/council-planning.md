@@ -60,9 +60,23 @@ Standard session start/resume sequence for all Planning Council workflows:
 2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Planning, get current phase
 3. Read `.ultimate-sdlc/council-state/planning/current-state.md` → get phase checklist
 4. Read `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md` → check for incomplete tasks
-5. **If resuming**: Display resume summary from WORKING-MEMORY, continue from last position
-6. **If new session**: Display welcome, proceed to current phase
-7. Check governance_mode → skip non-applicable phases per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
+5. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: planning` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+6. **If resuming**: Display resume summary from WORKING-MEMORY, continue from last position
+7. **If new session**: Display welcome, proceed to current phase
+8. Check governance_mode → skip non-applicable phases per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
+
+## Pre-AIOU Feedback Filter (Phases 2.5 / 3 / 3.5)
+
+Applies to the three AIOU-generating phases: Feature Deep-Dive, Feature Specs, AIOU Decomposition.
+
+Before drafting any AIOU for a feature (or before defining its components in a DIVE), the agent MUST:
+
+1. Invoke `/sdlc-feedback-review --aiou <AIOU-ID>` (or filter by FEAT-ID if the AIOU doesn't exist yet).
+2. Apply matched entries' "How to apply" guidance to the spec being drafted.
+3. If feedback contradicts an upstream spec (BRD, ADR, FEAT): **spec wins** — flag the conflict to the user for reconciliation. Do NOT silently override either source.
+4. Record which FB-NNN entries informed the AIOU in the AIOU spec under a new section `## Feedback Applied` (list IDs + one-line note).
+
+This ensures corrections from prior cycles (carried forward as `pattern` entries) and from earlier in the current cycle actively shape AIOU definition rather than being re-learned during Development.
 
 ## Scope Integrity Principle
 

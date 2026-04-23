@@ -49,9 +49,10 @@ Standard session start/resume sequence for all Development Council workflows:
 3. Read `.ultimate-sdlc/handoffs/planning-handoff.md` → load AIOU specs for current wave
 4. Read `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md` → check for incomplete AIOUs
 5. Check for `.ultimate-sdlc/council-state/development/run-tracker.md` → if exists, load current run assignment
-6. **If resuming**: Display resume summary, identify next incomplete AIOU
-7. **If new session**: Display welcome with wave overview, proceed to first AIOU
-8. Check governance_mode → apply mode-specific behavior per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
+6. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: development` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+7. **If resuming**: Display resume summary, identify next incomplete AIOU
+8. **If new session**: Display welcome with wave overview, proceed to first AIOU
+9. Check governance_mode → apply mode-specific behavior per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
 
 ## Context Health Protocol
 
@@ -89,8 +90,9 @@ Applied after every AIOU implementation. Defined once here — all wave workflow
 4. Check security requirements (parameterized queries, input validation, output encoding, no secrets)
 5. **Secrets scan**: Search all modified/created files for hardcoded secrets — API keys, passwords, tokens, private keys, connection strings. Any match → remove and replace with environment variable reference. Do NOT commit secrets.
 6. Verify file modifications match AIOU scope (no unrelated changes)
-7. Run build + test suite
-8. **[Enterprise]** Capture evidence of review in wave completion report
+7. **Feedback compliance** (per `feedback-rules.md § FBP-002`): Verify the AIOU implementation does not contradict any feedback entry loaded via the pre-AIOU filter. For each loaded FB-NNN, confirm the "How to apply" guidance was followed — or that a documented reconciliation exists in WORKING-MEMORY (e.g. "FB-003 contradicted by AIOU spec; spec won; user flagged"). Unexplained deviations are Code Review failures — fix before proceeding.
+8. Run build + test suite
+9. **[Enterprise]** Capture evidence of review in wave completion report
 
 ## Display Template
 
@@ -168,6 +170,7 @@ For EVERY AIOU that produces testable code, follow the Red-Green-Refactor cycle:
 - **Wave 2 additional context**: Read `.ultimate-sdlc/specs/architecture/database-design.md` (if exists) — use as implementation blueprint for data layer AIOUs. Schema design, indexes, migration strategy are authoritative.
 - **Wave 4 additional context**: Read `.ultimate-sdlc/specs/architecture/api-specification.md` (if exists) — use as implementation blueprint for API layer AIOUs. Endpoint paths, request/response schemas, error codes, and auth requirements are authoritative.
 - **All waves**: Read `.ultimate-sdlc/specs/prd-crosscutting.md` §1 NFRs (if exists) — performance budgets, security requirements, and accessibility standards apply to all implementation work.
+- **Feedback filter** (per `feedback-rules.md § Trigger R2`): Invoke `/sdlc-feedback-review --aiou AIOU-XXX` → load matching active entries. Apply their "How to apply" guidance to the implementation plan. If a feedback entry contradicts the AIOU/FEAT spec: **spec wins** — flag the conflict to the user for reconciliation. Record the applied FB-NNN IDs in the AIOU completion artifact and in WORKING-MEMORY under "Feedback applied this AIOU".
 
 ### 1. Red Phase — Write Failing Tests
 - Each acceptance criterion → at least one test case

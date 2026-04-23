@@ -155,6 +155,7 @@ Move these files/directories INTO the archive:
 | `handoffs/*` | `.cycles/cycle-{NNN}/handoffs/` |
 | `.memory/` | `.cycles/cycle-{NNN}/.memory/` |
 | `.metrics/` | `.cycles/cycle-{NNN}/.metrics/` |
+| `.ultimate-sdlc/feedback/` | `.cycles/cycle-{NNN}/.ultimate-sdlc/feedback/` |
 
 **Do NOT move** (these persist across cycles):
 - `.ultimate-sdlc/project-manifest.md` — Project identity
@@ -164,6 +165,7 @@ Move these files/directories INTO the archive:
 - `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/` — Framework context
 - `.reference/` — Framework reference
 - `.ultimate-sdlc/config.yaml` — Framework config
+- `.ultimate-sdlc/framework-revisions-proposed/` — Revision proposals may await user review across cycles
 - `CLAUDE.md`, `README.md`, `ARCHITECTURE.md` — Framework docs
 - Source code (`src/`, `app/`, etc.)
 
@@ -240,7 +242,27 @@ mkdir -p .metrics/tasks/development
 mkdir -p .metrics/tasks/audit
 mkdir -p .metrics/tasks/validation
 mkdir -p .metrics/summaries/weekly
+mkdir -p .ultimate-sdlc/feedback
+mkdir -p .ultimate-sdlc/framework-revisions-proposed
 ```
+
+#### 3b-2: Bootstrap Feedback Subsystem (per `feedback-rules.md § Trigger R4`)
+
+1. If `.ultimate-sdlc/feedback/INDEX.md` does not exist yet, copy from framework template:
+   ```bash
+   cp "<framework>/templates/feedback-index.md" .ultimate-sdlc/feedback/INDEX.md
+   ```
+2. Carry forward `pattern`-type entries from the most recently archived cycle:
+   - Locate `.cycles/cycle-{prev-NNN}/.ultimate-sdlc/feedback/` (from the cycle just archived).
+   - Identify `FB-*.md` files with frontmatter `type: pattern` AND `status: active` (not `superseded`, not `resolved`).
+   - Copy each to the fresh `.ultimate-sdlc/feedback/` preserving filename.
+   - For each copied file: update frontmatter `cycle` field to the new cycle ID. Keep FB-NNN IDs, `supersedes`, and all other fields unchanged.
+   - Add a bullet to each's "How to apply" section: `_(carried forward from cycle-{prev-NNN})_`
+3. Update `.ultimate-sdlc/feedback/INDEX.md`:
+   - Add each carried-forward entry to the `## Active` section with the same format used when originally written.
+   - Bump the stats table: `Total entries`, `Active`, and set `Next ID` to `FB-<max_carried + 1>`.
+4. Non-pattern entries (`user-correction`, `user-preference`, `gate-learning`) remain ONLY in the archive. They are not carried forward.
+5. `.ultimate-sdlc/framework-revisions-proposed/` is untouched — it persists across cycles (see Step A3's Do-Not-Move list).
 
 ### Step 3c: Create .ultimate-sdlc/project-context.md
 

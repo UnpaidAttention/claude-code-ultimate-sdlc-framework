@@ -147,8 +147,13 @@ cp -r specs/ .cycles/{cycle-id}/specs/
 | `handoffs/*` | `.cycles/{cycle-id}/handoffs/` |
 | `.memory/` | `.cycles/{cycle-id}/.memory/` |
 | `.metrics/` | `.cycles/{cycle-id}/.metrics/` |
+| `.ultimate-sdlc/feedback/` | `.cycles/{cycle-id}/.ultimate-sdlc/feedback/` |
 
-**Do NOT move**: `.ultimate-sdlc/project-manifest.md`, `product-concept.md`, `specs/`, `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/`, `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/`, `.reference/`, `.ultimate-sdlc/config.yaml`, source code.
+**Do NOT move**: `.ultimate-sdlc/project-manifest.md`, `product-concept.md`, `specs/`, `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/`, `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/`, `.reference/`, `.ultimate-sdlc/config.yaml`, `.ultimate-sdlc/framework-revisions-proposed/`, source code.
+
+**Note on feedback**: `.ultimate-sdlc/feedback/` is archived with the cycle. A fresh `.ultimate-sdlc/feedback/` is created by `/sdlc-new-cycle` and `pattern`-type entries are carried forward. Non-pattern entries stay in the archive as history.
+
+**Note on framework revisions**: `.ultimate-sdlc/framework-revisions-proposed/` persists across cycles because proposals may await user review for arbitrary time. Proposals that have been applied or rejected should be manually moved or left in place as history.
 
 #### 4d: Save Cycle Summary
 
@@ -178,6 +183,25 @@ If `.memory/semantic/patterns.md` or `.memory/semantic/anti-patterns.md` contain
 2. Create/update `.cycles/project-learnings.md`:
 
 Use **Display Template** from `council-development.md` to show: Project Learnings (Accumulated Across Cycles)
+
+### Step 6a: Feedback Promotion (if not done at S1)
+
+If the Validation Council's S1 phase already ran `/sdlc-feedback-promote` during this cycle, skip this step. Otherwise:
+
+1. Invoke `/sdlc-feedback-promote` → cluster ≥2-entry groups of active feedback into `pattern` entries.
+2. Singletons remain `active` but only `pattern` entries carry forward to the next cycle.
+3. Record the synthesis in `.cycles/{cycle-id}/CYCLE-SUMMARY.md`.
+
+### Step 6b: Framework Retrospective (per `feedback-rules.md § Tier 4`)
+
+1. Verify this skill is NOT running from inside the framework repo directory. (The `/sdlc-framework-retro` skill enforces this internally too, but defense in depth.)
+2. Invoke `/sdlc-framework-retro` → drafts `FR-NNN` revision proposals in `.ultimate-sdlc/framework-revisions-proposed/` based on this cycle's pattern entries (and any carried-forward patterns).
+3. **Do NOT auto-apply any proposal.** The skill produces proposals only. The user reviews and applies manually.
+4. If any proposals are generated, list them in the cycle summary under `## Framework Revision Proposals`:
+   - FR-NNN → target file → one-line description → impact level
+5. If zero proposals are generated (all patterns already covered by framework), note that in the summary.
+
+**Absolute rule**: Under no circumstances should this step write to the framework repo directory. That is the user's manual responsibility based on proposal review.
 
 ### Step 7: Update Project Manifest
 

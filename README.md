@@ -243,8 +243,72 @@ Per-project state persists in `.ultimate-sdlc/` across sessions:
 - `council-state/` — Per-council working memory and progress
 - `specs/` — Feature specs (FEAT-XXX), AIOUs (AIOU-XXX), ADRs
 - `progress.md` — Append-only session history
+- `feedback/` — User corrections with reasoning (see next section)
+- `framework-revisions-proposed/` — Framework edit proposals awaiting user review
 
 CLI utilities: `sdlc-state current` (show position), `sdlc-state advance` (move forward), `sdlc-state gate-check` (verify gate)
+
+---
+
+## Feedback-Driven Learning
+
+The framework captures **user corrections with reasoning** as persistent feedback entries, separate from specs. Requirements describe **what** the system does; feedback describes **how** the team wants work done. They are orthogonal — gates catch what you know can break, feedback catches what the project teaches you over time.
+
+### Storage
+
+```
+.ultimate-sdlc/feedback/
+├── INDEX.md                          # Authoritative index grouped by status
+├── FB-001-<slug>.md                  # Individual entries (frontmatter + body)
+├── ...
+└── REJECTED.md                       # Log of entries rejected at write time
+
+.ultimate-sdlc/framework-revisions-proposed/
+├── INDEX.md
+├── FR-001-<slug>.md                  # Proposed edits to framework files
+└── ...
+```
+
+### Four Feedback Types
+
+| Type | When to capture |
+|------|-----------------|
+| `user-correction` | User corrects agent output AND provides reasoning |
+| `user-preference` | User states a preference unprompted by an error |
+| `gate-learning` | A quality gate fails because of a rule/process gap |
+| `pattern` | Cycle-end synthesis of ≥2 recurring entries |
+
+### Workflow Commands
+
+| Command | Purpose | When |
+|---------|---------|------|
+| `/sdlc-feedback-log` | Capture a new feedback entry with required "why" reasoning | Anytime the user corrects or states a preference |
+| `/sdlc-feedback-review` | Surface active entries matching current context | Session start, pre-AIOU, pre-gate (often auto-invoked) |
+| `/sdlc-feedback-promote` | Cluster recurring entries into `pattern` entries | Validation Council S1 (end of cycle) |
+| `/sdlc-framework-retro` | Draft proposed framework edits from patterns | `/sdlc-close-cycle` Step 6b |
+
+### Guardrails
+
+- **Every entry requires the user's reasoning.** No "why" → no entry. A correction without reasoning is patching, not learning (FBP-001).
+- **Feedback cannot bypass INTEGRITY-RULES.** Entries that would enable PRH-001..PRH-009 violations are rejected at write time and logged to `REJECTED.md` (FR-2, FBP-004).
+- **Patterns require ≥2 corroborating entries** — no single-entry promotions (FBP-005).
+- **Framework self-modification is proposal-only.** `/sdlc-framework-retro` writes proposals to the project under `framework-revisions-proposed/`. Agents never write to the framework repo directory. The user reviews and applies manually (FR-3).
+- **Feedback is per-project.** It does not propagate across projects (FR-4).
+
+### Integration Points
+
+Feedback is read at:
+- Every council's Session Protocol (`/sdlc-feedback-review` auto-invoked)
+- Before any AIOU in Planning phases 2.5 / 3 / 3.5 and all Development waves
+- Before every gate verification
+- At `/sdlc-new-cycle` bootstrap (carries forward `pattern` entries)
+
+Feedback is written at:
+- User correction or stated preference (any time)
+- Gate failure caused by rule/process gap
+- Validation S1 (pattern synthesis)
+
+See `rules/feedback-rules.md` for full governance and `contexts/feedback-schema.md` for schema.
 
 ---
 
@@ -285,6 +349,13 @@ Per-project state lives in `.ultimate-sdlc/` within your project directory:
 │   ├── aious/AIOU-001.md        # Atomic implementation units
 │   ├── adrs/ADR-001.md          # Architecture decision records
 │   └── scope-lock.md            # Canonical in-scope feature list
+├── feedback/                    # User corrections with reasoning (per-cycle)
+│   ├── INDEX.md
+│   ├── FB-001-<slug>.md
+│   └── REJECTED.md
+├── framework-revisions-proposed/ # Framework edit proposals (cross-cycle, user-reviewed)
+│   ├── INDEX.md
+│   └── FR-001-<slug>.md
 ├── handoffs/                    # Council transition documents
 └── .cycles/                     # Archived cycle state
 ```

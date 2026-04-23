@@ -45,10 +45,23 @@ Standard session start/resume sequence for all Audit Council workflows:
 2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Audit, get current track/phase
 3. Read `.ultimate-sdlc/handoffs/development-handoff.md` → load implementation summary
 4. Read `.ultimate-sdlc/council-state/audit/WORKING-MEMORY.md` → check for incomplete tasks
-5. **If resuming**: Display resume summary, continue from last position
-6. **If new session**: Display welcome with track overview
-7. Check governance_mode → apply mode-specific behavior (combine phases in Lightweight, skip T3 if no frontend)
-8. Check `project_type` → skip T3 for non-frontend types (cli-tool, library, api-service, ml-pipeline)
+5. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: audit` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+6. **If resuming**: Display resume summary, continue from last position
+7. **If new session**: Display welcome with track overview
+8. Check governance_mode → apply mode-specific behavior (combine phases in Lightweight, skip T3 if no frontend)
+9. Check `project_type` → skip T3 for non-frontend types (cli-tool, library, api-service, ml-pipeline)
+
+## Pre-Gate Feedback Check
+
+Before verifying ANY gate (T3, A2, A3), the agent MUST:
+
+1. Invoke `/sdlc-feedback-review --gate <gate-id>` → loads active `gate-learning` entries for this specific gate.
+2. For each loaded entry, verify the preventive rule named in "How to apply" has been applied during the work leading up to this gate.
+3. Record each check in the gate report under a new section `### Feedback-derived checks`:
+   - FB-NNN → preventive rule → verified / not verified / N/A
+4. If any preventive rule was NOT applied: gate FAILS until the agent addresses it. This is an automatic fail criterion added by each gate-learning entry.
+
+This ensures past gate failures (captured as `gate-learning` feedback) actively prevent the same failure recurring.
 
 ## Display Template
 

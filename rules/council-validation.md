@@ -78,10 +78,32 @@ Standard session start/resume sequence for all Validation Council workflows:
 3. Read `.ultimate-sdlc/handoffs/audit-handoff.md` → load quality assessment results
 4. Read `.ultimate-sdlc/council-state/validation/WORKING-MEMORY.md` → check for incomplete tasks
 5. Check for checkpoint artifacts (`validation-checkpoint-*.md`) → resume from last checkpoint
-6. **If resuming**: Display resume summary from checkpoint, continue from next track
-7. **If new session**: Display welcome with track overview
-8. Check governance_mode → skip non-applicable tracks per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
-9. **Lazy initialization**: Only create supporting documents (correction-log.md, enhancement-ideas.md) when their track starts, not at V1 setup
+6. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: validation` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+7. **If resuming**: Display resume summary from checkpoint, continue from next track
+8. **If new session**: Display welcome with track overview
+9. Check governance_mode → skip non-applicable tracks per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`
+10. **Lazy initialization**: Only create supporting documents (correction-log.md, enhancement-ideas.md) when their track starts, not at V1 setup
+
+## S1 Feedback Promotion (Cycle-End Synthesis)
+
+During the Synthesis Track, Phase S1 (Documentation Update), the agent MUST invoke `/sdlc-feedback-promote` as part of the documentation update work:
+
+1. Run `/sdlc-feedback-promote` — clusters active feedback entries with ≥2 corroborating members into `pattern` entries that carry forward to the next cycle.
+2. Record in the V5 → C4 → P4 → E4 checkpoint chain that promotion was performed and which patterns were created.
+3. Singletons (single-entry clusters) remain `active` and also carry forward.
+4. The resulting pattern entries are read at the start of the NEXT cycle via `/sdlc-new-cycle` bootstrap.
+
+Skipping this step means cycle-specific lessons get re-learned next cycle — a violation of the framework's learning principle.
+
+## S2 Framework Retrospective (Optional but Recommended)
+
+During Phase S2 (Release Readiness), after the validation-handoff.md is drafted but before declaring RELEASE READY:
+
+1. Invoke `/sdlc-framework-retro` — drafts `FR-NNN` proposals in `.ultimate-sdlc/framework-revisions-proposed/` based on cycle-level patterns.
+2. Include a summary of proposals (IDs + target files) in the validation-handoff.md under a new section `## Framework Revision Proposals`.
+3. The user reviews proposals after release and applies (manually) to the framework repo.
+
+**Hard constraint**: `/sdlc-framework-retro` MUST NOT be invoked from inside the framework repo directory. The skill itself enforces this (see `skills/framework-retro/SKILL.md § Step 1 Safety Check`).
 
 ## Evidence Protocol
 
