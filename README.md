@@ -2,7 +2,7 @@
 
 A structured, gate-driven, multi-council orchestration system for AI-assisted software development. Manages the full lifecycle from requirements through deployment: **Planning → Development → Audit → Validation**.
 
-167 workflow commands, 245 knowledge skills, 19 specialist agents, 13 quality gates, 5 cycle types.
+171 workflow commands, 247 knowledge skills, 19 specialist agents, 13 quality gates, 5 cycle types.
 
 ## Install
 

@@ -10,7 +10,7 @@
     {
       "name": "ultimate-sdlc",
       "source": "./",
-      "description": "Ultimate SDLC Framework — 167 workflow commands, 19 specialist agents, 245 knowledge skills, 13 quality gates, 5 cycle types. Full lifecycle: Planning → Development → Audit → Validation.",
+      "description": "Ultimate SDLC Framework — 171 workflow commands, 19 specialist agents, 247 knowledge skills, 13 quality gates, 5 cycle types. Full lifecycle: Planning → Development → Audit → Validation with feedback-driven learning.",
       "version": "3.1.0",
       "author": {
         "name": "UnpaidAttention"
