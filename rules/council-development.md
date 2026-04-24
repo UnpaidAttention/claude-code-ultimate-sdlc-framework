@@ -362,9 +362,43 @@ Every Wave 5 AIOU MUST include a visual QA feedback loop before being marked com
 4. **Fix**: If discrepancies found, fix them and return to step 1. Max 3 iterations per AIOU.
 5. **Document**: Save final screenshots as visual QA evidence in `visual-qa/AIOU-XXX/` directory.
 
-**If no screenshot tool is available**: Document the manual QA check in the AIOU completion artifact. Note: "Visual QA performed via manual inspection — no screenshot tool available."
+**If no screenshot tool is available (headless dev, CI, or WSL without X server):**
 
-**Evidence Required at Gate I8**: `visual-qa/` directory must contain at least one screenshot per Wave 5 AIOU (or documented manual QA for environments without screenshot tools).
+The manual-QA fallback is NOT a narrative paragraph. It MUST produce structured evidence:
+
+Write `visual-qa/AIOU-XXX/manual-qa.md` containing all three sections:
+
+### 1. Rendered State Description
+
+Describe the output component-by-component. For each component:
+- Component name (matches design-system.md)
+- Position in layout (top bar / sidebar / main / modal / etc.)
+- Content rendered (text, image alt-text, data displayed)
+- Visual state (default / hover / focus / error / loading / empty / disabled — whichever is applicable)
+
+### 2. Design Token Citation
+
+For every visible element, cite the design-system.md token used:
+- Color: `--color-primary` → renders as #X
+- Font: `--font-heading` → renders as [family]
+- Spacing: `--spacing-md` → renders as [px]
+
+Any ad-hoc color/font/spacing without a token reference is a Visual QA defect.
+
+### 3. 30-Second Slop Test
+
+Check against the 5 ANTI-SLOP patterns:
+- [ ] No generic font (Inter/Roboto/Open Sans/system-ui without override)
+- [ ] No purple/indigo accent as primary
+- [ ] No three-box trinity (3 equal icon cards in symmetrical grid)
+- [ ] No uniform radius+shadow on everything
+- [ ] No flat white/gray background with no atmosphere
+
+Three or more unchecked = Visual QA FAIL. Return to implementation.
+
+---
+
+**Evidence Required at Gate I8 (unchanged policy, tightened acceptance criteria)**: `visual-qa/` directory must contain at least one screenshot OR a complete 3-section `manual-qa.md` per Wave 5 AIOU. Prose-only QA notes do NOT satisfy the criterion.
 
 ## UI Design Phases (Frontend Projects)
 

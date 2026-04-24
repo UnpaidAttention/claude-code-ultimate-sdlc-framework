@@ -12,3 +12,5 @@ This command invokes the `sdlc-dev-wave5-next` workflow skill. Use the Skill too
 ```
 Skill: sdlc-dev-wave5-next
 ```
+
+**If manual QA path (no screenshot tool)**: Write `visual-qa/<AIOU-ID>/manual-qa.md` using the three-section structure from `rules/council-development.md § Visual QA Protocol`. Do NOT substitute prose — the structured format is mandatory.

@@ -350,7 +350,7 @@ After implementation and tests pass:
 2. **Screenshot**: Capture at 3 breakpoints (375×812, 768×1024, 1920×1080) using:
    - Playwright MCP: `browser_navigate` → `browser_take_screenshot`
    - OR Browser Extension: `browser_navigate` → `browser.capture_screenshot_and_save`
-   - OR if neither available: document manual visual inspection
+   - OR if neither available: **write `visual-qa/AIOU-XXX/manual-qa.md`** using the three-section structure from `rules/council-development.md § Visual QA Protocol` (Rendered State Description / Design Token Citation / 30-Second Slop Test). Do NOT substitute prose — the structured format is mandatory.
 3. **Compare**: Review against design system and AIOU visual requirements:
    - [ ] Typography matches design tokens
    - [ ] Colors use semantic tokens (no ad-hoc hex values)
