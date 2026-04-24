@@ -164,7 +164,19 @@ Next ID: FR-NNN
 
 Add each new proposal to `## Proposed`.
 
-### Step 6: Hard Safety Audit (MANDATORY BEFORE REPORTING)
+### Step 6: Generate Deletion Proposals
+
+Every FR proposal set MUST include a deletion section:
+
+1. Read `.ultimate-sdlc/gate-hit-rate.md` (if exists)
+2. Identify candidate criteria:
+   - `times_evaluated >= 5` (enough data) AND `times_failed == 0` (never caught anything)
+   (per `contexts/gate-hit-rate-schema.md § Retirement Candidate Criteria`)
+3. For each candidate, draft an Option A deletion proposal in the FR doc
+4. If no candidates exist (project is too early — <5 cycles of gate history, or data file not yet populated), generate Option B: identify the 3 rules with lowest "uses loaded" count from feedback entries this cycle, with retention justifications
+5. **Hard rule**: An FR proposal set with zero deletion proposals AND zero retention justifications is INVALID — the skill refuses to complete. User must either accept a deletion candidate or write retention justifications.
+
+### Step 7: Hard Safety Audit (MANDATORY BEFORE REPORTING)
 
 Before presenting proposals to the user, run a final audit:
 
@@ -173,7 +185,7 @@ Before presenting proposals to the user, run a final audit:
 3. Confirm no Write/Edit tool calls were made to paths under `$FRAMEWORK_ROOT` during this workflow.
 4. If any violation: mark all generated proposals as `status: invalid`, do NOT surface them, and display a hard failure to the user.
 
-### Step 7: Report to User
+### Step 8: Report to User
 
 Display:
 

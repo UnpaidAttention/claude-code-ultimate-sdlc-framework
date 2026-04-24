@@ -71,6 +71,28 @@ entry describes a framework-level bug (e.g. a rule that contradicts INTEGRITY-RU
 - [ ] Update this file: set `status: applied`, `applied_at`, `applied_commit`
 - [ ] If rejected: set `status: rejected`, keep file as historical record of considered-and-declined changes
 
+## Deletion Proposals (MANDATORY — ≥1 required)
+
+Every retro MUST propose at least one of:
+
+### Option A: Retire a rule/criterion
+
+- **Target**: [file path + section/rule ID]
+- **Rationale**: [why this rule can be removed without harm]
+- **Hit-rate evidence**: [if a gate criterion — cite times_evaluated and times_failed from gate-hit-rate.md]
+- **Risk**: [what could go wrong if deleted]
+- **Mitigation**: [how other rules cover the gap]
+
+### Option B: Explicit retention justification
+
+If no rule can be deleted, list the 3 least-used rules from the current cycle and justify why each MUST remain:
+
+1. **Rule**: [path + ID] | **Justification**: [why still needed]
+2. **Rule**: [path + ID] | **Justification**: [why still needed]
+3. **Rule**: [path + ID] | **Justification**: [why still needed]
+
+Option B is acceptable for the first 3 cycles; after that, Option A is required. Framework accretion without retirement is a red flag.
+
 ## Agent must NOT
 
 - [ ] Apply this edit automatically (FR-3, proposal-only rule)
