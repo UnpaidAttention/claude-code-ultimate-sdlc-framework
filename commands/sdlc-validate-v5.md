@@ -1,5 +1,6 @@
 ---
 description:  Execute Validation Track V5 - Correction Planning. Create detailed correction plan for identified gaps.
+user_invocable: false
 ---
 
 # /sdlc-validate-v5

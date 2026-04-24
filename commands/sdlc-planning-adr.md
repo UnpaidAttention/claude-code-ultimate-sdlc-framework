@@ -1,5 +1,6 @@
 ---
 description:  Create Architecture Decision Record for technical decisions
+user_invocable: false
 ---
 
 # /sdlc-planning-adr

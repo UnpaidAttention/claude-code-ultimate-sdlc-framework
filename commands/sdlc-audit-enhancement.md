@@ -1,5 +1,6 @@
 ---
 description:  Log enhancement idea discovered during audit
+user_invocable: true
 ---
 
 # /sdlc-audit-enhancement

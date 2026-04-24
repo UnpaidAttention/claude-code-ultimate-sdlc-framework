@@ -1,5 +1,6 @@
 ---
 description:  Verify Planning Gate 8 criteria. Final gate before transitioning to Development Council.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

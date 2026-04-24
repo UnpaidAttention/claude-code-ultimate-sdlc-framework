@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track A3 - Quality Assessment. Code quality, maintainability, and best practices evaluation.
+user_invocable: false
 ---
 
 # /sdlc-audit-a3

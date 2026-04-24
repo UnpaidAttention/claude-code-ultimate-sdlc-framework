@@ -1,5 +1,6 @@
 ---
 description:  Verify Audit Gate A3 criteria. Quality assessment must be complete before enhancement track.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

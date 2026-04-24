@@ -1,5 +1,6 @@
 ---
 description:  Verify Audit Gate A2 criteria. Completeness assessment must be done before quality assessment.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

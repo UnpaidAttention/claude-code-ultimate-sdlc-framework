@@ -1,5 +1,6 @@
 ---
 description:  Execute Planning Phase 1.5 - Deliberation. Multi-perspective evaluation of requirements to consolidate complete feature list, verify coverage, and confirm scope with user.
+user_invocable: false
 ---
 
 # /sdlc-planning-phase-1-5

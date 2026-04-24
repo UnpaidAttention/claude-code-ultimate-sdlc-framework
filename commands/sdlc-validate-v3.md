@@ -1,5 +1,6 @@
 ---
 description:  Execute Validation Track V3 - Completeness Assessment. Build completeness matrix against requirements.
+user_invocable: false
 ---
 
 # /sdlc-validate-v3

@@ -1,5 +1,6 @@
 ---
 description:  Execute Synthesis Track S1 - Documentation Update. Update all documentation for release.
+user_invocable: false
 ---
 
 # /sdlc-validate-s1

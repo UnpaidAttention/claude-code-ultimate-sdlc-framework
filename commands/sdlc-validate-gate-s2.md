@@ -1,5 +1,6 @@
 ---
 description:  Verify FINAL Gate S2 criteria. Software must pass all criteria to be release ready.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

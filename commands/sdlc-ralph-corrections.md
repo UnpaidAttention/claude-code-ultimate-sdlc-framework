@@ -1,5 +1,6 @@
 ---
 description:  Process all pending corrections autonomously using Ralph Wiggum loop strategy
+user_invocable: true
 ---
 
 # /sdlc-ralph-corrections

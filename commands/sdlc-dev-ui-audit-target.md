@@ -1,5 +1,6 @@
 ---
 description:  "Phase 2 of UI Audit: Build the target state — define what SHOULD exist based on feature specs. Produces target route tree, interaction maps, and CRUD matrix."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-audit-target

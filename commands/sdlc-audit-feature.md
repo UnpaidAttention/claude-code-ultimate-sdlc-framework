@@ -1,5 +1,6 @@
 ---
 description:  Test and audit a specific feature
+user_invocable: true
 ---
 
 # /sdlc-audit-feature

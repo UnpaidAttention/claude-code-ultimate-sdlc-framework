@@ -1,5 +1,6 @@
 ---
 description:  Analyze AIOU scope and create run division plan for development. Executes after planning complete, before /dev-start.
+user_invocable: false
 ---
 
 # /sdlc-dev-scope-analysis

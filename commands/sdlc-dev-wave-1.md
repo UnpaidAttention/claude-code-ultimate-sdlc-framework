@@ -1,5 +1,6 @@
 ---
 description:  Execute Development Wave 1 - Utilities and Helpers. Implement shared utility functions and helper modules.
+user_invocable: true
 ---
 
 # /sdlc-dev-wave-1

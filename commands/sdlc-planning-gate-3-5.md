@@ -1,5 +1,6 @@
 ---
 description:  Verify Planning Gate 3.5 criteria. All features must be decomposed into AIOUs with wave assignments before proceeding.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

@@ -1,5 +1,6 @@
 ---
 description:  Verify Audit Gate T3 criteria. GUI analysis must be complete before proceeding.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

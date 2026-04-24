@@ -1,5 +1,6 @@
 ---
 description:  Execute Planning Phase 2 - Architecture. Define system architecture, create ADRs, and establish technical foundation.
+user_invocable: false
 ---
 
 # /sdlc-planning-phase-2

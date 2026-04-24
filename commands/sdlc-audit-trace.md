@@ -1,5 +1,6 @@
 ---
 description:  Verify implementation matches planning specifications
+user_invocable: false
 ---
 
 # /sdlc-audit-trace

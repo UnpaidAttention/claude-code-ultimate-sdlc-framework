@@ -1,5 +1,6 @@
 ---
 description:  "Phase 3 of UI Retheme: Propose complete new design system — color palette, typography, spacing, component styles, before/after comparison. Requires explicit user approval before implementation."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-retheme-propose

@@ -1,5 +1,6 @@
 ---
 description:  Abbreviated planning for maintenance cycles. Analyzes dependencies, security patches, and infrastructure changes, creates targeted AIOUs.
+user_invocable: true
 ---
 
 # /sdlc-maintenance-planning

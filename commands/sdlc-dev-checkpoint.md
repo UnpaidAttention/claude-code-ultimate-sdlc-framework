@@ -1,5 +1,6 @@
 ---
 description:  Create a git checkpoint for safe rollback
+user_invocable: false
 ---
 
 # /sdlc-dev-checkpoint

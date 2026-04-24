@@ -1,5 +1,6 @@
 ---
 description:  Apply verified correction following verification-first protocol
+user_invocable: false
 ---
 
 # /sdlc-validate-correct

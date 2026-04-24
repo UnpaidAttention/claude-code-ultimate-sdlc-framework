@@ -1,5 +1,6 @@
 ---
 description: SDLC workflow: dev-wave5-start
+user_invocable: true
 ---
 
 **Reference load**: If this AIOU touches security, error handling, or component decomposition, Read `rules/anti-slop-code-reference.md` before implementing.

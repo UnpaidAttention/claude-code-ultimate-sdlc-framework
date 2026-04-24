@@ -1,5 +1,6 @@
 ---
 description:  Execute Production Track P1 - Operational Assessment. Assess operational readiness for production.
+user_invocable: false
 ---
 
 # /sdlc-validate-p1

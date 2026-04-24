@@ -1,5 +1,6 @@
 ---
 description:  "Phase 5 of UI Retheme: Visual verification — build and test, screenshot comparison, consistency check, anti-slop audit, WCAG contrast verification. Produces retheme-verification artifact."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-retheme-verify

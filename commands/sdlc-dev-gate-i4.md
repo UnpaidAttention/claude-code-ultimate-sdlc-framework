@@ -1,5 +1,6 @@
 ---
 description:  Verify Development Gate I4 criteria. Backend must be complete before proceeding to UI development.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

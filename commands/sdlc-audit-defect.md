@@ -1,5 +1,6 @@
 ---
 description:  Log a defect with proper documentation and evidence
+user_invocable: true
 ---
 
 # /sdlc-audit-defect

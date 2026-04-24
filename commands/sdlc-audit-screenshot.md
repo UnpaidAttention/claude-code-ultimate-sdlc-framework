@@ -1,5 +1,6 @@
 ---
 description:  Capture screenshot evidence for defects and findings
+user_invocable: false
 ---
 
 # /sdlc-audit-screenshot

@@ -1,5 +1,6 @@
 ---
 description:  Execute Planning Phase 8 - Launch Ready. Final planning review and handoff preparation for Development Council.
+user_invocable: false
 ---
 
 # /sdlc-planning-phase-8

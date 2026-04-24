@@ -1,5 +1,6 @@
 ---
 description:  Multi-agent deliberation to discover and specify ALL features for the product
+user_invocable: false
 ---
 
 # /sdlc-planning-feature-discovery

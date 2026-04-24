@@ -1,5 +1,6 @@
 ---
 description:  "Phase 4 of UI Audit: Create prioritized implementation plan for closing UI gaps. Presents plan to user for review before implementation proceeds."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-audit-plan

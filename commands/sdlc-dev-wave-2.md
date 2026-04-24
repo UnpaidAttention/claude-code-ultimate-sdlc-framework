@@ -1,5 +1,6 @@
 ---
 description:  Execute Development Wave 2 - Data Layer. Implement database models, repositories, and migrations.
+user_invocable: true
 ---
 
 # /sdlc-dev-wave-2

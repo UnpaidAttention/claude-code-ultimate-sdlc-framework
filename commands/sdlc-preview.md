@@ -1,5 +1,6 @@
 ---
 description:  Preview server start, stop, and status check. Local development server management.
+user_invocable: true
 ---
 
 # /sdlc-preview

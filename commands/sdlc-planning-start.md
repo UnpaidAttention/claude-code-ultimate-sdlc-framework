@@ -1,5 +1,6 @@
 ---
 description:  Initialize or resume Planning Council session. Guides through phases 1-8 with gates at 3.5 and 8.
+user_invocable: true
 ---
 
 # /sdlc-planning-start

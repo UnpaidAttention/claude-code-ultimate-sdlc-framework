@@ -1,5 +1,6 @@
 ---
 description: Draft proposed edits to the framework itself based on cycle-level pattern entries. Produces FR-NNN proposals for user review. Never auto-applies to the framework repo.
+user_invocable: true
 ---
 
 # /sdlc-framework-retro

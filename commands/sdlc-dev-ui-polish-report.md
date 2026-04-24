@@ -1,5 +1,6 @@
 ---
 description:  Phase 2 of UI Polish — transform raw anti-slop scan results into a structured report with severity ratings and summary counts per category.
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-polish-report

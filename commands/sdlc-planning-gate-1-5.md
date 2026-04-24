@@ -1,5 +1,6 @@
 ---
 description:  Verify Planning Gate 1.5 criteria. All features identified, user-confirmed scope, anti-truncation declaration signed. Generates scope-lock.md on PASS.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

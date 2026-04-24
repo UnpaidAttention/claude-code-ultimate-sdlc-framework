@@ -1,5 +1,6 @@
 ---
 description:  Verify all CSS variables are defined and synchronized
+user_invocable: false
 ---
 
 # /sdlc-dev-validate-css

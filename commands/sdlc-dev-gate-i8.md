@@ -1,5 +1,6 @@
 ---
 description:  Verify Development Gate I8 criteria. Final gate before transitioning to Audit Council.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

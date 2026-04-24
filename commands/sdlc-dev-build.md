@@ -1,5 +1,6 @@
 ---
 description:  Verify build succeeds with evidence artifact
+user_invocable: false
 ---
 
 # /sdlc-dev-build

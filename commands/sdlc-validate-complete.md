@@ -1,5 +1,6 @@
 ---
 description:  Complete Validation Council and mark project as release-ready.
+user_invocable: true
 ---
 
 # /sdlc-validate-complete

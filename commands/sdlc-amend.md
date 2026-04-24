@@ -1,5 +1,6 @@
 ---
 description:  Backtrack to amend a previous council's artifacts without restarting the full pipeline. Use when downstream work reveals upstream issues.
+user_invocable: true
 ---
 
 # /sdlc-amend

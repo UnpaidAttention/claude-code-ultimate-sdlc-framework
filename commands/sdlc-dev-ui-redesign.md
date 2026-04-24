@@ -1,5 +1,6 @@
 ---
 description:  Reset and restart UI development on an existing project. Archives current UI artifacts and code, then re-executes the full UI pipeline (research, design plan, implementation, verification).
+user_invocable: true
 ---
 
 # /sdlc-dev-ui-redesign

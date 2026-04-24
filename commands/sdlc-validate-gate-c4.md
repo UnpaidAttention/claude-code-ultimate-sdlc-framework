@@ -1,5 +1,6 @@
 ---
 description:  Verify Correction Gate C4 criteria. All corrections must be validated before production track.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

@@ -1,5 +1,6 @@
 ---
 description:  Final release certification. Verify all gates passed and generate release documentation.
+user_invocable: true
 ---
 
 # /sdlc-release

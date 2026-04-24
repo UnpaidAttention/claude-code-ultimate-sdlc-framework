@@ -1,5 +1,6 @@
 ---
 description:  Execute Enhancement Track E1 - Feature Richness. Evaluate feature richness and identify enhancement opportunities.
+user_invocable: false
 ---
 
 # /sdlc-validate-e1

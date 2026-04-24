@@ -1,5 +1,6 @@
 ---
 description:  Execute Development Wave 4 - API Layer. Implement controllers, routes, and API endpoints.
+user_invocable: true
 ---
 
 **Reference load**: If this AIOU touches security, error handling, or component decomposition, Read `rules/anti-slop-code-reference.md` before implementing.

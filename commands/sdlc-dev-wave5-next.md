@@ -1,5 +1,6 @@
 ---
 description:  Move to the next Wave 5 AIOU with model switch suggestion
+user_invocable: false
 ---
 
 **Reference load**: If this AIOU touches security, error handling, or component decomposition, Read `rules/anti-slop-code-reference.md` before implementing.

@@ -1,5 +1,6 @@
 ---
 description:  Execute Development Wave 3 - Services. Implement business logic services and domain operations.
+user_invocable: true
 ---
 
 **Reference load**: If this AIOU touches security, error handling, or component decomposition, Read `rules/anti-slop-code-reference.md` before implementing.

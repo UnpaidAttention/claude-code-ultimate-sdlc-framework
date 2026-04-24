@@ -1,5 +1,6 @@
 ---
 description:  Execute an entire wave autonomously using Ralph Wiggum loop strategy
+user_invocable: true
 ---
 
 # /sdlc-ralph-wave

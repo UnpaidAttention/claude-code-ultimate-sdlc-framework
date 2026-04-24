@@ -1,5 +1,6 @@
 ---
 description:  Quick status overview of audit progress
+user_invocable: true
 ---
 
 # /sdlc-audit-status

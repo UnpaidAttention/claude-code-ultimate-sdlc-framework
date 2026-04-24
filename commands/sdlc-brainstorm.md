@@ -1,5 +1,6 @@
 ---
 description:  Structured brainstorming with Socratic questioning and documentation workflow. Turns ideas into validated designs.
+user_invocable: true
 ---
 
 # /sdlc-brainstorm

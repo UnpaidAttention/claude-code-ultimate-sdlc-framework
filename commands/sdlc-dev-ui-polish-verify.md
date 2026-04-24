@@ -1,5 +1,6 @@
 ---
 description:  Phase 6 of UI Polish — re-run the anti-slop scan to verify 0 findings remain, verify design token consistency, WCAG AA contrast, and no mixed old/new styles.
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-polish-verify

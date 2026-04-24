@@ -1,5 +1,6 @@
 ---
 description:  Verify individual UI elements actually perform their intended actions
+user_invocable: false
 ---
 
 # /sdlc-validate-ui-action

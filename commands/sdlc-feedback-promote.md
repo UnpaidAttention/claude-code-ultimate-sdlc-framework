@@ -1,5 +1,6 @@
 ---
 description: Synthesize recurring feedback entries into pattern entries at cycle end. Invoked during Validation Council S1 phase. Requires at least 2 corroborating entries per pattern.
+user_invocable: true
 ---
 
 # /sdlc-feedback-promote

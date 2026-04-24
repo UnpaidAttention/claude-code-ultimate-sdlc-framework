@@ -1,5 +1,6 @@
 ---
 description:  Create comprehensive 8-section feature matrix specification
+user_invocable: false
 ---
 
 # /sdlc-planning-feature

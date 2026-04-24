@@ -1,5 +1,6 @@
 ---
 description:  Deployment command for production releases. Pre-flight checks and deployment execution.
+user_invocable: true
 ---
 
 # /sdlc-deploy

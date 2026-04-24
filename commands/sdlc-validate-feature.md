@@ -1,5 +1,6 @@
 ---
 description:  Deep validation of feature through intent alignment and completeness
+user_invocable: true
 ---
 
 # /sdlc-validate-feature

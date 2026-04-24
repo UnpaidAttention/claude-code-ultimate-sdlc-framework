@@ -1,5 +1,6 @@
 ---
 description:  Rollback to a previous git checkpoint
+user_invocable: false
 ---
 
 # /sdlc-dev-rollback

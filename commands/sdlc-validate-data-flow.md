@@ -1,5 +1,6 @@
 ---
 description:  Trace data flow from GUI action through all layers to final effect
+user_invocable: false
 ---
 
 # /sdlc-validate-data-flow

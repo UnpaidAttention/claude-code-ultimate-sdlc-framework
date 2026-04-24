@@ -1,5 +1,6 @@
 ---
 description:  Recover from interrupted session. Diagnoses state, identifies incomplete work, and guides resumption.
+user_invocable: true
 ---
 
 # /sdlc-recover

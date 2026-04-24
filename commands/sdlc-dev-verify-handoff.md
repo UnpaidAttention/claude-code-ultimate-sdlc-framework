@@ -1,5 +1,6 @@
 ---
 description:  Validate planning handoff document before development
+user_invocable: false
 ---
 
 # /sdlc-dev-verify-handoff

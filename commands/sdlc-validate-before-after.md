@@ -1,5 +1,6 @@
 ---
 description:  Capture before/after evidence for corrections
+user_invocable: false
 ---
 
 # /sdlc-validate-before-after

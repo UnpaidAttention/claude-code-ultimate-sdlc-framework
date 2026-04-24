@@ -1,5 +1,6 @@
 ---
 description:  Verify Enhancement Gate E4 criteria. All enhancements must be polished before synthesis track.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

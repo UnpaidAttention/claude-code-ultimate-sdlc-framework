@@ -1,5 +1,6 @@
 ---
 description:  Plan and implement UI
+user_invocable: true
 ---
 
 # /sdlc-ui-ux-pro-max

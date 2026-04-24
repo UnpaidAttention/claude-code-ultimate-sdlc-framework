@@ -1,5 +1,6 @@
 ---
 description:  Verify Production Gate P4 criteria. Production readiness must be verified before enhancement track.
+user_invocable: false
 ---
 
 **Step 0 — Load enforcement protocols**: Read `rules/integrity-enforcement.md` before verifying gate criteria.

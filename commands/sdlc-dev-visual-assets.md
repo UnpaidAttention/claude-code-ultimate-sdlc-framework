@@ -1,5 +1,6 @@
 ---
 description:  Manage visual assets during UI development (Wave 5)
+user_invocable: false
 ---
 
 # /sdlc-dev-visual-assets
