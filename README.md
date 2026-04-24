@@ -40,16 +40,18 @@ The framework guides AI-assisted development through **four sequential councils*
 
 Transforms a product concept into implementation-ready specifications. Walks through discovery, architecture, feature specification, and AIOU (Atomic Implementation Output Unit) decomposition.
 
-| Phase | Purpose | Command |
-|-------|---------|---------|
-| Phase 1 | Discovery — understand the problem, users, constraints | `/sdlc-planning-start` |
-| Phase 1.5 | Deliberation — multi-perspective analysis | `/sdlc-planning-phase-1-5` |
-| Phase 2 | Architecture — system design, tech stack, data models | `/sdlc-planning-phase-2` |
-| Phase 2.5 | Feature deep-dive — detailed analysis per feature | `/sdlc-planning-feature-deep-dive` |
-| Phase 3 | Features — create FEAT-XXX specifications with acceptance criteria | `/sdlc-planning-phase-3` |
-| Phase 3.5 | AIOU decomposition — break features into atomic implementation units | `/sdlc-planning-phase-3-5` |
-| Phases 4-7 | Supporting specs — security, testing strategy, infrastructure, sprint planning | `/sdlc-planning-supporting-specs` |
-| Phase 8 | Launch ready — final review and handoff preparation | `/sdlc-planning-phase-8` |
+| Phase | Purpose |
+|-------|---------|
+| Phase 1 | Discovery — understand the problem, users, constraints |
+| Phase 1.5 | Deliberation — multi-perspective analysis |
+| Phase 2 | Architecture — system design, tech stack, data models |
+| Phase 2.5 | Feature deep-dive — detailed analysis per feature |
+| Phase 3 | Features — create FEAT-XXX specifications with acceptance criteria |
+| Phase 3.5 | AIOU decomposition — break features into atomic implementation units |
+| Phases 4-7 | Supporting specs — security, testing strategy, infrastructure, sprint planning |
+| Phase 8 | Launch ready — final review and handoff preparation |
+
+Use `/sdlc-planning-start` to begin. Then `/sdlc-continue` auto-advances through each phase.
 
 **Gates**: 1.5 (feature completeness), 3.5 (AIOU decomposition), 8 (launch ready)
 
@@ -68,32 +70,36 @@ Implements the planned specifications wave by wave, from foundational types thro
 
 **Gates**: I4 (services complete), I8 (pre-deployment ready)
 
-**Additional dev commands**: `/sdlc-dev-aiou` (execute a single AIOU), `/sdlc-dev-test` (run tests), `/sdlc-dev-checkpoint` (save progress), `/sdlc-dev-verify-feature` (verify a feature)
+Use `/sdlc-dev-start` to begin. Then `/sdlc-continue` advances wave by wave. Each wave command can also be invoked directly (e.g., `/sdlc-dev-wave-3`).
 
 #### 3. Audit Council — Implementation → Quality Assessment
 
 Independently tests and assesses the implementation for correctness, completeness, and quality.
 
-| Track | Purpose | Commands |
-|-------|---------|----------|
-| Testing (T1-T5) | Functional, GUI, integration, security, performance testing | `/sdlc-audit-t2` through `/sdlc-audit-t5` |
-| Audit (A1-A3) | Purpose alignment, completeness assessment, quality scorecard | `/sdlc-audit-a1` through `/sdlc-audit-a3` |
+| Track | Purpose |
+|-------|---------|
+| Testing (T1-T5) | Functional, GUI, integration, security, performance testing |
+| Audit (A1-A3) | Purpose alignment, completeness assessment, quality scorecard |
 
 **Gates**: T3 (GUI analysis), A2 (completeness), A3 (quality assessment)
 
-**Additional audit commands**: `/sdlc-audit-defect` (log a defect), `/sdlc-audit-report` (generate report), `/sdlc-audit-trace` (verify spec-to-implementation traceability)
+Use `/sdlc-audit-start` to begin. Then `/sdlc-continue` advances tracks automatically.
+
+**User-facing audit commands**: `/sdlc-audit-defect` (log a defect), `/sdlc-audit-report` (generate report)
 
 #### 4. Validation Council — Assessment → Release Readiness
 
 Validates corrections, hardens for production, polishes UX, and certifies release readiness.
 
-| Track | Purpose | Commands |
-|-------|---------|----------|
-| Validation (V1-V5) | Gap analysis, completeness, correction planning | `/sdlc-validate-v2` through `/sdlc-validate-v5` |
-| Correction (C1-C4) | Targeted fixes, edge cases, verification, regression | `/sdlc-validate-c1` through `/sdlc-validate-c4` |
-| Production (P1-P4) | Operational assessment, failure modes, performance, security hardening | `/sdlc-validate-p1` through `/sdlc-validate-p4` |
-| Enhancement (E1-E4) | Feature richness, innovation, UX polish | `/sdlc-validate-e1` through `/sdlc-validate-e4` |
-| Synthesis (S1-S2) | Documentation updates, final release certification | `/sdlc-validate-s1`, `/sdlc-validate-s2` |
+| Track | Purpose |
+|-------|---------|
+| Validation (V1-V5) | Gap analysis, completeness, correction planning |
+| Correction (C1-C4) | Targeted fixes, edge cases, verification, regression |
+| Production (P1-P4) | Operational assessment, failure modes, performance, security hardening |
+| Enhancement (E1-E4) | Feature richness, innovation, UX polish |
+| Synthesis (S1-S2) | Documentation updates, final release certification |
+
+Use `/sdlc-validate-start` to begin. Then `/sdlc-continue` advances tracks automatically.
 
 **Gates**: V5, C4, P4, E4, S2 (release ready)
 
@@ -119,7 +125,7 @@ Validates corrections, hardens for production, polishes UX, and certifies releas
 | **E4** | Validation | UX polished — accessibility, visual consistency, flow verified |
 | **S2** | Validation | Final release gate — everything passes, documentation complete |
 
-Run any gate check with: `/sdlc-planning-gate-1-5`, `/sdlc-dev-gate-i4`, `/sdlc-validate-gate-s2`, etc.
+Gates are verified automatically when `/sdlc-continue` reaches a gate checkpoint. The `/sdlc-status` command shows which gate is next and its current criteria status.
 
 ---
 
@@ -325,7 +331,7 @@ Special workflows for frontend projects with comprehensive UI lifecycle support:
 | **UI Retheme** | Complete visual makeover (5 phases) | `/sdlc-dev-ui-retheme` |
 | **UI Redesign** | Full restart of UI development | `/sdlc-dev-ui-redesign` |
 
-Each maintenance workflow has individually invocable phases (e.g., `/sdlc-dev-ui-audit-scan`, `/sdlc-dev-ui-audit-gaps`, `/sdlc-dev-ui-audit-fix`).
+Each maintenance workflow auto-advances through its phases when invoked (e.g., `/sdlc-dev-ui-audit` runs scan → gap analysis → fix in sequence).
 
 ---
 
