@@ -58,7 +58,11 @@ Always active regardless of council or context.
 
 ### 0.7 Socratic Gate
 
-For COMPLEX requests, verify before implementing: (1) Expected behavior? (2) Edge cases? (3) Constraints?
+For COMPLEX requests, ask 2-3 questions BEFORE implementing:
+
+- [ ] Expected behavior documented?
+- [ ] Edge cases enumerated?
+- [ ] Constraints identified (time, dependency, compatibility)?
 
 **Rule**: If 1% is unclear → ASK. Never assume.
 
