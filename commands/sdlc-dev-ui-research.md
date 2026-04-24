@@ -1,5 +1,6 @@
 ---
 description:  Conduct UI design research using external platforms before any frontend implementation. Executes once after first Gate I4 pass.
+user_invocable: true
 ---
 
 # /sdlc-dev-ui-research

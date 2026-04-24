@@ -1,5 +1,6 @@
 ---
 description:  Validate planning deliverables with evidence
+user_invocable: false
 ---
 
 # /sdlc-planning-verify

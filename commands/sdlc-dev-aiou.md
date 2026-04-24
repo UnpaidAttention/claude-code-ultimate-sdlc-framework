@@ -1,5 +1,6 @@
 ---
 description:  Execute a specific AIOU from the planning handoff. Follow acceptance criteria strictly.
+user_invocable: false
 ---
 
 # /sdlc-dev-aiou

@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track A1 - Purpose Alignment. Critically analyze if the implemented features align with the stated product purpose.
+user_invocable: false
 ---
 
 # /sdlc-audit-a1

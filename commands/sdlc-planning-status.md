@@ -1,5 +1,6 @@
 ---
 description:  Quick status overview of current planning progress
+user_invocable: false
 ---
 
 # /sdlc-planning-status

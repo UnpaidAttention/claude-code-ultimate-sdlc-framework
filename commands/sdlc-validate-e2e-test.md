@@ -1,5 +1,6 @@
 ---
 description:  End-to-end runtime testing with GUI-to-backend verification
+user_invocable: false
 ---
 
 # /sdlc-validate-e2e-test

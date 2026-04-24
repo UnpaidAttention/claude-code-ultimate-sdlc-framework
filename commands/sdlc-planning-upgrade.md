@@ -1,5 +1,6 @@
 ---
 description:  Upgrade framework to a new version
+user_invocable: true
 ---
 
 # /sdlc-planning-upgrade

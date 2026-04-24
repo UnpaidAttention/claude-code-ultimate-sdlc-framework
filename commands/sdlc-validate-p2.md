@@ -1,5 +1,6 @@
 ---
 description:  Execute Production Track P2 - Failure Mode Analysis. Identify and mitigate potential failure modes.
+user_invocable: false
 ---
 
 # /sdlc-validate-p2

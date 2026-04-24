@@ -1,5 +1,6 @@
 ---
 description:  Verify AIOU completion against acceptance criteria
+user_invocable: false
 ---
 
 # /sdlc-dev-verify-aiou

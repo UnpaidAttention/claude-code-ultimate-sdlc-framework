@@ -1,5 +1,6 @@
 ---
 description:  Complete Planning Council and generate handoff to Development Council.
+user_invocable: false
 ---
 
 # /sdlc-planning-complete

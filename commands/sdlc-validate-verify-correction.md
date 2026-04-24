@@ -1,5 +1,6 @@
 ---
 description:  Verify correction with test evidence and certificate
+user_invocable: false
 ---
 
 # /sdlc-validate-verify-correction

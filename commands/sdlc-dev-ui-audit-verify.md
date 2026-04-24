@@ -1,5 +1,6 @@
 ---
 description:  "Phase 6 of UI Audit: Verify completeness — run full UI-V verification to confirm all gaps are closed. PASS requires 0 CRITICAL, 0 HIGH issues."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-audit-verify

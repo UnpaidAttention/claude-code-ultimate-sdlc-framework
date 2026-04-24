@@ -1,5 +1,6 @@
 ---
 description:  Verify UI wiring completeness — navigation, interactive elements, states, visual consistency, responsive design. Runs after Wave 5, before Wave 6.
+user_invocable: true
 ---
 
 # /sdlc-dev-ui-verify

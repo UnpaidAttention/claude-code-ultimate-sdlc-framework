@@ -1,5 +1,6 @@
 ---
 description:  Search codebase for reusable patterns before implementing AIOU
+user_invocable: false
 ---
 
 # /sdlc-dev-search-patterns

@@ -1,5 +1,6 @@
 ---
 description:  Execute Planning Phase 3.5 - AIOU Decomposition. Break features into Atomic Independently Ownable Units and assign to development waves.
+user_invocable: false
 ---
 
 # /sdlc-planning-phase-3-5

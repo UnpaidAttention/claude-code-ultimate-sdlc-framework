@@ -1,5 +1,6 @@
 ---
 description:  Test-Driven Development command. Follows RED-GREEN-REFACTOR cycle with Iron Law enforcement.
+user_invocable: true
 ---
 
 # /sdlc-test

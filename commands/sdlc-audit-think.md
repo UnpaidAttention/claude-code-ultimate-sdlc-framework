@@ -1,5 +1,6 @@
 ---
 description:  Switch between cognitive thinking modes for audit tasks
+user_invocable: true
 ---
 
 # /sdlc-audit-think

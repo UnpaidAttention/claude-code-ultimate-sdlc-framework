@@ -1,5 +1,6 @@
 ---
 description:  Verify defect documentation with evidence certificate
+user_invocable: false
 ---
 
 # /sdlc-audit-verify-defect

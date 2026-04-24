@@ -1,5 +1,6 @@
 ---
 description:  Generate final planning-handoff.md for Development Council
+user_invocable: true
 ---
 
 # /sdlc-planning-handoff

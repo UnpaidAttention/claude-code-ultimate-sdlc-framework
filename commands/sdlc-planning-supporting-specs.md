@@ -1,5 +1,6 @@
 ---
 description:  Execute Planning Phases 4-7 combined. Security, testing, infrastructure, and sprint planning in one session.
+user_invocable: false
 ---
 
 # /sdlc-planning-supporting-specs

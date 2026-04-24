@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track T3 - GUI Analysis. UI/UX analysis, screenshots, and usability assessment.
+user_invocable: false
 ---
 
 # /sdlc-audit-t3

@@ -1,5 +1,6 @@
 ---
 description:  Read and validate framework configuration
+user_invocable: false
 ---
 
 # /sdlc-dev-config

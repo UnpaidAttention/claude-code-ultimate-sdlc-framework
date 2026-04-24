@@ -60,7 +60,8 @@ Standard session start/resume sequence for all Planning Council workflows:
 2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Planning, get current phase
 3. Read `.ultimate-sdlc/council-state/planning/current-state.md` → get phase checklist
 4. Read `.ultimate-sdlc/council-state/planning/WORKING-MEMORY.md` → check for incomplete tasks
-5. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: planning` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+5. **Feedback load** (per `rules/feedback-rules.md § Trigger R1` — Read feedback-rules.md first, then): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: planning` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+   **Cluster check**: After loading active entries, group by tag overlap. If any cluster has ≥3 entries, invoke `/sdlc-feedback-promote --mid-cycle` before proceeding with phase work. Record promotions triggered this way in WORKING-MEMORY.md under "Mid-cycle promotions".
 6. **If resuming**: Display resume summary from WORKING-MEMORY, continue from last position
 7. **If new session**: Display welcome, proceed to current phase
 8. Check governance_mode → skip non-applicable phases per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`

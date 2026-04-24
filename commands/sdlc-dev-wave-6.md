@@ -1,5 +1,6 @@
 ---
 description:  Execute Development Wave 6 - Integration. Full system integration, E2E testing, and final assembly.
+user_invocable: true
 ---
 
 # /sdlc-dev-wave-6

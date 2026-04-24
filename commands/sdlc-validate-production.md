@@ -1,5 +1,6 @@
 ---
 description:  Production readiness assessment for component or system
+user_invocable: true
 ---
 
 # /sdlc-validate-production

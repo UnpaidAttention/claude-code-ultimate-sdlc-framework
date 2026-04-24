@@ -78,7 +78,8 @@ Standard session start/resume sequence for all Validation Council workflows:
 3. Read `.ultimate-sdlc/handoffs/audit-handoff.md` → load quality assessment results
 4. Read `.ultimate-sdlc/council-state/validation/WORKING-MEMORY.md` → check for incomplete tasks
 5. Check for checkpoint artifacts (`validation-checkpoint-*.md`) → resume from last checkpoint
-6. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: validation` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+6. **Feedback load** (per `rules/feedback-rules.md § Trigger R1` — Read feedback-rules.md first, then): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: validation` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+   **Cluster check**: After loading active entries, group by tag overlap. If any cluster has ≥3 entries, invoke `/sdlc-feedback-promote --mid-cycle` before proceeding with phase work. Record promotions triggered this way in WORKING-MEMORY.md under "Mid-cycle promotions".
 7. **If resuming**: Display resume summary from checkpoint, continue from next track
 8. **If new session**: Display welcome with track overview
 9. Check governance_mode → skip non-applicable tracks per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`

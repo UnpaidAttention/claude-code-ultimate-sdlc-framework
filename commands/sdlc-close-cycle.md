@@ -1,5 +1,6 @@
 ---
 description:  Close and archive the current development cycle. Merges specs to project level, updates manifest, and prepares for next cycle.
+user_invocable: true
 ---
 
 # /sdlc-close-cycle

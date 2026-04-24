@@ -1,5 +1,6 @@
 ---
 description:  Reset and re-test a specific feature from scratch
+user_invocable: false
 ---
 
 # /sdlc-audit-reset-feature

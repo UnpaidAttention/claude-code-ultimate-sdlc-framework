@@ -1,5 +1,6 @@
 ---
 description:  Execute Validation Track V2 - Gap Analysis. Identify gaps between intent and implementation.
+user_invocable: false
 ---
 
 # /sdlc-validate-v2

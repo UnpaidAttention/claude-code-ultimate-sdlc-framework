@@ -1,5 +1,6 @@
 ---
 description:  Propose and implement a feature enhancement
+user_invocable: false
 ---
 
 # /sdlc-validate-enhance

@@ -1,5 +1,6 @@
 ---
 description:  Create project plan using Planning Council. No code writing - only plan file generation.
+user_invocable: true
 ---
 
 # /sdlc-plan

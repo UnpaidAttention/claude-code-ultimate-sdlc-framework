@@ -1,5 +1,6 @@
 ---
 description:  Execute Validation Track V4 - Prerequisite Verification. Verify all prerequisites for corrections are in place.
+user_invocable: false
 ---
 
 # /sdlc-validate-v4

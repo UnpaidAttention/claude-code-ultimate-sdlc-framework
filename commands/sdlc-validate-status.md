@@ -1,5 +1,6 @@
 ---
 description:  Quick status overview of current validation progress
+user_invocable: true
 ---
 
 # /sdlc-validate-status

@@ -1,5 +1,6 @@
 ---
 description:  Execute Enhancement Track E4 - UX Polish. Final user experience polish and refinement.
+user_invocable: false
 ---
 
 # /sdlc-validate-e4

@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track T4 - Integration Testing. System integration and cross-component testing.
+user_invocable: false
 ---
 
 # /sdlc-audit-t4

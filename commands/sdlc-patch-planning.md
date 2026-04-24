@@ -1,5 +1,6 @@
 ---
 description:  Abbreviated planning for patch/bugfix cycles. Analyzes defects, creates targeted fix AIOUs, and generates a lightweight planning handoff.
+user_invocable: true
 ---
 
 # /sdlc-patch-planning

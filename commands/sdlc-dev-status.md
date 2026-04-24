@@ -1,5 +1,6 @@
 ---
 description:  Quick status overview of development progress
+user_invocable: true
 ---
 
 # /sdlc-dev-status

@@ -1,5 +1,6 @@
 ---
 description:  Onboard an existing codebase to the Ultimate SDLC Framework. Scans code, generates feature inventory, extracts architecture, creates project manifest.
+user_invocable: true
 ---
 
 # /sdlc-adopt

@@ -1,5 +1,6 @@
 ---
 description:  Discover and capture a new project idea through structured questioning
+user_invocable: false
 ---
 
 # /sdlc-planning-discover

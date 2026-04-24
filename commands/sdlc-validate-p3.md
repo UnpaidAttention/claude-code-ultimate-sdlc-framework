@@ -1,5 +1,6 @@
 ---
 description:  Execute Production Track P3 - Performance Optimization. Optimize application performance for production.
+user_invocable: false
 ---
 
 # /sdlc-validate-p3

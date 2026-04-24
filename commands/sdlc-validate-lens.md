@@ -1,5 +1,6 @@
 ---
 description:  Apply multi-lens analysis to a feature or system
+user_invocable: false
 ---
 
 # /sdlc-validate-lens

@@ -1,5 +1,6 @@
 ---
 description:  Run tests and capture results with evidence artifact
+user_invocable: false
 ---
 
 # /sdlc-dev-test

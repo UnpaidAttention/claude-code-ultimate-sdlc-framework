@@ -1,5 +1,6 @@
 ---
 description:  Execute Production Track P4 - Security Hardening. Final security review and hardening before release.
+user_invocable: false
 ---
 
 # /sdlc-validate-p4

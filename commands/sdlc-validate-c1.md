@@ -1,5 +1,6 @@
 ---
 description:  Execute Correction Track C1 - Targeted Corrections. Implement priority corrections with before/after documentation.
+user_invocable: false
 ---
 
 # /sdlc-validate-c1

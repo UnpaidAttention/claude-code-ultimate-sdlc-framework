@@ -1,12 +1,14 @@
 ---
-trigger: always_on
+trigger: conditional
 ---
 
 # FEEDBACK-RULES.md — Feedback-Driven Learning
 
-This file governs the **feedback subsystem**: how the framework captures user corrections with reasoning, applies them to future work, and proposes framework-level improvements. Always loaded as **P0** alongside UNIVERSAL-RULES and INTEGRITY-RULES.
+**Load status**: Conditional-P0. Loaded at (a) every council's Session Protocol feedback step, (b) invocation of any `/sdlc-feedback-*` or `/sdlc-framework-retro` command. Not loaded at agent spin-up.
 
-**Core Principle**: Feedback captures **how the team wants work done**. Requirements capture **what the system does**. The two are orthogonal. Gates catch what we know can break; feedback catches what the project teaches us over time.
+This file governs the feedback subsystem: how the framework captures user corrections with reasoning, applies them to future work, and proposes framework-level improvements.
+
+**Core Principle** (always-on, mirrored in UNIVERSAL-RULES § 0.21): Feedback captures **how** the team wants work done. Requirements capture **what** the system does. The two are orthogonal. Gates catch what we know can break; feedback catches what the project teaches us over time.
 
 For schema and file layout, see `contexts/feedback-schema.md`.
 
@@ -22,13 +24,7 @@ For schema and file layout, see `contexts/feedback-schema.md`.
 
 ### FR-2: Feedback Never Bypasses Integrity Rules
 
-Feedback cannot be invoked to justify any PRH-001..PRH-009 violation. Specifically:
-
-- **PRH-002** (Test Manipulation): Feedback saying "skip this test" is INVALID. Reject at write time.
-- **PRH-003** (Service Disabling): Feedback saying "disable this middleware" is INVALID. Reject.
-- **PRH-006/007/008** (Scope Reduction): Feedback saying "simplify this feature" is INVALID. Scope changes go through spec updates, not feedback entries.
-
-Feedback that appears to bypass PRH rules MUST be rejected at write time and logged to `REJECTED.md`. The rejection message should point the user to the correct channel (spec change, gate criteria update, etc.).
+Feedback cannot justify any PRH-001..PRH-009 violation. See `INTEGRITY-RULES.md` for the full PRH enumeration. Write-time rejection applies per FBP-004 below; rejections logged to `REJECTED.md`.
 
 ### FR-3: Framework Self-Modification Is Proposal-Only
 
@@ -207,11 +203,20 @@ Violations are logged and, where applicable, blocked at skill boundaries.
 
 **Required**: If feedback appears to authorize a PRH violation, the entry is invalid — the user must restate the change as a spec update.
 
+**Rejection message**: When a feedback entry is rejected for this reason, the rejection message MUST point the user to the correct channel for their request — typically a spec update (FEAT-XXX edit), a gate criteria change, or an ADR — rather than silently refusing. This preserves the user's intent while blocking the PRH violation.
+
 ### FBP-005: Single-Entry Pattern Promotion
 
 **Prohibited**: Creating a `pattern` entry from only 1 constituent feedback entry.
 
-**Required**: A pattern requires ≥2 corroborating entries. Exception: if a single entry identifies a framework-level bug (e.g. rule contradicts INTEGRITY-RULES), it may escalate directly to an FR proposal without pattern promotion.
+**Required**: A pattern requires ≥2 corroborating entries.
+
+**Exception**: A singleton MAY promote directly if ALL of:
+1. `feedback_type: gate-learning` (it arose from a gate failure, not preference)
+2. The entry's reasoning identifies a **framework-level inconsistency** (rule contradicts another rule; workflow references a missing skill; schema conflicts with itself) — not a project-specific preference
+3. The singleton path creates an FR proposal directly (skipping the pattern stage) — set `promoted_to: FR-<new-id>` instead of `FB-<new-id>`
+
+This prevents the two-entry threshold from blocking framework bugs that only one cycle has uncovered.
 
 ### FBP-006: Speculative Feedback
 

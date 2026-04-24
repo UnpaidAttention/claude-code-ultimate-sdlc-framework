@@ -1,5 +1,6 @@
 ---
 description:  Execute Synthesis Track S2 - Release Readiness. Final release checklist and preparation.
+user_invocable: false
 ---
 
 # /sdlc-validate-s2

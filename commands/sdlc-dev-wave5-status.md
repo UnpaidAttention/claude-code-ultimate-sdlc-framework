@@ -1,5 +1,6 @@
 ---
 description:  Show Wave 5 UI development status with model distribution and layer progress
+user_invocable: true
 ---
 
 # /sdlc-dev-wave5-status

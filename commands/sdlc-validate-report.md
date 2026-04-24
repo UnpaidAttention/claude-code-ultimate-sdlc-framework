@@ -1,5 +1,6 @@
 ---
 description:  Generate comprehensive validation and perfection report
+user_invocable: true
 ---
 
 # /sdlc-validate-report

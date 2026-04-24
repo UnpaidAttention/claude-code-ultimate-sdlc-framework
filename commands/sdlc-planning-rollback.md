@@ -1,5 +1,6 @@
 ---
 description:  Revert to a previous phase checkpoint
+user_invocable: false
 ---
 
 # /sdlc-planning-rollback

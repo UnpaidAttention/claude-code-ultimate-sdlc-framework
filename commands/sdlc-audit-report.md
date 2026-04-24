@@ -1,5 +1,6 @@
 ---
 description:  Generate comprehensive final audit report
+user_invocable: true
 ---
 
 # /sdlc-audit-report

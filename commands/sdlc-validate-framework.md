@@ -1,5 +1,6 @@
 ---
 description:  Validate framework integrity by checking file existence, reference consistency, and structural validity.
+user_invocable: true
 ---
 
 # /sdlc-validate-framework

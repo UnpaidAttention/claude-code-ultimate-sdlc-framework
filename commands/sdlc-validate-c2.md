@@ -1,5 +1,6 @@
 ---
 description:  Execute Correction Track C2 - Edge Case Implementation. Handle edge cases and boundary conditions.
+user_invocable: false
 ---
 
 # /sdlc-validate-c2

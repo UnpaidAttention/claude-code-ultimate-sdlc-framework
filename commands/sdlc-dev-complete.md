@@ -1,5 +1,6 @@
 ---
 description:  Complete Development Council and generate handoff to Audit Council.
+user_invocable: true
 ---
 
 # /sdlc-dev-complete

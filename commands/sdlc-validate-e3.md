@@ -1,5 +1,6 @@
 ---
 description:  Execute Enhancement Track E3 - Enhancement Implementation. Implement approved enhancements.
+user_invocable: false
 ---
 
 # /sdlc-validate-e3

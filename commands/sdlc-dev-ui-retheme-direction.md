@@ -1,5 +1,6 @@
 ---
 description:  "Phase 2 of UI Retheme: Research new theme direction — present options to user, wait for input, research based on choice. Produces retheme-direction artifact."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-retheme-direction

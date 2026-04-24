@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track T5 - Performance and Security Testing. Load testing and security vulnerability assessment.
+user_invocable: false
 ---
 
 # /sdlc-audit-t5

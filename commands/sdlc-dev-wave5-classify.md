@@ -1,5 +1,6 @@
 ---
 description:  Classify Wave 5 AIOUs for optimal model routing when not done during planning
+user_invocable: false
 ---
 
 # /sdlc-dev-wave5-classify

@@ -1,5 +1,6 @@
 ---
 description:  "Phase 1 of UI Audit: Inventory existing UI — scan routes, components, interactive elements, and design system tokens. Produces existing inventory artifact."
+user_invocable: false
 ---
 
 # /sdlc-dev-ui-audit-scan

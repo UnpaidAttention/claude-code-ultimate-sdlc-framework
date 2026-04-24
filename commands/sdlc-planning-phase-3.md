@@ -1,5 +1,6 @@
 ---
 description:  Execute Planning Phase 3 - Features. Create detailed feature specifications (FEAT-XXX) with acceptance criteria.
+user_invocable: false
 ---
 
 # /sdlc-planning-phase-3

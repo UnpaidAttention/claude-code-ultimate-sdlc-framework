@@ -1,5 +1,6 @@
 ---
 description:  Roll back development to a specific wave completion point. Use when a wave introduces fundamental issues that require reverting.
+user_invocable: true
 ---
 
 # /sdlc-rollback

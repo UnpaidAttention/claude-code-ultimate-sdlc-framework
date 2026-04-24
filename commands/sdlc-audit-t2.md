@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track T2 - Functional Testing. Systematic functional testing of all features.
+user_invocable: false
 ---
 
 # /sdlc-audit-t2

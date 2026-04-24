@@ -1,5 +1,6 @@
 ---
 description:  Execute Enhancement Track E2 - Innovation Opportunities. Identify innovation and differentiation opportunities.
+user_invocable: false
 ---
 
 # /sdlc-validate-e2

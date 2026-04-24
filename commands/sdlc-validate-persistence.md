@@ -1,5 +1,6 @@
 ---
 description:  Verify configuration and state changes persist across app restart
+user_invocable: false
 ---
 
 # /sdlc-validate-persistence

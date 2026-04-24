@@ -1,5 +1,6 @@
 ---
 description:  Execute parallel planning for independent features
+user_invocable: false
 ---
 
 # /sdlc-planning-parallel

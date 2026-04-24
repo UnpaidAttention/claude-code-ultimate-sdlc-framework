@@ -1,5 +1,6 @@
 ---
 description:  Display current project and council status across the unified framework.
+user_invocable: true
 ---
 
 # /sdlc-status

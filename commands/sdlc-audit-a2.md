@@ -1,5 +1,6 @@
 ---
 description:  Execute Audit Track A2 - Completeness. Gap analysis and missing functionality assessment.
+user_invocable: false
 ---
 
 # /sdlc-audit-a2

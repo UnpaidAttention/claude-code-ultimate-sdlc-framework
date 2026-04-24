@@ -1,5 +1,6 @@
 ---
 description:  Execute parallel AIOU development with safety checks
+user_invocable: false
 ---
 
 # /sdlc-dev-parallel
