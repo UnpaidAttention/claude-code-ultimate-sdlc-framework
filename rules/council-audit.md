@@ -45,7 +45,7 @@ Standard session start/resume sequence for all Audit Council workflows:
 2. Read `.ultimate-sdlc/project-context.md` → confirm Active Council = Audit, get current track/phase
 3. Read `.ultimate-sdlc/handoffs/development-handoff.md` → load implementation summary
 4. Read `.ultimate-sdlc/council-state/audit/WORKING-MEMORY.md` → check for incomplete tasks
-5. **Feedback load** (per `feedback-rules.md § Trigger R1`): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: audit` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+5. **Feedback load** (per `rules/feedback-rules.md § Trigger R1` — Read feedback-rules.md first, then): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: audit` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
 6. **If resuming**: Display resume summary, continue from last position
 7. **If new session**: Display welcome with track overview
 8. Check governance_mode → apply mode-specific behavior (combine phases in Lightweight, skip T3 if no frontend)

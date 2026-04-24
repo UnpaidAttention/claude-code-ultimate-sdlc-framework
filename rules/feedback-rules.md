@@ -1,12 +1,14 @@
 ---
-trigger: always_on
+trigger: conditional
 ---
 
 # FEEDBACK-RULES.md — Feedback-Driven Learning
 
-This file governs the **feedback subsystem**: how the framework captures user corrections with reasoning, applies them to future work, and proposes framework-level improvements. Always loaded as **P0** alongside UNIVERSAL-RULES and INTEGRITY-RULES.
+**Load status**: Conditional-P0. Loaded at (a) every council's Session Protocol feedback step, (b) invocation of any `/sdlc-feedback-*` or `/sdlc-framework-retro` command. Not loaded at agent spin-up.
 
-**Core Principle**: Feedback captures **how the team wants work done**. Requirements capture **what the system does**. The two are orthogonal. Gates catch what we know can break; feedback catches what the project teaches us over time.
+This file governs the feedback subsystem: how the framework captures user corrections with reasoning, applies them to future work, and proposes framework-level improvements.
+
+**Core Principle** (always-on, mirrored in UNIVERSAL-RULES § 0.21): Feedback captures **how** the team wants work done. Requirements capture **what** the system does. The two are orthogonal. Gates catch what we know can break; feedback catches what the project teaches us over time.
 
 For schema and file layout, see `contexts/feedback-schema.md`.
 
