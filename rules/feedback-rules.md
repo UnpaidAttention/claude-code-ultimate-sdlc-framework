@@ -22,7 +22,7 @@ For schema and file layout, see `contexts/feedback-schema.md`.
 
 ### FR-2: Feedback Never Bypasses Integrity Rules
 
-Feedback cannot justify any PRH-001..PRH-009 violation. See `INTEGRITY-RULES.md` for the full PRH enumeration. Write-time rejection applies per FBP-004; rejections logged to `REJECTED.md`.
+Feedback cannot justify any PRH-001..PRH-009 violation. See `INTEGRITY-RULES.md` for the full PRH enumeration. Write-time rejection applies per FBP-004 below; rejections logged to `REJECTED.md`.
 
 ### FR-3: Framework Self-Modification Is Proposal-Only
 
@@ -200,6 +200,8 @@ Violations are logged and, where applicable, blocked at skill boundaries.
 **Prohibited**: Citing a feedback entry to justify a PRH-001..PRH-009 violation.
 
 **Required**: If feedback appears to authorize a PRH violation, the entry is invalid — the user must restate the change as a spec update.
+
+**Rejection message**: When a feedback entry is rejected for this reason, the rejection message MUST point the user to the correct channel for their request — typically a spec update (FEAT-XXX edit), a gate criteria change, or an ADR — rather than silently refusing. This preserves the user's intent while blocking the PRH violation.
 
 ### FBP-005: Single-Entry Pattern Promotion
 
