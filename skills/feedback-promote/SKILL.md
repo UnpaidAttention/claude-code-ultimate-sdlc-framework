@@ -78,7 +78,7 @@ fi
 ## Step 0: Determine promotion mode
 
 Read invocation flags:
-- If `--singleton-exception FB-NNN` → go to Step 6 (singleton framework-bug path)
+- If `--singleton-exception FB-NNN` → go to the Alternate Step (singleton framework-bug path) and skip the standard Steps 1-6
 - If `--mid-cycle` → go to Step 1, skip cycle-end gates, promote eligible clusters, do not mark cycle complete
 - If no flag → standard cycle-end promotion; proceed to Step 1
 
@@ -208,7 +208,7 @@ Active count: X → Y
 
 ---
 
-## Step 6: Singleton framework-bug promotion
+## Alternate Step: Singleton framework-bug promotion
 
 Invoked only via `/sdlc-feedback-promote --singleton-exception FB-NNN`.
 
