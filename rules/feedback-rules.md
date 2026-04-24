@@ -22,13 +22,7 @@ For schema and file layout, see `contexts/feedback-schema.md`.
 
 ### FR-2: Feedback Never Bypasses Integrity Rules
 
-Feedback cannot be invoked to justify any PRH-001..PRH-009 violation. Specifically:
-
-- **PRH-002** (Test Manipulation): Feedback saying "skip this test" is INVALID. Reject at write time.
-- **PRH-003** (Service Disabling): Feedback saying "disable this middleware" is INVALID. Reject.
-- **PRH-006/007/008** (Scope Reduction): Feedback saying "simplify this feature" is INVALID. Scope changes go through spec updates, not feedback entries.
-
-Feedback that appears to bypass PRH rules MUST be rejected at write time and logged to `REJECTED.md`. The rejection message should point the user to the correct channel (spec change, gate criteria update, etc.).
+Feedback cannot justify any PRH-001..PRH-009 violation. See `INTEGRITY-RULES.md` for the full PRH enumeration. Write-time rejection applies per FBP-004; rejections logged to `REJECTED.md`.
 
 ### FR-3: Framework Self-Modification Is Proposal-Only
 
