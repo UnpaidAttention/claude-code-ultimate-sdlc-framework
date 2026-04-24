@@ -38,11 +38,14 @@ Always active regardless of council or context.
 
 ### 0.5 Zero-Compromise Principle
 
-**PROHIBITED**: "We'll figure this out during development", "TBD", "Approximately X features", symptom-fixing without root cause.
+| Prohibited | Example | Required Alternative |
+|-----------|---------|---------------------|
+| Vague deferral | "We'll figure this out during development" | `DEFERRED:[reason]:[owner]:[target-phase]` |
+| Placeholder scope | "TBD", "Approximately X features" | Exact count, reference scope-lock.md |
+| Approximate counts | "~15 features", "about 100 AIOUs" | Exact integer from scope-lock.md |
+| Symptom-fixing | Fix without root cause analysis | Root cause documented, symptom fix rejected |
 
-**DEFERRED Pattern** (approved TBD alternative): `DEFERRED:[reason]:[owner]:[target-phase]`
-- All three fields required; track in `.ultimate-sdlc/specs/deferred-decisions.md`
-- Gate fails if DEFERRED items targeting current phase remain OPEN
+**DEFERRED format**: `DEFERRED:[reason]:[owner]:[target-phase]`. All three fields required. Track in `.ultimate-sdlc/specs/deferred-decisions.md`. Gate fails if DEFERRED items targeting current phase remain OPEN.
 
 ### 0.6 Request Classification
 
@@ -55,9 +58,9 @@ Always active regardless of council or context.
 
 ### 0.7 Socratic Gate
 
-For COMPLEX requests, ask 2-3 questions BEFORE implementing:
-- Expected behavior? Edge cases? Constraints?
-- If 1% is unclear → ASK. Never assume.
+For COMPLEX requests, verify before implementing: (1) Expected behavior? (2) Edge cases? (3) Constraints?
+
+**Rule**: If 1% is unclear → ASK. Never assume.
 
 ### 0.8 Skill Loading Protocol
 
@@ -99,7 +102,7 @@ For COMPLEX requests, ask 2-3 questions BEFORE implementing:
 
 ### 0.10 Focus Lens Protocol
 
-Apply analytical lenses for the current task. Lenses provide awareness, not hard blocking.
+Apply analytical lenses for the current task (awareness, not hard blocking):
 
 | Lens | Always Active | Context-Specific |
 |------|--------------|-----------------|
@@ -116,13 +119,14 @@ Apply analytical lenses for the current task. Lenses provide awareness, not hard
 
 ### 0.11 Conflict Resolution
 
-**Rule Priority Tiers**: P0 (UNIVERSAL-RULES, INTEGRITY-RULES) > P1 (council rules) > P2 (agent rules) > P3 (skill rules).
+**Priority**: P0 > P1 > P2 > P3. P0 = UNIVERSAL/INTEGRITY; P1 = council; P2 = agent; P3 = skill.
 
-**Resolution rules**:
-- P0 vs P1: P0 wins. P1 can NARROW (not contradict) P0.
-- P0 vs P2/P3: P0 wins always (unless agent has explicit `## Override` with rationale for P2).
-- P1 vs P2: P2 wins for agent-specific behavior.
-- When ambiguous: Choose SAFER option (priority: data safety > security > conservative scope > more verification).
+| Conflict Type | Winner | Rule |
+|--------------|--------|------|
+| P0 vs P1 | P0 | P1 may NARROW, not contradict |
+| P0 vs P2/P3 | P0 | Unless agent has explicit `## Override` with rationale (P2 only) |
+| P1 vs P2 | P2 | Agent-specific behavior wins |
+| Ambiguous | Safer | Priority: data safety > security > conservative scope > more verification |
 
 **Specific Cases**:
 - **Socratic Gate override**: Workflow frontmatter `socratic_gate: skip` → skip. Explicit "Prerequisites" section → questions already answered. Otherwise → apply gate.
@@ -252,11 +256,13 @@ Standard framework rules apply without modification. Claude's instruction adhere
 
 When facing a choice not covered by specs, ADRs, or existing patterns:
 
-1. **Search**: Check codebase for existing patterns/conventions. If found, follow them.
-2. **Evaluate**: Compare options on: security (safest wins), simplicity (simpler wins), consistency (matches existing patterns), reversibility (more reversible wins).
-3. **Document**: Record decision + rationale in WORKING-MEMORY.md.
-4. **ADR threshold**: If the decision affects >3 files or >1 feature, create an ADR.
-5. **Bias toward convention**: When equally valid, choose the most common industry convention for the stack.
+| Step | Action |
+|------|--------|
+| 1 | Search codebase for existing patterns; if found, follow |
+| 2 | Evaluate options: security (safest) > simplicity (simpler) > consistency (matches existing) > reversibility (more reversible) |
+| 3 | Record decision + rationale in WORKING-MEMORY.md |
+| 4 | If decision affects >3 files OR >1 feature: create ADR |
+| 5 | When equally valid: choose most common industry convention for stack |
 
 ### 0.21 Feedback-Driven Learning
 
