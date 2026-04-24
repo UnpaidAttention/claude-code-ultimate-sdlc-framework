@@ -71,7 +71,20 @@ Every async operation and interactive element MUST handle: **Loading** (skeleton
 
 ---
 ## Slop Detection Checklist
-Before committing: no `any` types · no magic values · no commented-out code · no `console.log` · components under 150 lines · no duplicated code · file structure makes sense · new dev understands in 2 min · no unnecessary state · error/loading/empty states all handled · inputs validated at boundaries · secrets in env vars, not code.
+Before committing any code:
+- [ ] Can I explain what this code does in one sentence?
+- [ ] No `any` types I can eliminate?
+- [ ] No magic numbers or strings (use named constants)?
+- [ ] No commented-out code to delete?
+- [ ] No `console.log` left in?
+- [ ] Every component under 150 lines?
+- [ ] No duplicated code blocks that should be extracted?
+- [ ] File structure makes sense to a new developer?
+- [ ] New developer would understand this in under 2 minutes?
+- [ ] No unnecessary state that could be derived?
+- [ ] All error/loading/empty states handled?
+- [ ] All inputs validated at system boundaries?
+- [ ] Secrets in environment variables, not code?
 
 ## Enforcement
 P0 violations MUST be corrected before any commit. No exceptions. Flag: `ANTI-SLOP VIOLATION: code - [category] - [specific pattern]`

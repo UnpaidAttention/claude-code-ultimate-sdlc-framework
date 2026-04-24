@@ -87,6 +87,16 @@ Stack traces, file paths, database error messages, and column names in API error
 **Tokens in localStorage**
 Data in `localStorage` is accessible to any JavaScript running on the page, including injected scripts (XSS). An attacker who achieves XSS can exfiltrate every token stored there. Use `HttpOnly` cookies, which the browser sends automatically but JavaScript cannot read.
 
+```ts
+// Before — NEVER
+localStorage.setItem('auth_token', token);
+const token = localStorage.getItem('auth_token'); // readable by any JS
+
+// After — HttpOnly cookie set server-side
+res.cookie('auth_token', token, { httpOnly: true, secure: true, sameSite: 'strict' });
+// Client JS cannot read it; browser sends it automatically on requests
+```
+
 **No JWT validation**
 Accepting a JWT without verifying `iss` (issuer), `aud` (audience), and `exp` (expiry) allows attackers to use tokens from other services or tokens that should have expired. Validate all three claims on every request, using a library that does so by default (e.g., `jsonwebtoken`, `python-jose`).
 
@@ -98,6 +108,25 @@ Endpoints without rate limiting can be brute-forced indefinitely. A login endpoi
 
 **No input validation**
 Accepting untrusted input without schema validation is the root cause of injection attacks, data corruption, and unexpected application states. Validate type, length, format, and allowed values at every system boundary using a schema library (Zod, Pydantic, Joi). Fail fast and return a clear error rather than processing bad data.
+
+```ts
+// Before — NEVER
+app.post('/users', (req, res) => {
+  const { email, age } = req.body; // unvalidated, any shape accepted
+  await db.createUser({ email, age });
+});
+
+// After
+const CreateUserSchema = z.object({
+  email: z.string().email(),
+  age: z.number().int().min(0).max(120),
+});
+app.post('/users', (req, res) => {
+  const parsed = CreateUserSchema.safeParse(req.body);
+  if (!parsed.success) return res.status(400).json({ error: parsed.error.flatten() });
+  await db.createUser(parsed.data);
+});
+```
 
 **No authorization checks**
 Authentication (who you are) is not the same as authorization (what you can do). An authenticated user should not be able to access or modify another user's data by guessing an ID. Check ownership or role on every endpoint that accesses data, not just at the route level.
@@ -120,6 +149,32 @@ A component that fetches data, transforms it, manages form state, and renders HT
 
 **API calls in components**
 Calling `fetch` directly in a component body tightly couples the UI to a specific endpoint URL, response shape, and error format. If that API changes, every component that calls it must be updated. Centralize API calls in hooks or services; components receive data as props.
+
+```tsx
+// Before — NEVER
+function UserList() {
+  const [users, setUsers] = useState([]);
+  useEffect(() => { fetch('/api/users').then(r => r.json()).then(setUsers); }, []);
+  return <ul>{users.map(u => <li key={u.id}>{u.name}</li>)}</ul>;
+}
+
+// After — API logic in a service/hook; component stays pure
+// services/userService.ts
+export const getUsers = () => fetch('/api/users').then(r => r.json());
+
+// hooks/useUsers.ts
+export function useUsers() {
+  return useQuery({ queryKey: ['users'], queryFn: getUsers });
+}
+
+// UserList.tsx
+function UserList() {
+  const { data: users = [], isLoading, error } = useUsers();
+  if (isLoading) return <Spinner />;
+  if (error) return <ErrorMessage error={error} />;
+  return <ul>{users.map(u => <li key={u.id}>{u.name}</li>)}</ul>;
+}
+```
 
 **Business logic in UI**
 Logic embedded in event handlers or render methods cannot be unit-tested without mounting a component. Extract pure functions (calculate, transform, validate) that can be tested independently of the rendering environment.
