@@ -1,7 +1,9 @@
 # INTEGRITY-ENFORCEMENT.md — Detailed Protocols
 
-**Load when**: Any gate verification workflow runs | Any PRH violation is suspected | Run recovery is triggered.
-**Load mechanism**: Gate workflows Read this file explicitly as Step 0. PRH violation detection triggers Read. Not loaded at session start.
+**Load when**: Any gate verification workflow runs.
+**Load mechanism**: Gate workflows Read this file explicitly as Step 0. Not loaded at session start.
+
+> Future extension: If run-recovery workflows or PRH violation detection logic is added, those paths should also Read this file.
 
 This file contains the detailed enforcement, self-check, verification, and recovery protocols extracted from INTEGRITY-RULES.md. The main INTEGRITY-RULES.md contains only awareness-level content (PRH IDs, one-line descriptions, triggers).
 
@@ -14,7 +16,7 @@ When any prohibited behavior is detected:
 1. **STOP** — Halt current work immediately
 2. **REVERT** — Undo corner-cutting changes, restore configs, re-enable services
 3. **DOCUMENT** — Log in WORKING-MEMORY.md: which PRH violated, why it was tempting
-4. **FIX** — Address root cause properly per Required Behavior (see INTEGRITY-RULES.md § PRH-NNN)
+4. **FIX** — Address root cause properly per the Required Behavior for the identified PRH rule in INTEGRITY-RULES.md (§ PRH-001 through § PRH-009)
 5. **VERIFY** — Confirm fix addresses root cause, run verification commands
 
 ---
