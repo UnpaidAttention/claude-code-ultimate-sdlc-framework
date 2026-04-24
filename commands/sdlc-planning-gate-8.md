@@ -11,3 +11,15 @@ This command invokes the `sdlc-planning-gate-8` workflow skill. Use the Skill to
 ```
 Skill: sdlc-planning-gate-8
 ```
+
+---
+
+### Final Step: Log evaluation
+
+Invoke `/sdlc-gate-log` with:
+- `gate_id`: `8`
+- `council`: `planning`
+- `result`: [PASS|FAIL from gate decision above]
+- `failed_criteria`: [array of criterion IDs that failed, empty if PASS]
+
+This appends a row to `.ultimate-sdlc/gate-hit-rate.md` for retro-time analysis. Logging failure does NOT reverse the gate decision.
