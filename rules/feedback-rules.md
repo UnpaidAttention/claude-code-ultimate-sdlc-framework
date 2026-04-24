@@ -209,7 +209,14 @@ Violations are logged and, where applicable, blocked at skill boundaries.
 
 **Prohibited**: Creating a `pattern` entry from only 1 constituent feedback entry.
 
-**Required**: A pattern requires ≥2 corroborating entries. Exception: if a single entry identifies a framework-level bug (e.g. rule contradicts INTEGRITY-RULES), it may escalate directly to an FR proposal without pattern promotion.
+**Required**: A pattern requires ≥2 corroborating entries.
+
+**Exception**: A singleton MAY promote directly if ALL of:
+1. `feedback_type: gate-learning` (it arose from a gate failure, not preference)
+2. The entry's reasoning identifies a **framework-level inconsistency** (rule contradicts another rule; workflow references a missing skill; schema conflicts with itself) — not a project-specific preference
+3. The singleton path creates an FR proposal directly (skipping the pattern stage) — set `promoted_to: FR-<new-id>` instead of `FB-<new-id>`
+
+This prevents the two-entry threshold from blocking framework bugs that only one cycle has uncovered.
 
 ### FBP-006: Speculative Feedback
 

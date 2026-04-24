@@ -50,6 +50,7 @@ Standard session start/resume sequence for all Development Council workflows:
 4. Read `.ultimate-sdlc/council-state/development/WORKING-MEMORY.md` → check for incomplete AIOUs
 5. Check for `.ultimate-sdlc/council-state/development/run-tracker.md` → if exists, load current run assignment
 6. **Feedback load** (per `rules/feedback-rules.md § Trigger R1` — Read feedback-rules.md first, then): Invoke `/sdlc-feedback-review` → load active feedback entries for `council: development` or `council: any`. Apply their "How to apply" during this session. Record loaded IDs in WORKING-MEMORY.md under "Feedback loaded this session".
+   **Cluster check**: After loading active entries, group by tag overlap. If any cluster has ≥3 entries, invoke `/sdlc-feedback-promote --mid-cycle` before proceeding with phase work. Record promotions triggered this way in WORKING-MEMORY.md under "Mid-cycle promotions".
 7. **If resuming**: Display resume summary, identify next incomplete AIOU
 8. **If new session**: Display welcome with wave overview, proceed to first AIOU
 9. Check governance_mode → apply mode-specific behavior per `~/.claude/plugins/cache/ultimate-sdlc/ultimate-sdlc/3.1.0/contexts/governance-modes.md`

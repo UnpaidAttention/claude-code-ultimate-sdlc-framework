@@ -69,7 +69,18 @@ fi
 |----------|----------|-------------|
 | `--dry-run` | no | Show clusters and proposed patterns without writing |
 | `--min-cluster-size <N>` | no | Override minimum cluster size (default 2, per FBP-005) |
-| (none) | — | Standard interactive promotion |
+| `--mid-cycle` | no | Promote now even though cycle is still in progress |
+| `--singleton-exception FB-NNN` | no | Promote a single gate-learning entry that qualifies for FBP-005 exception |
+| (none) | — | Standard cycle-end promotion |
+
+---
+
+## Step 0: Determine promotion mode
+
+Read invocation flags:
+- If `--singleton-exception FB-NNN` → go to Step 6 (singleton framework-bug path)
+- If `--mid-cycle` → go to Step 1, skip cycle-end gates, promote eligible clusters, do not mark cycle complete
+- If no flag → standard cycle-end promotion; proceed to Step 1
 
 ---
 
@@ -194,3 +205,18 @@ Active count: X → Y
 - INDEX.md reflects new state.
 - No constituents deleted — history is preserved.
 - No writes to the framework repo.
+
+---
+
+## Step 6: Singleton framework-bug promotion
+
+Invoked only via `/sdlc-feedback-promote --singleton-exception FB-NNN`.
+
+1. Read `.ultimate-sdlc/feedback/FB-NNN-*.md`
+2. Verify eligibility:
+   - `feedback_type: gate-learning` → required
+   - Reasoning mentions "contradiction", "inconsistency", "missing skill", "broken reference", or equivalent → required
+   - If either check fails: ABORT, tell user "This singleton does not qualify for FBP-005 exception. Need ≥1 corroborating entry."
+3. If eligible: generate FR proposal directly in `.ultimate-sdlc/framework-revisions-proposed/FR-<next-id>-<slug>.md` citing the single FB entry as motivation
+4. Mark `FB-NNN` as `status: promoted`, `promoted_to: FR-<new-id>` (note: `FR-` prefix, not `FB-`)
+5. Log to INDEX.md under both the feedback entries section (marking promoted) and under a new "FR proposals generated this cycle" section
